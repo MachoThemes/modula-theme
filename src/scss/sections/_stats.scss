@@ -1,0 +1,46 @@
+.stats-section {
+	background: #F7F8F9;
+}
+
+.stats-section__stat {
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.12);
+	padding: 1rem 1rem 1rem 4.2rem;
+	position: relative;
+
+	svg {
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		width: 40px;
+		height: 40px;
+		margin-top: -20px;
+	}
+
+	h6 {
+		color: $accent-color-2;
+		font-weight:700;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.stats-section {
+
+		.illustration {
+			width: 40vw;
+			max-width: 960px;
+		}
+	}
+
+}
+
+#illustration-18__glove {
+	animation-name: animation-5;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+	transform-origin: 57% 33%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}

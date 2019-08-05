@@ -1,0 +1,37 @@
+.feature {
+	margin-bottom: 4rem;
+}
+
+@include media-breakpoint-up(md) {
+	.feature {
+		display: flex;
+		align-items: center;
+
+		> div{
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+
+	}
+
+	.feature:nth-child(even) {
+		.feature__img {
+			order: 1;
+		}
+
+		.feature__text {
+			order: 0;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.feature {
+
+		.illustration {
+			width: 40vw;
+			max-width: 960px;
+		}
+	}
+
+}

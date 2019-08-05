@@ -1,0 +1,18 @@
+.faq-section {
+	padding: rem(60px) 0px;
+	background: #eaf9f4;
+
+	.faq-section__bg {
+		background: url('../images/faq-section__bg.jpg') no-repeat 50% top;
+		background-size: 100%;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top:0;
+	}
+
+	.accordion__title, .accordion__content {
+		background: #fff;
+	}
+}

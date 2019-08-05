@@ -1,0 +1,37 @@
+.submit-ticket-section {
+	background: $accent-color-2;
+	padding: 60px 0;
+	position: relative;
+
+
+	h2 {
+		color: #fff;
+	}
+
+	p {
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.button {
+		border-color: #fff;
+	}
+}
+
+.submit-ticket-section__bg-1 {
+	background: url('../images/cta-section__bg-1.png') no-repeat right top;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+
+.submit-ticket-section__bg-2 {
+	background: url('../images/cta-section__bg-2.png') no-repeat left bottom;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top:0;
+}

@@ -1,0 +1,58 @@
+.cta-section {
+	background: #27be92;
+	background: linear-gradient(45deg, #27be92 0%,#815fbf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27be92', endColorstr='#815fbf',GradientType=1 );
+	padding: 60px 0;
+	position: relative;
+
+	.row {
+		display: flex;
+		align-items: center;
+	}
+
+	h3 {
+		color: #fff;
+		font-weight: 700;
+		margin-bottom: 12px;
+	}
+
+	p {
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.button {
+		background: #292e37;
+		border-color: #292e37;
+	}
+
+	.button:hover {
+		background: #fff;
+		border-color: #fff;
+		color: #292e37;
+	}
+
+	.cta-section__bg-1 {
+		background: url('../images/cta-section__bg-1.png') no-repeat right top;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top:0;
+	}
+
+	.cta-section__bg-2 {
+		background: url('../images/cta-section__bg-2.png') no-repeat left bottom;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top:0;
+	}
+
+}
+
+
+.cta-section--single {
+	margin-bottom: 3rem;
+}

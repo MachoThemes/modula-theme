@@ -1,0 +1,114 @@
+.pricing-table-2 {
+	margin-left: 0;
+	margin-right: 0;
+	font-size: 17px;
+
+	.icon-question-circle {
+		cursor: help;
+		opacity: 0.4;
+		width: 14px;
+		height: 14px;
+		vertical-align: inherit;
+	}
+
+	.list--checkmark {
+		margin-bottom: 0;
+
+		li {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+}
+
+.pricing-table-2 > div {
+	text-align: left;
+	border-left: 1px solid #eeebf2;
+	border-top: 1px solid #eeebf2;
+	padding: 2rem 21px;
+	line-height: 1.5;
+	height: 50px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	padding: 0 30px;
+	background: #fff;
+
+	&:last-child {
+		border-right: 1px solid #eeebf2;
+	}
+}
+
+.pricing-table-2--header {
+	align-items: flex-end;
+}
+
+.pricing-table-2--header > div {
+	height: auto;
+	flex-direction: column;
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+.pricing-table-2--header > div {
+	display: block;
+}
+
+
+.pricing-table-2--second > div {
+	height: auto;
+	font-weight: 400;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.pricing-table-2__label {
+	background: #E9F9F4;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 0.5rem;
+}
+
+.pricing-table-2__title {
+	font-size: rem(30px);
+	line-height: 1;
+	font-weight: 400;
+}
+
+.pricing-table-2__price {
+	margin-bottom: 30px;
+	font-size: rem(30px);
+	font-weight: 600;
+	display: block;
+	color: #000;
+	line-height: 1;
+	font-weight: 700;
+
+	sup {
+		font-size: 0.5em;
+		vertical-align: middle;
+		font-weight: 700;
+	}
+
+}
+
+
+.pricing-table-2__features {
+	margin-left: -25px;
+	margin-right: -25px;
+
+	> div {
+	 	padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+a.pricing-table-2__button.edd-add-to-cart.edd-has-js {
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+}

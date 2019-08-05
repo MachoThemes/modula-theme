@@ -1,0 +1,28 @@
+.illustration-10 {
+    position: absolute;
+    right: -90px;
+    top: -69px;
+	width: 200px;
+
+	.illustration__animated-svg {
+		animation-name: appear-1;
+	}
+}
+
+.illustration-10 .illustration__content {
+	padding-bottom: 68%;
+}
+.illustration-10 svg {
+	top: -24%;
+}
+.illustration-10__leaf-1 {
+	transform-origin: 30% 84%;
+}
+.illustration-10__leaf-2 {
+	animation-delay: 0.2s;
+	transform-origin: 36% 59%;
+}
+.illustration-10__leaf-3 {
+	animation-delay: 0.4s;
+	transform-origin: 14% 58%;
+}

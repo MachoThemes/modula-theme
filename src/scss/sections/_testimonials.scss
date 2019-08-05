@@ -1,0 +1,22 @@
+.testimonials-section {
+	padding: 60px 0;
+
+	.section__heading {
+		margin-bottom: 2em;
+	}
+}
+
+
+@include media-breakpoint-up(xl) {
+	.testimonials-section {
+		.row {
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+
+		.col-lg-4 {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+}

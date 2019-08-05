@@ -1,0 +1,106 @@
+.banner-section {
+	padding-top: 200px;
+	padding-bottom: 16.6%;
+	position: relative;
+	background: #815fbf;
+	background: linear-gradient(45deg, #815fbf 0%,#27be92 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#815fbf', endColorstr='#27be92',GradientType=1 );
+	color: #fff;
+	overflow: hidden;
+
+	.row {
+		align-items: center;
+	}
+
+	h1 {
+		color: #fff;
+		font-weight: 400;
+		margin-bottom: 1.5rem;
+		overflow-wrap: break-word;
+		font-size: rem(38px);
+	}
+
+	.typed-cursor--blink {
+		display: none;
+	}
+
+	p {
+		font-size: rem(18px);
+		margin-bottom: 1.5rem;
+	}
+
+	.button {
+		color: #fff;
+	 	border-color: transparent;
+	}
+
+	.button--link:after{
+		background: rgba(255,255,255,0.2);
+	}
+
+
+	.wp-block-embed {
+		box-shadow: 4px 7px 10px 0px rgba(49, 49, 48, 0.2);
+	}
+
+}
+
+.banner-section__bg-1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/layer.png) no-repeat right top;
+	background-size: cover;
+
+}
+
+.banner-section__bg-2 {
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 0;
+	padding-bottom: 15.6%;
+	background: url(../images/wave.png) no-repeat 50% bottom;
+	background-size: 100%;
+
+	transform: translateY(100%);
+	animation: wave-appear 1.5s $easing 1s 1 forwards;
+}
+
+@keyframes wave-appear {
+    0% {
+		transform: translateY(100%);
+	}
+
+    100% {
+		transform: translateY(0px);
+	}
+}
+
+.banner-section__arrow {
+	width: 400px;
+	height: 40px;
+	max-width: 100%;
+	margin: 0px auto 0;
+	background: url(../images/banner-section__arrow.svg) no-repeat 50% 50%;
+	background-size: 100%;
+}
+
+
+@include media-breakpoint-up(xl) {
+
+	.banner-section {
+		padding-top: 260px;
+
+		.wp-block-embed {
+			width: 96%;
+			margin: 0 auto;
+		}
+	}
+
+}
+
+

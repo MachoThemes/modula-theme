@@ -1,0 +1,235 @@
+.pricing-table {
+	margin-left: 0;
+	margin-right: 0;
+	font-size: 16px;
+
+	.icon-ok {
+		width: 13px;
+		height: 13px;
+	}
+
+  	.icon-question-circle {
+		cursor: help;
+		opacity: 0.4;
+		width: 14px;
+		height: 14px;
+	}
+
+	.icon-cancel {
+		width: 10px;
+		height: 10px;
+		background-image: url(../images/icons/cancel--red.svg);
+	}
+
+}
+
+.pricing-table > div {
+	text-align: center;
+	border-left: 1px solid #eeebf2;
+	border-top: 1px solid #eeebf2;
+	line-height: 1.5;
+	height: 50px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #f7f8f9;
+
+	&:first-child {
+		justify-content: space-between;
+		font-weight: 700;
+		text-align: left;
+	}
+
+	&:last-child {
+		border-right: 1px solid #eeebf2;
+	}
+}
+
+.main-table .pricing-table > :not(:first-child) {
+	width: 18.75%;
+}
+
+.pricing-table--header {
+	align-items: flex-end;
+
+	.edd_download_purchase_form {
+		width: 100%;
+	}
+}
+
+.pricing-table--header > div {
+	height: auto;
+	flex-direction: column;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	&:first-child {
+		border-left: none;
+		border-top: none;
+		background: transparent;
+	}
+}
+
+.pricing-table--last > div:first-child {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background:transparent;
+	opacity: 0.5;
+}
+
+.pricing-table--last > div {
+	padding-top:30px;
+	padding-bottom:30px;
+	height: auto;
+	border-bottom: 1px solid #eeebf2;
+	display: block;
+
+	&:first-child {
+		border-left: none;
+		border-bottom: none;
+	}
+
+}
+
+.pricing-table__title {
+	font-weight: 600;
+}
+
+.pricing-table__price {
+	font-size: rem(38px);
+	font-weight: 600;
+	display: block;
+	color: $accent-color-1;
+	line-height: 1;
+
+	sup {
+		font-size: 0.5em;
+		vertical-align: middle;
+		font-weight: 700;
+	}
+
+}
+
+.pricing-table__initial-price {
+	margin-bottom: 0px;
+	font-size: rem(22px);
+	font-weight: 600;
+	display: block;
+	color: #d9d9d9;
+	line-height: 1;
+	text-decoration: line-through;
+	//text-decoration-color: red;
+}
+
+.pricing-table__message {
+	border-radius: 6px;
+	padding: 0.5rem;
+	background-color: #383c44;
+	color: rgba(255,255,255,0.7);
+	font-weight: 400;
+	opacity: 0;
+
+	.icon-right-open-big {
+		filter: invert(100%);
+	}
+
+	&.in-viewport {
+		animation-name: animation-4;
+		animation-duration: 3s;
+		//animation-direction: reverse;
+		//animation-fill-mode: backwards;
+	}
+}
+
+.pricing-table--highlight > div {
+	background: #F3EAD1 !important;
+}
+
+.pricing-table__button {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.pricing-table .pricing-table-inactive {
+
+	* {
+		opacity: 0.4;
+		pointer-events: none;
+	}
+
+}
+
+.pricing-message {
+	background: #fff;
+	box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.1);
+	border: 1px solid #eeebf2;
+	border-radius: 6px;
+	padding: 55px;
+	margin-top: rem(60px);
+	margin-bottom: 0;
+	text-align: center;
+
+	&:before {
+		width: 100px;
+		height: 100px;
+		background: url(../images/money-back.png) no-repeat 50% 50%;
+		background-size: cover;
+		display: inline-block;
+		content: '';
+	}
+}
+
+.pricing-message__content {
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+@include media-breakpoint-up(sm) {
+
+	.pricing-message {
+		text-align: left;
+
+		&:before {
+			float:left;
+		}
+	}
+
+	.pricing-message__content {
+		padding-left: 190px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.pricing-table > div {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.main-table .pricing-table {
+		min-width: 1000px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		padding-right: 15px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.lite-vs-pro-table .pricing-table {
+		min-width: 900px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		padding-right: 15px;
+	}
+}

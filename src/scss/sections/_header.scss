@@ -1,0 +1,123 @@
+.header {
+	box-shadow: 0px 0px 36px 5px rgba(0,0,0,0.1);
+	//position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: #fff;
+}
+
+.header__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	transition: height 0.6s $easing;
+}
+
+.logo-link {
+	width: 169px;
+	height: 45px;
+	//background: url(../images/logo-dark.svg) no-repeat 50% 50%;
+	background: url(../images/logo-dark.png) no-repeat 50% 50%;
+	background-size: 100%;
+}
+
+
+.header--over-content {
+	background: transparent;
+	box-shadow: none;
+	position: absolute;
+
+	.header__content {
+		height: 120px;
+	}
+
+	.logo-link {
+		//background: url(../images/logo.svg) no-repeat 50% 50%;
+		background: url(../images/logo.png) no-repeat 50% 50%;
+		background-size: 100%;
+	}
+
+	@include media-breakpoint-up(md) {
+		.main-menu > li > a ,
+		.other-links > li > a {
+			color: #fff;
+		}
+
+		.main-menu .get-started-link,
+		.other-links .get-started-link {
+			box-shadow: inset 0px 0px 0px 2px #fff;
+		}
+
+		.main-menu .menu-arrow {
+			filter: invert(1);
+		}
+
+	}
+
+	.menu-icon__navicon {
+		background-color: #fff;
+
+		&:before,
+		&:after {
+			background-color: #fff;
+		}
+	}
+}
+
+
+ .header--sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background: #fff;
+	box-shadow: 0px 0px 36px 5px rgba(0,0,0,0.1);
+
+	.header__content {
+		height: 70px;
+	}
+
+	.logo-link {
+		//background: url(../images/logo-dark.svg) no-repeat 50% 50%;
+		background: url(../images/logo-dark.png) no-repeat 50% 50%;
+		background-size: 100%;
+	}
+
+	@include media-breakpoint-up(md) {
+		.main-menu > li > a ,
+		.other-links > li > a {
+			color: $text-color;
+		}
+
+		.main-menu .menu-arrow {
+			filter: invert(0);
+		}
+
+		.main-menu .get-started-link,
+		.other-links .get-started-link {
+			box-shadow: inset 0px 0px 0px 2px $text-color;
+		}
+	}
+
+	.menu-icon__navicon {
+		background-color: $text-color;
+
+		&:before,
+		&:after {
+			background-color: $text-color;
+		}
+	}
+}
+
+
+.header--checkout {
+	.header__content {
+		height: auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}

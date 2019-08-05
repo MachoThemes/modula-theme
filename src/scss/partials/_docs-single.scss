@@ -1,0 +1,38 @@
+.docs-single {
+	background: #fff;
+	border-radius: 6px;
+	margin-bottom: 30px;
+	box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.1);
+
+	padding: 30px;
+	padding-bottom: 10px;
+	transition: all 0.6s $easing;
+
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	a {
+		text-decoration: none;
+	}
+
+	&:hover {
+		box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.4);
+	}
+}
+
+.docs-single__header {
+	border-bottom: 2px solid #e8e8e8;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+.docs-single__content {
+	font-size: 16px;
+}
+
+.docs-single__footer {
+	margin-top: auto;
+	font-size: 16px;
+}

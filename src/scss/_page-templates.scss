@@ -1,0 +1,319 @@
+.blog,
+.author {
+
+ 	.main .container {
+		margin-top: -100px;
+	}
+
+	@include media-breakpoint-up(sm) {
+		.title-section {
+			padding-bottom: 260px;
+		}
+		.main .container {
+			margin-top: -287px;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		.title-section {
+			padding-bottom: 320px;
+		}
+		.main .container {
+			margin-top: -353px;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.title-section {
+			padding-bottom: 260px;
+		}
+		.main .container {
+			margin-top: -296px;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		.title-section {
+			padding-bottom: 300px;
+		}
+		.main .container {
+			margin-top: -331px;
+		}
+	}
+
+
+}
+
+
+.single-post {
+	.main {
+		padding: 0 0 3rem;
+	}
+}
+
+.post-layout-default {
+
+	.title-single__thumbnail img{
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.post-wrap {
+		background-color: #FFF;
+		box-shadow: 0 0 27px 0 rgba(214, 231, 233, 0.52);
+		border: 1px solid rgba(0,0,0,.05);
+		padding: 0 2rem;
+	}
+
+}
+
+.post-layout-no-sidebar {
+
+	.post-content #ez-toc-container {
+		display: none !important;
+	}
+
+}
+
+.page-template-demos {
+	.title-section {
+		padding-bottom: rem(275px);
+	}
+	.main .container {
+		margin-top: rem(-275px);
+	}
+}
+
+.page-template-pricing {
+	.title-section {
+		padding-top: rem(80px);
+		padding-bottom: rem(240px);
+	}
+	.pricing-section {
+		margin-top: rem(-240px);
+		padding-bottom: 0;
+	}
+	.faq-section{
+		margin-top: rem(-80px);
+		padding-top: rem(130px);
+	}
+
+}
+
+.page-template-checkout {
+
+	.main {
+		background: #f6f6f6;
+		font-size: 16px;
+		padding-top: 0px;
+	}
+
+	.title-wrap {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+.page-template-account {
+	.main {
+		background: #f6f6f6;
+		padding-top: 2rem;
+	}
+}
+
+.page-template-documentation {
+	.main {
+		background: #f6f6f6;
+
+		.docs > div {
+			margin-bottom: 30px;
+		}
+	}
+	.main .container {
+		margin-top: -55px;
+
+		@include media-breakpoint-up(sm) {
+			margin-top: -114px;
+		}
+	}
+
+	.doc-search {
+		margin-bottom: 20px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 60px;
+		}
+	}
+
+}
+
+.single-docs {
+
+	.main {
+		background: #f6f6f6;
+		padding-top: 0px;
+	}
+
+	.wedocs-single-content {
+		@include media-breakpoint-up(md) {
+			padding-left: 40px;
+		}
+	}
+
+	.doc-search {
+		margin: 20px 0;
+		@include media-breakpoint-up(sm) {
+			margin: 40px 0;
+		}
+		@include media-breakpoint-up(md) {
+			margin-left: 40px;
+		}
+	}
+
+	.entry-meta {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 1rem;
+
+		@include media-breakpoint-up(sm) {
+			justify-content: flex-start;
+		}
+
+		> span {
+			margin: 0 10px;
+		}
+	}
+
+	.entry-content {
+		clear:both;
+	}
+
+	.wedocs-breadcrumb {
+		padding: 0;
+
+		li {
+			float: left;
+			list-style: none;
+
+			&.delimiter { margin: 0 10px; }
+			&:last-child { display: none; }
+		}
+	}
+
+
+	.wedocs-feedback-wrap {
+		border-top: 1px solid #e8e8e8;
+		border-bottom: 1px solid #e8e8e8;
+		text-align: left;
+		padding: 20px 0;
+		margin: 20px 0 0;
+
+		a {
+			background: #fff;
+			border: none;
+			border-bottom: 1px solid;
+			color: $text-color;
+		}
+
+		a.positive {
+			border-color: $accent-color-2;
+			&:hover { background: $accent-color-2; }
+		}
+		a.negative{
+			border-color: #dd0024;
+			&:hover { background: #dd0024; }
+		}
+
+	}
+}
+
+.page-template-purchase-confirmation {
+
+	.main {
+		padding-top: 105px;
+	}
+
+	.main > .container > .row {
+		align-items: center;
+	}
+
+	@include media-breakpoint-up(md) {
+		.main > .container > .row {
+			margin-bottom: 4rem;
+		}
+
+		.main > .container > .row:nth-child(odd) > :first-child {
+			order: 1;
+		}
+
+		.main > .container > .row:nth-child(odd) > :last-child {
+			order: 0;
+		}
+
+	}
+
+	@include media-breakpoint-up(lg) {
+		.illustration {
+			width: 40vw;
+			max-width: 960px;
+		}
+	}
+
+}
+
+.page-template-become-an-affilliate {
+
+	.main > .container > .row {
+		align-items: center;
+	}
+
+	@include media-breakpoint-up(md) {
+		.main > .container > .row {
+			margin-bottom: 4rem;
+		}
+
+	}
+
+	@include media-breakpoint-up(lg) {
+		.illustration {
+			width: 40vw;
+			max-width: 960px;
+		}
+	}
+
+}
+
+.page-template-knowledgebase {
+	.main .container {
+		margin-top: -55px;
+
+		@include media-breakpoint-up(sm) {
+			margin-top: -114px;
+		}
+	}
+
+	.doc-search {
+		margin-bottom: 20px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 60px;
+		}
+	}
+
+}
+
+.single-knowledge-base {
+	.main {
+		padding: 1.5rem 0 3rem;
+	}
+}
+
+.page-template-pricing-2 {
+	.lite-vs-pro-section {
+		background-color: #fff;
+
+		.pricing-table--header > div:first-child {
+			background-color: #fff;
+		}
+	}
+
+}

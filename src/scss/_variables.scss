@@ -1,0 +1,44 @@
+// Colors.
+$text-color: #292e37;
+$contrast-color: #ababb3;
+$hover-color: #9271d5;
+//$accent-color-1: #8165ba;
+$accent-color-1: #774cce;
+$accent-color-2: #2ebf91;
+
+// Easing.
+$easing : cubic-bezier(.26,.42,0,.96);
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1320px
+) !default;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .5),
+    2: $spacer,
+	3: ($spacer * 1.5),
+  ),
+  $spacers
+);

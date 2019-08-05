@@ -1,0 +1,43 @@
+.widget_categories ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.widget_categories ul ul {
+    margin-bottom: 0;
+}
+
+.widget_categories li {
+    padding: 0px 0;
+	border-bottom: 1px solid rgba(0,0,0,0.06);
+	list-style: none;
+}
+
+.widget_categories li a {
+	text-decoration: none;
+}
+
+.widget_categories li ul li {
+    border-bottom: 0;
+}
+
+.widget_categories li:first-child {
+    padding-top: 0;
+}
+
+.widget_categories li:last-child {
+    border-bottom: 0;
+}
+
+.widget_categories li ul li:last-child {
+    padding-bottom: 0;
+}
+
+.widget_categories li span {
+    float: right;
+    display: none;
+}
+
+.widget_categories select {
+    margin-bottom: 0;
+}

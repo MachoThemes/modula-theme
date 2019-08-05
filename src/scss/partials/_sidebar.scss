@@ -1,0 +1,14 @@
+.sidebar {
+	font-size: 16px;
+
+	.social-links i{
+		filter: invert(100%);
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.sidebar {
+		padding-left: 30px;
+	}
+}
+

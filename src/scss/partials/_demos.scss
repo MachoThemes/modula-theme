@@ -1,0 +1,31 @@
+.demo {
+	box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.1), 0px 0px 1px 0px rgba(0,0,0,0.2);
+	border-radius: 4px;
+	margin-bottom: 1.5em;
+}
+
+.demo__img {
+	width: 100%;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.demo__content {
+	padding: 15px;
+	background: #fff;
+
+	h3 {
+		font-weight: 700;
+	}
+
+	ul {
+		color: $accent-color-2;
+		li:before { color:inherit; }
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.demo__content {
+		padding: 40px;
+	}
+}
