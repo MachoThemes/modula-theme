@@ -26,13 +26,6 @@
 			</div>
 			<div class="col-xs-12">
 				<div class="rounded-box">
-					<a class="anchor" name="appsumo"></a>
-					<h3 class="mb-3">Redeem AppSumo Codes</h3>
-					<?php echo do_shortcode('[edd_appsumo_redeem_form]'); ?>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="rounded-box">
 					<a class="anchor" name="account-information"></a>
 					<h3 class="mb-3">Account Information</h3>
 					<?php echo do_shortcode('[edd_profile_editor]'); ?>

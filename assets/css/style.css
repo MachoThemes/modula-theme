@@ -2154,7 +2154,7 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
 
 .as-seen-on-section {
   padding: 3.75rem 0px;
-  background: #341c65; }
+  background: #774cce; }
   .as-seen-on-section .section__heading {
     margin-bottom: 2rem; }
     .as-seen-on-section .section__heading h3 {
@@ -2386,6 +2386,31 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
   transform-origin: 57% 33%;
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
+
+.compatibility-section {
+  background: #2ebf91; }
+  .compatibility-section .section__heading h3 {
+    color: #fff;
+    margin-bottom: 0rem; }
+
+.compatibility-section__images > div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.compatibility-section__img {
+  height: 34px; }
+  .compatibility-section__img svg {
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    transition: filter 0.6s cubic-bezier(0.26, 0.42, 0, 0.96); }
+    .compatibility-section__img svg:hover {
+      filter: brightness(0.8) sepia(1); }
 
 .main-menu {
   background: #2d3139;

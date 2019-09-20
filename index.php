@@ -35,6 +35,11 @@
 			'category__in' => $cat_ids,
 		)
 	);
+
+	// Pagination fix
+	$temp_query = $wp_query;
+	$wp_query   = null;
+	$wp_query   = $query;
 ?>
 
 <section class="main">
@@ -50,6 +55,7 @@
 			<?php else : ?>
 				<?php //get_template_part( 'template-parts/content/content', 'none' ); ?>
 			<?php endif; ?>
+			<?php wp_reset_postdata(); ?>
 		</div>
 
 		<div class="row">
@@ -59,6 +65,12 @@
 		</div>
 	</div>
 </section>
+
+<?php
+// Reset main query object
+$wp_query = null;
+$wp_query = $temp_query;
+?>
 
 <?php get_template_part( 'template-parts/sections/cta' ); ?>
 

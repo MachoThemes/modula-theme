@@ -1,33 +1,24 @@
-.as-seen-on-section {
-	padding: rem(60px) 0px;
-	background: $accent-color-1;
+.compatibility-section {
+	background: $accent-color-2;
 
 	.section__heading {
-		margin-bottom: 2rem;
 		h3 {
 			color: #fff;
+			margin-bottom: 0rem;
 		}
 	}
 
 }
 
-.as-seen-on-section__images {
-	justify-content: center;
-	align-items: center;
-
+.compatibility-section__images {
 	> div {
 	 	display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom:2rem;
 	}
-
-
-
 }
 
-
-.as-seen-on-section__images__img {
+.compatibility-section__img {
 	height: 34px;
 
 	svg {
@@ -43,6 +34,5 @@
 	}
 
 }
-
 
 
