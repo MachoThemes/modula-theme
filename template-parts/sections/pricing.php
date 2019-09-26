@@ -329,20 +329,20 @@ $addons = new WP_Query( $args );
 				Included Hover Effects
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Modula comes with 12 stunning and creative <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'hover-effects' ) ) ); ?>">hover effects</a> built in.</span>
+					<span class="tooltip__text">Modula comes with 40 stunning and creative <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'hover-effects' ) ) ); ?>">hover effects</a> built in.</span>
 				</span>
 			</div>
 			<div class="col-xs-3">
-				12
+				40
 			</div>
 			<div class="col-xs-3">
-				12
+				40
 			</div>
 			<div class="col-xs-3">
-				12
+				40
 			</div>
 			<div class="col-xs-3">
-				12
+				40
 			</div>
 		</div><!-- row -->
 

@@ -78,7 +78,7 @@ $addons = new WP_Query( $args );
 						Included Hover Effects
 					</div>
 					<div class="col-xs-4">
-						12 Unique Hover Effects
+						40 Unique Hover Effects
 					</div>
 					<div class="col-xs-4">
 						Only 1

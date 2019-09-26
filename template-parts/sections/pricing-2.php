@@ -81,7 +81,7 @@
 												</span>
 											</li>
 											<li>
-												12 Included Hover Effects
+												40 Included Hover Effects
 												<span class="tooltip">
 													<i class="icon-question-circle ml-2"></i>
 													<span class="tooltip__text">Modula comes with 12 stunning and creative <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'hover-effects' ) ) ); ?>">hover effects</a> built in.</span>
