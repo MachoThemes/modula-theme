@@ -227,10 +227,6 @@
 	clear:both;
 }
 
-.vat_number_not_given {
-	color: red !important
-}
-
 @media screen and (min-width: 768px) {
 	#edd-first-name-wrap {
 		width: calc( 50% - 15px );
