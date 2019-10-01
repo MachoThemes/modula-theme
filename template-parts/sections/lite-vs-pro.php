@@ -63,42 +63,6 @@ $addons = new WP_Query( $args );
 
 				<div class="pricing-table row">
 					<div class="col-xs-4">
-						Included Lightbox Styles
-					</div>
-					<div class="col-xs-4">
-						6 Unique Styles
-					</div>
-					<div class="col-xs-4">
-						Only 1
-					</div>
-				</div><!-- row -->
-
-				<div class="pricing-table row">
-					<div class="col-xs-4">
-						Included Hover Effects
-					</div>
-					<div class="col-xs-4">
-						40 Unique Hover Effects
-					</div>
-					<div class="col-xs-4">
-						Only 1
-					</div>
-				</div><!-- row -->
-
-				<div class="pricing-table row">
-					<div class="col-xs-4">
-						Included Loading Effects
-					</div>
-					<div class="col-xs-4">
-						4 Unique Loading Effects
-					</div>
-					<div class="col-xs-4">
-						Only 1
-					</div>
-				</div><!-- row -->
-
-				<div class="pricing-table row">
-					<div class="col-xs-4">
 						Gallery Filters
 					</div>
 					<div class="col-xs-4">

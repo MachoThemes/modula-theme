@@ -260,28 +260,6 @@ $addons = new WP_Query( $args );
 
 		<div class="pricing-table row">
 			<div class="col-xs-3">
-				Included Lightbox Styles
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Modula comes with 6 easy-to-use <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'demo/lightbox-gallery' ) ) ); ?>">lightbox styles</a> that seamlessly integrate with your galleries.</span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				6
-			</div>
-			<div class="col-xs-3">
-				6
-			</div>
-			<div class="col-xs-3">
-				6
-			</div>
-			<div class="col-xs-3">
-				6
-			</div>
-		</div><!-- row -->
-
-		<div class="pricing-table row">
-			<div class="col-xs-3">
 				Gallery Filters
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
@@ -321,50 +299,6 @@ $addons = new WP_Query( $args );
 			</div>
 			<div class="col-xs-3">
 				<i class="icon-ok"></i>
-			</div>
-		</div><!-- row -->
-
-		<div class="pricing-table row">
-			<div class="col-xs-3">
-				Included Hover Effects
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Modula comes with 40 stunning and creative <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'hover-effects' ) ) ); ?>">hover effects</a> built in.</span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				40
-			</div>
-			<div class="col-xs-3">
-				40
-			</div>
-			<div class="col-xs-3">
-				40
-			</div>
-			<div class="col-xs-3">
-				40
-			</div>
-		</div><!-- row -->
-
-		<div class="pricing-table row">
-			<div class="col-xs-3">
-				Included Loading Effects
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Modula comes with 4 cool <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'demo/image-loaded-effects' ) ) ); ?>">image-entry animations</a>.</span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				4
-			</div>
-			<div class="col-xs-3">
-				4
-			</div>
-			<div class="col-xs-3">
-				4
-			</div>
-			<div class="col-xs-3">
-				4
 			</div>
 		</div><!-- row -->
 
