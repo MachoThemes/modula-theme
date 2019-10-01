@@ -318,6 +318,11 @@ function modula_footer() {
 		return;
 	}
 
+	if ( is_page( 'pricing' ) ) {
+		get_template_part( 'template-parts/sections/footer-simple' );
+		return;
+	}
+
 	get_template_part( 'template-parts/sections/footer' );
 
 }
