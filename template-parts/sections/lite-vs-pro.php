@@ -2,23 +2,7 @@
 $utm_medium = isset( $_GET['utm_medium'] ) ? $_GET['utm_medium'] : '';
 
 //get addons
-$args = array(
-	'post_type'      => 'download',
-	'post_status'    => array( 'publish' ),
-	'posts_per_page' => -1,
-	'order' => 'ASC',
-	'orderby' => 'menu_order',
-	'tax_query'      => array(
-		array(
-			'taxonomy' => 'download_category',
-			'field'    => 'slug',
-			'terms'    => 'addons',
-		),
-	),
-);
-// this will show hidden extensions as well
-remove_action( 'pre_get_posts', array( EDD_Hide_Download::get_instance(), 'pre_get_posts' ), 9999 );
-$addons = new WP_Query( $args );
+$addons = modula_theme_get_all_extensions( $downloads );
 ?>
 
 <section class="lite-vs-pro-section">

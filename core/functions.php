@@ -533,3 +533,46 @@ function modula_checkout_redirect() {
 	}
 
 }
+
+
+function modula_theme_get_all_extensions( $plans = array() ) {
+
+	$args = array(
+		'post_type'      => 'download',
+		'post_status'    => array( 'publish' ),
+		'posts_per_page' => -1,
+		'order' => 'ASC',
+		'orderby' => 'date',
+		'tax_query'      => array(
+			array(
+				'taxonomy' => 'download_category',
+				'field'    => 'slug',
+				'terms'    => 'addons',
+			),
+		),
+	);
+	// this will show hidden extensions as well
+	if ( class_exists('EDD_Hide_Download') ) {
+		remove_action( 'pre_get_posts', array( EDD_Hide_Download::get_instance(), 'pre_get_posts' ), 9999 );
+	}
+	$addons = new WP_Query( $args );
+
+	//sort addons based on the number of plans they are included
+	if( $plans ) {
+		foreach( $addons->posts as $addon ) {
+			$addon->nr_of_plans = 0;
+			foreach( $plans as $plan ) {
+				if ( false !== array_search( $addon->ID, $plan->get_bundled_downloads() ) ) {
+					$addon->nr_of_plans++;
+				}
+			}
+		}
+
+		function extension_compare($ext1, $ext2) {
+			return $ext1->nr_of_plans < $ext2->nr_of_plans;
+		}
+		usort( $addons->posts, "extension_compare" );
+	}
+
+	return $addons;
+}

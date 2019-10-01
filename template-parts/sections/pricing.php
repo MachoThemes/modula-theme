@@ -53,24 +53,7 @@ foreach ( $download_ids as $id ) {
 }
 
 //get addons
-$args = array(
-	'post_type'      => 'download',
-	'post_status'    => array( 'publish' ),
-	'posts_per_page' => -1,
-	'order' => 'ASC',
-	'orderby' => 'menu_order',
-	'tax_query'      => array(
-		array(
-			'taxonomy' => 'download_category',
-			'field'    => 'slug',
-			'terms'    => 'addons',
-		),
-	),
-);
-// this will show hidden extensions as well
-remove_action( 'pre_get_posts', array( EDD_Hide_Download::get_instance(), 'pre_get_posts' ), 9999 );
-$addons = new WP_Query( $args );
-
+$addons = modula_theme_get_all_extensions( $downloads );
 
 ?>
 <section class="pricing-section">
@@ -251,35 +234,6 @@ $addons = new WP_Query( $args );
 			</div>
 		</div><!-- row -->
 
-		<?php while ( $addons->have_posts() ): ?>
-			<?php $addons->the_post(); ?>
-
-			<div class="row pricing-table <?php echo isset( $utm_medium ) && $utm_medium === get_post_field( 'post_name' ) ? 'pricing-table--highlight' : ''; ?>">
-				<div class="col-xs-3">
-					<?php echo modula_get_post_meta( get_the_id(), 'pricing_title' ) != '' ? modula_get_post_meta( get_the_id(), 'pricing_title' ) : strstr( get_the_title()," " ) . ' Extension'; ?>
-
-					<?php if ( modula_get_post_meta( get_the_id(), 'tooltip' ) != '' || has_excerpt() ): ?>
-						<span class="tooltip">
-							<i class="icon-question-circle"></i>
-							<span class="tooltip__text"><?php echo modula_get_post_meta( get_the_id(), 'tooltip' ) != '' ? modula_get_post_meta( get_the_id(), 'tooltip' ) : get_the_excerpt(); ?></span>
-						</span>
-					<?php endif; ?>
-				</div>
-
-				<?php foreach ( $downloads as $download ): ?>
-					<div class="col-xs-3">
-						<?php if ( false === array_search( get_the_id(), $download->get_bundled_downloads() ) ): ?>
-							<i class="icon-cancel"></i>
-						<?php else: ?>
-							<i class="icon-ok"></i>
-						<?php endif; ?>
-					</div>
-				<?php endforeach; ?>
-
-			</div><!-- row -->
-
-		<?php endwhile; ?>
-
 		<div class="pricing-table row">
 			<div class="col-xs-3">
 				Gallery Filters
@@ -323,6 +277,35 @@ $addons = new WP_Query( $args );
 				<i class="icon-ok"></i>
 			</div>
 		</div><!-- row -->
+
+		<?php while ( $addons->have_posts() ): ?>
+			<?php $addons->the_post(); ?>
+
+			<div class="row pricing-table <?php echo isset( $utm_medium ) && $utm_medium === get_post_field( 'post_name' ) ? 'pricing-table--highlight' : ''; ?>">
+				<div class="col-xs-3">
+					<?php echo modula_get_post_meta( get_the_id(), 'pricing_title' ) != '' ? modula_get_post_meta( get_the_id(), 'pricing_title' ) : strstr( get_the_title()," " ) . ' Extension'; ?>
+
+					<?php if ( modula_get_post_meta( get_the_id(), 'tooltip' ) != '' || has_excerpt() ): ?>
+						<span class="tooltip">
+							<i class="icon-question-circle"></i>
+							<span class="tooltip__text"><?php echo modula_get_post_meta( get_the_id(), 'tooltip' ) != '' ? modula_get_post_meta( get_the_id(), 'tooltip' ) : get_the_excerpt(); ?></span>
+						</span>
+					<?php endif; ?>
+				</div>
+
+				<?php foreach ( $downloads as $download ): ?>
+					<div class="col-xs-3">
+						<?php if ( false === array_search( get_the_id(), $download->get_bundled_downloads() ) ): ?>
+							<i class="icon-cancel"></i>
+						<?php else: ?>
+							<i class="icon-ok"></i>
+						<?php endif; ?>
+					</div>
+				<?php endforeach; ?>
+
+			</div><!-- row -->
+
+		<?php endwhile; ?>
 
 		<div class="pricing-table pricing-table--last row">
 			<div class="col-xs-3 text-left">
