@@ -81,7 +81,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					</div>
 				</div><!-- row -->
 
-				<div class="pricing-table row">
+				<div class="pricing-table row <?php echo isset( $utm_medium ) && $utm_medium === 'sorting-metabox' ? 'pricing-table--highlight' : ''; ?>">
 					<div class="col-xs-4">
 						Gallery Sorting
 						<span class="tooltip">
