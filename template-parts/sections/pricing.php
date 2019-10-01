@@ -144,6 +144,50 @@ $addons = new WP_Query( $args );
 
 		</div>
 
+		<div class="row pricing-table">
+			<div class="col-xs-3">
+				Unlimited Galleries
+				<span class="tooltip">
+					<i class="icon-question-circle"></i>
+					<span class="tooltip__text">The number of galleries you can create on your website.</span>
+				</span>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+		</div><!-- row -->
+
+		<div class="pricing-table row">
+			<div class="col-xs-3">
+				Unlimited Images
+				<span class="tooltip">
+					<i class="icon-question-circle"></i>
+					<span class="tooltip__text">Any gallery created with Modula can have as many images as you want. </span>
+				</span>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+		</div><!-- row -->
+
 		<div class="pricing-table row">
 			<div class="col-xs-3">
 				Supported Sites
@@ -161,28 +205,6 @@ $addons = new WP_Query( $args );
 
 			<?php endforeach; ?>
 
-		</div><!-- row -->
-
-		<div class="row pricing-table">
-			<div class="col-xs-3">
-				Number of Galleries
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">The number of galleries you can create on your website.</span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				Unlimited Galleries
-			</div>
-			<div class="col-xs-3">
-				Unlimited Galleries
-			</div>
-			<div class="col-xs-3">
-				Unlimited Galleries
-			</div>
-			<div class="col-xs-3">
-				Unlimited Galleries
-			</div>
 		</div><!-- row -->
 
 		<div class="pricing-table row">
@@ -299,28 +321,6 @@ $addons = new WP_Query( $args );
 			</div>
 			<div class="col-xs-3">
 				<i class="icon-ok"></i>
-			</div>
-		</div><!-- row -->
-
-		<div class="pricing-table row">
-			<div class="col-xs-3">
-				Number of Images
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Any gallery created with Modula can have as many images as you want. </span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				Unlimited Images
-			</div>
-			<div class="col-xs-3">
-				Unlimited Images
-			</div>
-			<div class="col-xs-3">
-				Unlimited Images
-			</div>
-			<div class="col-xs-3">
-				Unlimited Images
 			</div>
 		</div><!-- row -->
 

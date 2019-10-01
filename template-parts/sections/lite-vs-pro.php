@@ -63,6 +63,30 @@ $addons = new WP_Query( $args );
 
 				<div class="pricing-table row">
 					<div class="col-xs-4">
+						Unlimited Galleries
+					</div>
+					<div class="col-xs-4">
+						<i class="icon-ok"></i>
+					</div>
+					<div class="col-xs-4">
+						<i class="icon-cancel"></i>
+					</div>
+				</div><!-- row -->
+
+				<div class="pricing-table row">
+					<div class="col-xs-4">
+						Unlimited Images
+					</div>
+					<div class="col-xs-4">
+						<i class="icon-ok"></i>
+					</div>
+					<div class="col-xs-4">
+						<i class="icon-cancel"></i>
+					</div>
+				</div><!-- row -->
+
+				<div class="pricing-table row">
+					<div class="col-xs-4">
 						Gallery Filters
 					</div>
 					<div class="col-xs-4">
@@ -86,30 +110,6 @@ $addons = new WP_Query( $args );
 					</div>
 					<div class="col-xs-4">
 						<i class="icon-cancel"></i>
-					</div>
-				</div><!-- row -->
-
-				<div class="pricing-table row">
-					<div class="col-xs-4">
-						Number of Images
-					</div>
-					<div class="col-xs-4">
-						Unlimited Images
-					</div>
-					<div class="col-xs-4">
-						Only 20 Images
-					</div>
-				</div><!-- row -->
-
-				<div class="pricing-table row">
-					<div class="col-xs-4">
-						Number of Galleries
-					</div>
-					<div class="col-xs-4">
-					   Unlimited Galleries
-					</div>
-					<div class="col-xs-4">
-						Unlimited Galleries
 					</div>
 				</div><!-- row -->
 
