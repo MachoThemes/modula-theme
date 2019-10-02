@@ -86,8 +86,13 @@
 
 .page-template-pricing {
 	.title-section {
-		padding-top: rem(80px);
-		padding-bottom: rem(240px);
+ 		//padding-top: rem(80px);
+		//padding-bottom: rem(240px);
+		padding-top: 2rem;
+   		padding-bottom: 13rem;
+	}
+	.title-section__excerpt {
+		padding: 0.5rem 0;
 	}
 	.pricing-section {
 		margin-top: rem(-240px);

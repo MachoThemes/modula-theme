@@ -1363,8 +1363,11 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
   margin-top: -17.1875rem; }
 
 .page-template-pricing .title-section {
-  padding-top: 5rem;
-  padding-bottom: 15rem; }
+  padding-top: 2rem;
+  padding-bottom: 13rem; }
+
+.page-template-pricing .title-section__excerpt {
+  padding: 0.5rem 0; }
 
 .page-template-pricing .pricing-section {
   margin-top: -15rem;
