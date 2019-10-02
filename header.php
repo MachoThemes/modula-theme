@@ -20,9 +20,9 @@
 
 <body <?php body_class(); ?>>
 
-	<?php do_action('before_header');  ?>
-
 	<section class="site-wrap">
+
+		<?php do_action('before_header');  ?>
 
 		<header class="<?php modula_header_class(); ?>">
 			<div class="container">

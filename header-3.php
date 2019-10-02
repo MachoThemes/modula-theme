@@ -20,6 +20,8 @@
 
 <body <?php body_class(); ?>>
 
+	<?php do_action('before_header');  ?>
+
 	<header class="<?php modula_header_class(); ?>">
 		<div class="container">
 			<div class="row justify-content-center">

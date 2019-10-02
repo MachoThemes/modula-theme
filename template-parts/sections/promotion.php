@@ -1,6 +1,5 @@
-<?php $discount_code_id = 177460; ?>
 <section class="promotion-section text-center" style="display:none">
-	Use the promo code <span class="discount-code"><?php echo get_post_meta($discount_code_id, '_edd_discount_code', true);  ?></span> and get <strong>10% OFF</strong>. Offer expires in <span data-expires="<?php echo get_post_meta($discount_code_id, '_edd_discount_expiration', true);  ?>" class="timer"></span>
+	Get 30% OFF on Modula Gallery. Offer expires in <span class="timer"></span>
 </section>
 
 <script>
@@ -15,49 +14,40 @@ jQuery(function() {
 
 	var $promotionSection = jQuery('.promotion-section');
 	var $timerSpan = jQuery('.promotion-section').find('.timer');
-	var $modulaDiscountCode = getCookie('modulaDiscountCode');
+	var $modulaDiscountCode = getCookie('modulaDiscountCodeExpires');
 
-	if( ! $modulaDiscountCode )  {
+ 	if( ! $modulaDiscountCode )  {
 		//set cookie
 		var now = new Date().getTime();
 		var exdate = new Date();
-		exdate.setDate( exdate.getDate() + 30 );
-		document.cookie = "modulaDiscountCode="+ now +"; expires="+exdate.toUTCString();
-
-		$modulaDiscountCode = now;
+		exdate.setDate( exdate.getDate() + 1 );
+		document.cookie = "modulaDiscountCodeExpires="+ exdate.getTime() + ';expires=' + exdate.toUTCString();
+		$modulaDiscountCode = exdate.getTime();
 	}
 
-	var now = new Date().getTime();
-	var distance = now - $modulaDiscountCode;
-	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	$promotionSection.delay(1000).slideDown( "medium" );
 
-	if( days == 0 && hours < 6 ) {
+	// Update the count down every 1 second
+	var x = setInterval(function() {
 
-		// Update the count down every 1 second
-		var x = setInterval(function() {
+		var now = new Date().getTime();
+		var distance = (6*60*60*1000) - (now - $modulaDiscountCode);
 
-			var now = new Date().getTime();
-			var distance = (6*60*60*1000) - (now - $modulaDiscountCode);
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-			// Time calculations for days, hours, minutes and seconds
-			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		$timerSpan.html( ('0' + hours).slice(-2) + ":" + ('0' + minutes).slice(-2) + ":" + ('0' + seconds).slice(-2) );
 
-			$timerSpan.html( ('0' + hours).slice(-2) + ":" + ('0' + minutes).slice(-2) + ":" + ('0' + seconds).slice(-2) );
+		// If the count down is finished, write some text
+		if (distance < 0) {
+			clearInterval(x);
+			$promotionSection.hide();
+		}
+	}, 1000);
 
-			// If the count down is finished, write some text
-			if (distance < 0) {
-				clearInterval(x);
-				$promotionSection.hide();
-			}
-		}, 1000);
-
-		$promotionSection.delay(1000).slideDown( "fast" );
-
-	}
 
 
 });
