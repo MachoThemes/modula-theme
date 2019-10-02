@@ -313,3 +313,17 @@ function theme_edd_download_supports( $supports ) {
 	$supports[] = 'page-attributes';
 	return $supports;
 }
+
+
+add_action('wp_head', 'modula_theme_add_beacon');
+function modula_theme_add_beacon() {
+
+	if ( ! is_page( 'pricing' ) ) {
+		return;
+	}
+
+    ?>
+		<script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+		<script type="text/javascript">window.Beacon('init', 'c40559a2-6acf-4283-96a6-183fa5da758c')</script><style>
+    <?php
+}
