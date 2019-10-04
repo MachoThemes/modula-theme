@@ -21,16 +21,7 @@ $upgrading = false;
 $download_ids = array( $download1_id, $download2_id, $download3_id, $download4_id );
 
 $cart_discounts = edd_get_cart_discounts();
-if( ! in_array(  '30OFF',  $cart_discounts )  ) {
-	$cart_discounts[] = '30OFF';
-}
-if ( isset( $_GET['discount'] ) )  {
-	$discount = new EDD_Discount( $_GET['discount'], true );
-	if( $discount->status === 'active' && ! in_array(  $_GET['discount'],  $cart_discounts )  ) {
-		$cart_discounts[] = $_GET['discount'];
-	}
-}
-EDD()->session->set( 'cart_discounts', implode( '|', $cart_discounts ) );
+
 
 
 if ( isset( $_GET['license'] ) ) {
