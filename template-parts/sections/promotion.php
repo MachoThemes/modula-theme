@@ -31,7 +31,7 @@ jQuery(function() {
 	var x = setInterval(function() {
 
 		var now = new Date().getTime();
-		var distance = (6*60*60*1000) - (now - $modulaDiscountCode);
+		var distance = (1*60*60*1000) - (now - $modulaDiscountCode);
 
 		// Time calculations for days, hours, minutes and seconds
 		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
