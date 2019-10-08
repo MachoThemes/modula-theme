@@ -187,7 +187,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 		<div class="pricing-table row">
 			<div class="col-xs-3">
-				1 Year of Free Updates
+				Updates for 1 full year
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
 					<span class="tooltip__text">You’ll have access to free updates for 1 year or until you cancel your yearly subscription.</span>
@@ -209,7 +209,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 		<div class="pricing-table row">
 			<div class="col-xs-3">
-				1 Year of Support
+				Support for 1 full year
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
 					<span class="tooltip__text">In case you ever run into issues with our plugin (unlikely), feel free to reach out to our support at any time.</span>
