@@ -12,6 +12,7 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+<script type="text/javascript" src="https://load.fomo.com/api/v1/CCS6JvBrQcWOvOW-sBtOLw/load.js" async></script>
 	<?php wp_head(); ?>
 	<meta name="theme-color" content="#2ebf91">
 </head>
