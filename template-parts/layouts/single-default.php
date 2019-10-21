@@ -32,19 +32,20 @@
 									by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_the_author(); ?></a>
 								</span>
 
-								<span class="title-single__date">
-									<?php
+								<?php
 									$u_time = get_the_time('U');
 									$u_modified_time = get_the_modified_time('U');
 									if ($u_modified_time >= $u_time + 86400) {
+									echo  '<span class="title-single__date">';
 									echo "<p>Last modified on ";
 									the_modified_time('F jS, Y');
 									echo " at ";
 									the_modified_time();
-									echo "</p> "; }
+									echo "</p> ";
+									echo '<span>';
+								}
 
 									?>
-								</span>
 
 								<?php if( get_comments_number() !== '0' ) : ?>
 									<span class="title-single__comments">
