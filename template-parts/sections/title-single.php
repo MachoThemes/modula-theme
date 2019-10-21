@@ -28,7 +28,7 @@
 						</span>
 
 						<span class="title-single__date">
-							<?php echo do_shortcode('[lmt-post-modified-info] '); ?>
+							<?php if ( function_exists( 'the_last_modified_info' ) ) { the_last_modified_info(); } ?>
 						</span>
 
 						<?php if( get_comments_number() !== '0' ) : ?>
