@@ -37,10 +37,8 @@
 									$u_modified_time = get_the_modified_time('U');
 									if ($u_modified_time >= $u_time + 86400) {
 									echo  '<span class="title-single__date">';
-									echo "<p>Last modified on ";
+									echo "<p>Updated on ";
 									the_modified_time('F jS, Y');
-									echo " at ";
-									the_modified_time();
 									echo "</p> ";
 									echo '<span>';
 								}
