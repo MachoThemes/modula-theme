@@ -28,7 +28,12 @@
 						</span>
 
 						<span class="title-single__date">
-							<?php if ( function_exists( 'the_last_modified_info' ) ) { the_last_modified_info(); } ?>
+							<?php
+
+							$d = get_option( 'date_format' );
+							echo get_post_modified_time( $d );
+
+							?>
 						</span>
 
 						<?php if( get_comments_number() !== '0' ) : ?>
