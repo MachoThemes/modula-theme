@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -123,8 +123,7 @@ var Accordion = function () {
 exports.default = Accordion;
 
 /***/ }),
-/* 8 */,
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -197,7 +196,7 @@ var DocSearch = function () {
 exports.default = DocSearch;
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -246,7 +245,7 @@ var Events = function () {
 exports.default = Events;
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -328,7 +327,7 @@ var Header = function () {
 exports.default = Header;
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -383,7 +382,7 @@ var Modal = function () {
 exports.default = Modal;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -437,6 +436,7 @@ var PromotionSection = function () {
 exports.default = PromotionSection;
 
 /***/ }),
+/* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */,
@@ -444,8 +444,7 @@ exports.default = PromotionSection;
 /* 18 */,
 /* 19 */,
 /* 20 */,
-/* 21 */,
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -453,19 +452,19 @@ exports.default = PromotionSection;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Header = __webpack_require__(11);
+var _Header = __webpack_require__(10);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _PromotionSection = __webpack_require__(13);
+var _PromotionSection = __webpack_require__(12);
 
 var _PromotionSection2 = _interopRequireDefault(_PromotionSection);
 
-var _Modal = __webpack_require__(12);
+var _Modal = __webpack_require__(11);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
-var _Events = __webpack_require__(10);
+var _Events = __webpack_require__(9);
 
 var _Events2 = _interopRequireDefault(_Events);
 
@@ -473,7 +472,7 @@ var _Accordion = __webpack_require__(7);
 
 var _Accordion2 = _interopRequireDefault(_Accordion);
 
-var _DocSearch = __webpack_require__(9);
+var _DocSearch = __webpack_require__(8);
 
 var _DocSearch2 = _interopRequireDefault(_DocSearch);
 
@@ -496,7 +495,6 @@ var Modula = function () {
 		this.initCurrency();
 		this.initPostNavigation();
 		this.initCheckoutPage();
-		this.initTestimonials();
 	}
 
 	_createClass(Modula, [{
@@ -508,40 +506,6 @@ var Modula = function () {
 		key: 'initPromotionSection',
 		value: function initPromotionSection() {
 			new _PromotionSection2.default(jQuery('.promotion-section'));
-		}
-	}, {
-		key: 'initTestimonials',
-		value: function initTestimonials() {
-
-			if (jQuery('.testimonials-section-2').length == 0) {
-				return;
-			}
-
-			jQuery('.testimonials-section-2__testimonials').slick({
-				arrows: false,
-				dots: true,
-				slidesToShow: 3,
-				slidesToScroll: 3,
-				responsive: [{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}, {
-					breakpoint: 992,
-					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2
-					}
-				}, {
-					breakpoint: 1200,
-					settings: {
-						slidesToShow: 3,
-						slidesToScroll: 3
-					}
-				}]
-			});
 		}
 	}, {
 		key: 'initScrollAnimation',

@@ -20,7 +20,6 @@ class Modula {
 		this.initCurrency();
 		this.initPostNavigation();
 		this.initCheckoutPage();
-		this.initTestimonials();
 	}
 
 	initHeader() {
@@ -29,43 +28,6 @@ class Modula {
 
 	initPromotionSection() {
 		new PromotionSection( jQuery('.promotion-section') );
-	}
-
-	initTestimonials() {
-
-		if ( jQuery('.testimonials-section-2').length == 0 ) {
-			return;
-		}
-
-		jQuery('.testimonials-section-2__testimonials').slick({
-			arrows: false,
-			dots: true,
-			slidesToShow: 3,
-			slidesToScroll: 3,
-			responsive: [
-				{
-				  breakpoint: 768,
-				  settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				  }
-				},
-				{
-					breakpoint: 992,
-					settings: {
-					  slidesToShow: 2,
-					  slidesToScroll: 2,
-					}
-				},
-				{
-					breakpoint: 1200,
-					settings: {
-					  slidesToShow: 3,
-					  slidesToScroll: 3,
-					}
-				},
-			  ]
-		});
 	}
 
 	initScrollAnimation() {
@@ -230,5 +192,4 @@ class Modula {
 	}
 
 }
-
 window.Modula = new Modula();
