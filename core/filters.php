@@ -377,16 +377,32 @@
 	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // start link
 	remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); // Display relational links for the posts adjacent to the current post.
 	remove_action( 'wp_head', 'wp_generator' ); // Display the XHTML generator that is generated on the wp_head hook, WP version
-	remove_action( 'wp_head', 'wp_shortlink_wp_head');
-	remove_action('wp_head', 'rest_output_link_wp_head', 10);
-	remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
-	remove_action('template_redirect', 'rest_output_link_header', 11, 0);
+	remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+	remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+	remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+	remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
 
 	/**
 	 * Remove Meta Tag for EDD
 	 * https://wordpress.org/support/topic/how-to-remove-meta-generator/
 	 */
-	function remove_edd_version_in_header_action(){
+	function remove_edd_version_in_header_action() {
 		remove_action( 'wp_head', 'edd_version_in_header' );
 	}
-	add_action( 'wp_head', 'remove_edd_version_in_header_action');
+	add_action( 'wp_head', 'remove_edd_version_in_header_action' );
+
+	/**
+	 * Remove Yoast SEO Plugin meta tag generator
+	 */
+	function modula_remove_yoast_seo_comments_fn() {
+		if ( ! class_exists( 'WPSEO_Frontend' ) ) {
+			return;
+		}
+		$instance = WPSEO_Frontend::get_instance();
+		// To ensure that future version of the plugin does not cause any problem
+		if ( ! method_exists( $instance, 'debug_mark' ) ) {
+			return;
+		}
+		remove_action( 'wpseo_head', array( $instance, 'debug_mark' ), 2 );
+	}
+	add_action( 'template_redirect', 'modula_remove_yoast_seo_comments_fn', 9999 );
