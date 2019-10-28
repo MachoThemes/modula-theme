@@ -343,7 +343,7 @@
 		add_filter( 'wp_resource_hints', 'modula_disable_emojis_remove_dns_prefetch', 10, 2 );
 	}
 
-	add_action( 'init', 'disable_emojis' );
+	add_action( 'init', 'modula_disable_emojis' );
 
 	/**
 	 * Filter function used to remove the tinymce emoji plugin.
