@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -123,109 +123,7 @@ var Accordion = function () {
 exports.default = Accordion;
 
 /***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var CheckoutPage = function () {
-	function CheckoutPage() {
-		var _this = this;
-
-		_classCallCheck(this, CheckoutPage);
-
-		this.waypointsInitiated = false;
-
-		jQuery(window).resize(function () {
-			return _this.onResize();
-		});
-
-		setTimeout(function () {
-			jQuery(window).trigger('resize');
-		}, 2000);
-	}
-
-	_createClass(CheckoutPage, [{
-		key: 'onResize',
-		value: function onResize() {
-			if (jQuery(window).width() < 1200) {
-				this.destroyStickyCart();
-			} else {
-				this.initStickyCart();
-			}
-		}
-	}, {
-		key: 'initStickyCart',
-		value: function initStickyCart() {
-
-			if (typeof Waypoint === "undefined") {
-				return;
-			}
-
-			if (this.waypointsInitiated == true) {
-				return;
-			}
-
-			this.waypoint1 = new Waypoint({
-				element: jQuery('.edd-cart-col'),
-				offset: '100px',
-				handler: function handler(direction) {
-					if ('down' === direction) {
-						jQuery('.edd-cart-col').addClass('stick');
-					}
-					if ('up' === direction) {
-						jQuery('.edd-cart-col').removeClass('stick');
-					}
-				}
-			});
-
-			this.waypoint2 = new Waypoint({
-				element: jQuery('.footer-section'),
-				offset: '100%',
-				handler: function handler(direction) {
-					if ('down' === direction) {
-						jQuery('.edd-cart-col').removeClass('stick').css({ 'top': jQuery('#edd_purchase_form').height() - jQuery('.edd-cart-col').height() - jQuery('#edd_purchase_submit').height() });
-					}
-					if ('up' === direction) {
-						jQuery('.edd-cart-col').css({ 'top': '' }).addClass('stick');
-					}
-				}
-			});
-
-			this.waypointsInitiated = true;
-		}
-	}, {
-		key: 'destroyStickyCart',
-		value: function destroyStickyCart() {
-			if (this.waypoint1 != undefined) {
-				this.waypoint1.destroy();
-			}
-
-			if (this.waypoint2 != undefined) {
-				this.waypoint2.destroy();
-			}
-
-			jQuery('.edd-cart-col').css({ 'top': '' }).removeClass('stick');
-
-			this.waypointsInitiated = false;
-		}
-	}]);
-
-	return CheckoutPage;
-}();
-
-exports.default = CheckoutPage;
-
-/***/ }),
+/* 8 */,
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -362,54 +260,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Footer = function () {
-	function Footer($element) {
-		_classCallCheck(this, Footer);
-
-		this.$footer = $element;
-
-		this.initOdometer();
-	}
-
-	_createClass(Footer, [{
-		key: 'initOdometer',
-		value: function initOdometer() {
-			var _this = this;
-
-			if (typeof Waypoint === "undefined") {
-				return;
-			}
-
-			new Waypoint({
-				element: this.$footer,
-				offset: '70%',
-				handler: function handler(direction) {
-					_this.$footer.find('.odometer').html(452043);
-				}
-			});
-		}
-	}]);
-
-	return Footer;
-}();
-
-exports.default = Footer;
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 var Header = function () {
 	function Header($element) {
 		_classCallCheck(this, Header);
@@ -478,7 +328,7 @@ var Header = function () {
 exports.default = Header;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -533,7 +383,7 @@ var Modal = function () {
 exports.default = Modal;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -587,6 +437,7 @@ var PromotionSection = function () {
 exports.default = PromotionSection;
 
 /***/ }),
+/* 14 */,
 /* 15 */,
 /* 16 */,
 /* 17 */,
@@ -594,8 +445,7 @@ exports.default = PromotionSection;
 /* 19 */,
 /* 20 */,
 /* 21 */,
-/* 22 */,
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -603,19 +453,15 @@ exports.default = PromotionSection;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Header = __webpack_require__(12);
+var _Header = __webpack_require__(11);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Footer = __webpack_require__(11);
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-var _PromotionSection = __webpack_require__(14);
+var _PromotionSection = __webpack_require__(13);
 
 var _PromotionSection2 = _interopRequireDefault(_PromotionSection);
 
-var _Modal = __webpack_require__(13);
+var _Modal = __webpack_require__(12);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -630,10 +476,6 @@ var _Accordion2 = _interopRequireDefault(_Accordion);
 var _DocSearch = __webpack_require__(9);
 
 var _DocSearch2 = _interopRequireDefault(_DocSearch);
-
-var _CheckoutPage = __webpack_require__(8);
-
-var _CheckoutPage2 = _interopRequireDefault(_CheckoutPage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -655,18 +497,12 @@ var Modula = function () {
 		this.initPostNavigation();
 		this.initCheckoutPage();
 		this.initTestimonials();
-		this.initFooter();
 	}
 
 	_createClass(Modula, [{
 		key: 'initHeader',
 		value: function initHeader() {
 			new _Header2.default(jQuery('.header'));
-		}
-	}, {
-		key: 'initFooter',
-		value: function initFooter() {
-			new _Footer2.default(jQuery('.footer-section'));
 		}
 	}, {
 		key: 'initPromotionSection',

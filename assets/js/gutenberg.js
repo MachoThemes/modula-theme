@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -236,7 +236,7 @@ var _classnames3 = __webpack_require__(0);
 
 var _classnames4 = _interopRequireDefault(_classnames3);
 
-var _edit = __webpack_require__(16);
+var _edit = __webpack_require__(15);
 
 var _edit2 = _interopRequireDefault(_edit);
 
@@ -491,7 +491,7 @@ var _classnames2 = __webpack_require__(0);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _edit = __webpack_require__(19);
+var _edit = __webpack_require__(18);
 
 var _edit2 = _interopRequireDefault(_edit);
 
@@ -680,7 +680,7 @@ var _classnames = __webpack_require__(0);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _edit = __webpack_require__(21);
+var _edit = __webpack_require__(20);
 
 var _edit2 = _interopRequireDefault(_edit);
 
@@ -773,8 +773,7 @@ exports.settings = settings;
 /* 11 */,
 /* 12 */,
 /* 13 */,
-/* 14 */,
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -887,7 +886,7 @@ var Controls = function (_Component) {
 exports.default = Controls;
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -907,11 +906,11 @@ var _colors = __webpack_require__(1);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _inspector = __webpack_require__(17);
+var _inspector = __webpack_require__(16);
 
 var _inspector2 = _interopRequireDefault(_inspector);
 
-var _controls = __webpack_require__(15);
+var _controls = __webpack_require__(14);
 
 var _controls2 = _interopRequireDefault(_controls);
 
@@ -1073,7 +1072,7 @@ var Edit = function (_Component) {
 exports.default = compose([applyWithSelect, _colors2.default, withFontSizes('fontSize')])(Edit);
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1222,7 +1221,7 @@ var Inspector = function (_Component) {
 exports.default = compose([_colors2.default, applyFallbackStyles, withFontSizes('fontSize')])(Inspector);
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1294,7 +1293,7 @@ var Controls = function (_Component) {
 exports.default = Controls;
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1314,11 +1313,11 @@ var _colors = __webpack_require__(2);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _controls = __webpack_require__(18);
+var _controls = __webpack_require__(17);
 
 var _controls2 = _interopRequireDefault(_controls);
 
-var _inspector = __webpack_require__(20);
+var _inspector = __webpack_require__(19);
 
 var _inspector2 = _interopRequireDefault(_inspector);
 
@@ -1486,7 +1485,7 @@ var Edit = function (_Component) {
 exports.default = compose([_colors2.default, withFontSizes('fontSize')])(Edit);
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1634,7 +1633,7 @@ var Inspector = function (_Component) {
 exports.default = compose([_colors2.default])(Inspector);
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1746,7 +1745,7 @@ exports.default = Edit;
 ;
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

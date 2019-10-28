@@ -1,11 +1,10 @@
 import Header from './modules/Header';
-import Footer from './modules/Footer';
 import PromotionSection from './modules/PromotionSection';
 import Modal from './modules/Modal';
 import Events from './modules/Events';
 import Accordion from './modules/Accordion';
 import DocSearch from './modules/DocSearch';
-import CheckoutPage from './modules/CheckoutPage';
+
 
 class Modula {
 
@@ -22,15 +21,10 @@ class Modula {
 		this.initPostNavigation();
 		this.initCheckoutPage();
 		this.initTestimonials();
-		this.initFooter();
 	}
 
 	initHeader() {
 		new Header( jQuery('.header') );
-	}
-
-	initFooter() {
-		new Footer( jQuery('.footer-section') );
 	}
 
 	initPromotionSection() {
