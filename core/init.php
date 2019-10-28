@@ -25,8 +25,6 @@ if ( ! function_exists( 'antreas_add_scripts' ) ) {
 	add_action( 'wp_enqueue_scripts', 'antreas_add_scripts' );
 	function antreas_add_scripts() {
 		wp_register_script( 'waypoints', ANTREAS_ASSETS_VENDORS . '/waypoints/jquery.waypoints.js', array(), ANTREAS_VERSION, true );
-		wp_register_script( 'slick', ANTREAS_ASSETS_VENDORS . '/slick/slick.min.js', array(), ANTREAS_VERSION, true );
-		wp_register_script( 'odometer', ANTREAS_ASSETS_VENDORS . '/odometer/odometer.min.js', array(), ANTREAS_VERSION, true );
 	}
 }
 
@@ -98,8 +96,6 @@ if ( ! function_exists( 'antreas_add_styles' ) ) {
 		wp_enqueue_style( ANTREAS_SLUG . '-main', ANTREAS_ASSETS_CSS . 'style.css', array(), '1.1.1' );
 		wp_add_inline_style( ANTREAS_SLUG . '-main', antreas_generate_custom_css() );
 
-		wp_register_style( 'slick', ANTREAS_ASSETS_VENDORS . '/slick/slick.css' );
-		wp_register_style( 'slick-theme', ANTREAS_ASSETS_VENDORS . '/slick/slick-theme.css' );
 	}
 }
 

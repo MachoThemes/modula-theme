@@ -1,5 +1,3 @@
-<?php wp_enqueue_style( 'slick' ); ?>
-<?php wp_enqueue_script( 'slick' ); ?>
 
 <section class="section testimonials-section-2">
 	<div class="container">
