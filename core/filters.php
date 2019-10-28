@@ -405,4 +405,4 @@
 	function remove_edd_version_in_header_action(){
 		remove_action( 'wp_head', 'edd_version_in_header' );
 	}
-	add_action( 'wp_head', 'remove_edd_version_in_header_action',
+	add_action( 'wp_head', 'remove_edd_version_in_header_action');
