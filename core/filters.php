@@ -202,22 +202,6 @@
 		return $items;
 	}
 
-
-	add_filter( 'wp_nav_menu_items', 'modula_add_quick_access_links', 10, 2 );
-	function modula_add_quick_access_links( $items, $args ) {
-
-		if ( $args->menu->slug === 'quick-access' ) {
-			if ( ! is_user_logged_in() ) {
-				$items .= '<li class="menu-item"><a class="login-link" href="#" rel="nofollow">Log In</a></li>';
-			} else {
-				$items .= '<li class="menu-item"><a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '">My Account</a></li>';
-			}
-		}
-
-		return $items;
-	}
-
-
 	add_action( 'wp_ajax_modula_search_articles', 'modula_search_articles' );
 	add_action( 'wp_ajax_nopriv_modula_search_articles', 'modula_search_articles' );
 	function modula_search_articles() {
