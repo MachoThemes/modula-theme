@@ -397,3 +397,12 @@
 	remove_action('wp_head', 'rest_output_link_wp_head', 10);
 	remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
 	remove_action('template_redirect', 'rest_output_link_header', 11, 0);
+
+	/**
+	 * Remove Meta Tag for EDD
+	 * https://wordpress.org/support/topic/how-to-remove-meta-generator/
+	 */
+	function remove_edd_version_in_header_action(){
+		remove_action( 'wp_head', 'edd_version_in_header' );
+	}
+	add_action( 'wp_head', 'remove_edd_version_in_header_action',
