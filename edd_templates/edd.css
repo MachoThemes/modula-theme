@@ -178,7 +178,7 @@
 	display: inline-block;
 	width: 10px;
 	height: 11px;
-	background: url(images/xit.gif ) 0 0 no-repeat;
+	background: url(../assets/images/icons/cancel.svg ) 0 0 no-repeat;
 	position: relative;
 	top: 3px;
 }
