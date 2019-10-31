@@ -283,10 +283,10 @@ add_action( 'before_header', 'modula_before_header', 10, 2 );
 function modula_before_header() {
 
 	global $post;
-
-	if ( is_page( 'pricing' ) ) {
+	// comment line so that promotion will be available on whole website
+	//if ( is_page( 'pricing' ) ) {
 		get_template_part( 'template-parts/sections/promotion' );
-	}
+	//}
 
 	if ( '' !== modula_get_option( 'top_bar_content' ) && modula_show_section( modula_get_option( 'top_bar_include' ), modula_get_option( 'top_bar_exclude' ) ) ) {
 		get_template_part( 'template-parts/sections/topbar' );
