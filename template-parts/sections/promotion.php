@@ -34,7 +34,7 @@
         var x = setInterval(function () {
 
             var now = new Date().getTime();
-            var endDate = new Date(2019, 10, 31, 00, 00, 00, 0).getTime();
+            var endDate = new Date(2019, 11, 1, 10, 00, 00, 0).getTime();
 
             //var distance = (6*60*60*1000) - (now - $modulaDiscountCode);
 
