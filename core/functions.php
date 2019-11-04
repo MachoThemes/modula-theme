@@ -284,10 +284,6 @@ function modula_before_header() {
 
 	global $post;
 
-	if ( is_page( 'pricing' ) ) {
-		get_template_part( 'template-parts/sections/promotion' );
-	}
-
 	if ( '' !== modula_get_option( 'top_bar_content' ) && modula_show_section( modula_get_option( 'top_bar_include' ), modula_get_option( 'top_bar_exclude' ) ) ) {
 		get_template_part( 'template-parts/sections/topbar' );
 	}
@@ -581,15 +577,18 @@ function modula_theme_get_all_extensions( $plans = array() ) {
 add_action( 'wp', 'modula_theme_pricing_discounts' );
 function modula_theme_pricing_discounts() {
 
-	if ( ! is_page( 'pricing' ) ) {
-		return;
-	}
+	if ( is_user_logged_in() ) {
+		$current_user = wp_get_current_user();
+		$discount = new EDD_Discount( '30OFF', true );
 
-	$cart_discounts = edd_get_cart_discounts();
+		if ( ! $discount->is_used( $current_user->user_email ) ) {
+			$cart_discounts[] = '30OFF';
+		}
 
-	if( ! in_array(  '30OFF',  $cart_discounts ) ) {
+	}else{
 		$cart_discounts[] = '30OFF';
 	}
+
 
 	if ( isset( $_GET['discount'] ) )  {
 		$discount = new EDD_Discount( $_GET['discount'], true );
@@ -597,6 +596,8 @@ function modula_theme_pricing_discounts() {
 			$cart_discounts[] = $_GET['discount'];
 		}
 	}
-
-	EDD()->session->set( 'cart_discounts', implode( '|', $cart_discounts ) );
+	if ( $cart_discounts ) {
+		EDD()->session->set( 'cart_discounts', implode( '|', $cart_discounts ) );
+	}
+	
 }
