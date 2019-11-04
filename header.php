@@ -7,6 +7,8 @@
 
 <body <?php body_class(); ?>>
 
+	<?php get_template_part( 'template-parts/sections/promotion' ); ?>
+
 	<section class="site-wrap">
 
 		<?php do_action('before_header');  ?>
