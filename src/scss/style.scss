@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'mixins';
-
 @import 'reset';
 @import 'general';
 @import 'typography';
@@ -9,15 +8,8 @@
 @import 'icons';
 @import 'grid';
 @import 'animations';
-
 @import 'page-templates';
-
-/* @import 'blocks/quotes/style';
-@import 'blocks/highlight/style';
-@import 'blocks/table/style';
-@import 'blocks/click-to-tweet/style'; */
 @import 'blocks/image/style';
-
 @import 'sections/base';
 @import 'sections/site-wrap';
 @import 'sections/topbar';
@@ -43,10 +35,8 @@
 @import 'sections/services-2';
 @import 'sections/promotion';
 @import 'sections/404';
-@import 'sections/related-posts';
 @import 'sections/stats';
 @import 'sections/compatibility';
-
 @import 'partials/main-menu';
 @import 'partials/footer-menu';
 @import 'partials/menu-icon';
@@ -76,9 +66,7 @@
 @import 'partials/scrollbar';
 @import 'partials/checkout-badges';
 @import 'partials/checkout-steps';
-@import 'partials/odometer';
 @import 'partials/sidebar';
-
 @import 'partials/illustrations/base';
 @import 'partials/illustrations/hero';
 @import 'partials/illustrations/illustration-2';

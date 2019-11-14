@@ -13,7 +13,7 @@ switch ( $layout ) :
 endswitch;
 ?>
 
-<?php get_template_part( 'template-parts/sections/related-posts' ); ?>
+
 <?php get_template_part( 'template-parts/sections/cta-single' ); ?>
 <?php comments_template( '', true ); ?>
 
