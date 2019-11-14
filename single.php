@@ -17,4 +17,4 @@ endswitch;
 <?php get_template_part( 'template-parts/sections/cta-single' ); ?>
 <?php comments_template( '', true ); ?>
 
-<?php get_footer(); ?>
+<?php get_footer('simple'); ?>
