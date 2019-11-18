@@ -93,7 +93,8 @@
 	box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.1);
 }
 
-.title-single__author a {
+.title-single__author a,
+title-single__comments a {
 	text-decoration: underline;
 }
 
