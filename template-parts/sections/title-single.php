@@ -10,7 +10,7 @@
 					<h1 class="h2 title-single__title mb-0"><?php echo esc_html( get_the_title() ); ?></h1>
 				</div>
 				<?php if( has_post_thumbnail() ): ?>
-					<div class="col-md-6">
+					<div class="col-md-10">
 						<figure class="wp-block-image alignwide mb-0 mt-0">
 							<div class="title-single__thumbnail">
 								<?php echo wp_get_attachment_image( get_post_thumbnail_id(), "full", false ); ?>

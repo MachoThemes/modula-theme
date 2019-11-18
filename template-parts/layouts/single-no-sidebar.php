@@ -8,14 +8,7 @@
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : ?>
 					<?php the_post(); ?>
-					<div class="col-md-3">
-						<?php if('1' == get_post_meta( get_the_id(), '_ez-toc-insert', true )): ?>
-							<div class="post-navigation">
-								<?php echo do_shortcode('[toc]');  ?>
-							</div>
-						<?php endif; ?>
-					</div>
-					<div class="post-content col-md-6">
+					<div class="post-content col-md-7">
 						<?php the_content(); ?>
 						<?php do_action( 'modula_after_single_content' );  ?>
 					</div>
