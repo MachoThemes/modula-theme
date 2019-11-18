@@ -2651,6 +2651,12 @@ img.alignleft, img.alignright, img.aligncenter {
   font-size: 12px;
   box-sizing: border-box; }
 
+.wp-block-image figcaption {
+  font-size: 14px;
+  color: #CCC;
+  font-weight: 400;
+  text-align: center; }
+
 video {
   margin: 0;
   max-width: 100%;
