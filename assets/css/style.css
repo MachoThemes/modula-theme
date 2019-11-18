@@ -1724,7 +1724,6 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
   .title-single__meta > span:last-child {
     margin-right: 0; }
   .title-single__meta a {
-    text-decoration: none;
     color: inherit; }
 
 .title-single__author img {
