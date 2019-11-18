@@ -2661,9 +2661,6 @@ video {
   line-height: 0;
   height: auto; }
 
-.post-content > h1, .post-content > h2, .post-content > h3, .post-content > h4, .post-content > h5, .post-content > h6 {
-  margin-top: 4rem; }
-
 .alignwide {
   margin-left: calc( -100vw / 2 + 100% / 2);
   margin-right: calc( -100vw / 2 + 100% / 2);
