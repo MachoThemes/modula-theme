@@ -27,6 +27,15 @@
 							by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_the_author(); ?></a>
 						</span>
 
+
+						<?php if( get_comments_number() !== '0' ) : ?>
+                            <span class="title-single__comments">
+								<a title="<?php echo esc_attr__( 'Comment on Post', 'modula' ); ?>" href="<?php echo esc_url( get_the_permalink( get_the_ID() ) ); ?>#comments">
+									<?php esc_html( comments_number( __( 'no comments', 'modula' ), __( 'one comment', 'modula' ), __( '% comments', 'modula' ) ) ); ?>
+								</a>
+							</span>
+						<?php endif; ?>
+
 						<span class="title-single__date">
 							<?php
 
@@ -36,13 +45,6 @@
 							?>
 						</span>
 
-						<?php if( get_comments_number() !== '0' ) : ?>
-							<span class="title-single__comments">
-								<a title="<?php echo esc_attr__( 'Comment on Post', 'modula' ); ?>" href="<?php echo esc_url( get_the_permalink( get_the_ID() ) ); ?>#comments">
-									<?php esc_html( comments_number( __( 'no comments', 'modula' ), __( 'one comment', 'modula' ), __( '% comments', 'modula' ) ) ); ?>
-								</a>
-							</span>
-						<?php endif; ?>
 
 						<span class="title-single__read">
 							<?php echo floor( modula_reading_time( get_the_content() ) / 60 ) + 1; ?> min read
