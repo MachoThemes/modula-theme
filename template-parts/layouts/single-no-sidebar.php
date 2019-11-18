@@ -4,7 +4,7 @@
 
 <section class="main">
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-center">
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : ?>
 					<?php the_post(); ?>
