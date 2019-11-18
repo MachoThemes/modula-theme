@@ -2628,33 +2628,29 @@ img {
 img.alignleft, img.alignright, img.aligncenter {
     margin-bottom: 12px;
 }
-
-
+*/
 .wp-caption {
-    margin-bottom: 15px;
-    padding: 0;
-    max-width: 100%;
-    line-height: 0em;
-    box-sizing: border-box;
-}
+  margin-bottom: 15px;
+  padding: 0;
+  max-width: 100%;
+  line-height: 0em;
+  box-sizing: border-box; }
 
 .wp-caption img {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    line-height: 0em;
-}
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  line-height: 0em; }
 
 .wp-caption .wp-caption-text {
-    margin: 10px 0 0;
-    padding: 0 10px 0;
-    text-align: left;
-    color: #888;
-    line-height: 1.4em;
-    font-size: 12px;
-    box-sizing: border-box;
-}
- */
+  margin: 10px 0 0;
+  padding: 0 10px 0;
+  text-align: left;
+  color: #888;
+  line-height: 1.4em;
+  font-size: 12px;
+  box-sizing: border-box; }
+
 video {
   margin: 0;
   max-width: 100%;
