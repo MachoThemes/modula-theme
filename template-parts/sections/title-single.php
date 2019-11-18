@@ -20,7 +20,7 @@
 					<div class="clear"></div>
 				<?php endif; ?>
 
-				<div class="col-md-6">
+				<div class="col-md-7">
 					<div class="title-single__meta mb-3">
 						<span class="title-single__author">
 							<?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
