@@ -7,7 +7,7 @@
 
 <body <?php body_class(); ?>>
 
-	<?php get_template_part( 'template-parts/sections/promotion' ); ?>
+	<?php //get_template_part( 'template-parts/sections/promotion' ); ?>
 
 	<section class="site-wrap">
 

@@ -588,7 +588,7 @@
 	}
 
 
-	add_action( 'wp', 'modula_theme_pricing_discounts' );
+	//add_action( 'wp', 'modula_theme_pricing_discounts' );
 	function modula_theme_pricing_discounts() {
 
 		if ( is_user_logged_in() ) {
