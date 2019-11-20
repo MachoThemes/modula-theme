@@ -11,6 +11,7 @@
 			     is_page() &&
 			     ! is_page_template( 'page-templates/pricing.php' ) &&
 			     ! is_page_template( 'page-templates/pricing-2.php' ) &&
+			     ! is_page_template( 'page-templates/pricing-ltd.php' ) &&
 			     ! is_page_template( 'page-templates/checkout.php' ) &&
 			     ! is_page_template( 'page-templates/account.php' ) &&
 			     ! is_page_template( 'page-templates/purchase-confirmation.php' ) &&
