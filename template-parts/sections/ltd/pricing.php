@@ -76,7 +76,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 				<div class="col-xs-4 <?php echo isset( $download->higher_plan ) && $download->higher_plan === false ? 'pricing-table-inactive': ''; ?>">
 
-					<h4 class="pricing-table__title mb-2"><?php echo explode( '-', $download->post_title )[1]; ?></h4>
+					<h4 class="pricing-table__title mb-2"><?php echo $download->post_title; ?></h4>
 
 					<?php if ( $upgrading && $download->higher_plan ): ?>
 						<div class="pricing-table__initial-price">
