@@ -1,6 +1,6 @@
 <?php /* Template Name: Pricing LT */ ?>
 
-<?php get_header(); ?>
+<?php get_header('3'); ?>
 <?php get_template_part( 'template-parts/sections/ltd/hero-2' ); ?>
 <?php get_template_part( 'template-parts/sections/highlights' ); ?>
 
