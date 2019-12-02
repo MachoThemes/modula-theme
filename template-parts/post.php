@@ -19,10 +19,6 @@
 			<?php the_excerpt(); ?>
 		</div>
 
-		<div class="post__footer">
-			<a class="button button--link mb-0" href="<?php echo esc_url( get_the_permalink() ); ?>">Continue Reading</a>
-		</div>
-
 	</div>
 
 </article>
