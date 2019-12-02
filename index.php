@@ -70,7 +70,4 @@
 $wp_query = null;
 $wp_query = $temp_query;
 ?>
-
-<?php get_template_part( 'template-parts/sections/cta' ); ?>
-
 <?php get_footer(); ?>
