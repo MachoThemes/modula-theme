@@ -35,6 +35,5 @@
 	</div>
 </section>
 
-<?php get_template_part( 'template-parts/sections/cta' ); ?>
 
 <?php get_footer(); ?>
