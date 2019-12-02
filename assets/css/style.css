@@ -1654,15 +1654,6 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
     font-weight: 400;
     margin-bottom: 0.5em; }
 
-.title-section__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../images/layer.png) no-repeat right top;
-  background-size: cover; }
-
 .title-section__excerpt {
   font-size: 1.125rem; }
   .title-section__excerpt a {

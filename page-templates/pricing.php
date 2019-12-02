@@ -3,7 +3,6 @@
 <?php get_header('3'); ?>
 
 <section class="title-section">
-	<div class="title-section__bg"></div>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-8">
