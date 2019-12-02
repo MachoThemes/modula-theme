@@ -235,59 +235,7 @@
 	}
 
 
-	function modula_docs_breadcrumbs() {
-		global $post;
 
-		$html = '';
-		$args = apply_filters(
-			'wedocs_breadcrumbs',
-			array(
-				'delimiter' => '<li class="delimiter"><i class="wedocs-icon wedocs-icon-angle-right"></i></li>',
-				'home'      => __( 'Home', 'wedocs' ),
-				'before'    => '<li><span class="current">',
-				'after'     => '</span></li>',
-			)
-		);
-
-		$breadcrumb_position = 1;
-
-		$html .= '<ul class="wedocs-breadcrumb mb-sm-0" itemscope itemtype="http://schema.org/BreadcrumbList">';
-		//$html .= '<li><i class="wedocs-icon wedocs-icon-home"></i></li>';
-		//$html .= wedocs_get_breadcrumb_item( $args['home'], home_url( '/' ), $breadcrumb_position );
-		//$html .= $args['delimiter'];
-
-		$docs_home = wedocs_get_option( 'docs_home', 'wedocs_settings' );
-
-		if ( $docs_home ) {
-			$breadcrumb_position ++;
-
-			$html .= wedocs_get_breadcrumb_item( __( 'Docs', 'wedocs' ), get_permalink( $docs_home ), $breadcrumb_position );
-			$html .= $args['delimiter'];
-		}
-
-		if ( $post->post_type == 'docs' && $post->post_parent ) {
-			$parent_id   = $post->post_parent;
-			$breadcrumbs = array();
-
-			while ( $parent_id ) {
-				$breadcrumb_position ++;
-
-				$page          = get_post( $parent_id );
-				$breadcrumbs[] = wedocs_get_breadcrumb_item( get_the_title( $page->ID ), get_permalink( $page->ID ), $breadcrumb_position );
-				$parent_id     = $page->post_parent;
-			}
-
-			$breadcrumbs = array_reverse( $breadcrumbs );
-			for ( $i = 0; $i < count( $breadcrumbs ); $i ++ ) {
-				$html .= $breadcrumbs[ $i ];
-				$html .= ' ' . $args['delimiter'] . ' ';
-			}
-		}
-
-		$html .= '</ul>';
-
-		echo apply_filters( 'wedocs_breadcrumbs_html', $html, $args );
-	}
 
 	add_action( 'before_header', 'modula_before_header', 10, 2 );
 	function modula_before_header() {
