@@ -15,10 +15,6 @@
 			<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 		</h5>
 
-		<div class="post__excerpt">
-			<?php the_excerpt(); ?>
-		</div>
-
 	</div>
 
 </article>
