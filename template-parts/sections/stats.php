@@ -21,7 +21,7 @@
 					<div class="col-xs-12 col-sm-6">
 						<div class="stats-section__stat mb-3">
 							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/stats/downloads.svg' ); ?>
-							<h6 class="mb-0">452,043</h6>
+							<h6 class="mb-0">535,051</h6>
 							<p class="mb-0">all time downloads</p>
 						</div><!-- stats-section__stat -->
 					</div><!-- col -->
