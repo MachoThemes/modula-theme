@@ -29,7 +29,7 @@
 							<?php
 
 							$d = get_option( 'date_format' );
-							echo esc_html__('Updated on: ', 'modula') . get_post_modified_time( $d );
+							echo esc_html__('Updated on:', 'modula') . ' ' . get_post_modified_time( $d );
 
 							?>
 						</span>
