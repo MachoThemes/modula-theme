@@ -15,7 +15,7 @@ class Theme_Widget_Popular_Posts extends WP_Widget {
 			'classname'   => 'widget--popular-posts',
 			'description' => 'displays popular posts',
 		);
-		$this->WP_Widget( 'popular_posts', 'Popular Posts', $widget_ops );
+		parent::__construct( 'popular_posts', 'Popular Posts', $widget_ops );
 	}
 
 	function widget( $args, $instance ) {
