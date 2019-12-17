@@ -31,7 +31,11 @@
 							$d = get_option( 'date_format' );
 							echo esc_html__('Updated on:', 'modula') . ' ' . get_post_modified_time( $d );
 
+                            echo get_post_modified_time();
+
 							?>
+
+
 						</span>
 
 						<?php if ( get_comments_number() !== '0' ) : ?>
