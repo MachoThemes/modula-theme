@@ -26,13 +26,13 @@
 
 
 						<span class="title-single__date">
+                            <?php echo esc_html__('Updated on:', 'modula') ?>
 							<?php
 
 							$d = get_option( 'date_format' );
-							echo esc_html__('Updated on:', 'modula') . ' ' . get_post_modified_time( $d );
 
 							?>
-
+                            <time class="updated" datetime="<?php echo get_post_modified_time( 'Y-m-d' ) ?>" itemprop="datePublished" pubdate="<?php the_date( 'Y-m-d' ) ?>"><?php echo get_the_date( $d ) ?></time>
 
 						</span>
 
