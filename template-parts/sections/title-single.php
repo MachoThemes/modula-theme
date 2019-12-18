@@ -32,7 +32,7 @@
 							$d = get_option( 'date_format' );
 
 							?>
-                            <time class="updated" datetime="<?php echo get_post_modified_time( 'Y-m-d' ) ?>" itemprop="datePublished" pubdate="<?php the_date( 'Y-m-d' ) ?>"><?php echo get_the_date( $d ) ?></time>
+                            <time class="updated" datetime="<?php echo get_post_modified_time( 'Y-m-d' ) ?>" itemprop="datePublished" pubdate="<?php the_date( 'Y-m-d' ) ?>"><?php echo get_post_modified_time( $d ) ?></time>
 
 						</span>
 
