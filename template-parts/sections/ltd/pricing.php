@@ -179,6 +179,12 @@ $addons = modula_theme_get_all_extensions( $downloads );
 			</div>
 		</div><!-- row -->
 
+        <div class="pricing-table row">
+            <div class="pricing-breaker">
+                <h4>Modula Extensions</h4>
+            </div>
+        </div><!--row -->
+
 		<div class="pricing-table row">
 			<div class="col-xs-4">
 				Gallery Filters
