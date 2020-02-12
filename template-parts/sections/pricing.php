@@ -212,20 +212,20 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				Support for 1 full year
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">In case you ever run into issues with our plugin (unlikely), feel free to reach out to our support at any time.</span>
+					<span class="tooltip__text">In case you ever run into issues with our plugin (unlikely), feel free to reach out to our support at any time. Priority support - tickets get handled in 12 hours or less. Regular support - tickets get handled in 36 hours or less. On weekends, response time might slow down to 48hours. </span>
 				</span>
 			</div>
 			<div class="col-xs-3">
-				<i class="icon-ok"></i>
+                <strong>Priority</strong>
 			</div>
 			<div class="col-xs-3">
-				<i class="icon-ok"></i>
+				<strong>Priority</strong>
 			</div>
 			<div class="col-xs-3">
-				<i class="icon-ok"></i>
+				<strong>Regular</strong>
 			</div>
 			<div class="col-xs-3">
-				<i class="icon-ok"></i>
+				<strong>Regular</strong>
 			</div>
 		</div><!-- row -->
 
