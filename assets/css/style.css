@@ -2197,7 +2197,11 @@ html body .pricing-table.row .pricing-breaker {
   border: 1px solid #CCC;
   text-align: center;
   padding: 15px 0;
-  font-weight: 900; }
+  font-weight: 900;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  html body .pricing-table.row .pricing-breaker h4 {
+    margin-bottom: 0; }
 
 .lite-vs-pro-section {
   padding: 3.75rem 0;

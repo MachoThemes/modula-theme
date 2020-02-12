@@ -39,7 +39,7 @@ module.exports = function(grunt){
                 ]
             },
             cssmin: {
-                src: ['layout/css/*.min.css']
+                src: ['assets/css/*.min.css']
             },
             jsmin: {
                 src: [
@@ -169,7 +169,7 @@ module.exports = function(grunt){
             target: {
                 files: [{
                     expand: true,
-                    cwd: 'layout/css',
+                    cwd: 'assets/css',
                     src: ['*.css', '!*.min.css', '!style-overrides.css'],
                     dest: 'layout/css',
                     ext: '.min.css'
