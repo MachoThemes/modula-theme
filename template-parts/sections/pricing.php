@@ -222,10 +222,10 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				<strong>Priority</strong>
 			</div>
 			<div class="col-xs-3">
-				<strong>Regular</strong>
+				Regular
 			</div>
 			<div class="col-xs-3">
-				<strong>Regular</strong>
+				Regular
 			</div>
 		</div><!-- row -->
 
