@@ -278,7 +278,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 			<div class="row pricing-table <?php echo isset( $utm_medium ) && $utm_medium === get_post_field( 'post_name' ) ? 'pricing-table--highlight' : ''; ?>">
 				<div class="col-xs-3">
-					<?php echo modula_get_post_meta( get_the_id(), 'pricing_title' ) != '' ? modula_get_post_meta( get_the_id(), 'pricing_title' ) : strstr( get_the_title()," " ) . ' Extension'; ?>
+					<?php echo modula_get_post_meta( get_the_id(), 'pricing_title' ) != '' ? modula_get_post_meta( get_the_id(), 'pricing_title' ) : get_the_title(); ?>
 
 					<?php if ( modula_get_post_meta( get_the_id(), 'tooltip' ) != '' || has_excerpt() ): ?>
 						<span class="tooltip">
