@@ -2192,6 +2192,13 @@ title-single__comments a {
     width: 100%;
     overflow: scroll; } }
 
+html body .pricing-table.row .pricing-breaker {
+  background-color: #DDD;
+  border: 1px solid #CCC;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 900; }
+
 .lite-vs-pro-section {
   padding: 3.75rem 0;
   background: #f7f8f9; }
