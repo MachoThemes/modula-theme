@@ -185,6 +185,29 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 		</div><!-- row -->
 
+
+        <div class="pricing-table row">
+            <div class="col-xs-3">
+                Support for 1 full year
+                <span class="tooltip">
+					<i class="icon-question-circle"></i>
+					<span class="tooltip__text">In case you ever run into issues with our plugin (unlikely), feel free to reach out to our support at any time. Priority support - tickets get handled in 12 hours or less. Regular support - tickets get handled in 36 hours or less. On weekends, response time might slow down to 48hours. </span>
+				</span>
+            </div>
+            <div class="col-xs-3">
+                <strong>Priority</strong>
+            </div>
+            <div class="col-xs-3">
+                <strong>Priority</strong>
+            </div>
+            <div class="col-xs-3">
+                Regular
+            </div>
+            <div class="col-xs-3">
+                Regular
+            </div>
+        </div><!-- row -->
+
 		<div class="pricing-table row">
 			<div class="col-xs-3">
 				Updates for 1 full year
@@ -207,27 +230,6 @@ $addons = modula_theme_get_all_extensions( $downloads );
 			</div>
 		</div><!-- row -->
 
-		<div class="pricing-table row">
-			<div class="col-xs-3">
-				Support for 1 full year
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">In case you ever run into issues with our plugin (unlikely), feel free to reach out to our support at any time. Priority support - tickets get handled in 12 hours or less. Regular support - tickets get handled in 36 hours or less. On weekends, response time might slow down to 48hours. </span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-                <strong>Priority</strong>
-			</div>
-			<div class="col-xs-3">
-				<strong>Priority</strong>
-			</div>
-			<div class="col-xs-3">
-				Regular
-			</div>
-			<div class="col-xs-3">
-				Regular
-			</div>
-		</div><!-- row -->
 
         <div class="pricing-table row">
             <div class="pricing-breaker">
