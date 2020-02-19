@@ -230,8 +230,6 @@
             </div>
         </div><!-- row -->
 
-        
-
         <div class="pricing-table row">
             <div class="col-xs-4">
                 Gallery Filters
