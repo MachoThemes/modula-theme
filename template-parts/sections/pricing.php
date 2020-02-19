@@ -128,51 +128,45 @@ $addons = modula_theme_get_all_extensions( $downloads );
 		</div>
 
 		<div class="row pricing-table">
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				Unlimited Galleries
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
 					<span class="tooltip__text">The number of galleries you can create on your website.</span>
 				</span>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
 		</div><!-- row -->
 
 		<div class="pricing-table row">
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				Unlimited Images
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
 					<span class="tooltip__text">Any gallery created with Modula can have as many images as you want. </span>
 				</span>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
 		</div><!-- row -->
 
 		<div class="pricing-table row">
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				Supported Sites
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
@@ -182,7 +176,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 			<?php foreach( $downloads as $download ): ?>
 
-				<div class="col-xs-3">
+				<div class="col-xs-4">
 					<?php echo modula_nr_of_sites( $download->ID ); ?>
 				</div>
 
@@ -192,20 +186,17 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 
         <div class="pricing-table row">
-            <div class="col-xs-3">
+            <div class="col-xs-4">
                 Support for 1 full year
                 <span class="tooltip">
 					<i class="icon-question-circle"></i>
 					<span class="tooltip__text">In case you ever run into issues with our plugin (unlikely), feel free to reach out to our support at any time. Priority support - tickets get handled in 12 hours or less. Regular support - tickets get handled in 36 hours or less. On weekends, response time might slow down to 48hours. </span>
 				</span>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-4">
                 <strong>Priority</strong>
             </div>
-            <div class="col-xs-3">
-                <strong>Priority</strong>
-            </div>
-            <div class="col-xs-3">
+            <div class="col-xs-4">
                 Regular
             </div>
             <div class="col-xs-3">
@@ -214,23 +205,20 @@ $addons = modula_theme_get_all_extensions( $downloads );
         </div><!-- row -->
 
 		<div class="pricing-table row">
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				Updates for 1 full year
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
 					<span class="tooltip__text">You’ll have access to free updates for 1 year or until you cancel your yearly subscription.</span>
 				</span>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
 		</div><!-- row -->
@@ -243,45 +231,39 @@ $addons = modula_theme_get_all_extensions( $downloads );
         </div><!--row -->
 
 		<div class="pricing-table row">
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				Gallery Filters
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
 					<span class="tooltip__text">Easily create <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'demo/filters' ) ) ); ?>">filterable WordPress galleries</a> with Modula.</span>
 				</span>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
 		</div><!-- row -->
 
 		<div class="pricing-table row <?php echo isset( $utm_medium ) && $utm_medium === 'sorting-metabox' ? 'pricing-table--highlight' : ''; ?>">
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				Gallery Sorting
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
 					<span class="tooltip__text">Multiple choices for sorting out images from your gallery: manual, date created, date modified, alphabetically, reverse or random</span>
 				</span>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<i class="icon-ok"></i>
 			</div>
 		</div><!-- row -->
@@ -302,7 +284,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				</div>
 
 				<?php foreach ( $downloads as $download ): ?>
-					<div class="col-xs-3">
+					<div class="col-xs-4">
 						<?php if ( false === array_search( get_the_id(), $download->get_bundled_downloads() ) ): ?>
 							<i class="icon-cancel"></i>
 						<?php else: ?>
@@ -316,13 +298,13 @@ $addons = modula_theme_get_all_extensions( $downloads );
 		<?php endwhile; ?>
 
 		<div class="pricing-table pricing-table--last row">
-			<div class="col-xs-3 text-left">
+			<div class="col-xs-4 text-left">
 				<span class="mb-0"><small>Prices are listed in USD<br/> and don't include VAT</small></span>
 			</div>
 
 			<?php foreach( $downloads as $download ): ?>
 
-				<div class="col-xs-3 <?php echo isset( $download->higher_plan ) && $download->higher_plan === false ? 'pricing-table-inactive': ''; ?>">
+				<div class="col-xs-4 <?php echo isset( $download->higher_plan ) && $download->higher_plan === false ? 'pricing-table-inactive': ''; ?>">
 
 					<?php if ( $upgrading && $download->higher_plan ): ?>
 						<a class="button pricing-table__button" href="<?php echo esc_url( edd_sl_get_license_upgrade_url( $license_by_key->ID, $download->upgrade_id ) ); ?>" title="Upgrade">Upgrade</a>
