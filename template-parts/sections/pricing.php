@@ -7,7 +7,7 @@
 //$download4_id = 219279;
 
 //wp-modula.com pricing plans
-$download1_id = 256715;
+//$download1_id = 256715;
 $download2_id = 256712;
 $download3_id = 256708;
 $download4_id = 405675;
@@ -18,7 +18,12 @@ $utm_medium = isset( $_GET['utm_medium'] ) ? $_GET['utm_medium'] : '';
 $upgrading = false;
 
 //Agency, Business, Trio, Basic
-$download_ids = array( $download1_id, $download2_id, $download3_id, $download4_id );
+$download_ids = array(
+        //$download1_id,
+        $download2_id,
+        $download3_id,
+        $download4_id
+);
 
 $cart_discounts = edd_get_cart_discounts();
 
@@ -74,7 +79,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 			<?php foreach( $downloads as $download ): ?>
 
-				<div class="col-xs-3 <?php echo isset( $download->higher_plan ) && $download->higher_plan === false ? 'pricing-table-inactive': ''; ?>">
+				<div class="col-xs-4 <?php echo isset( $download->higher_plan ) && $download->higher_plan === false ? 'pricing-table-inactive': ''; ?>">
 
 					<h4 class="pricing-table__title mb-2"><?php echo explode( '-', $download->post_title )[1]; ?></h4>
 
