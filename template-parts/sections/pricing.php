@@ -63,7 +63,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 	<div class="container main-table">
 
 		<div class="pricing-table pricing-table--header row">
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 
 				<div class="pricing-table__message visible-xs waypoint">
 					<div class="row align-items-center">
