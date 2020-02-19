@@ -199,7 +199,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
             <div class="col-xs-4">
                 Regular
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-4">
                 Regular
             </div>
         </div><!-- row -->
@@ -272,7 +272,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 			<?php $addons->the_post(); ?>
 
 			<div class="row pricing-table <?php echo isset( $utm_medium ) && $utm_medium === get_post_field( 'post_name' ) ? 'pricing-table--highlight' : ''; ?>">
-				<div class="col-xs-3">
+				<div class="col-xs-4">
 					<?php echo modula_get_post_meta( get_the_id(), 'pricing_title' ) != '' ? modula_get_post_meta( get_the_id(), 'pricing_title' ) : get_the_title(); ?>
 
 					<?php if ( modula_get_post_meta( get_the_id(), 'tooltip' ) != '' || has_excerpt() ): ?>
