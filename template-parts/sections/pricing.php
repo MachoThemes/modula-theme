@@ -7,7 +7,7 @@
 //$download4_id = 219279;
 
 //wp-modula.com pricing plans
-//$download1_id = 256715;
+$download1_id = 256715;
 $download2_id = 256712;
 $download3_id = 256708;
 $download4_id = 405675;
@@ -19,7 +19,7 @@ $upgrading = false;
 
 //Agency, Business, Trio, Basic
 $download_ids = array(
-        //$download1_id,
+        $download1_id,
         $download2_id,
         $download3_id,
         $download4_id
