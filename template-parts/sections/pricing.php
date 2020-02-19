@@ -230,14 +230,7 @@
             </div>
         </div><!-- row -->
 
-
-        <div class="pricing-table row">
-            <div class="col-xs-12">
-                <div class="pricing-breaker">
-                    <h4>Modula Extensions</h4>
-                </div>
-            </div>
-        </div><!--row -->
+        
 
         <div class="pricing-table row">
             <div class="col-xs-4">
