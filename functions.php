@@ -54,3 +54,38 @@ function modula_hide_licenses( $licenses, $payment, $edd_receipt_args ){
 	return $new_licenses;
 
 }
+add_action( 'edd_add_email_tags', 'modula_email_tags', 101 );
+function modula_email_tags(){
+
+	edd_remove_email_tag( 'license_keys' );
+	edd_add_email_tag( 'license_keys', __( 'Show all purchased licenses', 'edd_sl' ), 'modula_licenses_tag' );
+
+}
+
+function modula_licenses_tag( $payment_id = 0 ){
+
+	$keys_output  = '';
+	$license_keys = edd_software_licensing()->get_licenses_of_purchase( $payment_id );
+
+	if( $license_keys ) {
+		foreach( $license_keys as $license ) {
+
+			if ( 0 != $license->parent ) {
+				continue;
+			}
+
+			$price_name  = '';
+
+			if( $license->price_id ) {
+
+				$price_name = " - " . edd_get_price_option_name( $license->download_id, $license->price_id );
+
+			}
+
+			$keys_output .=  $license->get_download()->get_name() . $price_name . ": " . $license->key . "\n\r";
+		}
+	}
+
+	return $keys_output;
+
+}
