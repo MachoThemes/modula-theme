@@ -59,6 +59,7 @@ function modula_email_tags(){
 
 	edd_remove_email_tag( 'license_keys' );
 	edd_add_email_tag( 'license_keys', __( 'Show all purchased licenses', 'edd_sl' ), 'modula_licenses_tag' );
+	edd_add_email_tag( 'modula_license_keys', __( 'Show all purchased licenses', 'edd_sl' ), 'modula_licenses_tag' );
 
 }
 
