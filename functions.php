@@ -39,3 +39,18 @@ add_action( 'init', 'jp_disable_billing_details' );
 
 add_filter( 'edd-vat-use-checkout-billing-template', '__return_false' );
 add_filter( 'edd_require_billing_address', '__return_false' );
+
+// Modula Hide Bundle licenses
+add_filter( 'edd_sl_licenses_of_purchase', 'modula_hide_licenses', 99, 3 );
+function modula_hide_licenses( $licenses, $payment, $edd_receipt_args ){
+	$new_licenses = array();
+
+	foreach ($licenses as $license ) {
+		if ( 0 == $license->parent ) {
+			$new_licenses[] = $license;
+		}
+	}
+
+	return $new_licenses;
+
+}
