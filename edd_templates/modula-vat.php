@@ -11,12 +11,12 @@
 
 			<p id="edd-card-country-wrap">
 				<label for="billing_country" class="edd-label">
-					<?php _e( 'Billing Country', VAT_EDD_DOMAIN_NAME ); ?>
+					<?php _e( 'Billing Country', 'modula-theme' ); ?>
 					<?php if( edd_field_is_required( 'billing_country' ) ) { ?>
 						<span class="edd-required-indicator">*</span>
 					<?php } ?>
 				</label>
-				<span class="edd-description"><?php _e( 'The country for your billing address.', VAT_EDD_DOMAIN_NAME ); ?></span>
+				<span class="edd-description"><?php _e( 'The country for your billing address.', 'modula-theme' ); ?></span>
 				<select name="billing_country" id="billing_country" data-nonce="<?php echo wp_create_nonce( 'edd-country-field-nonce' ); ?>" class="billing_country edd-select">
 					<?php
 
