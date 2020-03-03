@@ -6,10 +6,10 @@
 //$download3_id = 219340;
 //$download4_id = 219279;
 
-//wp-modula.com pricing plans
+//wp-modula.com pricing plans 
 $download1_id = 256715;
 $download2_id = 256712;
-$download3_id = 256708;
+$download3_id = 424564;
 $download4_id = 405675;
 
 wp_enqueue_script( 'waypoints' );
