@@ -90,3 +90,6 @@ function modula_licenses_tag( $payment_id = 0 ){
 	return $keys_output;
 
 }
+
+// EU VAT
+require_once ANTREAS_CORE . 'modula-vat-handle.php';

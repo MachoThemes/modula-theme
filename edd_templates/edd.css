@@ -283,6 +283,11 @@
 		float: right;
 	}
 
+	#edd-card-vat-wrap {
+		width: calc( 50% - 15px );
+		float: right;
+	}
+
 	#edd-card-state-wrap {
 		width: calc( 50% - 15px );
 		float: right;

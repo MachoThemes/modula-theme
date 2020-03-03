@@ -48,6 +48,10 @@ if ( ! function_exists( 'antreas_scripts_front' ) ) {
 		wp_enqueue_script( 'modula-index', ANTREAS_ASSETS_JS . 'index.js', array( 'jquery' ), ANTREAS_VERSION, true );
 		wp_localize_script( 'modula-index', 'modula', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
+		if ( function_exists( 'edd_is_checkout' ) && edd_is_checkout() ) {
+			wp_enqueue_script( 'modula-checkout', ANTREAS_ASSETS_JS . 'checkout.js', array( 'jquery' ), ANTREAS_VERSION, true );
+		}
+
 	}
 }
 
