@@ -22,16 +22,9 @@ function modula_get_tax_rate( $rate, $country, $state ){
 
 	$user_address = edd_get_customer_address();
 
-	if( empty( $country ) ) {
-		if( ! empty( $_POST['billing_country'] ) ) {
-			$country = $_POST['billing_country'];
-		} elseif( is_user_logged_in() && ! empty( $user_address['country'] ) ) {
-			$country = $user_address['country'];
-		}elseif ( isset( $_SERVER["HTTP_CF_IPCOUNTRY"] ) ) {
-			$country = $_SERVER["HTTP_CF_IPCOUNTRY"];
-		}
-		$country = ! empty( $country ) ? $country : edd_get_shop_country();
-	}
+    if ( isset( $_SERVER["HTTP_CF_IPCOUNTRY"] ) && empty( $_POST['billing_country'] ) ) {
+        $country = $_SERVER["HTTP_CF_IPCOUNTRY"];
+    }
 
 	if( empty( $state ) ) {
 		if( ! empty( $_POST['state'] ) ) {
