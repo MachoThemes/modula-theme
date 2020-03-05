@@ -118,7 +118,7 @@ global $post; ?>
 			<tr class="edd_cart_footer_row edd_cart_tax_row"<?php if( ! edd_is_cart_taxed() ) echo ' style="display:none;"'; ?>>
 				<?php do_action( 'edd_checkout_table_tax_first' ); ?>
 				<th colspan="<?php echo edd_checkout_cart_columns(); ?>" class="edd_cart_tax">
-					<?php _e( 'Tax', 'easy-digital-downloads' ); ?>:&nbsp;<span class="edd_cart_tax_amount" data-tax="<?php echo edd_get_cart_tax( false ); ?>"><?php echo esc_html( edd_cart_tax() ); ?></span>
+					<?php _e( 'VAT', 'easy-digital-downloads' ); ?>&nbsp;<?php echo modula_get_country() ?>:&nbsp;<span class="edd_cart_tax_amount" data-tax="<?php echo edd_get_cart_tax( false ); ?>"><?php echo esc_html( edd_cart_tax() ); ?></span>
 				</th>
 				<?php do_action( 'edd_checkout_table_tax_last' ); ?>
 			</tr>

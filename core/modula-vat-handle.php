@@ -245,3 +245,28 @@ function modula_get_pdf_style(){
 
     return $style;
 }
+
+add_filter( 'edd_vat_cart_label_tax_rate', 'modula_change_vat_label_tax', 10, 3 );
+function modula_change_vat_label_tax( $label, $cart_tax, $formatted_rate ){
+
+    $label = sprintf( __( '%2$s(%1$s%%)', 'edd-eu-vat' ), $formatted_rate, $cart_tax );
+    return $label;
+
+}
+
+function modula_get_country(){
+
+    $user_address = edd_get_customer_address();
+
+    if( ! empty( $_POST['billing_country'] ) ) {
+        $country = $_POST['billing_country'];
+    } elseif( is_user_logged_in() && ! empty( $user_address['country'] ) ) {
+        $country = $user_address['country'];
+    }elseif ( isset( $_SERVER["HTTP_CF_IPCOUNTRY"] ) && empty( $_POST['billing_country'] ) ) {
+        $country = $_SERVER["HTTP_CF_IPCOUNTRY"];
+    }
+
+    $country = ! empty( $country ) ? $country : edd_get_shop_country();
+    return $country;
+
+}
