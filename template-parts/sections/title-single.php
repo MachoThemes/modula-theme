@@ -10,8 +10,8 @@
                     <h1 class="h2 title-single__title mb-0"><?php echo esc_html( get_the_title() ); ?></h1>
                 </div>
 				<?php if ( has_post_thumbnail() ): ?>
-                    <div class="col-md-10">
-                        <figure class="wp-block-image alignwide mb-0 mt-0">
+                    <div class="col-md-12">
+                        <figure class="wp-block-image alignfull mb-0 mt-0">
                             <div class="title-single__thumbnail">
 								<?php echo wp_get_attachment_image( get_post_thumbnail_id(), "full", false ); ?>
                             </div>
@@ -20,7 +20,7 @@
                     <div class="clear"></div>
 				<?php endif; ?>
 
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <div class="title-single__meta mb-3">
 
 
@@ -46,11 +46,14 @@
 						<?php endif; ?>
 
 
-                        <span class="title-single__read">
-							<?php echo floor( modula_reading_time( get_the_content() ) / 60 ) + 1; ?> min read
-						</span>
+                     
 
                     </div>
+                    <div class="time-to-read">
+                    <span class="title-single__read">
+							<?php echo floor( modula_reading_time( get_the_content() ) / 60 ) + 1; ?> min read
+						</span>
+                        </div>
                 </div>
             </div>
         </div>
