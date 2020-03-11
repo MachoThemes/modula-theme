@@ -46,14 +46,11 @@
 						<?php endif; ?>
 
 
-                     
-
-                    </div>
-                    <div class="time-to-read">
-                    <span class="title-single__read">
+                        <span class="title-single__read">
 							<?php echo floor( modula_reading_time( get_the_content() ) / 60 ) + 1; ?> min read
 						</span>
-                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
