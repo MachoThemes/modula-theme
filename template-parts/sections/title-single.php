@@ -20,7 +20,7 @@
                     <div class="clear"></div>
 				<?php endif; ?>
 
-                <div class="col-md-12">
+                <div class="col-md-7">
                     <div class="title-single__meta mb-3">
 
 
