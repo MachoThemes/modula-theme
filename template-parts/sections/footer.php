@@ -38,7 +38,7 @@
 				?>
 			</div>
 			<div class="col-sm-6 text-sm-right">
-				<p class="mb-3 mb-sm-0">© 2017-<?php echo date("Y"); ?> MachoThemes. All rights reserved. A <a href="https://www.machothemes.com" target="_blank">MachoThemes</a> product</p>
+				<p class="mb-3 mb-sm-0">© 2017-<?php echo date("Y"); ?> WP Chill. All rights reserved. A <a href="https://wpchill.com" target="_blank">WP Chill</a> product</p>
 			</div>
 		</div>
 	</div>
