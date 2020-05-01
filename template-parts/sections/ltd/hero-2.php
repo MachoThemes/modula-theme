@@ -11,7 +11,7 @@
                 <p class="mb-3">
                 <div class="stars mr-2"></div><strong>70,000+</strong> Active Users
                 </p>
-                <a class="button button--xl mr-1 mb-md-0" href="#pricing">Buy Modula Gallery</a>
+                <a class="button button--xl mr-1 mb-md-0" href="#pricing">Get Started Now</a>
             </div>
 
             <div class="col-md-6" style="z-index:0;">

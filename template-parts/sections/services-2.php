@@ -127,7 +127,7 @@
 
 		<div class="row">
 			<div class="col-xs-12 text-center">
-				<a class="button button--xl mb-0" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">Buy Modula Gallery</a>
+				<a class="button button--xl mb-0" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">Get Started Now</a>
 			</div>
 		</div>
 
