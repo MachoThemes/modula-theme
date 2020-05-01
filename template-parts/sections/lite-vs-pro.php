@@ -34,7 +34,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 						</div><!-- pricing-table__message -->
 					</div>
 					<div class="col-xs-4">
-						<h4 class="pricing-table__title">Agency, Business, Plus or Starter</h4>
+						<h4 class="pricing-table__title">Agency, Business, Trio or Starter</h4>
 						<br />
 						<a class="button pricing-table__button" href="#pricing">Upgrade Now</a>
 					</div>
@@ -53,7 +53,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 						<i class="icon-ok"></i>
 					</div>
 					<div class="col-xs-4">
-						<i class="icon-cancel"></i>
+						<i class="icon-ok"></i>
 					</div>
 				</div><!-- row -->
 
@@ -69,12 +69,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					</div>
 				</div><!-- row -->
 
-                <div class="pricing-table row">
-                    <div class="pricing-breaker">
-                        <h4>Modula Extensions</h4>
-                    </div>
-                </div><!--row -->
-
+    
 				<div class="pricing-table row">
 					<div class="col-xs-4">
 						Gallery Filters
