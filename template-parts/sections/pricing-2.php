@@ -99,13 +99,6 @@
 									<div class="col-md-4">
 										<ul class="list--checkmark">
 											<li>
-												6 Included Lightbox Styles
-												<span class="tooltip">
-													<i class="icon-question-circle ml-2"></i>
-													<span class="tooltip__text">Modula comes with 6 easy-to-use <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'demo/lightbox-gallery' ) ) ); ?>">lightbox styles</a> that seamlessly integrate with your galleries.</span>
-												</span>
-											</li>
-											<li>
 												Video Extension
 												<span class="tooltip">
 													<i class="icon-question-circle ml-2"></i>
