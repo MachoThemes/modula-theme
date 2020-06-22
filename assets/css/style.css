@@ -2163,20 +2163,6 @@ title-single__comments a {
   z-index: -1;
   border-radius: 30px; }
 
-/* .lite-vs-pro-table .pricing-table--header > :nth-child(2) {
-
-	border-top: 6px solid $accent-color-1;
-
-	&:before {
-	width: 38px;
-	height: 46px;
-	content: '';
-	background: url(../images/pricing-table--featured.png) no-repeat 50% 50%;
-	background-size: cover;
-	display: inline-block;
-	margin-bottom: 5px;
-	}
-} */
 .lite-vs-pro-table .pricing-table > :nth-child(2) {
   background: #fff; }
 
@@ -2745,7 +2731,7 @@ video {
       justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
-  background: #f7f8f9; }
+  background: #fff; }
   .pricing-table > div:first-child {
     -ms-flex-pack: justify;
         justify-content: space-between;
