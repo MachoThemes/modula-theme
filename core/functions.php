@@ -438,7 +438,7 @@
 
 	function modula_edd_get_download_price( $download_id ) {
 
-		$initial_price = edd_get_download_price( $download_id );
+		$initial_price = floor( edd_get_download_price( $download_id ));
 		$price         = $initial_price;
 
 		$discounts = edd_get_cart_discounts();
@@ -447,7 +447,7 @@
 			$price      -= $difference;
 		}
 
-		return $price;
+		return floor($price);
 	}
 
 	function modula_get_upgrade_id_by_download_id( $upgrades, $download_id ) {
