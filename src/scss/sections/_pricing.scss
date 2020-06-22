@@ -9,12 +9,12 @@
 
 	 &:before{
 		content: 'BEST DEAL';
-		width: 100%;
+		width: calc( 100% + 1px); /* correction for border-left from pricing table */
 		display: inline-block;
 		margin-bottom: 5px;
 		opacity: 1;
 		position: relative;
-		top: -30px;
+		top: -26px;
 		background: #3e3e3e;
 		text-align: center;
 		left: 0;
@@ -26,8 +26,11 @@
 	}
 }
 
+/* featured pricing package */
 .main-table .pricing-table > :nth-child(3) {
-	background: #fff;
+	background: #fefff0;
+	padding-top: 26px;
+	border-top: 0;
 }
 
 

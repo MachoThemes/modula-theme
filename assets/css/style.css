@@ -2129,12 +2129,13 @@ title-single__comments a {
   background: #fff; }
   .main-table .pricing-table--header > :nth-child(3):before {
     content: 'BEST DEAL';
-    width: 100%;
+    width: calc( 100% + 1px);
+    /* correction for border-left from pricing table */
     display: inline-block;
     margin-bottom: 5px;
     opacity: 1;
     position: relative;
-    top: -30px;
+    top: -26px;
     background: #3e3e3e;
     text-align: center;
     left: 0;
@@ -2144,8 +2145,11 @@ title-single__comments a {
     text-transform: uppercase;
     padding: 5px; }
 
+/* featured pricing package */
 .main-table .pricing-table > :nth-child(3) {
-  background: #fff; }
+  background: #fefff0;
+  padding-top: 26px;
+  border-top: 0; }
 
 .lite-vs-pro-table > .row {
   -ms-flex-pack: center;
@@ -2797,7 +2801,6 @@ video {
   display: block;
   line-height: 1;
   width: 100%;
-  background-color: #fff;
   padding: 15px 0;
   border-top: 1px solid #EEE;
   border-bottom: 1px solid #EEE; }
