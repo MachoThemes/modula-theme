@@ -34,10 +34,10 @@ add_action( 'init', 'jp_disable_billing_details' );
 function jp_disable_billing_details() {
 	remove_action( 'edd_after_cc_fields', 'edd_default_cc_address_fields' );
 }
-add_action( 'init', 'jp_disable_billing_details' );
+// add_action( 'init', 'jp_disable_billing_details' );
 
 
-add_filter( 'edd-vat-use-checkout-billing-template', '__return_false' );
+// add_filter( 'edd-vat-use-checkout-billing-template', '__return_false' );
 add_filter( 'edd_require_billing_address', '__return_false' );
 
 // Modula Hide Bundle licenses
