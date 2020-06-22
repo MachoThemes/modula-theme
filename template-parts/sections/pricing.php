@@ -116,12 +116,6 @@ $addons = modula_theme_get_all_extensions( $downloads );
 						</div>
 					<?php endif; ?>
 
-					<div class="pricing-table__description">
-						<?php if( has_excerpt( get_the_id() ) ) {
-							echo get_the_excerpt();
-						} ?>
-					</div>
-
 					<?php if ( $upgrading && $download->higher_plan ): ?>
 						<a class="button pricing-table__button" href="<?php echo esc_url( edd_sl_get_license_upgrade_url( $license_by_key->ID, $download->upgrade_id ) ); ?>" title="Upgrade">Upgrade</a>
 					<?php else: ?>
