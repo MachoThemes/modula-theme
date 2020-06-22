@@ -54,8 +54,9 @@
 .pricing-table--header {
 	align-items: flex-end;
 
-	.edd_download_purchase_form {
-		width: 100%;
+	.col-xs-3 {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -94,7 +95,8 @@
 }
 
 .pricing-table__title {
-	font-weight: 600;
+	font-weight: 400;
+	color: #666;
 }
 
 .pricing-table__price {
@@ -103,6 +105,11 @@
 	display: block;
 	color: $accent-color-1;
 	line-height: 1;
+	width: 100%;
+	background-color: #fff;
+	padding: 15px 0;
+	border-top: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
 
 	sup {
 		font-size: 0.5em;

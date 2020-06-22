@@ -2761,8 +2761,9 @@ video {
 .pricing-table--header {
   -ms-flex-align: end;
       align-items: flex-end; }
-  .pricing-table--header .edd_download_purchase_form {
-    width: 100%; }
+  .pricing-table--header .col-xs-3 {
+    padding-left: 0;
+    padding-right: 0; }
 
 .pricing-table--header > div {
   height: auto;
@@ -2795,14 +2796,20 @@ video {
     border-bottom: none; }
 
 .pricing-table__title {
-  font-weight: 600; }
+  font-weight: 400;
+  color: #666; }
 
 .pricing-table__price {
   font-size: 2.375rem;
   font-weight: 600;
   display: block;
   color: #774cce;
-  line-height: 1; }
+  line-height: 1;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 0;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE; }
   .pricing-table__price sup {
     font-size: 0.5em;
     vertical-align: middle;

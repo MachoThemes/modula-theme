@@ -331,7 +331,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					<?php if ( $upgrading && $download->higher_plan ): ?>
 						<a class="button pricing-table__button" href="<?php echo esc_url( edd_sl_get_license_upgrade_url( $license_by_key->ID, $download->upgrade_id ) ); ?>" title="Upgrade">Upgrade</a>
 					<?php else: ?>
-						<?php echo do_shortcode( '[purchase_link price="0" class="edd-submit button pricing-table__button" text="Get Started" id="' . $download->ID . '" direct="true"]' ) ?>
+						<?php echo do_shortcode( '[purchase_link price="0" class="edd-submit button pricing-table__button" text="Buy Now" id="' . $download->ID . '" direct="true"]' ) ?>
 					<?php endif; ?>
 
 				</div><!-- col -->
