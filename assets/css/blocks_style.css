@@ -1,1 +1,109 @@
-.wp-block-table{display:block;min-width:240px;width:100%}.wp-block-table.aligncenter,.wp-block-table.alignleft,.wp-block-table.alignright{width:100%}.wp-block-table.alignwide{margin-left:0;margin-right:0}@media (min-width:992px){.wp-block-table.alignwide{margin-left:-110px;margin-right:-110px;width:calc(100% + 220px)}}@media screen and (max-width:768px){.wp-block-table{overflow-x:scroll}.wp-block-table>tbody{display:block;min-width:768px}}.wp-block-quote{padding-left:2.5rem!important}.wp-block-quote cite{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.wp-block-quote cite>*{margin-left:8px;margin-right:8px}.wp-block-quote cite>:first-child{margin-left:0}.wp-block-quote cite>:last-child{margin-right:0}.wp-block-quote cite img{border-radius:50%;width:40px!important;height:40px!important}.wp-block-machothemes-highlight{background:transparent!important}.wp-block-machothemes-highlight:empty{display:none}.wp-block-machothemes-highlight+.wp-block-machothemes-highlight{padding-top:7px}.wp-block-machothemes-highlight__content{padding:2px 5px 2px 3px;position:relative;border-radius:6px}.wp-block-machothemes-highlight__content:not(.has-background){background-color:#f3ead1}.wp-block-machothemes-click-to-tweet{border-radius:6px;margin-bottom:1.9em;position:relative;border:1px solid transparent}.wp-block-machothemes-click-to-tweet__text{margin-bottom:0;position:relative}.wp-block-machothemes-click-to-tweet__text a{box-shadow:none!important;text-decoration:none!important}.wp-block-machothemes-click-to-tweet__twitter-btn:not(.has-button-color){background:#1da1f2}.wp-block-machothemes-click-to-tweet__twitter-btn{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:6px;border:none;box-shadow:none!important;color:#fff!important;cursor:pointer;display:inline-block;font-size:13px;font-style:normal;font-weight:400;line-height:1.8;margin-top:10px;padding:.28em 1em;position:relative;text-decoration:none!important;white-space:normal;word-break:break-all}.wp-block-machothemes-click-to-tweet__twitter-btn:before{content:"";display:inline-block;height:18px;margin-right:5px;background:url(../images/icons/twitter.svg) no-repeat 50% 50%;background-size:cover;position:relative;top:4px;width:18px}.wp-block-machothemes-click-to-tweet__twitter-btn:active:before{animation:a .2s;animation-timing-function:ease-out;animation-fill-mode:none}@keyframes a{0%{transform:scale(1)}15%{transform:scale(.9)}to{transform:scale(1)}}
+.wp-block-table {
+  display: block;
+  min-width: 240px;
+  width: 100%; }
+  .wp-block-table.alignleft, .wp-block-table.alignright, .wp-block-table.aligncenter {
+    width: 100%; }
+  .wp-block-table.alignwide {
+    margin-left: 0px;
+    margin-right: 0px; }
+    @media (min-width: 992px) {
+      .wp-block-table.alignwide {
+        margin-left: -110px;
+        margin-right: -110px;
+        width: calc( 100% + 220px); } }
+
+@media screen and (max-width: 768px) {
+  .wp-block-table {
+    overflow-x: scroll; }
+    .wp-block-table > tbody {
+      display: block;
+      min-width: 768px; } }
+
+.wp-block-quote {
+  padding-left: 2.5rem !important; }
+  .wp-block-quote cite {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+    .wp-block-quote cite > * {
+      margin-left: 8px;
+      margin-right: 8px; }
+    .wp-block-quote cite > *:first-child {
+      margin-left: 0; }
+    .wp-block-quote cite > *:last-child {
+      margin-right: 0; }
+    .wp-block-quote cite img {
+      border-radius: 50%;
+      width: 40px !important;
+      height: 40px !important; }
+
+.wp-block-machothemes-highlight {
+  background: transparent !important; }
+  .wp-block-machothemes-highlight:empty {
+    display: none; }
+  .wp-block-machothemes-highlight + .wp-block-machothemes-highlight {
+    padding-top: 7px; }
+  .wp-block-machothemes-highlight__content {
+    padding: 2px 5px 2px 3px;
+    position: relative;
+    border-radius: 6px; }
+  .wp-block-machothemes-highlight__content:not(.has-background) {
+    background-color: #f3ead1; }
+
+.wp-block-machothemes-click-to-tweet {
+  border-radius: 6px;
+  margin-bottom: 1.9em;
+  position: relative;
+  border: 1px solid transparent; }
+  .wp-block-machothemes-click-to-tweet__text {
+    margin-bottom: 0;
+    position: relative; }
+    .wp-block-machothemes-click-to-tweet__text a {
+      box-shadow: none !important;
+      text-decoration: none !important; }
+  .wp-block-machothemes-click-to-tweet__twitter-btn:not(.has-button-color) {
+    background: #1da1f2; }
+  .wp-block-machothemes-click-to-tweet__twitter-btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 6px;
+    border: none;
+    box-shadow: none !important;
+    color: #fff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-top: 10px;
+    padding: 0.28em 1em;
+    position: relative;
+    text-decoration: none !important;
+    white-space: normal;
+    word-break: break-all; }
+    .wp-block-machothemes-click-to-tweet__twitter-btn::before {
+      content: "";
+      display: inline-block;
+      height: 18px;
+      margin-right: 5px;
+      background: url(../images/icons/twitter.svg) no-repeat 50% 50%;
+      background-size: cover;
+      position: relative;
+      top: 4px;
+      width: 18px; }
+    .wp-block-machothemes-click-to-tweet__twitter-btn:active::before {
+      animation: pulse 200ms;
+      animation-timing-function: ease-out;
+      animation-fill-mode: none; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  15% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
