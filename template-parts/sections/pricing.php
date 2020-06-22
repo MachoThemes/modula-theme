@@ -95,11 +95,11 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					<?php endif; ?>
 
 					<div class="pricing-table__price mb-2">
-						<?php if ( $upgrading && $download->higher_plan ): ?>
-							<sup>$</sup><?php echo $download->upgrade_cost; ?>
-						<?php else: ?>
+						<?php if ( $upgrading && $download->higher_plan ) { ?>
+							<sup>$</sup><?php echo $download->upgrade_cost; ?> 
+						<?php } else { ?>
 							<sup>$</sup><?php echo floor(modula_edd_get_download_price( $download->ID )); ?><sup>.00</sup>
-						<?php endif; ?>
+						<?php } ?>
 					</div>
 
 					<?php if ( $upgrading && $download->higher_plan ): ?>
@@ -115,6 +115,12 @@ $addons = modula_theme_get_all_extensions( $downloads );
 							</p>
 						</div>
 					<?php endif; ?>
+
+					<div class="pricing-table__description">
+						<?php if( has_excerpt( $download->ID ) ) {
+							echo the_excerpt( $download->ID );
+						} ?>
+					</div>
 
 					<?php if ( $upgrading && $download->higher_plan ): ?>
 						<a class="button pricing-table__button" href="<?php echo esc_url( edd_sl_get_license_upgrade_url( $license_by_key->ID, $download->upgrade_id ) ); ?>" title="Upgrade">Upgrade</a>
