@@ -1590,7 +1590,7 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
     margin-bottom: 0.5em; }
 
 .title-section__excerpt {
-  font-size: 1.125rem; }
+  font-size: 1rem; }
   .title-section__excerpt a {
     color: inherit;
     -webkit-text-decoration-color: inherit;
