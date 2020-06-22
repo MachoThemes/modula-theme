@@ -274,9 +274,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 		<?php endwhile; ?>
 
-		</div><!-- row -->
-
-<div class="pricing-table row">
+		<div class="pricing-table row">
 	<div class="col-xs-3">
 		Gallery Filters
 		<span class="tooltip">
@@ -319,6 +317,10 @@ $addons = modula_theme_get_all_extensions( $downloads );
 		<i class="icon-ok"></i>
 	</div>
 </div><!-- row -->
+
+		</div><!-- row -->
+
+
 
 		<div class="pricing-table pricing-table--last row">
 			<div class="col-xs-3 text-left">
