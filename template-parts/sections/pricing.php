@@ -318,9 +318,6 @@ $addons = modula_theme_get_all_extensions( $downloads );
 	</div>
 </div><!-- row -->
 
-		</div><!-- row -->
-
-
 
 		<div class="pricing-table pricing-table--last row">
 			<div class="col-xs-3 text-left">
@@ -340,6 +337,12 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				</div><!-- col -->
 
 			<?php endforeach; ?>
+
+		</div><!-- row -->
+
+
+
+		
 
 
 
