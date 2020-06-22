@@ -98,7 +98,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 						<?php if ( $upgrading && $download->higher_plan ): ?>
 							<sup>$</sup><?php echo $download->upgrade_cost; ?>
 						<?php else: ?>
-							<sup>$</sup><?php echo modula_edd_get_download_price( $download->ID ); ?><sup>.00</sup>
+							<sup>$</sup><?php echo floor(modula_edd_get_download_price( $download->ID )); ?><sup>.00</sup>
 						<?php endif; ?>
 					</div>
 
