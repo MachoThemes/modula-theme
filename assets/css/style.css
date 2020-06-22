@@ -2822,7 +2822,8 @@ video {
   padding: 1rem;
   background-color: #444;
   color: #FFF;
-  font-weight: 400; }
+  font-weight: 400;
+  max-width: 95%; }
   .pricing-table__message h6 {
     color: #FFF; }
   .pricing-table__message small {

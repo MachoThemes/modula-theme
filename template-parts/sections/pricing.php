@@ -119,7 +119,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					<?php if ( $upgrading && $download->higher_plan ): ?>
 						<a class="button pricing-table__button" href="<?php echo esc_url( edd_sl_get_license_upgrade_url( $license_by_key->ID, $download->upgrade_id ) ); ?>" title="Upgrade">Upgrade</a>
 					<?php else: ?>
-						<?php echo do_shortcode( '[purchase_link price="0" class="edd-submit button pricing-table__button" text="Get Started" id="' . $download->ID . '" direct="true"]' ) ?>
+						<?php echo do_shortcode( '[purchase_link price="0" class="edd-submit button pricing-table__button" text="Buy Now" id="' . $download->ID . '" direct="true"]' ) ?>
 					<?php endif; ?>
 
 				</div><!-- col -->
@@ -129,7 +129,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 		</div>
 
 		<div class="row pricing-table">
-			<div class="col-xs-3">
+			<div class="col-xs-3"> 
 				Unlimited Galleries
 				<span class="tooltip">
 					<i class="icon-question-circle"></i>
@@ -243,49 +243,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
             </div>
         </div><!--row -->
 
-		<div class="pricing-table row">
-			<div class="col-xs-3">
-				Gallery Filters
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Easily create <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'demo/filters' ) ) ); ?>">filterable WordPress galleries</a> with Modula.</span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-		</div><!-- row -->
-
-		<div class="pricing-table row <?php echo isset( $utm_medium ) && $utm_medium === 'sorting-metabox' ? 'pricing-table--highlight' : ''; ?>">
-			<div class="col-xs-3">
-				Gallery Sorting
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Multiple choices for sorting out images from your gallery: manual, date created, date modified, alphabetically, reverse or random</span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-		</div><!-- row -->
+		
 
 		<?php while ( $addons->have_posts() ): ?>
 			<?php $addons->the_post(); ?>
@@ -335,6 +293,50 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 			<?php endforeach; ?>
 
+		</div><!-- row -->
+
+		<div class="pricing-table row">
+			<div class="col-xs-3">
+				Gallery Filters
+				<span class="tooltip">
+					<i class="icon-question-circle"></i>
+					<span class="tooltip__text">Easily create <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'demo/filters' ) ) ); ?>">filterable WordPress galleries</a> with Modula.</span>
+				</span>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+		</div><!-- row -->
+
+		<div class="pricing-table row <?php echo isset( $utm_medium ) && $utm_medium === 'sorting-metabox' ? 'pricing-table--highlight' : ''; ?>">
+			<div class="col-xs-3">
+				Gallery Sorting
+				<span class="tooltip">
+					<i class="icon-question-circle"></i>
+					<span class="tooltip__text">Multiple choices for sorting out images from your gallery: manual, date created, date modified, alphabetically, reverse or random</span>
+				</span>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
+			<div class="col-xs-3">
+				<i class="icon-ok"></i>
+			</div>
 		</div><!-- row -->
 
 
