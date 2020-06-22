@@ -355,8 +355,8 @@ $addons = modula_theme_get_all_extensions( $downloads );
 			<div class="col-xs-12">
 				<div class="pricing-message">
 					<div class="pricing-message__content">
-						<h5>100% No-Risk Money Back Guarantee!</h5>
-						<p>You are fully protected by our 100% No-Risk-Double-Guarantee.  If you <u>don’t like Modula over the next 14 days</u>, then we will happily refund 100% of your money. No questions asked.</p>
+						<h5>14-Day 100% No-Risk Money-Back Guarantee!</h5>
+						<p>There’s no risk trying Modula: if you don’t like Modula after 14 days, we’ll refund your purchase. We take pride in a frustration-free refund process.</p>
 					</div>
 				</div>
 			</div>
