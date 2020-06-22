@@ -65,10 +65,11 @@ $addons = modula_theme_get_all_extensions( $downloads );
 		<div class="pricing-table pricing-table--header row">
 			<div class="col-xs-3">
 
-				<div class="pricing-table__message visible-xs waypoint">
+				<div class="pricing-table__message">
 					<div class="row align-items-center">
 						<div class="col-xs-10">
-						swipe left to see the entire table
+						<p>Upgrade or cancel at any time</p>
+						<small>Choose a plan and you can upgrade or cancel it any time you want.</small>
 						</div>
 						<div class="col-xs-2">
 							<i class="icon-right-open-big"></i>
