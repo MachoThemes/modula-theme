@@ -526,7 +526,7 @@
 			}
 
 			function extension_compare( $ext1, $ext2 ) {
-				return $ext1->nr_of_plans < $ext2->nr_of_plans;
+				return $ext1->nr_of_plans > $ext2->nr_of_plans;
 			}
 
 			usort( $addons->posts, "extension_compare" );
