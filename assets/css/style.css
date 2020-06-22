@@ -2720,16 +2720,16 @@ video {
   margin-right: 0;
   font-size: 16px; }
   .pricing-table .icon-ok, .pricing-table ul.list--checkmark li:before, ul.list--checkmark .pricing-table li:before {
-    width: 13px;
-    height: 13px; }
+    width: 18px;
+    height: 18px; }
   .pricing-table .icon-question-circle {
     cursor: help;
     opacity: 0.4;
     width: 14px;
     height: 14px; }
   .pricing-table .icon-cancel, .pricing-table .modal__close {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     background-image: url(../images/icons/cancel--red.svg); }
 
 .pricing-table > div {
