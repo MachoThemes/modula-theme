@@ -2790,7 +2790,8 @@ video {
 
 .pricing-table__title {
   font-weight: 400;
-  color: #666; }
+  color: #666;
+  font-size: 1.25rem; }
 
 .pricing-table__price {
   font-size: 2.375rem;
