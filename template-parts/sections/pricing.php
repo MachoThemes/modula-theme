@@ -68,7 +68,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				<div class="pricing-table__message">
 					<div class="row align-items-center">
 						<div class="col-xs-10">
-						<p>Upgrade or cancel at any time</p>
+						<h6>You can change plans or cancel your account at any time</h6>
 						<small>Choose a plan and you can upgrade or cancel it any time you want.</small>
 						</div>
 						<div class="col-xs-2">
@@ -347,7 +347,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				<div class="pricing-message">
 					<div class="pricing-message__content">
 						<h5>100% No-Risk Money Back Guarantee!</h5>
-						<p>You are fully protected by our 100% No-Risk-Double-Guarantee.  If you don’t like Modula over the next 14 days, then we will happily refund 100% of your money. No questions asked.</p>
+						<p>You are fully protected by our 100% No-Risk-Double-Guarantee.  If you <u>don’t like Modula over the next 14 days</u>, then we will happily refund 100% of your money. No questions asked.</p>
 					</div>
 				</div>
 			</div>
