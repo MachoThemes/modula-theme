@@ -51,7 +51,7 @@
 				<h3>Learn more about Modula's Affiliate Program!</h3>
 				<p>First things first, affiliates are a very important part of our growth strategy. </p>
 				<p>We have many successful affiliate partners who profit from our program because of our continued commitment to creating opportunities for our affiliates to earn commissions.</p>
-				<p>As a Modula affiliate, you’ll earn a 40% commission from everyone you refer.</p>
+				<p>As a Modula affiliate, you’ll earn a 20% commission from everyone you refer.</p>
 			</div>
 
 		</div>
