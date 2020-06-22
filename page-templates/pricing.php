@@ -6,7 +6,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-8">
-				<h1>Start showing off your pictures with the last gallery plugin you will ever need.</h1>
+				<h1>You're <u>5 mins away</u> from having a gallery that amazes potential clients</h1>
 				<?php if ( has_excerpt() ) : ?>
 					<div class="title-section__excerpt">
 						<?php echo wp_kses_post( get_the_excerpt() ); ?>
