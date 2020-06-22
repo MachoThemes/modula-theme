@@ -92,7 +92,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 						<?php if ( $upgrading && $download->higher_plan ): ?>
 							<sup>$</sup><?php echo $download->upgrade_cost; ?>
 						<?php else: ?>
-							<sup>$</sup><?php echo modula_edd_get_download_price( $download->ID ); ?>
+							<sup>$</sup><?php echo edd_get_download_price( $download->ID ); ?>
 						<?php endif; ?>
 					</div>
 
@@ -105,7 +105,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					<?php elseif ( count( $cart_discounts ) > 0 ): ?>
 						<div class="pricing-table__savings">
 							<p class="wp-block-machothemes-highlight mb-2">
-								<mark class="wp-block-machothemes-highlight__content">$<?php echo edd_get_download_price( $download->ID ) - modula_edd_get_download_price( $download->ID ); ?> savings</mark>
+								<mark class="wp-block-machothemes-highlight__content">$<?php echo edd_get_download_price( $download->ID ) - edd_get_download_price( $download->ID ); ?> savings</mark>
 							</p>
 						</div>
 					<?php endif; ?>
