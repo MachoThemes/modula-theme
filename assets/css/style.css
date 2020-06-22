@@ -2823,6 +2823,10 @@ video {
   background-color: #444;
   color: #FFF;
   font-weight: 400; }
+  .pricing-table__message h6 {
+    color: #FFF; }
+  .pricing-table__message small {
+    font-size: 12px; }
   .pricing-table__message .icon-right-open-big, .pricing-table__message .nav-links .next:before, .nav-links .pricing-table__message .next:before {
     filter: invert(100%); }
   .pricing-table__message.in-viewport {
