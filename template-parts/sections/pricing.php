@@ -274,6 +274,52 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 		<?php endwhile; ?>
 
+		</div><!-- row -->
+
+<div class="pricing-table row">
+	<div class="col-xs-3">
+		Gallery Filters
+		<span class="tooltip">
+			<i class="icon-question-circle"></i>
+			<span class="tooltip__text">Easily create <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'demo/filters' ) ) ); ?>">filterable WordPress galleries</a> with Modula.</span>
+		</span>
+	</div>
+	<div class="col-xs-3">
+		<i class="icon-ok"></i>
+	</div>
+	<div class="col-xs-3">
+		<i class="icon-ok"></i>
+	</div>
+	<div class="col-xs-3">
+		<i class="icon-ok"></i>
+	</div>
+	<div class="col-xs-3">
+		<i class="icon-ok"></i>
+	</div>
+</div><!-- row -->
+
+<div class="pricing-table row <?php echo isset( $utm_medium ) && $utm_medium === 'sorting-metabox' ? 'pricing-table--highlight' : ''; ?>">
+	<div class="col-xs-3">
+		Gallery Sorting
+		<span class="tooltip">
+			<i class="icon-question-circle"></i>
+			<span class="tooltip__text">Multiple choices for sorting out images from your gallery: manual, date created, date modified, alphabetically, reverse or random</span>
+		</span>
+	</div>
+	<div class="col-xs-3">
+		<i class="icon-ok"></i>
+	</div>
+	<div class="col-xs-3">
+		<i class="icon-ok"></i>
+	</div>
+	<div class="col-xs-3">
+		<i class="icon-ok"></i>
+	</div>
+	<div class="col-xs-3">
+		<i class="icon-ok"></i>
+	</div>
+</div><!-- row -->
+
 		<div class="pricing-table pricing-table--last row">
 			<div class="col-xs-3 text-left">
 				<span class="mb-0"><small>Prices are listed in USD<br/> and don't include VAT</small></span>
@@ -293,51 +339,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 			<?php endforeach; ?>
 
-		</div><!-- row -->
 
-		<div class="pricing-table row">
-			<div class="col-xs-3">
-				Gallery Filters
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Easily create <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'demo/filters' ) ) ); ?>">filterable WordPress galleries</a> with Modula.</span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-		</div><!-- row -->
-
-		<div class="pricing-table row <?php echo isset( $utm_medium ) && $utm_medium === 'sorting-metabox' ? 'pricing-table--highlight' : ''; ?>">
-			<div class="col-xs-3">
-				Gallery Sorting
-				<span class="tooltip">
-					<i class="icon-question-circle"></i>
-					<span class="tooltip__text">Multiple choices for sorting out images from your gallery: manual, date created, date modified, alphabetically, reverse or random</span>
-				</span>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-			<div class="col-xs-3">
-				<i class="icon-ok"></i>
-			</div>
-		</div><!-- row -->
 
 
 
