@@ -2122,7 +2122,7 @@ title-single__comments a {
 
 .pricing-section {
   padding: 3.75rem 0;
-  background: #f7f8f9; }
+  background: #FAFAFA; }
 
 .main-table .pricing-table--header > :nth-child(3) {
   position: relative;
@@ -2205,8 +2205,7 @@ html body .pricing-table.row .pricing-breaker {
     font-size: 18px; }
 
 .lite-vs-pro-section {
-  padding: 3.75rem 0;
-  background: #f7f8f9; }
+  padding: 3.75rem 0; }
 
 .services-section {
   padding: 40px 0;
