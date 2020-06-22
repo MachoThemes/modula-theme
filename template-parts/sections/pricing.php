@@ -117,8 +117,8 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					<?php endif; ?>
 
 					<div class="pricing-table__description">
-						<?php if( has_excerpt( $download->ID ) ) {
-							echo the_excerpt( $download->ID );
+						<?php if( has_excerpt( get_the_id() ) ) {
+							echo get_the_excerpt();
 						} ?>
 					</div>
 
