@@ -83,7 +83,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				<div class="col-xs-3 <?php echo isset( $download->higher_plan ) && $download->higher_plan === false ? 'pricing-table-inactive': ''; ?>">
 
 					<h4 class="pricing-table__title mb-2"><?php echo explode( '-', $download->post_title )[1]; ?></h4>
-					<div class="pricing-table__package_description"><?php get_the_excerpt( $download->ID ) ?></div>
+					<div class="pricing-table__package_description"><?php echo get_the_excerpt( $download->ID ) ?></div>
 
 					<?php if ( $upgrading && $download->higher_plan ): ?>
 						<div class="pricing-table__initial-price">
