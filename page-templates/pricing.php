@@ -6,36 +6,12 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-8">
-				<h1>You're <u>5 mins away</u> from having a gallery that amazes potential clients</h1>
+				<h1>You're <u>5 minutes away</u> from having a gallery that amazes potential clients</h1>
 				<?php if ( has_excerpt() ) : ?>
 					<div class="title-section__excerpt">
 						<?php echo wp_kses_post( get_the_excerpt() ); ?>
 					</div>
 				<?php endif; ?>
-
-				<div class="row checkout-badges align-items-center mt-2">
-					<div class="col-xs-6 col-sm-3 text-center mb-3 mb-sm-0">
-						<div class="checkout-badges__ssl" title="SSL Encrypted Payment">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/checkout-badges/ssl--white.svg' ); ?>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-4 text-center mb-3 mb-sm-0">
-						<div title="All Major Credit Cards Accepted" class="checkout-badges__cc">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/checkout-badges/credit-cards--white.svg' ); ?>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-2 text-center">
-						<div title="Norton Secured Transaction" class="checkout-badges__norton">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/checkout-badges/norton-secured--white.svg' ); ?>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-3 text-center">
-						<div title="McAfee Secured Transaction" class="checkout-badges__mcafee">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/checkout-badges/mcafee--white.svg' ); ?>
-						</div>
-					</div>
-				</div><!-- row -->
-
 			</div>
 		</div>
 	</div>

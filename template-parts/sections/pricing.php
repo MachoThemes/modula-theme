@@ -173,6 +173,13 @@ $addons = modula_theme_get_all_extensions( $downloads );
 		</div><!-- row -->
 
 		<div class="pricing-table row">
+            <div class="pricing-breaker">
+                <h4>Support & Updates</h4>
+            </div><!--pricing-breaker-->
+        </div><!--row -->
+
+
+		<div class="pricing-table row">
 			<div class="col-xs-3">
 				Supported Sites
 				<span class="tooltip">
@@ -239,8 +246,8 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
         <div class="pricing-table row">
             <div class="pricing-breaker">
-                <h4>Modula Extensions</h4>
-            </div>
+                <h4>Extensions included with each purchase</h4>
+            </div><!--pricing-breaker-->
         </div><!--row -->
 
 		
