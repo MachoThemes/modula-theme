@@ -34,7 +34,8 @@ $addons = modula_theme_get_all_extensions( $downloads );
 						</div><!-- pricing-table__message -->
 					</div>
 					<div class="col-xs-4">
-						<h4 class="pricing-table__title">Agency, Business, Trio or Starter</h4>
+						<h4 class="pricing-table__title">Paid plans</h4>
+						<small><i>*All extensions are included starting with the Business plan</i></small>
 						<br />
 						<a class="button pricing-table__button" href="#pricing">Upgrade Now</a>
 					</div>
