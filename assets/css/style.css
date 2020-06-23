@@ -2816,7 +2816,7 @@ video {
   max-width: 90%;
   line-height: 1.15;
   position: relative;
-  top: -49px; }
+  top: -45px; }
   .pricing-table__message h6 {
     color: #FFF; }
   .pricing-table__message small {
@@ -2877,6 +2877,12 @@ video {
     overflow-x: scroll;
     overflow-y: hidden;
     padding-right: 15px; } }
+
+.pricing-table__package_description {
+  font-size: 0.8125rem;
+  padding-bottom: 30px;
+  font-weight: 400;
+  color: #666; }
 
 .pricing-table-2 {
   margin-left: 0;

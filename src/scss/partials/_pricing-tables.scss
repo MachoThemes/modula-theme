@@ -136,7 +136,7 @@
 	max-width: 90%;
 	line-height: 1.15;
 	position: relative;
-	top: -49px;
+	top: -45px;
 
 	h6 {
 		color: #FFF;
@@ -237,3 +237,9 @@
 	}
 }
 
+.pricing-table__package_description {
+	font-size: rem(13px);
+	padding-bottom: 30px;
+	font-weight: 400;
+	color: #666;
+}
