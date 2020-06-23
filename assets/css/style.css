@@ -2129,7 +2129,7 @@ title-single__comments a {
   background: #fff; }
   .main-table .pricing-table--header > :nth-child(3):before {
     content: 'BEST DEAL';
-    width: calc( 100% + 1px);
+    width: calc( 100% + 2px);
     /* correction for border-left from pricing table */
     display: inline-block;
     opacity: 1;
@@ -2782,8 +2782,7 @@ video {
 .pricing-table--last > div {
   padding-top: 30px;
   padding-bottom: 30px;
-  height: auto;
-  display: block; }
+  height: auto; }
   .pricing-table--last > div:first-child {
     border-left: none;
     border-bottom: none; }

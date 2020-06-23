@@ -9,7 +9,7 @@
 
 	 &:before{
 		content: 'BEST DEAL';
-		width: calc( 100% + 1px ); /* correction for border-left from pricing table */
+		width: calc( 100% + 2px ); /* correction for border-left from pricing table */
 		display: inline-block;
 		opacity: 1;
 		position: relative;
