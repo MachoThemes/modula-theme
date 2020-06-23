@@ -327,10 +327,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 
 		<div class="pricing-table pricing-table--last row">
-			<div class="col-xs-3 text-left">
-				<span class="mb-0"><small>Prices are listed in USD<br/> and don't include VAT</small></span>
-			</div>
-
+			
 			<?php foreach( $downloads as $download ): ?>
 
 				<div class="col-xs-3 <?php echo isset( $download->higher_plan ) && $download->higher_plan === false ? 'pricing-table-inactive': ''; ?>">

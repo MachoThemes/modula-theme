@@ -2186,13 +2186,8 @@ title-single__comments a {
     overflow: scroll; } }
 
 html body .pricing-table.row .pricing-breaker {
-  background-color: #DDD;
-  border: 1px solid #CCC;
-  text-align: center;
-  padding: 15px 0;
-  font-weight: 900;
-  -ms-flex-pack: center;
-      justify-content: center;
+  background-color: #ebebeb;
+  padding: 15px 0 15px 10px;
   width: 100%; }
   html body .pricing-table.row .pricing-breaker h4 {
     margin-bottom: 0;
@@ -2727,8 +2722,8 @@ video {
 
 .pricing-table > div {
   text-align: center;
-  border-left: 1px solid #eeebf2;
-  border-top: 1px solid #eeebf2;
+  border-left: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
   line-height: 1.5;
   height: 50px;
   display: -ms-flexbox;
