@@ -9,11 +9,11 @@
 
 	 &:before{
 		content: 'BEST DEAL';
-		width: calc( 100% + 2px ); /* correction for border-left from pricing table */
+		width: calc( 100% + 2px);
 		display: inline-block;
 		opacity: 1;
-		position: relative;
-		top: -55px;
+		position: absolute;
+		top: -1px;
 		background: #3e3e3e;
 		text-align: center;
 		left: 0;
@@ -22,6 +22,7 @@
 		font-size: 15px;
 		text-transform: uppercase;
 		padding: 5px;
+		transform: translateY(-100%);
 	}
 }
 

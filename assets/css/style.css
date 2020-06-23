@@ -2131,7 +2131,7 @@ title-single__comments a {
     display: inline-block;
     opacity: 1;
     position: absolute;
-    top: 0;
+    top: -1px;
     background: #3e3e3e;
     text-align: center;
     left: 0;
@@ -2140,8 +2140,7 @@ title-single__comments a {
     font-size: 15px;
     text-transform: uppercase;
     padding: 5px;
-    transform: translateY(-50%);
-  }
+    transform: translateY(-100%); }
 
 /* featured pricing package */
 .main-table .pricing-table > :nth-child(3) {
@@ -2736,7 +2735,7 @@ video {
   background: #fff; }
   .pricing-table > div:first-child {
     -ms-flex-pack: justify;
-        justify-content: center;
+        justify-content: space-between;
     font-weight: 700;
     text-align: left; }
   .pricing-table > div:last-child {
@@ -2746,8 +2745,8 @@ video {
   width: 18.75%; }
 
 .pricing-table--header {
-  /*-ms-flex-align: end;
-      align-items: flex-end;*/ }
+  -ms-flex-align: end;
+      align-items: flex-end; }
   .pricing-table--header .col-xs-3 {
     padding-left: 0;
     padding-right: 0; }
@@ -2815,9 +2814,7 @@ video {
   color: #FFF;
   font-weight: 400;
   max-width: 90%;
-  line-height: 1.15;
-  position: relative;
-  /*top: -45px;*/ }
+  line-height: 1.15; }
   .pricing-table__message h6 {
     color: #FFF; }
   .pricing-table__message small {
