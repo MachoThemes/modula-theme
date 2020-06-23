@@ -363,7 +363,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				<div class="pricing-message">
 					<div class="pricing-message__content">
 						<h5>100% No-Risk Money Back Guarantee!</h5>
-						<p>There’s no risk trying GravityView: if you don’t like GravityView after 30 days, we’ll refund your purchase. We take pride in a frustration-free refund process.</p>
+						<p>There’s no risk trying Modula: if you don’t like Modula after 14 days, we’ll refund your purchase. We take pride in a frustration-free refund process.</p>
 					</div>
 				</div>
 			</div>
