@@ -3,11 +3,9 @@ input[type=button],
 input[type=submit] {
     position: relative;
     display: inline-block;
-    border: 2px solid $accent-color-2;
-    padding: 18px 32px;
+    padding: 18px 48px;
     color: #fff;
     text-align: center;
-	border-radius: 6px;
     cursor: pointer;
 	background: $accent-color-2;
 	transition: all 0.5s $easing;
