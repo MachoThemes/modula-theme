@@ -2171,8 +2171,8 @@ title-single__comments a {
   z-index: -1;
   border-radius: 30px; }
 
-.lite-vs-pro-table .pricing-table > :nth-child(2) {
-  background: #fff; }
+.lite-vs-pro-table .last-column {
+  min-height: 221px; }
 
 @media screen and (max-width: 1000px) {
   .main-table {
@@ -2741,7 +2741,7 @@ video {
     font-weight: 700;
     text-align: left; }
   .pricing-table > div:last-child {
-    border-right: 1px solid #eeebf2; }
+    border-right: 1px solid #ebebeb; }
 
 .main-table .pricing-table > :not(:first-child) {
   width: 18.75%; }

@@ -39,7 +39,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 						<br />
 						<a class="button pricing-table__button" href="#pricing">Upgrade Now</a>
 					</div>
-					<div class="col-xs-4">
+					<div class="col-xs-4 last-column">
 						<h4 class="pricing-table__title">Lite</h4>
 						<br />
 						<a style="opacity: 0; pointer-events:none" class="button pricing-table__button" href="https://wordpress.org/plugins/modula-best-grid-gallery/" target="_blank">Download Lite</a>
