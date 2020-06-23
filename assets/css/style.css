@@ -2744,12 +2744,9 @@ video {
 .main-table .pricing-table > :not(:first-child) {
   width: 18.75%; }
 
-.pricing-table--header {
-  -ms-flex-align: end;
-      align-items: flex-end; }
-  .pricing-table--header .col-xs-3 {
-    padding-left: 0;
-    padding-right: 0; }
+.pricing-table--header .col-xs-3 {
+  padding-left: 0;
+  padding-right: 0; }
 
 .pricing-table--header > div {
   height: auto;
