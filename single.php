@@ -8,7 +8,7 @@
 			get_template_part( 'template-parts/layouts/single-no-sidebar' );
 			break;
 		default:
-			get_template_part( 'template-parts/layouts/single-default' );
+			get_template_part( 'template-parts/layouts/single-no-sidebar' );
 			break;
 	endswitch;
 ?>

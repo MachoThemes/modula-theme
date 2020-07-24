@@ -1,8 +1,6 @@
 <?php /* Template Name: Checkout */ ?>
 
-<?php get_header('checkout'); ?>
-
-<?php wp_enqueue_script( 'waypoints' ); ?>
+<?php get_header( 'checkout' ); ?>
 
 <?php
 	$payment_mode = edd_get_chosen_gateway();
@@ -13,7 +11,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 
-			<?php if ( function_exists('edd_get_cart_contents') && edd_get_cart_contents() ) : ?>
+			<?php if ( function_exists( 'edd_get_cart_contents' ) && edd_get_cart_contents() ) : ?>
 
 				<div class="col-sm-12 title-wrap">
 					<h1 class="h3 text-center">Complete Your Purchase</h1>
@@ -55,7 +53,7 @@
 								<p class="mb-3">Modula is one of the leading gallery plugins in the WordPress economy today. Their variety of displays matched with customer support make them a terrific option.</p>
 							</div>
 							<div class="testimonial__author">
-								<?php echo wp_get_attachment_image( 225676, "thumbnail", false, array('class' => 'testimonial__avatar mr-3') ); ?>
+								<?php echo wp_get_attachment_image( 225676, 'thumbnail', false, array( 'class' => 'testimonial__avatar mr-3' ) ); ?>
 								<div class="testimonial__name">
 									<h6 class="mb-0">Tom McFarlin</h6>
 									<p class="testimonial__title mb-0">WordPress Developer</p>
@@ -83,7 +81,7 @@
 							if ( edd_is_ajax_disabled() && ! empty( $_REQUEST['payment-mode'] ) ) {
 								do_action( 'edd_purchase_form' );
 							} elseif ( edd_show_gateways() ) {
-								do_action( 'edd_payment_mode_select'  );
+								do_action( 'edd_payment_mode_select' );
 							} else {
 								do_action( 'edd_purchase_form' );
 							}
@@ -103,7 +101,7 @@
 
 				</div><!-- col -->
 
-			<?php else: ?>
+			<?php else : ?>
 
 				<div class="col-sm-12 title-wrap">
 					<h1 class="h3 text-center">Checkout</h1>

@@ -12,7 +12,7 @@
 
 
 			<div class="col-md-6" style="order:1">
-				<?php wp_enqueue_script( 'waypoints' ); ?>
+			
 				<?php get_template_part( 'assets/images/illustration-7.svg' ); ?>
 				<div class="illustration illustration-7 mb-3 mb-md-0">
 					<div class="illustration__content">
@@ -56,11 +56,11 @@
 
 		</div>
 
-		<?php if( ! affwp_is_affiliate( get_current_user_id() ) ):  ?>
+		<?php if ( ! affwp_is_affiliate( get_current_user_id() ) ) : ?>
 
 		<div class="row">
 			<div class="col-md-6">
-				<?php wp_enqueue_script( 'waypoints' ); ?>
+			
 				<?php get_template_part( 'assets/images/illustration-8.svg' ); ?>
 				<div class="illustration illustration-8 mb-3 mb-md-0 float-lg-right">
 					<div class="illustration__content">
@@ -96,7 +96,7 @@
 			<div class="col-md-6">
 				<h3>Joining in</h3>
 				<p>Joining our affiliate program is simple. Fill out the form below to get started:</p>
-				<?php echo do_shortcode('[affiliate_registration]'); ?>
+				<?php echo do_shortcode( '[affiliate_registration]' ); ?>
 			</div>
 
 		</div>

@@ -57,7 +57,7 @@
 @import 'partials/author-box';
 @import 'partials/subscribe-form';
 @import 'partials/modal';
-@import 'partials/rounded-box';
+
 @import 'partials/docs-single';
 @import 'partials/doc-search';
 @import 'partials/social-links';
@@ -87,14 +87,11 @@
 @import 'partials/widgets/nav-menu';
 @import 'partials/widgets/pages';
 @import 'partials/widgets/recent-comments';
-@import 'partials/widgets/recent-posts';
-@import 'partials/widgets/popular-posts';
 @import 'partials/widgets/rss';
 @import 'partials/widgets/search';
 @import 'partials/widgets/tag-cloud';
 @import 'partials/widgets/text';
-
-@import 'vendors/ninja-forms';
+@import 'vendors/edd';
 
 @import 'responsive';
 @import 'utilities';
@@ -102,5 +99,3 @@
 .schema-faq-question {
 	font-size: 22px;
 }
-
-

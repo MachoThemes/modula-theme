@@ -1,6 +1,6 @@
 <?php /* Template Name: Pricing */ ?>
 
-<?php get_header('3'); ?>
+<?php get_header( '3' ); ?>
 
 <section class="title-section">
 	<div class="container">
@@ -23,6 +23,6 @@
 <?php get_template_part( 'template-parts/sections/lite-vs-pro' ); ?>
 <?php get_template_part( 'template-parts/sections/compatibility' ); ?>
 <?php get_template_part( 'template-parts/sections/testimonials-2' ); ?>
-<?php //get_template_part( 'template-parts/sections/cta' ); ?>
+<?php // get_template_part( 'template-parts/sections/cta' ); ?>
 
 <?php get_footer(); ?>

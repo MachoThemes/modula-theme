@@ -3,23 +3,9 @@
 //Add default metaboxes to posts
 add_action( 'add_meta_boxes', 'antreas_metaboxes' );
 function antreas_metaboxes() {
-	add_meta_box( ANTREAS_SLUG . '_post_metabox', __( 'Post Options', 'modula' ), 'antreas_display_post_metabox', 'post', 'side', 'high' );
-
-	$post_types     = get_post_types( array( 'public' => true ), 'names' );
-	foreach ( $post_types as $current_type ) {
-		add_meta_box( ANTREAS_SLUG . '_layout_metabox', __( 'Layout Options', 'modula' ), 'antreas_display_layout_metabox', $current_type, 'side', 'high' );
-	}
-
 	add_meta_box( ANTREAS_SLUG . '_pricing_info_metabox', __( 'Pricing Info', 'modula' ), 'antreas_display_pricing_info_metabox', 'download', 'side', 'low' );
 }
 
-//Display and save post metaboxes
-function antreas_display_post_metabox( $post ) {
-	antreas_meta_fields( $post, antreas_metadata_post_options() );
-}
-function antreas_display_layout_metabox( $post ) {
-	antreas_meta_fields( $post, antreas_metadata_layout_options() );
-}
 function antreas_display_pricing_info_metabox( $post ) {
 	antreas_meta_fields( $post, antreas_metadata_download_pricing_info() );
 }
@@ -27,8 +13,6 @@ function antreas_display_pricing_info_metabox( $post ) {
 
 add_action( 'edit_post', 'antreas_metaboxes_save' );
 function antreas_metaboxes_save( $post ) {
-	antreas_meta_save( antreas_metadata_post_options() );
-	antreas_meta_save( antreas_metadata_layout_options() );
 	antreas_meta_save( antreas_metadata_download_pricing_info() );
 }
 
