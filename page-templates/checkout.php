@@ -106,4 +106,4 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 		</div>
 </section>
 
-<?php get_footer(); ?>
+<?php get_footer('minimal'); ?>
