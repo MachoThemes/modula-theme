@@ -106,4 +106,6 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 		</div>
 </section>
 
-<?php get_footer('simple'); ?>
+<?php wp_footer(); ?>
+<?php get_template_part( 'template-parts/sections/footer-simple' ); ?>
+
