@@ -1,8 +1,8 @@
 <?php /* Template Name: Purchase Confirmation */ ?>
 
-<?php get_header( 'checkout' ); ?>
+<?php get_header('checkout'); ?>
 
-<?php if ( isset( $_GET['payment_key'] ) ) : ?>
+<?php if ( isset( $_GET['payment_key'] ) ): ?>
 
 	<?php
 
@@ -11,7 +11,7 @@
 	$session = edd_get_purchase_session();
 	if ( isset( $_GET['payment_key'] ) ) {
 		$payment_key = urldecode( $_GET['payment_key'] );
-	} elseif ( $session ) {
+	} else if ( $session ) {
 		$payment_key = $session['purchase_key'];
 	} elseif ( $edd_receipt_args['payment_key'] ) {
 		$payment_key = $edd_receipt_args['payment_key'];
@@ -63,12 +63,12 @@
 		return '<p class="edd-alert edd-alert-error">' . $edd_receipt_args['error'] . '</p>';
 	}
 
-	$payment = get_post( $edd_receipt_args['id'] );
-	$meta    = edd_get_payment_meta( $payment->ID );
-	$cart    = edd_get_payment_meta_cart_details( $payment->ID, true );
-	$user    = edd_get_payment_meta_user_info( $payment->ID );
-	$email   = edd_get_payment_user_email( $payment->ID );
-	$status  = edd_get_payment_status( $payment, true );
+	$payment   = get_post( $edd_receipt_args['id'] );
+	$meta      = edd_get_payment_meta( $payment->ID );
+	$cart      = edd_get_payment_meta_cart_details( $payment->ID, true );
+	$user      = edd_get_payment_meta_user_info( $payment->ID );
+	$email     = edd_get_payment_user_email( $payment->ID );
+	$status    = edd_get_payment_status( $payment, true );
 
 
 	?>
@@ -81,6 +81,7 @@
 
 		<div class="row">
 			<div class="col-md-6">
+				<?php wp_enqueue_script( 'waypoints' ); ?>
 				<?php get_template_part( 'assets/images/illustration-4.svg' ); ?>
 				<div class="illustration illustration-4 mb-3 mb-md-0">
 					<div class="illustration__content">
@@ -125,18 +126,18 @@
 			<div class="col-md-6">
 				<h1 class="h3">Thank you for your purchase</h1>
 
-				<?php if ( isset( $_GET['payment_key'] ) ) : ?>
+				<?php if ( isset( $_GET['payment_key'] ) ): ?>
 					<p>Below are the download links and instructions to install and activate your plugin. You will receive an e-mail with this information as well (check the spam folder).<br/>If you don't receive the e-mail within a few minutes, please <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact-us' ) ) ); ?>">contact us</a>.</p>
-				<?php else : ?>
+				<?php else:  ?>
 					<p>You will receive an e-mail with the Download links (also be sure to check the spam folder). <br/>If you don't receive the e-mail within a few minutes, please <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact-us' ) ) ); ?>">contact us</a>.<br>Below are the instructions to install and activate your plugin. </p>
-				<?php endif; ?>
+				<?php endif;  ?>
 
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-6">
-		
+				<?php wp_enqueue_script( 'waypoints' ); ?>
 				<?php get_template_part( 'assets/images/illustration-5.svg' ); ?>
 				<div class="illustration illustration-5 mb-3 mb-md-0 float-lg-right">
 					<div class="illustration__content">
@@ -170,21 +171,21 @@
 			</div>
 			<div class="col-md-6">
 
-				<?php if ( isset( $_GET['payment_key'] ) ) : ?>
+				<?php if ( isset( $_GET['payment_key'] ) ): ?>
 
 					<h3>Download links</h3>
 
 					<div class="row">
 
-					<?php if ( $cart ) : ?>
+					<?php if ( $cart ): ?>
 
 						<?php foreach ( $cart as $key => $item ) : ?>
 
-							<?php if ( ! apply_filters( 'edd_user_can_view_receipt_item', true, $item ) ) : ?>
+							<?php if( ! apply_filters( 'edd_user_can_view_receipt_item', true, $item ) ) : ?>
 								<?php continue; // Skip this item if can't view it ?>
 							<?php endif; ?>
 
-							<?php if ( empty( $item['in_bundle'] ) ) : ?>
+							<?php if( empty( $item['in_bundle'] ) ) : ?>
 
 								<?php
 								$price_id       = edd_get_cart_item_price_id( $item );
@@ -202,13 +203,13 @@
 									</strong>
 								</p>
 
-								<?php if ( edd_is_payment_complete( $payment->ID ) && edd_receipt_show_download_files( $item['id'], $edd_receipt_args, $item ) ) : ?>
+								<?php if( edd_is_payment_complete( $payment->ID ) && edd_receipt_show_download_files( $item['id'], $edd_receipt_args, $item ) ) : ?>
 
 										<?php
 										if ( ! empty( $download_files ) && is_array( $download_files ) ) :
 											foreach ( $download_files as $filekey => $file ) :
 												?>
-													<a class="button button--download-icon mb-3" href="<?php echo esc_url( edd_get_download_file_url( $meta['key'], $email, $filekey, $item['id'], $price_id ) ); ?>" class="edd_download_file_link"><?php echo ucwords( str_replace( '-', ' ', $file['name'] ) ); ?></a>
+													<a class="button button--download-icon mb-3" href="<?php echo esc_url( edd_get_download_file_url( $meta['key'], $email, $filekey, $item['id'], $price_id ) ); ?>" class="edd_download_file_link"><?php echo ucwords( str_replace('-', ' ', $file['name'] ) ); ?></a>
 												<?php
 												do_action( 'edd_receipt_files', $filekey, $file, $item['id'], $payment->ID, $meta );
 											endforeach;
@@ -245,8 +246,7 @@
 
 										else :
 											echo '<li>' . apply_filters( 'edd_receipt_no_files_found_text', __( 'No downloadable files found.', 'easy-digital-downloads' ), $item['id'] ) . '</li>';
-										endif;
-										?>
+										endif; ?>
 
 								<?php endif; ?>
 
@@ -288,11 +288,11 @@
 			</div>
 		</div>
 
-		<?php if ( isset( $_GET['payment_key'] ) ) : ?>
+		<?php if ( isset( $_GET['payment_key'] ) ): ?>
 
 			<div class="row">
 				<div class="col-md-6">
-				
+					<?php wp_enqueue_script( 'waypoints' ); ?>
 					<?php get_template_part( 'assets/images/illustration-6.svg' ); ?>
 					<div class="illustration illustration-6 mb-3 mb-md-0">
 						<div class="illustration__content">
@@ -311,7 +311,7 @@
 
 				<div class="col-md-6">
 					<h3>Receipt</h3>
-					<?php echo do_shortcode( '[edd_receipt]' ); ?>
+					<?php echo do_shortcode('[edd_receipt]'); ?>
 				</div>
 			</div>
 

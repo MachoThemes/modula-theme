@@ -1,27 +1,22 @@
 export default class Accordion {
 
-    constructor( $element )
-    {
-        this.$accordion        = $element;
-        this.$accordionTitle   = this.$accordion.children('.accordion__title');
-        this.$accordionContent = this.$accordion.children('.accordion__content');
+	constructor($element){
+ 		this.$accordion = $element;
+		this.$accordionTitle = this.$accordion.children('.accordion__title');
+		this.$accordionContent = this.$accordion.children('.accordion__content');
 
-        this.$accordionTitle.on('click', ( e ) => this.onAccordionClick(e));
+		//events
+		this.$accordionTitle.on('click', (e) => this.onAccordionClick(e) );
+	}
 
-    }
+	onAccordionClick(e){
+		e.preventDefault();
 
-    onAccordionClick( e )
-    {
-        e.preventDefault();
-
-        this.$accordionContent.slideToggle(
-            300,
-            'swing',
-            () => {
-            this.$accordion.toggleClass('accordion--opened');
-            }
-        );
-
-    }
+		this.$accordionContent.slideToggle( 300, 'swing', () => {
+			this.$accordion.toggleClass( 'accordion--opened' );
+		});
+	}
 
 }
+
+

@@ -1,7 +1,7 @@
 <?php
 $utm_medium = isset( $_GET['utm_medium'] ) ? $_GET['utm_medium'] : '';
 
-// get addons
+//get addons
 $addons = modula_theme_get_all_extensions( $downloads );
 ?>
 
@@ -70,11 +70,11 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					</div>
 				</div><!-- row -->
 
-				<div class="pricing-table row">
-					<div class="pricing-breaker">
-						<h4>Extensions included with purchase</h4>
-					</div>
-				</div><!--row -->
+                <div class="pricing-table row">
+                    <div class="pricing-breaker">
+                        <h4>Extensions included with purchase</h4>
+                    </div>
+                </div><!--row -->
 
 				<div class="pricing-table row">
 					<div class="col-xs-4">
@@ -104,14 +104,14 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					</div>
 				</div><!-- row -->
 
-				<?php while ( $addons->have_posts() ) : ?>
+				<?php while ( $addons->have_posts() ): ?>
 					<?php $addons->the_post(); ?>
 
 					<div class="row pricing-table <?php echo isset( $utm_medium ) && $utm_medium === get_post_field( 'post_name' ) ? 'pricing-table--highlight' : ''; ?>">
 						<div class="col-xs-4">
 							<?php echo modula_get_post_meta( get_the_id(), 'pricing_title' ) != '' ? modula_get_post_meta( get_the_id(), 'pricing_title' ) : get_the_title(); ?>
 
-							<?php if ( modula_get_post_meta( get_the_id(), 'tooltip' ) != '' || has_excerpt() ) : ?>
+							<?php if ( modula_get_post_meta( get_the_id(), 'tooltip' ) != '' || has_excerpt() ): ?>
 								<span class="tooltip">
 									<i class="icon-question-circle"></i>
 									<span class="tooltip__text"><?php echo modula_get_post_meta( get_the_id(), 'tooltip' ) != '' ? modula_get_post_meta( get_the_id(), 'tooltip' ) : get_the_excerpt(); ?></span>

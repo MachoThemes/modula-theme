@@ -32,7 +32,7 @@
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">Social Media Sharing</h5>
-							<p>Add social media sharing icons and integrate with Pinterest, Facebook, Twitter, LinkedIN and more.</p>
+							<p>Add social media sharing icons and integrate with Pinterest, Instagram and more.</p>
 						</div>
 					</div><!-- row -->
 				</div><!-- service-2 -->

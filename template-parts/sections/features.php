@@ -5,7 +5,7 @@
 		<div class="row feature">
 			<div class="feature__img col-md-6">
 
-				
+				<?php wp_enqueue_script( 'waypoints' ); ?>
 				<?php get_template_part( 'assets/images/illustration-2.svg' ); ?>
 				<div class="illustration illustration-2 mb-3 mb-md-0 float-lg-right">
 					<div class="illustration__content">
@@ -55,7 +55,7 @@
 		<div class="row feature">
 			<div class="feature__img col-md-6">
 
-				
+				<?php wp_enqueue_script( 'waypoints' ); ?>
 				<?php get_template_part( 'assets/images/illustration-3.svg' ); ?>
 				<div class="illustration illustration-3 mb-3 mb-md-0">
 					<div class="illustration__content">
@@ -87,7 +87,7 @@
 		<div class="row feature">
 			<div class="feature__img col-md-6">
 
-				
+				<?php wp_enqueue_script( 'waypoints' ); ?>
 				<?php get_template_part( 'assets/images/illustration-15.svg' ); ?>
 				<div class="illustration illustration-15 mb-3 mb-md-0 float-lg-right">
 					<div class="illustration__content">
