@@ -1,55 +1,23 @@
 <?php /* Template Name: Checkout */ ?>
 
-<?php get_header('checkout'); ?>
-
-<?php wp_enqueue_script( 'waypoints' ); ?>
+<?php get_header( 'checkout' ); ?>
 
 <?php
-	$payment_mode = edd_get_chosen_gateway();
-	$form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode ) );
+$payment_mode = edd_get_chosen_gateway();
+$form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode ) );
 ?>
 
 <section class="main">
 	<div class="container">
 		<div class="row justify-content-center">
 
-			<?php if ( function_exists('edd_get_cart_contents') && edd_get_cart_contents() ) : ?>
+			<?php if ( function_exists( 'edd_get_cart_contents' ) && edd_get_cart_contents() ) { ?>
 
-				<div class="col-sm-12 title-wrap justify-content-center">
-					<h1 class="h3 text-center">Complete Your Purchase</h1>
-					<p class="text-center">You’re just 60 seconds away from powerful, easy-to-use galleries.</p>
-
-					<div class="row align-items-center justify-content-center">
-						<div class="col-xs-6">
-							<div class="row checkout-badges align-items-center mb-3">
-								<div class="col-xs-6 col-sm-3 text-right text-sm-center">
-									<div title="SSL Encrypted Payment" class="checkout-badges__ssl">
-										<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/checkout-badges/ssl.svg' ); ?>
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4 text-sm-center">
-									<div title="14 Day Moneyback Guarantee" class="checkout-badges__moneyback">
-										<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/checkout-badges/moneyback.svg' ); ?>
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-2 text-right text-sm-center">
-									<div title="Norton Secured Transaction" class="checkout-badges__norton">
-										<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/checkout-badges/norton-secured.svg' ); ?>
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-3 text-sm-center">
-									<div title="McAfee Secured Transaction" class="checkout-badges__mcafee">
-										<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/checkout-badges/mcafee.svg' ); ?>
-									</div>
-								</div>
-							</div><!-- row -->
-						</div>
-					</div>
-				</div>
+			<div class="col-sm-12 title-wrap justify-content-center">
+				<h1 class="h3 text-center">Complete Your Purchase</h1>
+				<p class="text-center">You're <u>5 minutes away</u> from having a gallery that amazes potential clients.</p>
 
 				<div class="col-lg-7">
-
-					<?php edd_checkout_cart(); ?>
 
 					<div id="edd_checkout_form_wrap" class="edd_clearfix">
 						<?php do_action( 'edd_before_purchase_form' ); ?>
@@ -65,7 +33,7 @@
 							if ( edd_is_ajax_disabled() && ! empty( $_REQUEST['payment-mode'] ) ) {
 								do_action( 'edd_purchase_form' );
 							} elseif ( edd_show_gateways() ) {
-								do_action( 'edd_payment_mode_select'  );
+								do_action( 'edd_payment_mode_select' );
 							} else {
 								do_action( 'edd_purchase_form' );
 							}
@@ -85,23 +53,58 @@
 
 				</div><!-- col -->
 
-			<?php else: ?>
+				<div class="col-lg-5"> <!--right hand side checkout details -->
+					<?php edd_checkout_cart(); ?>
+					<div class="row edd_testimonial_row">
+						<div class="col-xs-12">
 
-				<div class="col-sm-12 title-wrap">
-					<h1 class="h3 text-center">Checkout</h1>
-					<div class="text-center">
-						<p class="empty-cart">Your cart is empty</p>
-						<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">Buy Modula Gallery</a>
-						<div>
-							<img width="600" src="<?php echo get_template_directory_uri(); ?>/assets/images/illustration-13.svg" alt="Cart">
+							<div class="testimonial__stars"></div>
+
+							<div class="testimonial_content">Finally a beautiful looking image gallery plugin with a development team that actually cares about web performance. Modula doesn't slow down your site and looks great.</div>
+							<div class="testimonial_name"><strong>- Brian Jackson</strong>, Forgemedia LLC</div>
+
+						</div>
+
+					</div>
+					<div class="row edd_testimonial_row">
+						<div class="col-xs-12">
+							<div class="testimonial__stars"></div>
+							<div class="testimonial_content">AT LAST! A wordpress gallery plugin that does what it says – and more – and is easy to set up and simple to configure. Thank you so much</div>
+							<div class="testimonial_name"><strong>- Paul J. White</strong>, A happy Modula user</div>
 						</div>
 					</div>
-				</div>
 
-			<?php endif; ?>
+					<div class="row edd_checklist_row">
+						<div class="col-xs-12">
+							<h5>Even more reasons to choose Modula</h5>
+							<ul>
+								<li><i class="icon-ok"></i><u>14-day money-back guarantee</u></li>
+								<li><i class="icon-ok"></i>200+ 5-star reviews</li>
+								<li><i class="icon-ok"></i>20,000+ happy clients</li>
+								<li><i class="icon-ok"></i>800,000+ total downloads</li>
+							</ul>
+							<img src=<?php echo get_template_directory_uri(); ?>/assets/images/checkout-badges/secure-badges.png">
+						</div>
+					</div>
+				</div><!--/.col-lg-5-->
+				<?php } else { ?>
 
+					<div class="col-sm-12 title-wrap">
+						<h1 class="h3 text-center">Checkout</h1>
+						<div class="text-center">
+							<p class="empty-cart">Your cart is empty</p>
+							<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">Buy Modula Gallery</a>
+							<div>
+								<img width="600" src="<?php echo get_template_directory_uri(); ?>/assets/images/illustration-13.svg" alt="Cart">
+							</div>
+						</div>
+					</div>
+
+				<?php } ?>
+
+			</div>
 		</div>
-	</div>
 </section>
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>
+<?php get_template_part( 'template-parts/sections/footer-simple' ); ?>
