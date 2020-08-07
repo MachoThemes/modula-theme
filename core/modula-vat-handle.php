@@ -9,7 +9,7 @@ function modula_change_vat_field_location(){
 }
 
 // Add custom template for billing country and vat field
-add_action( 'edd_purchase_form_after_cc_form', 'modula_show_vat' );
+// add_action( 'edd_purchase_form_after_cc_form', 'modula_show_vat' );
 function modula_show_vat(){
 	edd_get_template_part( 'modula-vat' );
 }
