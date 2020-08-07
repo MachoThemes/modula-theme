@@ -1,5 +1,3 @@
-<?php wp_enqueue_script( 'waypoints' ); ?>
-
 <?php get_template_part( 'template-parts/sections/title-single' ); ?>
 
 <section class="main">
