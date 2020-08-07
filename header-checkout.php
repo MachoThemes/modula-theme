@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
-	<!-- Hotjar Tracking Code for https://wp-modula.com/ -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:445155,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
 	<?php wp_head(); ?>
 	<meta name="theme-color" content="#2ebf91">
 </head>
@@ -28,21 +17,21 @@
 					<div class="checkout-steps">
 						<div class="checkout-steps__pricing-step">
 							<div class="checkout-steps__icon">
-								<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/shopping-cart.svg' ); ?>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/shopping-cart.png" />
 							</div>
 							<div class="checkout-steps__label">Choose Plan</div>
 						</div><!-- checkout-steps__pricing-step -->
 						<div class="checkout-steps__line"></div>
 						<div class="checkout-steps__checkout-step">
 							<div class="checkout-steps__icon">
-								<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cc.svg' ); ?>
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cc.png" />
 							</div>
 							<div class="checkout-steps__label">Payment Details</div>
 						</div><!-- checkout-steps__checkout-step -->
 						<div class="checkout-steps__line"></div>
 						<div class="checkout-steps__download-step">
 							<div class="checkout-steps__icon">
-								<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/download-icon.svg' ); ?>
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/download-icon.png" />
 							</div>
 							<div class="checkout-steps__label">Download Files</div>
 						</div><!-- checkout-steps__download-step -->
