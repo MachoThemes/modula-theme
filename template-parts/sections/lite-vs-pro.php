@@ -66,7 +66,7 @@ $addons = modula_theme_get_all_extensions( $downloads );
 						<i class="icon-ok"></i>
 					</div>
 					<div class="col-xs-4">
-						<i class="icon-cancel"></i>
+						<i class="icon-ok"></i>
 					</div>
 				</div><!-- row -->
 
