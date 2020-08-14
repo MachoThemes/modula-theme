@@ -14,7 +14,7 @@
 					<div class="col-xs-12 col-sm-6">
 						<div class="stats-section__stat mb-3">
 							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/stats/installations.svg' ); ?>
-							<h6 class="mb-0">70,000+</h6>
+							<h6 class="mb-0">80,000+</h6>
 							<p class="mb-0">active installations</p>
 						</div><!-- stats-section__stat -->
 					</div><!-- col -->

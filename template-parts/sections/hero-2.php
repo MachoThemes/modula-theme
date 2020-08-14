@@ -9,7 +9,7 @@
                 <h1 class="mb-3">Empowering photographers, designers, creators and artists to build unique looking galleries</h1>
                 <p class="mb-3">With our drag-to-fit grid system you can take your pictures and drag them into unique layouts that put your images in the spotlight.</p>
                 <p class="mb-3">
-                <div class="stars mr-2"></div><strong>70,000+</strong> Active Users
+                <div class="stars mr-2"></div><strong>80,000+</strong> Active Users
                 </p>
                 <a class="button button--xl mr-1 mb-md-0" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">Get Started Now</a>
             </div>
