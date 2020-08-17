@@ -34,8 +34,53 @@ add_action( 'init', 'jp_disable_billing_details' );
 function jp_disable_billing_details() {
 	remove_action( 'edd_after_cc_fields', 'edd_default_cc_address_fields' );
 	add_action( 'edd_after_cc_fields', 'modula_cc_address_fields' );
+	add_action( 'edd_paypalexpress_cc_form', 'modula_add_country' );
 }
 add_action( 'init', 'jp_disable_billing_details' );
+
+function modula_add_country(){
+
+	$logged_in = is_user_logged_in();
+	$customer  = EDD()->session->get( 'customer' );
+	$customer  = wp_parse_args( $customer, array( 'address' => array(
+		'line1'   => '',
+		'line2'   => '',
+		'city'    => '',
+		'zip'     => '',
+		'state'   => '',
+		'country' => ''
+	) ) );
+
+	$customer['address'] = array_map( 'sanitize_text_field', $customer['address'] );
+
+	if( $logged_in ) {
+
+		$user_address = get_user_meta( get_current_user_id(), '_edd_user_address', true );
+
+		foreach( $customer['address'] as $key => $field ) {
+
+			if ( empty( $field ) && ! empty( $user_address[ $key ] ) ) {
+				$customer['address'][ $key ] = $user_address[ $key ];
+			} else {
+				$customer['address'][ $key ] = '';
+			}
+
+		}
+
+	}
+
+	$selected_country = edd_get_shop_country();
+	if ( isset( $_SERVER["HTTP_CF_IPCOUNTRY"] ) ) {
+        $selected_country = $_SERVER["HTTP_CF_IPCOUNTRY"];
+    }
+
+	if( ! empty( $customer['address']['country'] ) && '*' !== $customer['address']['country'] ) {
+		$selected_country = $customer['address']['country'];
+	}
+
+	echo '<input type="hidden" name="billing_country" value="' . $selected_country . '">';
+
+}
 
 function modula_cc_address_fields(){
 
