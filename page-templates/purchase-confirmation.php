@@ -316,5 +316,5 @@
 
 	</div>
 </section>
-
+<?php echo do_shortcode('[edd_shareasale]'); ?>
 <?php get_footer(); ?>
