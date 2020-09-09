@@ -536,19 +536,19 @@
 	}
 
 
-	//add_action( 'wp', 'modula_theme_pricing_discounts' );
+	add_action( 'wp', 'modula_theme_pricing_discounts' );
 	function modula_theme_pricing_discounts() {
 
 		if ( is_user_logged_in() ) {
 			$current_user = wp_get_current_user();
-			$discount     = new EDD_Discount( '30OFF', true );
+			$discount     = new EDD_Discount( '14OFF', true );
 
 			if ( ! $discount->is_used( $current_user->user_email ) ) {
-				$cart_discounts[] = '30OFF';
+				$cart_discounts[] = '14OFF';
 			}
 
 		} else {
-			$cart_discounts[] = '30OFF';
+			$cart_discounts[] = '14OFF';
 		}
 
 
