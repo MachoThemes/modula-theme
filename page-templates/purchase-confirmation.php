@@ -81,45 +81,7 @@
 
 		<div class="row">
 			<div class="col-md-6">
-				<?php get_template_part( 'assets/images/illustration-4.svg' ); ?>
-				<div class="illustration illustration-4 mb-3 mb-md-0">
-					<div class="illustration__content">
-						<svg class="illustration__animated-svg illustration-4__plant-1" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__plant-1"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__plant-2" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__plant-2"></use>
-						</svg>
-						<svg class="illustration-4__static" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__static"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__heart-1" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__heart-1"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__heart-2" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__heart-2"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__heart-3" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__heart-3"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__heart-4" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__heart-4"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__heart-5" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__heart-5"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__heart-6" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__heart-6"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__heart-7" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__heart-7"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-4__heart-8" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-4__heart-8"></use>
-						</svg>
-
-					</div>
-				</div>
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/images/illustration-4.png'); ?>" alt="Thank you">
 			</div>
 
 			<div class="col-md-6">
@@ -136,36 +98,7 @@
 
 		<div class="row">
 			<div class="col-md-6">
-				<?php get_template_part( 'assets/images/illustration-5.svg' ); ?>
-				<div class="illustration illustration-5 mb-3 mb-md-0 float-lg-right">
-					<div class="illustration__content">
-						<svg class="illustration-5__static" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-5__static"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-5__instruction-1" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-5__instruction-1"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-5__instruction-5" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-5__instruction-5"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-5__instruction-4" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-5__instruction-4"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-5__instruction-2" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-5__instruction-2"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-5__plant" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-5__plant"></use>
-						</svg>
-						<svg class="illustration__animated-svg illustration-5__instruction-3" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-5__instruction-3"></use>
-						</svg>
-						<svg class="illustration-5__person" viewBox="0 0 100 100">
-							<use xlink:href="#illustration-5__person"></use>
-						</svg>
-
-					</div>
-				</div>
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/images/illustration-5.png'); ?>" alt="Installation instructions">
 			</div>
 			<div class="col-md-6">
 
@@ -290,20 +223,7 @@
 
 			<div class="row">
 				<div class="col-md-6">
-					<?php get_template_part( 'assets/images/illustration-6.svg' ); ?>
-					<div class="illustration illustration-6 mb-3 mb-md-0">
-						<div class="illustration__content">
-							<svg class="illustration-6__static" viewBox="0 0 100 100">
-								<use xlink:href="#illustration-6__static"></use>
-							</svg>
-							<svg class="illustration__animated-svg illustration-6__plant" viewBox="0 0 100 100">
-								<use xlink:href="#illustration-6__plant"></use>
-							</svg>
-							<svg class="illustration-6__static-2" viewBox="0 0 100 100">
-								<use xlink:href="#illustration-6__static-2"></use>
-							</svg>
-						</div>
-					</div>
+					<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/images/illustration-6.png'); ?>" alt="">
 				</div>
 
 				<div class="col-md-6">

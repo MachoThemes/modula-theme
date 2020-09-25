@@ -9,7 +9,7 @@
 			</div>
 
 			<div class="col-md-6">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/illustration-14.svg" alt="404 Page Not Found">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/illustration-14.png" alt="404 Page Not Found">
 			</div><!-- col -->
 
 		</div><!-- row -->

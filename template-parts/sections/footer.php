@@ -4,7 +4,7 @@
 <section class="footer-section">
 	<div class="footer container">
 		<div class="row">
-			<div class="col-sm-8 col-md-3 mb-3 mb-md-0">
+			<div class="col-sm-8 col-md-2 mb-3 mb-md-0">
 				<?php dynamic_sidebar( 'footer-widgets-1' ); ?>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-2 col-md-offset-1 mb-3 mb-md-0">
@@ -16,7 +16,7 @@
 			<div class="col-xs-6 col-sm-4 col-md-2">
 				<?php dynamic_sidebar( 'footer-widgets-4' ); ?>
 			</div>
-			<div class="col-xs-6 col-sm-4 col-md-2">
+			<div class="col-xs-6 col-sm-4 col-md-3">
 				<?php dynamic_sidebar( 'footer-widgets-5' ); ?>
 			</div>
 		</div>

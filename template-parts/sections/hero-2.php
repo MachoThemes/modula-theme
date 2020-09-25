@@ -1,4 +1,3 @@
-<?php get_template_part( 'assets/images/hero.svg' ); ?>
 <section class="hero-section-2">
     <div class="hero-section-2__bg-1"></div>
 
@@ -18,7 +17,7 @@
                 <img class="hero-section-2__hero" src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-2.png">
 
                 <div class="hero-section-2__arrow">
-					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/banner-section__arrow.svg' ); ?>
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/banner-section__arrow.png' ); ?>" alt="Easily create galleries with Modula">
                 </div>
             </div>
 
