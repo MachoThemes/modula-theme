@@ -48,13 +48,13 @@
 				<div class="testimonial">
 					<div class="testimonial__stars mb-3"></div>
 					<div class="testimonial__content mb-3">
-						<p class="mb-0">WP Modula is such a great plugin to enhance the demonstration of photo galleries on my website. The number of customization options for a photo gallery is commendable.</p>
+						<p class="mb-0">Modula is an excellent solution for photographers wanting an attractive, feature-packed and easy-to-use gallery to display their work.</p>
 					</div>
 					<div class="testimonial__author">
-						<?php echo wp_get_attachment_image( 225677, "thumbnail", false, array('class' => 'testimonial__avatar mr-3') ); ?>
+						<?php echo wp_get_attachment_image( 460459, "thumbnail", false, array('class' => 'testimonial__avatar mr-3') ); ?>
 						<div class="testimonial__name">
-							<h6 class="mb-0">Vashishtha Kapoor</h6>
-							<p class="testimonial__title mb-0">Digital Marketer</p>
+							<h6 class="mb-0">Mark Condon</h6>
+							<p class="testimonial__title mb-0">shotkit.com</p>
 						</div>
 					</div>
 				</div><!-- testimonial -->
