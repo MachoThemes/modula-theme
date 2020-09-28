@@ -3,7 +3,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3 section__heading text-center">
+			<div class="col-md-12 section__heading text-center">
 				<h2>Join over 80,000 people using Modula.</h2>
 				<p>With Modula adding galleries to your WordPress website has never been easier. Add galleries, masonry grids and more in just a few clicks.</p>
 			</div>
