@@ -15,7 +15,7 @@
 				<div class="service-2 mb-3">
 					<div class="row">
 						<div class="col-sm-3 text-center text-sm-right mb-2">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/services/icon-services-1.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/services/icon-services-1.png' ); ?> " alt="Desing your gallery">
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">Design Your Own Gallery Layouts</h5>
@@ -28,7 +28,7 @@
 				<div class="service-2 mb-3">
 					<div class="row">
 						<div class="col-sm-3 text-center text-sm-right mb-2">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/services/icon-services-2.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/services/icon-services-2.png' ); ?> " alt="Social Media Sharing">
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">Social Media Sharing</h5>
@@ -43,7 +43,7 @@
 				<div class="service-2 mb-3">
 					<div class="row">
 						<div class="col-sm-3 text-center text-sm-right mb-2">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/services/icon-services-3.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/services/icon-services-3.png' ); ?> " alt="Easy Preview">
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">Easily Preview Your Galleries</h5>
@@ -56,7 +56,7 @@
 				<div class="service-2 mb-3">
 					<div class="row">
 						<div class="col-sm-3 text-center text-sm-right mb-2">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/services/icon-services-4.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/services/icon-services-4.png' ); ?> " alt=" Modula WordPress">
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">Modula ❤️ WordPress</h5>
@@ -71,7 +71,7 @@
 				<div class="service-2 mb-3">
 					<div class="row">
 						<div class="col-sm-3 text-center text-sm-right mb-2">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/services/icon-services-5.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/services/icon-services-5.png' ); ?> " alt="Drag & Drop">
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">A User-Friendly Drag & Drop Builder</h5>
@@ -84,7 +84,7 @@
 				<div class="service-2 mb-3">
 					<div class="row">
 						<div class="col-sm-3 text-center text-sm-right mb-2">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/services/icon-services-6.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/services/icon-services-6.png' ); ?> " alt="Gallery Filters">
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">Sort Galleries With Filters</h5>
@@ -99,7 +99,7 @@
 				<div class="service-2 mb-3">
 					<div class="row">
 						<div class="col-sm-3 text-center text-sm-right mb-2">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/services/icon-services-7.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/services/icon-services-7.png' ); ?> " alt="Extensions">
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">Powerful Extensions</h5>
@@ -112,7 +112,7 @@
 				<div class="service-2 mb-3">
 					<div class="row">
 						<div class="col-sm-3 text-center text-sm-right mb-2">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/services/icon-services-8.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/services/icon-services-8.png' ); ?> " alt="Great Support">
 						</div>
 						<div class="col-sm-9 text-center text-sm-left">
 							<h5 class="mb-1">We Take Support Seriously</h5>

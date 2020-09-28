@@ -95,7 +95,7 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 							<p class="empty-cart">Your cart is empty</p>
 							<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">Buy Modula Gallery</a>
 							<div>
-								<img width="600" src="<?php echo get_template_directory_uri(); ?>/assets/images/illustration-13.svg" alt="Cart">
+								<img width="600" src="<?php echo get_template_directory_uri(); ?>/assets/images/illustration-13.png" alt="Cart">
 							</div>
 						</div>
 					</div>

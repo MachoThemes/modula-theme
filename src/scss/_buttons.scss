@@ -1,6 +1,7 @@
 .button,
 input[type=button],
-input[type=submit] {
+input[type=submit],
+.wp-block-button__link {
     position: relative;
     display: inline-block;
     padding: 18px 48px;
@@ -54,8 +55,6 @@ input[type=submit] {
 }
 
 
-
-
 .button--link {
 	background: transparent;
 	position: relative;
@@ -103,7 +102,8 @@ input[type=submit] {
 .button--download-icon {
 	background-color: $accent-color-1;
 	border-color: $accent-color-1;
-	background-image: url(../images/download-icon.svg);
+	//background-image: url(../images/download-icon.svg);
+	background-image: url(../images/download-icon.png);
 	background-repeat: no-repeat;
 	background-position: 20px 48%;
 	background-size: 22px;

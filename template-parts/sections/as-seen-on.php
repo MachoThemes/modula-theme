@@ -10,54 +10,58 @@
 		<div class="row as-seen-on-section__images">
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img">
-					<a href="https://colorlib.com"><?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/colorlib.svg' ); ?></a>
+					<a href="https://colorlib.com">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/colorlib.png' ); ?> " alt="Colorlib">
+					</a>
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img">
-					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/winning-wp.svg' ); ?>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/winning-wp.png' ); ?> " alt="Winning WP">
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img" style="height:25px;">
-					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/themeisle.svg' ); ?>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/themeisle.png' ); ?> " alt="ThemeIsle">
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img">
-					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/wp-engine.svg' ); ?>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/wp-engine.png' ); ?> " alt="WP Engine">
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img" style="height:40px;">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/logos/wpbuffs.png'; ?>">
+					<img src="<?php echo get_template_directory_uri() . '/assets/images/logos/wpbuffs.png'; ?>" alt="WPBuffs">
 				</div>
 			</div>
 			<div class="clear visible-lg"></div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img" style="height:24px;">
-					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/shortpixel.svg' ); ?>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/shortpixel.png' ); ?> " alt="ShortPixel">
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img" style="height:40px;">
-					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/website-planet.svg' ); ?>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/shotkit.png' ); ?> " alt="Shotkit">
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img" style="height:27px;">
-					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/kinsta.svg' ); ?>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/kinsta.png' ); ?> " alt="Kinsta">
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img" style="height:40px;">
-					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/wplift.svg' ); ?>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/wplift.png' ); ?> " alt="WPLift">
 				</div>
 			</div>
 
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img">
-					<a href="https://www.codeinwp.com"><?php echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/codeinwp.svg' ); ?></a>
+					<a href="https://www.codeinwp.com">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/codeinwp.png' ); ?> " alt="CodeInWP">
+					</a>
 				</div>
 			</div>
 		</div>

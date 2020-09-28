@@ -1,26 +1,26 @@
 .stats-section {
 	background: #F7F8F9;
-}
 
-.stats-section__stat {
-	background: #fff;
-	border-radius: 6px;
-	box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.12);
-	padding: 1rem 1rem 1rem 4.2rem;
-	position: relative;
+	.stats-section__stat {
+		background: #fff;
+		border-radius: 6px;
+		box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.12);
+		padding: 1rem 1rem 1rem 4.2rem;
+		position: relative;
 
-	svg {
-		position: absolute;
-		left: 20px;
-		top: 50%;
-		width: 40px;
-		height: 40px;
-		margin-top: -20px;
-	}
+		img {
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			width: 40px;
+			height: 40px;
+			margin-top: -20px;
+		}
 
-	h6 {
-		color: $accent-color-2;
-		font-weight:700;
+		h6 {
+			color: $accent-color-2;
+			font-weight:700;
+		}
 	}
 }
 

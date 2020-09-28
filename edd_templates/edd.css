@@ -178,7 +178,7 @@
 	display: inline-block;
 	width: 10px;
 	height: 11px;
-	background: url(../assets/images/icons/cancel.svg ) 0 0 no-repeat;
+	background: url(../assets/images/icons/cancel.png ) 0 0 no-repeat;
 	position: relative;
 	top: 3px;
 }
@@ -401,7 +401,7 @@
     margin-right: 15px;
     width: 28px;
 	height: 28px;
-	background: url(../assets/images/icons/paypal.svg) no-repeat 50% 50%;
+	background: url(../assets/images/icons/paypal.png) no-repeat 50% 50%;
 	background-size: 100%;
 }
 
@@ -412,7 +412,7 @@
     margin-right: 15px;
     width: 24px;
 	height: 24px;
-	background: url(../assets/images/icons/credit-card.svg) no-repeat 50% 50%;
+	background: url(../assets/images/icons/credit-card.png) no-repeat 50% 50%;
 	background-size: 100%;
 }
 
@@ -587,7 +587,7 @@
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	background:url(../assets/images/icons/lock2.svg) no-repeat 50% 50%;
+	background:url(../assets/images/icons/lock2.png) no-repeat 50% 50%;
 	background-size: 100%;
 	margin-left: 6px;
 }
@@ -1079,7 +1079,7 @@ input.edd_submit_plain {
 	margin: 20px auto 0;
 	width: 400px;
 	max-width: 100% !important;
-	background-image: url(../assets/images/icons/lock1.svg);
+	background-image: url(../assets/images/icons/lock1.png);
 	background-repeat: no-repeat;
 	background-position: 20px 50%;
 	background-size: 22px;
@@ -1087,7 +1087,7 @@ input.edd_submit_plain {
 
 #edd-purchase-button[value="Please Wait..."] {
 	background-image: none;
-}​
+}
 
 .edd-submit.button:focus,
 [type="submit"].edd-submit:focus {

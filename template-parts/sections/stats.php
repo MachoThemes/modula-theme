@@ -3,8 +3,8 @@
 
 		<div class="row align-items-center">
 			<div class="col-lg-6 mb-3">
-				<div class="illustration illustration-18 float-lg-right">
-					<?php get_template_part( 'assets/images/illustration-18.svg' ); ?>
+				<div class="float-lg-right">
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/illustration-18.png' ); ?> " alt="Active community">
 				</div>
 			</div>
 			<div class="col-lg-6">
@@ -13,28 +13,28 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-6">
 						<div class="stats-section__stat mb-3">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/stats/installations.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stats/installations.png' ); ?> " alt="Active installs">
 							<h6 class="mb-0">80,000+</h6>
 							<p class="mb-0">active installations</p>
 						</div><!-- stats-section__stat -->
 					</div><!-- col -->
 					<div class="col-xs-12 col-sm-6">
 						<div class="stats-section__stat mb-3">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/stats/downloads.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stats/downloads.png' ); ?> " alt="Downloads">
 							<h6 class="mb-0">535,051</h6>
 							<p class="mb-0">all time downloads</p>
 						</div><!-- stats-section__stat -->
 					</div><!-- col -->
 					<div class="col-xs-12 col-sm-6">
 						<div class="stats-section__stat mb-3">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/stats/ratings.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stats/ratings.png' ); ?> " alt="User reviews">
 							<h6 class="mb-0">4.7 / 5</h6>
 							<p class="mb-0">user reviews</p>
 						</div><!-- stats-section__stat -->
 					</div><!-- col -->
 					<div class="col-xs-12 col-sm-6">
 						<div class="stats-section__stat mb-3">
-							<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/stats/happiness.svg' ); ?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stats/happiness.png' ); ?> " alt="Happy users">
 							<h6 class="mb-0">93%</h6>
 							<p class="mb-0">happiness score</p>
 						</div><!-- stats-section__stat -->
@@ -42,7 +42,6 @@
 				</div><!-- row -->
 			</div>
 		</div>
-
 
 	</div><!-- container -->
 </section>

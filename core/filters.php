@@ -185,10 +185,6 @@
 				$items .= '<li class="menu-item"><a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '#account-information">Account Information</a></li>';
 				$items .= '<li class="menu-item"><a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '#download-history">Download History</a></li>';
 
-				if ( function_exists( 'affwp_is_affiliate' ) && affwp_is_affiliate( get_current_user_id() ) ) :
-					$items .= '<li class="menu-item"><a href="' . get_permalink( get_page_by_path( 'affiliate-area' ) ) . '">Affiliate Area</a></li>';
-				endif;
-
 				$items .= '<li class="menu-item"><a href="' . wp_logout_url( home_url() ) . '">Log Out</a></li>';
 				$items .= '</ul>';
 				$items .= '</li>';
