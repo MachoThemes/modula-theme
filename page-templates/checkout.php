@@ -81,9 +81,9 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 								<li><i class="icon-ok"></i><u>14-day money-back guarantee</u></li>
 								<li><i class="icon-ok"></i>200+ 5-star reviews</li>
 								<li><i class="icon-ok"></i>20,000+ happy clients</li>
-								<li><i class="icon-ok"></i>800,000+ total downloads</li>
+								<li><i class="icon-ok"></i>920,000+ total downloads</li>
 							</ul>
-							<img src=<?php echo get_template_directory_uri(); ?>/assets/images/checkout-badges/secure-badges.png">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/checkout-badges/secure-badges.png">
 						</div>
 					</div>
 				</div><!--/.col-lg-5-->
@@ -95,7 +95,8 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 							<p class="empty-cart">Your cart is empty</p>
 							<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">Buy Modula Gallery</a>
 							<div>
-								<img width="600" src="<?php echo get_template_directory_uri(); ?>/assets/images/illustration-13.png" alt="Cart">
+								<img width="600"
+								     src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/illustration-13.png" alt="Cart">
 							</div>
 						</div>
 					</div>
