@@ -81,7 +81,7 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 								<li><i class="icon-ok"></i><u>14-day money-back guarantee</u></li>
 								<li><i class="icon-ok"></i>200+ 5-star reviews</li>
 								<li><i class="icon-ok"></i>20,000+ happy clients</li>
-								<li><i class="icon-ok"></i>920,000+ total downloads</li>
+								<li><i class="icon-ok"></i>923,604 total downloads</li>
 							</ul>
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/checkout-badges/secure-badges.png">
 						</div>

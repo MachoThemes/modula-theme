@@ -43,7 +43,9 @@
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img" style="height:40px;">
+					<a href="https://shotkit.com">
 					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/shotkit.png' ); ?> " alt="Shotkit">
+					</a>
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
