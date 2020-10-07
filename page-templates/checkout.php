@@ -69,8 +69,8 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 					<div class="row edd_testimonial_row">
 						<div class="col-xs-12">
 							<div class="testimonial__stars"></div>
-							<div class="testimonial_content">AT LAST! A wordpress gallery plugin that does what it says – and more – and is easy to set up and simple to configure. Thank you so much</div>
-							<div class="testimonial_name"><strong>- Paul J. White</strong>, A happy Modula user</div>
+							<div class="testimonial_content">Modula is the best gallery plugin for WordPress I’ve ever used. It’s fast, easy to get started, and has some killer features. It’s also super customizable. As a developer I appreciate that for my clients. As a user, I appreciate that I don’t need to add any code to get things the way I want!</div>
+							<div class="testimonial_name"><strong>- Joe Casabona</strong>, casabona.org</div>
 						</div>
 					</div>
 
