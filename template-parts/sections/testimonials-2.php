@@ -32,13 +32,13 @@
 				<div class="testimonial">
 					<div class="testimonial__stars mb-3"></div>
 					<div class="testimonial__content mb-3">
-						<p class="mb-0">I’m a big fan of Modula for how easy it makes it to create stylish galleries. Modula gives you the best of both worlds by letting you quickly create a gallery with basic settings and then, only if you want to, dig into the advanced settings.</p>
+						<p class="mb-0">Modula is the best gallery plugin for WordPress I’ve ever used. It’s fast, easy to get started, and has some killer features. It’s also super customizable. As a developer I appreciate that for my clients. As a user, I appreciate that I don’t need to add any code to get things the way I want!</p>
 					</div>
 					<div class="testimonial__author">
-						<?php echo wp_get_attachment_image( 225675, "thumbnail", false, array('class' => 'testimonial__avatar mr-3') ); ?>
+						<?php echo wp_get_attachment_image( 462018, "thumbnail", false, array('class' => 'testimonial__avatar mr-3') ); ?>
 						<div class="testimonial__name">
-							<h6 class="mb-0">Devesh</h6>
-							<p class="testimonial__title mb-0">WP Kube</p>
+							<h6 class="mb-0">Joe Casabona</h6>
+							<p class="testimonial__title mb-0">casabona.org</p>
 						</div>
 					</div>
 				</div><!-- testimonial -->

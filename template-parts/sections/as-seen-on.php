@@ -55,7 +55,9 @@
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
 				<div class="as-seen-on-section__images__img" style="height:40px;">
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/wplift.png' ); ?> " alt="WPLift">
+					<a href="https://cpothemes.com/wordpress-photo-gallery-plugins">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/cpothemes.png' ); ?>" alt="CPOThemes">
+					</a>
 				</div>
 			</div>
 
