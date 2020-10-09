@@ -14,6 +14,8 @@ define( 'ANTREAS_CORE', get_template_directory() . '/core/' );
 define( 'ANTREAS_SHORTCODES', get_template_directory() . '/shortcodes/' );
 define( 'ANTREAS_PREMIUM_NAME', 'Antreas Pro' );
 define( 'ANTREAS_PREMIUM_URL', 'www.machothemes.com/theme/antreas/' );
+add_theme_support( 'editor-styles');
+add_action( 'admin_init', 'modula_theme_add_editor_styles' );
 
 require_once ANTREAS_CORE . 'init.php';
 
@@ -286,6 +288,10 @@ function modula_licenses_tag( $payment_id = 0 ){
 
 	return $keys_output;
 
+}
+
+function modula_theme_add_editor_styles() {
+	add_editor_style( 'modula-theme-block-styles.css' );
 }
 
 // EU VAT
