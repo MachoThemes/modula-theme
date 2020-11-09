@@ -40,6 +40,14 @@
 		                   <?php echo 'by '. get_the_author(); ?>
 	                    </span>
 
+	                    <?php if( get_comments_number() !== '0' ) : ?>
+		                    <span class="title-single__comments">
+										<a title="<?php echo esc_attr__( 'Comment on Post', 'modula' ); ?>" href="<?php echo esc_url( get_the_permalink( get_the_ID() ) ); ?>#comments">
+											<?php esc_html( comments_number( __( 'no comments', 'modula' ), __( 'one comment', 'modula' ), __( '% comments', 'modula' ) ) ); ?>
+										</a>
+									</span>
+	                    <?php endif; ?>
+
                     </div>
                 </div>
             </div>
