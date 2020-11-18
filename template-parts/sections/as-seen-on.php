@@ -37,8 +37,8 @@
 			</div>
 			<div class="clear visible-lg"></div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
-				<div class="as-seen-on-section__images__img" style="height:24px;">
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/shortpixel.png' ); ?> " alt="ShortPixel">
+				<div class="as-seen-on-section__images__img" style="height:30px;">
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/fixthephoto.png' ); ?> " alt="FixThePhoto">
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
