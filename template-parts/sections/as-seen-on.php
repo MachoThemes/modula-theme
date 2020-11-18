@@ -10,34 +10,34 @@
         <div class="row as-seen-on-section__images">
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img">
-                    <a href="https://colorlib.com">
+                    <a href="https://colorlib.com" target="_blank">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/colorlib.png'); ?> "
-                             alt="Colorlib">
+                             alt="Colorlib logo">
                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/winning-wp.png'); ?> "
-                         alt="Winning WP">
+                         alt="Winning WP logo">
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:25px;">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/themeisle.png'); ?> "
-                         alt="ThemeIsle">
+                         alt="ThemeIsle logo">
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/wp-engine.png'); ?> "
-                         alt="WP Engine">
+                         alt="WP Engine logo">
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:40px;">
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/logos/wpbuffs.png'; ?>"
-                         alt="WPBuffs">
+                         alt="WPBuffs logo">
                 </div>
             </div>
             <div class="clear visible-lg"></div>
@@ -45,38 +45,38 @@
                 <div class="as-seen-on-section__images__img" style="height:30px;">
                     <a href="https://fixthephoto.com" target="_blank">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/fixthephoto.png'); ?> "
-                             alt="FixThePhoto">
+                             alt="FixThePhoto logo">
                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:40px;">
-                    <a href="https://shotkit.com">
+                    <a href="https://shotkit.com" target="_blank">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/shotkit.png'); ?> "
-                             alt="Shotkit">
+                             alt="Shotkit logo">
                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:27px;">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/kinsta.png'); ?> "
-                         alt="Kinsta">
+                         alt="Kinsta logo">
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:40px;">
-                    <a href="https://cpothemes.com/wordpress-photo-gallery-plugins">
+                    <a href="https://cpothemes.com/wordpress-photo-gallery-plugins" target="_blank">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/cpothemes.png'); ?>"
-                             alt="CPOThemes">
+                             alt="CPOThemes logo">
                     </a>
                 </div>
             </div>
 
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img">
-                    <a href="https://www.codeinwp.com">
+                    <a href="https://www.codeinwp.com" target="_blank">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/codeinwp.png'); ?> "
-                             alt="CodeInWP">
+                             alt="CodeInWP logo">
                     </a>
                 </div>
             </div>
