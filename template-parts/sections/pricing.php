@@ -83,19 +83,23 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				<div class="col-xs-3 <?php echo isset( $download->higher_plan ) && $download->higher_plan === false ? 'pricing-table-inactive': ''; ?>">
 
 					<h4 class="pricing-table__title mb-2"><?php echo explode( '-', $download->post_title )[1]; ?></h4>
-					<div class="pricing-table__package_description"><?php echo get_the_excerpt( $download->ID ) ?></div>
+					<?php if ( get_the_excerpt( $download->ID ) && '' != get_the_excerpt( $download->ID ) ) {
+						?>
+						<div class="pricing-table__package_description"><?php echo get_the_excerpt( $download->ID ) ?></div>
+						<?php
+					} ?>
 
-					<?php if ( $upgrading && $download->higher_plan ): ?>
-						<div class="pricing-table__initial-price">
-							$<?php echo floor( edd_get_download_price( $download->ID ) ); ?>
-						</div>
-					<?php elseif ( count( $cart_discounts ) > 0 ): ?>
-						<div class="pricing-table__initial-price">
-							$<?php echo floor( edd_get_download_price( $download->ID ) ); ?>
-						</div>
-					<?php endif; ?>
 
 					<div class="pricing-table__price mb-2">
+						<?php if ( $upgrading && $download->higher_plan ): ?>
+							<div class="pricing-table__initial-price">
+								$<?php echo floor( edd_get_download_price( $download->ID ) ); ?>
+							</div>
+						<?php elseif ( count( $cart_discounts ) > 0 ): ?>
+							<div class="pricing-table__initial-price">
+								$<?php echo floor( edd_get_download_price( $download->ID ) ); ?>
+							</div>
+						<?php endif; ?>
 						<?php if ( $upgrading && $download->higher_plan ) { ?>
 							<sup>$</sup><?php echo $download->upgrade_cost; ?> 
 						<?php } else { ?>
