@@ -22,19 +22,17 @@ class Theme_Widget_Popular_Posts extends WP_Widget {
 
 		extract( $args );
 		$title  = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
-		$number = $instance['number'];
-		$cat    = $instance['cat'];
 
 		echo $before_widget;
 		if ( $title ) {
 			echo $before_title . $title . $after_title;
 		}
 
-		$args                        = array();
-		$args['posts_per_page']      = 4;
-		$args['meta_key']      = 'modula_post_views_count';
-		$args['orderby']      = 'meta_value_num';
-		$args['order']           = 'desc';
+		$args                   = array();
+		$args['posts_per_page'] = 4;
+		$args['meta_key']       = 'modula_post_views_count';
+		$args['orderby']        = 'meta_value_num';
+		$args['order']          = 'desc';
 
 
 		$query                       = new WP_Query( $args );

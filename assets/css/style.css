@@ -1598,25 +1598,19 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
     -webkit-text-decoration-color: inherit;
             text-decoration-color: inherit; }
 
-.title-single__title {
-  padding: 50px 0; }
-
 .title-single__thumbnail {
   width: 100%;
-  height: 0px;
-  padding-bottom: 40%;
-  position: relative; }
+  position: relative;
+  margin-bottom: 15px; }
+  .title-single__thumbnail img {
+    width: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); }
 
-.title-single__thumbnail img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
+.title-single__title {
+  line-height: 1.35;
+  padding: 15px 0; }
 
 .title-single__cats {
-  margin-bottom: 1.5rem;
   margin-bottom: 30px;
   font-weight: 600; }
   .title-single__cats a {
@@ -1637,7 +1631,7 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
       justify-content: flex-start;
   -ms-flex-align: center;
       align-items: center;
-  border-bottom: 2px solid #e8e8e8;
+  /*border-bottom: 2px solid #e8e8e8;*/
   padding: 15px 0;
   font-weight: 600; }
   .title-single__meta > span {
