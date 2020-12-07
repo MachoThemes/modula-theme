@@ -15,7 +15,15 @@
 				</h1>
 				<div class="title-section__excerpt">
 					<?php if ( is_category() ) : ?>
-						<?php printf( esc_html__( 'Posts in %s category.', 'modula' ), single_cat_title( '', false ) ); ?>
+						<?php
+						$cat_desc = category_description();
+
+						if ( $cat_desc && '' != $cat_desc ) {
+							printf( category_description() );
+						} else {
+							printf( esc_html__( 'Posts in %s category.', 'modula' ), single_cat_title( '', false ) );
+						}
+						?>
 					<?php elseif ( is_author() ) : ?>
 						<?php echo esc_html( the_author_meta( 'description' ) ); ?>
 					<?php elseif ( is_tag() ) : ?>
