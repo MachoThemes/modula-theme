@@ -4,7 +4,14 @@
 			<div class="col-md-8 col-md-offset-2">
 				<h1>
 					<?php if ( is_category() ) : ?>
-						<?php printf( esc_html__( 'Category Archives', 'modula' ), single_cat_title( '', false ) ); ?>
+						<?php
+						$cat_title = single_cat_title( '', false );
+						if ( $cat_title && '' != $cat_title ) {
+							echo single_cat_title( '', false );
+						} else {
+							printf( esc_html__( 'Category Archives', 'modula' ), single_cat_title( '', false ) );
+						}
+						?>
 					<?php elseif ( is_author() ) : ?>
 						<?php printf( esc_html__( 'Articles by  %s', 'modula' ), get_the_author() ); ?>
 					<?php elseif ( is_tag() ) : ?>
@@ -19,7 +26,7 @@
 						$cat_desc = category_description();
 
 						if ( $cat_desc && '' != $cat_desc ) {
-							printf( category_description() );
+							echo category_description();
 						} else {
 							printf( esc_html__( 'Posts in %s category.', 'modula' ), single_cat_title( '', false ) );
 						}
