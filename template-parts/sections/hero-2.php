@@ -1,9 +1,6 @@
 <section class="hero-section-2">
-    <div class="hero-section-2__bg-1"></div>
-
     <div class="container">
         <div class="row">
-
             <div class="col-md-5 text-center text-md-left m-0 p-0 mb-xs-3 mb-md-0">
                 <small style="background-color: rgba(0,0,0,.5); padding: 3px 10px; ">For Photographers, Designers or Creatives</small>
                 <h1 class="mb-2">Get a Highly Customizable Gallery Plugin Without Touching a Line of Code</h1>
