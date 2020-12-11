@@ -541,7 +541,7 @@ input[type=checkbox].checkbox, .edd-login-remember input[type=checkbox],
     background: white;
     width: 2px;
     height: 2px;
-    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
     transform: rotate(45deg); }
 
 [class^="icon-"], .icon, ul.list--checkmark li:before, ul.list--docs li:before, .main-menu .menu-arrow, .accordion__title:after, .nav-links .prev:before, .nav-links .next:before, .modal__close, .doc-search:before {
@@ -1920,14 +1920,6 @@ title-single__comments a {
   .hero-section-2 .hero-section-2__hero {
     position: relative;
     cursor: pointer; }
-  .hero-section-2 .hero-section-2__bg-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../images/layer.png) no-repeat right top;
-    background-size: cover; }
   .hero-section-2 .hero-section-2__arrow {
     width: 400px;
     height: 40px;
@@ -1950,16 +1942,16 @@ title-single__comments a {
 .highlights-section {
   margin-top: -1.875rem; }
   .highlights-section .highlights-section__wrap {
-    border-radius: 6px;
-    background: #fff;
-    box-shadow: -3px 2px 70px 0px rgba(128, 144, 174, 0.12); }
+    border-bottom: 1px solid #EEE;
+    background: #fff; }
     .highlights-section .highlights-section__wrap > :not(:last-child) {
       border-bottom: 1px solid #ececec; }
     .highlights-section .highlights-section__wrap .highlights-section__highlight {
       padding: 1rem 0.5rem;
       text-align: center; }
       .highlights-section .highlights-section__wrap .highlights-section__highlight p {
-        color: #7d7d7d; }
+        color: #8b8b8b;
+        font-size: 16px; }
       .highlights-section .highlights-section__wrap .highlights-section__highlight img {
         height: 50px; }
 

@@ -4,7 +4,7 @@
 
 		<div class="row justify-content-center">
 			<div class="col-md-6 section__heading text-center">
-				<h3>What People are Saying about Modula</h3>
+				<h3>See why more than 80,000 users love Modula</h3>
 				<p>Don’t take our word for it, here’s what others have to say</p>
 			</div>
 
