@@ -41,6 +41,13 @@
 					</div><!-- col -->
 				</div><!-- row -->
 			</div>
+
+            <div class="col-lg-12 text-center mt-lg-3">
+                <a class="button button--xl"
+                   href="<?php echo esc_url(get_permalink(get_page_by_path('pricing'))); ?>">Get Started Now with Modula</a>
+                <div><small class="cta_money_back_guarantee" style="font-size: 13px; position:relative;top: -15px;">14
+                        day money back guarantee, love it or get a full refund.</small></div>
+            </div>
 		</div>
 
 	</div><!-- container -->
