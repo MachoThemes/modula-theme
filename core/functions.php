@@ -5,7 +5,7 @@
 
 		$class = 'header';
 
-		if ( is_home() ||
+		if ( ( is_home() ||
 		     is_archive() ||
 		     (
 			     is_page() &&
@@ -16,7 +16,8 @@
 			     ! is_page_template( 'page-templates/account.php' ) &&
 			     ! is_page_template( 'page-templates/purchase-confirmation.php' ) &&
 			     ! is_page_template( 'page-templates/landing-page-2.php' )
-		     )
+		     ) ) &&
+		    ! is_tax('wpchill_docs_cat')
 		) {
 			$class .= ' header--over-content';
 		}
