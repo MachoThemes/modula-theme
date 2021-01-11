@@ -3,7 +3,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-6 section__heading text-center">
-                <h3>See why more than 80,000 users love Modula</h3>
+                <h3>Why more than 80,000 users ❤️ Modula</h3>
                 <p>Don’t take our word for it, here’s what others have to say</p>
             </div>
 
@@ -23,7 +23,7 @@
                                 <?php echo wp_get_attachment_image(225676, "thumbnail", false, array('class' => 'testimonial__avatar mr-3')); ?>
                                 <div class="testimonial__name">
                                     <h6 class="mb-0">Tom McFarlin</h6>
-                                    <p class="testimonial__title mb-0">WordPress Developer</p>
+                                    <p class="testimonial__title mb-0">tommcfarlin.com</p>
                                 </div>
                             </div>
                         </div><!-- testimonial -->

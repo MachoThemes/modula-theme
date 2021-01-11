@@ -2,6 +2,7 @@
 
 <?php get_header('3'); ?>
 <?php get_template_part( 'template-parts/sections/ltd/hero-2' ); ?>
+<?php get_template_part( 'template-parts/sections/page-builders' ); ?>
 <?php get_template_part( 'template-parts/sections/highlights' ); ?>
 
 

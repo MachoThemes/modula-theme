@@ -75,7 +75,7 @@
 						<?php echo wp_get_attachment_image( 225676, "thumbnail", false, array('class' => 'testimonial__avatar mr-3') ); ?>
 						<div class="testimonial__name">
 							<h6 class="mb-0">Tom McFarlin</h6>
-							<p class="testimonial__title mb-0">WordPress Developer</p>
+							<p class="testimonial__title mb-0">tommcfarlin.com</p>
 						</div>
 					</div>
 				</div><!-- testimonial -->

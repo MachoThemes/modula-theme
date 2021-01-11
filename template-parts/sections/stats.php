@@ -21,7 +21,7 @@
 					<div class="col-xs-12 col-sm-6">
 						<div class="stats-section__stat mb-3">
 							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stats/downloads.png' ); ?> " alt="Downloads">
-							<h6 class="mb-0">981,132</h6>
+							<h6 class="mb-0">1,015,403</h6>
 							<p class="mb-0">all time downloads</p>
 						</div><!-- stats-section__stat -->
 					</div><!-- col -->
