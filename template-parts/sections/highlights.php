@@ -176,7 +176,7 @@
 					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
 						<div class="highlights-section__highlight">
 							<div class="media">
-								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/mobile-friendly-icon.png' ); ?> " alt="Mobile friendly Galleries Icon">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/slider-extension-icon.png' ); ?> " alt="Slider Extension Icon">
 								<div class="media-body">
 									<h5>Slider</h5>
 									<p class="mb-0">Ever wanted to be able to create a gallery slider? One big image with thumbnail navigation below it? We have it.</p>
