@@ -191,7 +191,7 @@
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/slideshow-extension-icon.png' ); ?> " alt="Slideshow Extension Icon">
 								<div class="media-body">
 									<h5>Slideshow</h5>
-									<p class="mb-0">Ever wanted to be able to create a gallery slider? One big image with thumbnail navigation below it? We have it.</p>
+									<p class="mb-0">Automatically turn your lightbox images into an auto-play slideshow. Play & pause between images.</p>
 								</div><!--/.media-body-->
 							</div><!--/.media-->
 						</div><!--/.hightlights-section-->
@@ -203,7 +203,7 @@
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/right-click-protection-extension-icon.png' ); ?> " alt="Right Click Protection Extension Icon">
 								<div class="media-body">
 									<h5>Right-click protection</h5>
-									<p class="mb-0">Ever wanted to be able to create a gallery slider? One big image with thumbnail navigation below it? We have it.</p>
+									<p class="mb-0">Easily prevent your visitors from downloading your images with right-click protection. Use this extension to retain full ownership of your creative work</p>
 								</div><!--/.media-body-->
 							</div><!--/.media-->
 						</div><!--/.hightlights-section-->
@@ -215,14 +215,14 @@
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/advanced-shortcode-extension-icon.png' ); ?> " alt="Advanced Shortcode Extension Icon">
 								<div class="media-body">
 									<h5>Advanced Shortcode</h5>
-									<p class="mb-0">Ever wanted to be able to create a gallery slider? One big image with thumbnail navigation below it? We have it.</p>
+									<p class="mb-0">Allows you to dynamically link to specific galleries without creating pages for them by using URLs with query strings.</p>
 								</div><!--/.media-body-->
 							</div><!--/.media-->
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
 				<div class="text-center col-lg-12 text-center mt-lg-3">
-					<a class="button button--xl mr-1" href="<?php echo esc_url(get_permalink(get_page_by_path('pricing'))); ?>">
+					<a class="button button--xl" href="<?php echo esc_url(get_permalink(get_page_by_path('pricing'))); ?>">
 						Get Started Now with Modula
 					</a>
 					<div>
