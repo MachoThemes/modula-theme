@@ -1962,7 +1962,7 @@ title-single__comments a {
     border-bottom: 1px solid #EEE; }
     .highlights-section .highlights-section__wrap div[class^="col-"]:nth-of-type(3n) {
       border-right: 0; }
-    .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(13), .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(14), .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(15) {
+    .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(16), .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(17), .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(18) {
       border-bottom: 0; }
   .highlights-section .highlights-section__wrap .highlights-section__highlight {
     padding: 1rem; }
@@ -1973,6 +1973,21 @@ title-single__comments a {
       height: 55px; }
     .highlights-section .highlights-section__wrap .highlights-section__highlight h5 {
       margin-bottom: 0.5rem; }
+
+@media screen and (max-width: 992px) {
+  body .highlights-section .highlights-section__wrap div[class^="col-"] {
+    border-right: 1px solid #EEE;
+    border-bottom: 1px solid #EEE; }
+    body .highlights-section .highlights-section__wrap div[class^="col-"]:nth-of-type(2n) {
+      border-right: 0; }
+    body .highlights-section .highlights-section__wrap div[class^="col-"]:nth-of-type(3n) {
+      border-right: 1px solid #EEE; }
+    body .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(16) {
+      border-bottom: 1px solid #EEE; }
+    body .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(17), body .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(18) {
+      border-bottom: 0; }
+    body .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(6), body .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(12), body .highlights-section .highlights-section__wrap div[class^="col-"]:nth-child(18) {
+      border-right: 0; } }
 
 .cta-section {
   background: #27be92;

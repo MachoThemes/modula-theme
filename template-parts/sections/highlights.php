@@ -1,6 +1,6 @@
 <section class="section highlights-section">
 	<div class="container">
-		<div class="row justify-content-center">
+		<div class="row">
 			<div class="col-xs-12">
 
 				<div class="section__heading text-center">
@@ -9,7 +9,7 @@
 				</div>
 
 				<div class="row no-gutters highlights-section__wrap">
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/cdn-image-optimization-icon.png' ); ?> " alt="CDN & Image Optimization Icon">
@@ -20,7 +20,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/video-and-images-icon.png' ); ?> " alt="Combine Videos & Images in a Gallery Icon">
@@ -31,7 +31,7 @@
 							</div>	
 						</div>
 					</div>   
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/gallery-albums-icon.png' ); ?> " alt="Gallery Albums Icon">
@@ -42,7 +42,7 @@
 							</div><!--/.media-->
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/gallery-defaults-icon.png' ); ?> " alt="Gallery Defaults Icon">
@@ -53,7 +53,7 @@
 							</div><!--/.media-->
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/drag-and-drop-builder-icon.png' ); ?> " alt="Drag & Drop Builder Icon">
@@ -64,7 +64,7 @@
 							</div><!--/.media-->
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/mobile-friendly-icon.png' ); ?> " alt="Mobile friendly Galleries Icon">
@@ -76,7 +76,7 @@
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/password-protect-galleries.png' ); ?> " alt="Password Protected Galleries Icon">
@@ -88,7 +88,7 @@
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/watermark-extension-icon.png' ); ?> " alt="Watermark Extension Icon">
@@ -100,7 +100,7 @@
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/deeplink-extension-icon.png' ); ?> " alt="SEO Deeplink Extension Icon">
@@ -112,7 +112,7 @@
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/user-roles-extension.png' ); ?> " alt="User Roles Extension Icon">
@@ -124,7 +124,7 @@
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/white-label-extension-icon.png' ); ?> " alt="White Label Extension Icon">
@@ -136,7 +136,7 @@
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/zoom-extension-icon.png' ); ?> " alt="Zoom Extension Icon">
@@ -148,7 +148,7 @@
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/download-extension-icon.png' ); ?> " alt="Download Extension Icon">
@@ -160,7 +160,7 @@
 						</div><!--/.hightlights-section-->
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/exif-extension-icon.png' ); ?> " alt="EXIF Extension Icon">
@@ -173,12 +173,48 @@
 					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
 
 
-					<div class="col-sm-6 col-lg-4 text-center text-sm-left">
+					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
 								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/slider-extension-icon.png' ); ?> " alt="Slider Extension Icon">
 								<div class="media-body">
 									<h5>Slider</h5>
+									<p class="mb-0">Ever wanted to be able to create a gallery slider? One big image with thumbnail navigation below it? We have it.</p>
+								</div><!--/.media-body-->
+							</div><!--/.media-->
+						</div><!--/.hightlights-section-->
+					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
+
+					<div class="col-sm-6 col-lg-4">
+						<div class="highlights-section__highlight">
+							<div class="media">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/slideshow-extension-icon.png' ); ?> " alt="Slideshow Extension Icon">
+								<div class="media-body">
+									<h5>Slideshow</h5>
+									<p class="mb-0">Ever wanted to be able to create a gallery slider? One big image with thumbnail navigation below it? We have it.</p>
+								</div><!--/.media-body-->
+							</div><!--/.media-->
+						</div><!--/.hightlights-section-->
+					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
+
+					<div class="col-sm-6 col-lg-4">
+						<div class="highlights-section__highlight">
+							<div class="media">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/right-click-protection-extension-icon.png' ); ?> " alt="Right Click Protection Extension Icon">
+								<div class="media-body">
+									<h5>Right-click protection</h5>
+									<p class="mb-0">Ever wanted to be able to create a gallery slider? One big image with thumbnail navigation below it? We have it.</p>
+								</div><!--/.media-body-->
+							</div><!--/.media-->
+						</div><!--/.hightlights-section-->
+					</div><!--/.col-sm-6/.col-lg-4/.text-center/.text-sm-left-->
+
+					<div class="col-sm-6 col-lg-4">
+						<div class="highlights-section__highlight">
+							<div class="media">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/advanced-shortcode-extension-icon.png' ); ?> " alt="Advanced Shortcode Extension Icon">
+								<div class="media-body">
+									<h5>Advanced Shortcode</h5>
 									<p class="mb-0">Ever wanted to be able to create a gallery slider? One big image with thumbnail navigation below it? We have it.</p>
 								</div><!--/.media-body-->
 							</div><!--/.media-->
