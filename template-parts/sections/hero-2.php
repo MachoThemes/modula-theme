@@ -11,7 +11,7 @@
 						website and is fully mobile responsive!</u></p>
 				<p class="mb-2"><strong>Migrating images is 100% free, <u>import 100s in seconds!</u></strong></p>
 
-                <a class="button button--xl mr-1" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">
+                <a class="button button--xl" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">
                     Get Started Now with Modula
                 </a>
                 <div class="text-center">
