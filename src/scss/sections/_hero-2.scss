@@ -33,14 +33,6 @@
 		background: rgba(255,255,255,0.2);
 	}
 
-	.stars {
-		width: 106px;
-		height: 22px;
-		background:url(../images/star2.png) repeat-x 50% 50%;
-		background-size: 20%;
-		display: inline-block;
-		vertical-align: sub;
-	}
 
 	.hero-section-2__hero {
 		position: relative;
@@ -55,6 +47,14 @@
 		max-width: 100%;
 		margin: 0px auto 0;
 		background-size: 100%;
+	}
+
+	.cta_money_back_guarantee {
+		font-size: 13px; 
+		position:relative;
+		top: -15px;
+		padding: 0 45px;
+		display: inline-block;
 	}
 }
 

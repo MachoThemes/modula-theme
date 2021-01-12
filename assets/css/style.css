@@ -1910,13 +1910,6 @@ title-single__comments a {
     border-color: transparent; }
   .hero-section-2 .button--link:after {
     background: rgba(255, 255, 255, 0.2); }
-  .hero-section-2 .stars {
-    width: 106px;
-    height: 22px;
-    background: url(../images/star2.png) repeat-x 50% 50%;
-    background-size: 20%;
-    display: inline-block;
-    vertical-align: sub; }
   .hero-section-2 .hero-section-2__hero {
     position: relative;
     cursor: pointer; }
@@ -1926,6 +1919,12 @@ title-single__comments a {
     max-width: 100%;
     margin: 0px auto 0;
     background-size: 100%; }
+  .hero-section-2 .cta_money_back_guarantee {
+    font-size: 13px;
+    position: relative;
+    top: -15px;
+    padding: 0 45px;
+    display: inline-block; }
 
 @media (min-width: 1200px) {
   .hero-section-2 h1 {
