@@ -62,12 +62,10 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 				<div class="pricing-table__message visible-xs waypoint">
 					<div class="row align-items-center">
-						<div class="col-xs-10">
+						<div class="col-xs-12">
 						swipe left to see the entire table
 						</div>
-						<div class="col-xs-2">
-							<i class="icon-right-open-big"></i>
-						</div>
+					
 					</div>
 				</div><!-- pricing-table__message -->
 			</div>

@@ -65,13 +65,11 @@ $addons = modula_theme_get_all_extensions( $downloads );
 
 				<div class="pricing-table__message">
 					<div class="row align-items-center">
-						<div class="col-xs-10">
+						<div class="col-xs-12">
 						<h6>You can change plans or cancel your account at any time</h6>
 						<small>Choose a plan and you can upgrade or cancel it any time you want.</small>
 						</div>
-						<div class="col-xs-2">
-							<i class="icon-right-open-big"></i>
-						</div>
+						
 					</div>
 				</div><!-- pricing-table__message -->
 			</div>
