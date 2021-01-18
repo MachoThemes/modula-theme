@@ -19,10 +19,10 @@ $upgrading  = false;
 
 // Agency, Business, Trio, Basic
 $download_ids = array(
-	$download1_id,
-	$download2_id,
-	$download3_id,
 	$download4_id,
+	$download3_id,
+	$download2_id,
+	$download1_id,
 );
 
 $cart_discounts = edd_get_cart_discounts();
