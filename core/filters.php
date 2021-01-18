@@ -189,10 +189,6 @@
 				$items .= '</ul>';
 				$items .= '</li>';
 			}
-
-			if ( ! is_page_template( 'page-templates/pricing.php' ) ) {
-				$items .= '<li class="menu-item"><a class="get-started-link" href="' . get_permalink( get_page_by_path( 'pricing' ) ) . '">Buy Modula</a></li>';
-			}
 		}
 
 		return $items;
