@@ -3,3 +3,4 @@ node_modules/*
 .vscode/*
 modula.zip
 package-lock.json
+.prettierrc
