@@ -17,10 +17,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 header__content">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link" rel="home" itemprop="url">
-						<!-- 	<img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" itemprop="logo" width="211" height="57" alt="Modula" />-->
-						</a>
-
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link" rel="home" itemprop="url"></a>
 						<div class="menu-icon">
 							<div class="menu-icon__navicon"></div>
 						</div>
