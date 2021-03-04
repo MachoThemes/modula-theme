@@ -2309,11 +2309,14 @@ title-single__comments a {
   padding-bottom: 15rem; }
 
 .pricing-table {
-  display: none; }
+  display: block; }
 
 .pricing-section {
   padding: 3.75rem 0;
   background: #FAFAFA; }
+
+.page-template-pricing-section-2 .pricing-table {
+  display: none; }
 
 .main-table .pricing-table--header > :nth-child(3) {
   position: relative;
