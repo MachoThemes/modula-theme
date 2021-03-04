@@ -2,6 +2,9 @@
 $utm_medium = isset( $_GET['utm_medium'] ) ? $_GET['utm_medium'] : '';
 
 //get addons
+if (!isset($downloads)) {
+	$downloads = array();
+}
 $addons = modula_theme_get_all_extensions( $downloads );
 ?>
 
