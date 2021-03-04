@@ -4687,10 +4687,6 @@ body.modal--open {
       padding-right: 100px;
       float: right;
       margin-top: 10px; }
-    #edd_checkout_cart_wrap .edd_cart_item .edd_cart_item_price,
-    body #edd_checkout_cart_wrap .edd_cart_discount {
-      padding-right: 0;
-    }
     #edd_checkout_cart_wrap .edd_cart_item .edd_cart_remove_item_btn > span,
     #edd_checkout_cart_wrap .edd_cart_footer_row .edd_cart_remove_item_btn > span {
       width: 10px;
@@ -4719,7 +4715,7 @@ body.modal--open {
     #edd_checkout_cart_wrap .edd_cart_footer_row .edd_discount_remove {
       display: block;
       top: -2px;
-      /*float: right;*/
+      float: right;
       width: 10px;
       height: 10px;
       background-image: url(../images/icons/cancel.png);
@@ -4729,9 +4725,12 @@ body.modal--open {
       #edd_checkout_cart_wrap .edd_cart_footer_row .edd_discount_remove:hover {
         background-position: initial;
         background-image: url(../images/icons/cancel-hover.png); }
+    #edd_checkout_cart_wrap .edd_cart_item .edd_cart_actions.discount_actions,
+    #edd_checkout_cart_wrap .edd_cart_footer_row .edd_cart_actions.discount_actions {
+      padding-right: 32px; }
     #edd_checkout_cart_wrap .edd_cart_item .edd_cart_total,
     #edd_checkout_cart_wrap .edd_cart_footer_row .edd_cart_total {
-      padding-right: 52px;
+      padding-right: 99px;
       padding-top: 20px;
       padding-bottom: 20px; }
     #edd_checkout_cart_wrap .edd_cart_item .edd_cart_tax,
@@ -5379,7 +5378,7 @@ p.edd-logged-out {
   .account-form-container form {
     width: 95%; }
   #edd_checkout_cart > tfoot > tr.edd_cart_footer_row.edd_cart_discount_row > th.edd_cart_actions.discount_actions {
-    padding-top: 14px !important; padding-right:20px; } }
+    padding-top: 14px !important; } }
 
 @media screen and (max-width: 350px) {
   th.edd_cart_discount {
@@ -5396,12 +5395,6 @@ p.edd-logged-out {
 #edd_payment_mode_select_wrap,
 #edd_purchase_form_wrap {
   border-left: 1px solid #ddd !important; }
-
-body .edd_cart_item td.edd_cart_actions {
-    padding-left: 10px !important;
-    width: 30px;
-    padding-right: 10px !important;
-}
 
 html {
   font-size: 100%; }

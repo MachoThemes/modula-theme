@@ -124,8 +124,9 @@ global $post; ?>
 		<tr class="edd_cart_footer_row edd_cart_footer_row_total">
 			<?php do_action( 'edd_checkout_table_footer_first' ); ?>
                         <th class="edd_cart_total edd_cart_total_text"><span><?php _e( 'Your total today', 'easy-digital-downloads' ); ?>: </span></th>
-			<th colspan="2" class="edd_cart_total"><span class="edd_cart_amount" data-subtotal="<?php echo edd_get_cart_subtotal(); ?>" data-total="<?php echo edd_get_cart_total(); ?>"><?php edd_cart_total(); ?></span></th>
-            <?php do_action( 'edd_checkout_table_footer_last' ); ?>
+			<th class="edd_cart_total"><span class="edd_cart_amount" data-subtotal="<?php echo edd_get_cart_subtotal(); ?>" data-total="<?php echo edd_get_cart_total(); ?>"><?php edd_cart_total(); ?></span></th>
+			<th class="edd_cart_total"></th>
+                        <?php do_action( 'edd_checkout_table_footer_last' ); ?>
 		</tr>
 	</tfoot>
 </table>
