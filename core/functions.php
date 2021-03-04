@@ -10,6 +10,7 @@
 		     (
 			     is_page() &&
 			     ! is_page_template( 'page-templates/pricing.php' ) &&
+                             ! is_page_template( 'page-templates/pricing-section-2.php' ) &&
 			     ! is_page_template( 'page-templates/pricing-2.php' ) &&
 			     ! is_page_template( 'page-templates/pricing-ltd.php' ) &&
 			     ! is_page_template( 'page-templates/checkout.php' ) &&
@@ -537,7 +538,7 @@
 	}
 
 
-	add_action( 'wp', 'modula_theme_pricing_discounts' );
+	// add_action( 'wp', 'modula_theme_pricing_discounts' );
 	function modula_theme_pricing_discounts() {
 
 		if ( is_user_logged_in() ) {

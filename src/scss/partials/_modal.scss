@@ -1,3 +1,7 @@
+body.modal--open {
+    overflow: hidden;
+}
+
 .modal {
 	background: rgba(246,246,246,0.9);
 	position: fixed;
@@ -12,6 +16,17 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+        &.modal--changelog {
+            overflow: overlay;
+            .modal__overlay {
+            }
+            .modal__content {
+                position: absolute;
+                top: 60px;
+                white-space: pre;
+                width: 1200px !important;
+            }
+        }
 }
 
 .modal--open {

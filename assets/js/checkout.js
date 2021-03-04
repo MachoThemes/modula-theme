@@ -7,5 +7,6 @@
 			$('#edd_vat_fields').fadeIn('slow');
 		});
 	});
+        
 
 })(jQuery);

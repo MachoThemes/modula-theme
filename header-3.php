@@ -3,6 +3,7 @@
 <head>
 	<?php wp_head(); ?>
 	<meta name="theme-color" content="#2ebf91">
+	<script src="https://www.googleoptimize.com/optimize.js?id=GTM-TPVPWRK"></script>
 </head>
 
 <body <?php body_class(); ?>>

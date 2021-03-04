@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -365,6 +365,7 @@ var Modal = function () {
 		value: function openModal(e) {
 			e.preventDefault();
 			this.$modal.addClass('modal--open');
+			jQuery('body').addClass('modal--open');
 			document.dispatchEvent(new Event(this.id + '-opened'));
 		}
 	}, {
@@ -372,6 +373,7 @@ var Modal = function () {
 		value: function closeModal(e) {
 			e.preventDefault();
 			this.$modal.removeClass('modal--open');
+			jQuery('body').removeClass('modal--open');
 			document.dispatchEvent(new Event(this.id + '-closed'));
 		}
 	}]);
@@ -436,7 +438,428 @@ var PromotionSection = function () {
 exports.default = PromotionSection;
 
 /***/ }),
-/* 13 */,
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TRANSITION_END = 'transitionend';
+var MAX_UID = 1000000;
+var MILLISECONDS_MULTIPLIER = 1000;
+
+// Shoutout AngusCroll (https://goo.gl/pxwQGp)
+function toType(obj) {
+  return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
+}
+
+function getSpecialTransitionEndEvent() {
+  return {
+    bindType: TRANSITION_END,
+    delegateType: TRANSITION_END,
+    handle: function handle(event) {
+      if (jQuery(event.target).is(this)) {
+        return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
+      }
+      return undefined; // eslint-disable-line no-undefined
+    }
+  };
+}
+
+function transitionEndEmulator(duration) {
+  var _this = this;
+
+  var called = false;
+
+  jQuery(this).one(Util.TRANSITION_END, function () {
+    called = true;
+  });
+
+  setTimeout(function () {
+    if (!called) {
+      Util.triggerTransitionEnd(_this);
+    }
+  }, duration);
+
+  return this;
+}
+
+function setTransitionEndSupport() {
+  jQuery.fn.emulateTransitionEnd = transitionEndEmulator;
+  jQuery.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Public Util Api
+ * --------------------------------------------------------------------------
+ */
+
+var Util = {
+
+  TRANSITION_END: 'bsTransitionEnd',
+
+  getUID: function getUID(prefix) {
+    do {
+      // eslint-disable-next-line no-bitwise
+      prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+    } while (document.getElementById(prefix));
+    return prefix;
+  },
+  getSelectorFromElement: function getSelectorFromElement(element) {
+    var selector = element.getAttribute('data-target');
+
+    if (!selector || selector === '#') {
+      var hrefAttr = element.getAttribute('href');
+      selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : '';
+    }
+
+    try {
+      return document.querySelector(selector) ? selector : null;
+    } catch (err) {
+      return null;
+    }
+  },
+  getTransitionDurationFromElement: function getTransitionDurationFromElement(element) {
+    if (!element) {
+      return 0;
+    }
+
+    // Get transition-duration of the element
+    var transitionDuration = jQuery(element).css('transition-duration');
+    var transitionDelay = jQuery(element).css('transition-delay');
+
+    var floatTransitionDuration = parseFloat(transitionDuration);
+    var floatTransitionDelay = parseFloat(transitionDelay);
+
+    // Return 0 if element or transition duration is not found
+    if (!floatTransitionDuration && !floatTransitionDelay) {
+      return 0;
+    }
+
+    // If multiple durations are defined, take the first
+    transitionDuration = transitionDuration.split(',')[0];
+    transitionDelay = transitionDelay.split(',')[0];
+
+    return (parseFloat(transitionDuration) + parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
+  },
+  reflow: function reflow(element) {
+    return element.offsetHeight;
+  },
+  triggerTransitionEnd: function triggerTransitionEnd(element) {
+    jQuery(element).trigger(TRANSITION_END);
+  },
+
+
+  // TODO: Remove in v5
+  supportsTransitionEnd: function supportsTransitionEnd() {
+    return Boolean(TRANSITION_END);
+  },
+  isElement: function isElement(obj) {
+    return (obj[0] || obj).nodeType;
+  },
+  typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
+    for (var property in configTypes) {
+      if (Object.prototype.hasOwnProperty.call(configTypes, property)) {
+        var expectedTypes = configTypes[property];
+        var value = config[property];
+        var valueType = value && Util.isElement(value) ? 'element' : toType(value);
+
+        if (!new RegExp(expectedTypes).test(valueType)) {
+          throw new Error(componentName.toUpperCase() + ': ' + ('Option "' + property + '" provided type "' + valueType + '" ') + ('but expected type "' + expectedTypes + '".'));
+        }
+      }
+    }
+  },
+  findShadowRoot: function findShadowRoot(element) {
+    if (!document.documentElement.attachShadow) {
+      return null;
+    }
+
+    // Can find the shadow root otherwise it'll return the document
+    if (typeof element.getRootNode === 'function') {
+      var root = element.getRootNode();
+      return root instanceof ShadowRoot ? root : null;
+    }
+
+    if (element instanceof ShadowRoot) {
+      return element;
+    }
+
+    // when we don't find a shadow root
+    if (!element.parentNode) {
+      return null;
+    }
+
+    return Util.findShadowRoot(element.parentNode);
+  }
+};
+
+setTransitionEndSupport();
+
+/**
+ * ------------------------------------------------------------------------
+ * Constants
+ * ------------------------------------------------------------------------
+ */
+
+var NAME = 'tab';
+var VERSION = '4.3.1';
+var DATA_KEY = 'bs.tab';
+var EVENT_KEY = '.' + DATA_KEY;
+var DATA_API_KEY = '.data-api';
+var JQUERY_NO_CONFLICT = jQuery.fn[NAME];
+
+var Event = {
+  HIDE: 'hide' + EVENT_KEY,
+  HIDDEN: 'hidden' + EVENT_KEY,
+  SHOW: 'show' + EVENT_KEY,
+  SHOWN: 'shown' + EVENT_KEY,
+  CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+};
+
+var ClassName = {
+  DROPDOWN_MENU: 'dropdown-menu',
+  ACTIVE: 'active',
+  DISABLED: 'disabled',
+  FADE: 'fade',
+  SHOW: 'show'
+};
+
+var Selector = {
+  DROPDOWN: '.dropdown',
+  NAV_LIST_GROUP: '.nav, .list-group',
+  ACTIVE: '.active',
+  ACTIVE_UL: 'li > .active',
+  DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
+  DROPDOWN_TOGGLE: '.dropdown-toggle',
+  DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
+
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+};
+var Tab = function () {
+  function Tab(element) {
+    _classCallCheck(this, Tab);
+
+    this._element = element;
+  }
+
+  // Getters
+
+  _createClass(Tab, [{
+    key: 'show',
+
+
+    // Public
+
+    value: function show() {
+      var _this2 = this;
+
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && jQuery(this._element).hasClass(ClassName.ACTIVE) || jQuery(this._element).hasClass(ClassName.DISABLED)) {
+        return;
+      }
+
+      var target = void 0;
+      var previous = void 0;
+      var listElement = jQuery(this._element).closest(Selector.NAV_LIST_GROUP)[0];
+      var selector = Util.getSelectorFromElement(this._element);
+
+      if (listElement) {
+        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector.ACTIVE_UL : Selector.ACTIVE;
+        previous = jQuery.makeArray(jQuery(listElement).find(itemSelector));
+        previous = previous[previous.length - 1];
+      }
+
+      var hideEvent = jQuery.Event(Event.HIDE, {
+        relatedTarget: this._element
+      });
+
+      var showEvent = jQuery.Event(Event.SHOW, {
+        relatedTarget: previous
+      });
+
+      if (previous) {
+        jQuery(previous).trigger(hideEvent);
+      }
+
+      jQuery(this._element).trigger(showEvent);
+
+      if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      if (selector) {
+        target = document.querySelector(selector);
+      }
+
+      this._activate(this._element, listElement);
+
+      var complete = function complete() {
+        var hiddenEvent = jQuery.Event(Event.HIDDEN, {
+          relatedTarget: _this2._element
+        });
+
+        var shownEvent = jQuery.Event(Event.SHOWN, {
+          relatedTarget: previous
+        });
+
+        jQuery(previous).trigger(hiddenEvent);
+        jQuery(_this2._element).trigger(shownEvent);
+      };
+
+      if (target) {
+        this._activate(target, target.parentNode, complete);
+      } else {
+        complete();
+      }
+    }
+  }, {
+    key: 'dispose',
+    value: function dispose() {
+      jQuery.removeData(this._element, DATA_KEY);
+      this._element = null;
+    }
+
+    // Private
+
+  }, {
+    key: '_activate',
+    value: function _activate(element, container, callback) {
+      var _this3 = this;
+
+      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? jQuery(container).find(Selector.ACTIVE_UL) : jQuery(container).children(Selector.ACTIVE);
+
+      var active = activeElements[0];
+      var isTransitioning = callback && active && jQuery(active).hasClass(ClassName.FADE);
+      var complete = function complete() {
+        return _this3._transitionComplete(element, active, callback);
+      };
+
+      if (active && isTransitioning) {
+        var transitionDuration = Util.getTransitionDurationFromElement(active);
+
+        jQuery(active).removeClass(ClassName.SHOW).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+      } else {
+        complete();
+      }
+    }
+  }, {
+    key: '_transitionComplete',
+    value: function _transitionComplete(element, active, callback) {
+      if (active) {
+        jQuery(active).removeClass(ClassName.ACTIVE);
+
+        var dropdownChild = jQuery(active.parentNode).find(Selector.DROPDOWN_ACTIVE_CHILD)[0];
+
+        if (dropdownChild) {
+          jQuery(dropdownChild).removeClass(ClassName.ACTIVE);
+        }
+
+        if (active.getAttribute('role') === 'tab') {
+          active.setAttribute('aria-selected', false);
+        }
+      }
+
+      jQuery(element).addClass(ClassName.ACTIVE);
+      if (element.getAttribute('role') === 'tab') {
+        element.setAttribute('aria-selected', true);
+      }
+
+      Util.reflow(element);
+
+      if (element.classList.contains(ClassName.FADE)) {
+        element.classList.add(ClassName.SHOW);
+      }
+
+      if (element.parentNode && jQuery(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
+        var dropdownElement = jQuery(element).closest(Selector.DROPDOWN)[0];
+
+        if (dropdownElement) {
+          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector.DROPDOWN_TOGGLE));
+
+          jQuery(dropdownToggleList).addClass(ClassName.ACTIVE);
+        }
+
+        element.setAttribute('aria-expanded', true);
+      }
+
+      if (callback) {
+        callback();
+      }
+    }
+
+    // Static
+
+  }], [{
+    key: '_jQueryInterface',
+    value: function _jQueryInterface(config) {
+      return this.each(function () {
+        var $this = jQuery(this);
+        var data = $this.data(DATA_KEY);
+
+        if (!data) {
+          data = new Tab(this);
+          $this.data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError('No method named "' + config + '"');
+          }
+          data[config]();
+        }
+      });
+    }
+  }, {
+    key: 'VERSION',
+    get: function get() {
+      return VERSION;
+    }
+  }]);
+
+  return Tab;
+}();
+
+/**
+ * ------------------------------------------------------------------------
+ * Data Api implementation
+ * ------------------------------------------------------------------------
+ */
+
+jQuery(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
+  event.preventDefault();
+  Tab._jQueryInterface.call(jQuery(this), 'show');
+});
+
+/**
+ * ------------------------------------------------------------------------
+ * jQuery
+ * ------------------------------------------------------------------------
+ */
+
+jQuery.fn[NAME] = Tab._jQueryInterface;
+jQuery.fn[NAME].Constructor = Tab;
+jQuery.fn[NAME].noConflict = function () {
+  jQuery.fn[NAME] = JQUERY_NO_CONFLICT;
+  return Tab._jQueryInterface;
+};
+
+exports.default = Tab;
+
+/***/ }),
 /* 14 */,
 /* 15 */,
 /* 16 */,
@@ -444,7 +867,8 @@ exports.default = PromotionSection;
 /* 18 */,
 /* 19 */,
 /* 20 */,
-/* 21 */
+/* 21 */,
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -475,6 +899,10 @@ var _Accordion2 = _interopRequireDefault(_Accordion);
 var _DocSearch = __webpack_require__(8);
 
 var _DocSearch2 = _interopRequireDefault(_DocSearch);
+
+var _Tabs = __webpack_require__(13);
+
+var _Tabs2 = _interopRequireDefault(_Tabs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -528,6 +956,10 @@ var Modula = function () {
 		value: function initModals() {
 			new _Modal2.default('modal-1', jQuery('.modal--login'), jQuery('.login-link'));
 			new _Modal2.default('modal-2', jQuery('.modal--video'), jQuery('.banner-section .hero__img, .banner-section .hero__play-icon, .hero-section-2__hero'));
+			jQuery('.changelog-link').each(function () {
+				var count = jQuery(this).attr('data-count');
+				new _Modal2.default('modal-changelog-' + count, jQuery('#modal--changelog-' + count), jQuery('#changelog-link-' + count));
+			});
 		}
 	}, {
 		key: 'initAccordions',

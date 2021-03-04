@@ -170,12 +170,12 @@
 
 		if ( $args->theme_location == 'main_menu' ) {
 
-			if ( is_page_template( 'page-templates/pricing.php' ) ) {
+			if ( is_page_template( 'page-templates/pricing.php' ) ||  is_page_template( 'page-templates/pricing-section-2.php' )) {
 				$items = '';
 			}
 
 			if ( ! is_user_logged_in() ) {
-				$items .= '<li class="menu-item"><a class="login-link" href="#" rel="nofollow">Log In</a></li>';
+				$items .= '<li class="menu-item"><a class="" href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '" rel="nofollow">Log In</a></li>';
 			} else {
 				$items .= '<li class="menu-item menu-item-has-children">';
 				$items .= '<a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '">My Account</a>';
@@ -183,8 +183,6 @@
 				$items .= '<li class="menu-item"><a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '">Purchase History</a></li>';
 				$items .= '<li class="menu-item"><a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '#subscriptions">Subscriptions</a></li>';
 				$items .= '<li class="menu-item"><a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '#account-information">Account Information</a></li>';
-				$items .= '<li class="menu-item"><a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '#download-history">Download History</a></li>';
-
 				$items .= '<li class="menu-item"><a href="' . wp_logout_url( home_url() ) . '">Log Out</a></li>';
 				$items .= '</ul>';
 				$items .= '</li>';
@@ -255,9 +253,8 @@
 		return $mimes;
 	}
 
-	remove_action( 'edd_before_purchase_form', 'edd_sl_renewal_form', - 1 );
-	remove_action( 'edd_checkout_form_top', 'edd_discount_field', - 1 );
-
+	//remove_action( 'edd_before_purchase_form', 'edd_sl_renewal_form', - 1 );
+	//remove_action( 'edd_checkout_form_top', 'edd_discount_field', - 1 );
 
 	add_action( 'wp_head', 'modula_track_post_views' );
 	function modula_track_post_views( $post_id ) {
