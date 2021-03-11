@@ -4804,13 +4804,14 @@ body.modal--open {
   margin-right: 10px; }
 
 #edd_checkout_form_wrap #edd_sl_renewal_form > p, #edd_checkout_form_wrap #edd_purchase_form > p, #edd_checkout_form_wrap #edd_sl_cancel_renewal_form > p {
-  border: none;
-  padding: 0 20px 20px 20px;
+  border: 1px solid #eee;
+  border-left: 1px solid #ddd !important;
+  padding: 0.5em 1.387em;
   background-color: #fff;
   box-shadow: 4px 4px 0 0 #cfd9e6; }
   #edd_checkout_form_wrap #edd_sl_renewal_form > p input.edd-submit, #edd_checkout_form_wrap #edd_purchase_form > p input.edd-submit, #edd_checkout_form_wrap #edd_sl_cancel_renewal_form > p input.edd-submit {
     border: none;
-    color: #666;
+    color: #292e37;
     box-shadow: none;
     background: #fff;
     padding: 0; }

@@ -333,13 +333,14 @@ add_action( 'edd_checkout_form_top', 'modula_theme_testimonial_cheerful_theme' )
 function modula_theme_testimonial_cheerful_theme() { ?>
     <div class="checkout-testimonial testimonial">
         <div class="testimonial-photo">
-            <?php echo wp_get_attachment_image(232409, "thumbnail", false, array('class' => 'testimonial__avatar')); ?>
+            <?php echo wp_get_attachment_image(462018, "thumbnail", false, array('class' => 'testimonial__avatar')); ?>
         </div>
         <div class="testimonial__content mb-3">
-            <p class="mb-0">I’m a HUGE fan of the free Modula and the Pro version is WAY more
-                amazing. I haven’t had any problems and I am confident their support would be
-                responsive if I did. I don’t often leave reviews, but I really love Modula!</p>
-             <p class="testimonial__title mb-0">— Cheerful Themes – CheerfulThemes.com</p>
+            <p class="mb-0">Modula is the best gallery plugin for WordPress I’ve ever used. It’s
+						fast, easy to get started, and has some killer features. It’s also super
+						customizable. As a developer I appreciate that for my clients. As a user, I
+						appreciate that I don’t need to add any code to get things the way I want!</p>
+             <p class="testimonial__title mb-0">— Joe Casabona – casabona.org</p>
         </div>
     </div><!-- testimonial -->
 <?php

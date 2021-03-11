@@ -181,13 +181,14 @@
         
         #edd_sl_renewal_form, #edd_purchase_form, #edd_sl_cancel_renewal_form {
             > p {
-                border: none;
-                padding: 0 20px 20px 20px;
+                border: 1px solid #eee;
+                border-left: 1px solid #ddd !important;
+                padding: 0.5em 1.387em;
                 background-color: #fff;
                 box-shadow: 4px 4px 0 0 #cfd9e6;
                 input.edd-submit {
                     border: none;
-                    color: #666;
+                    color: #292e37;
                     box-shadow: none;
                     background: #fff;
                     padding: 0;

@@ -255,7 +255,8 @@
 		return $mimes;
 	}
 
-	//remove_action( 'edd_before_purchase_form', 'edd_sl_renewal_form', - 1 );
+	remove_action( 'edd_before_purchase_form', 'edd_sl_renewal_form', - 1 );
+	add_action( 'edd_before_purchase_form', 'modula_theme_sl_renewal_form', -1 );
 	//remove_action( 'edd_checkout_form_top', 'edd_discount_field', - 1 );
 
 	add_action( 'wp_head', 'modula_track_post_views' );
@@ -269,6 +270,92 @@
 		}
 		modula_set_post_views( $post_id );
 	}
+
+	function modula_theme_sl_renewal_form() {
+
+		if( ! edd_sl_renewals_allowed() ) {
+			return;
+		}
+	
+		$renewal      = EDD()->session->get( 'edd_is_renewal' );
+		$renewal_keys = edd_sl_get_renewal_keys();
+		$preset_key   = ! empty( $_GET['key'] ) ? esc_html( urldecode( $_GET['key'] ) ) : '';
+		$error        = ! empty( $_GET['edd-sl-error'] ) ? sanitize_text_field( $_GET['edd-sl-error'] ) : '';
+		$color        = edd_get_option( 'checkout_color', 'blue' );
+		$color        = ( $color == 'inherit' ) ? '' : $color;
+		$style        = edd_get_option( 'button_style', 'button' );
+		ob_start(); ?>
+		<form method="post" id="edd_sl_renewal_form">
+			<fieldset id="edd_sl_renewal_fields">
+				<p id="edd_sl_show_renewal_form_wrap">
+					<?php _e( 'Renewing a license key? <a href="#" id="edd_sl_show_renewal_form">Click to renew an existing license</a>', 'edd_sl' ); ?>
+				</p>
+				<p id="edd-license-key-container-wrap" class="edd-cart-adjustment" style="display:none;">
+					<span class="edd-description"><?php _e( 'Enter the license key you wish to renew. Leave blank to purchase a new one.', 'edd_sl' ); ?></span>
+					<input class="edd-input required" type="text" name="edd_license_key" autocomplete="off" placeholder="<?php _e( 'Enter your license key', 'edd_sl' ); ?>" id="edd-license-key" value="<?php echo $preset_key; ?>"/>
+					<input type="hidden" name="edd_action" value="apply_license_renewal"/>
+				</p>
+				<p class="edd-sl-renewal-actions" style="display:none">
+					<input type="submit" id="edd-add-license-renewal" disabled="disabled" class="edd-submit button <?php echo $color . ' ' . $style; ?>" value="<?php _e( 'Apply License Renewal', 'edd_sl' ); ?>"/>&nbsp;<span><a href="#" id="edd-cancel-license-renewal"><?php _e( 'Cancel', 'edd_sl' ); ?></a></span>
+				</p>
+	
+				<?php if( ! empty( $renewal ) && ! empty( $renewal_keys ) ) : ?>
+					<p id="edd-license-key-container-wrap" class="edd-cart-adjustment">
+						<span class="edd-description"><?php _e( 'You may renew multiple license keys at once.', 'edd_sl' ); ?></span>
+					</p>
+				<?php endif; ?>
+			</fieldset>
+			<?php if( ! empty( $error ) ) : ?>
+				<div class="edd_errors">
+						<p class="edd_error"><?php echo urldecode( sanitize_text_field( $_GET['message'] ) ); ?></p>
+				</div>
+			<?php endif; ?>
+		</form>
+		<?php if( ! empty( $renewal ) && ! empty( $renewal_keys ) ) : ?>
+		<form method="post" id="edd_sl_cancel_renewal_form">
+			<p>
+				<input type="hidden" name="edd_action" value="cancel_license_renewal"/>
+				<input type="submit" class="edd-submit button" value="<?php _e( 'Cancel License Renewal', 'edd_sl' ); ?>"/>
+			</p>
+		</form>
+		<?php
+		endif;
+		echo ob_get_clean();
+	}
+
+	function modula_theme_sl_checkout_js() {
+
+		if( ! function_exists( 'edd_is_checkout' ) ) {
+			return;
+		}
+	
+		if ( ! edd_is_checkout() ) {
+			return;
+		}
+	?>
+		<script>
+		jQuery(document).ready(function($) {
+			$('#edd_sl_show_renewal_form, #edd-cancel-license-renewal').click(function(e) {
+				e.preventDefault();
+				$('#edd-license-key-container-wrap,#edd_sl_show_renewal_form,.edd-sl-renewal-actions').toggle();
+				$('#edd-license-key').focus();
+			});
+	
+			$('#edd-license-key').keyup(function(e) {
+				var input  = $('#edd-license-key');
+				var button = $('#edd-add-license-renewal');
+	
+				if ( input.val() != '' ) {
+					button.prop("disabled", false);
+				} else {
+					button.prop("disabled", true);
+				}
+			});
+		});
+		</script>
+	<?php
+	}
+	add_action( 'wp_head', 'modula_theme_sl_checkout_js' );
 
 
 //Add theme-specific body classes
