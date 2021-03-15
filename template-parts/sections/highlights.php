@@ -163,7 +163,7 @@
 					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
-								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/exif-extension-icon.jpg' ); ?> " alt="EXIF Extension Icon">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/exif-extension.jpg' ); ?> " alt="EXIF Extension Icon">
 								<div class="media-body">
 									<h5>EXIF</h5>
 									<p class="mb-0">With this extension, your galleries will be ablee to read, edit and display EXIF data. Control what's displayed in the lightbox.</p>
