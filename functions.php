@@ -353,7 +353,6 @@ function modula_theme_add_editor_styles() {
 add_shortcode('modula_pricing', 'modula_theme_modula_pricing_shortcode');
 function modula_theme_modula_pricing_shortcode( $atts = array() ) {
 	$output = '';
-	$discount = false;
 	$packages = array(
 		'starter'  => 405675,
 		'agency'   => 256715,
@@ -363,14 +362,15 @@ function modula_theme_modula_pricing_shortcode( $atts = array() ) {
 	if (isset($atts['discount'])) {
 		$discount = true;
 	}
-	wp_parse_args($atts, array(
-		'package' => 'starter'
+	$args = wp_parse_args($atts, array(
+		'package' => 'starter',
+		'discount' => false
 	));
 
-	if ($discount) {
-		$price = modula_edd_get_download_price( $packages[$atts['package']] );
+	if ($args['discount']) {
+		$price = modula_edd_get_download_price( $packages[$args['package']] );
 	} else {
-		$price = edd_get_download_price( $packages[$atts['package']] );
+		$price = edd_get_download_price( $packages[$args['package']] );
 	}
 
 	if ($price) {
