@@ -71,7 +71,7 @@ if ( ! function_exists( 'antreas_add_styles' ) ) {
 	function antreas_add_styles() {
 		//wp_enqueue_style( 'main-font', 'https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700', array(), ANTREAS_VERSION );
 
-		wp_enqueue_style( ANTREAS_SLUG . '-main', ANTREAS_ASSETS_CSS . 'style.css', array(), '1.1.1' );
+		wp_enqueue_style( ANTREAS_SLUG . '-main', ANTREAS_ASSETS_CSS . 'style.css', array(), ANTREAS_VERSION );
 		wp_add_inline_style( ANTREAS_SLUG . '-main', antreas_generate_custom_css() );
 
 	}

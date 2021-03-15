@@ -4687,9 +4687,10 @@ body.modal--open {
       font-size: 19px; }
     #edd_checkout_cart_wrap .edd_cart_item .edd_cart_item_price,
     #edd_checkout_cart_wrap .edd_cart_footer_row .edd_cart_item_price {
-      padding-right: 100px;
+      /*padding-right: 100px;
       float: right;
-      margin-top: 10px; }
+      margin-top: 10px;*/
+      text-align: right; }
     #edd_checkout_cart_wrap .edd_cart_item .edd_cart_remove_item_btn > span,
     #edd_checkout_cart_wrap .edd_cart_footer_row .edd_cart_remove_item_btn > span {
       width: 10px;
@@ -4733,8 +4734,9 @@ body.modal--open {
       padding-right: 32px; }
     #edd_checkout_cart_wrap .edd_cart_item .edd_cart_total,
     #edd_checkout_cart_wrap .edd_cart_footer_row .edd_cart_total {
-      padding-right: 99px;
+      padding-right: 0;
       padding-top: 20px;
+      text-align: right;
       padding-bottom: 20px; }
     #edd_checkout_cart_wrap .edd_cart_item .edd_cart_tax,
     #edd_checkout_cart_wrap .edd_cart_footer_row .edd_cart_tax {
