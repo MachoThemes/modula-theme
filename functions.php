@@ -350,5 +350,34 @@ function modula_theme_add_editor_styles() {
 	add_editor_style( 'modula-theme-block-styles.css' );
 }
 
+add_shortcode('modula_pricing', 'modula_theme_modula_pricing_shortcode');
+function modula_theme_modula_pricing_shortcode( $atts = array() ) {
+	$output = '';
+	$discount = false;
+	$packages = array(
+		'starter'  => 405675,
+		'agency'   => 256715,
+		'trio' 	   => 256708,
+		'business' => 256712
+	);
+	if (isset($atts['discount'])) {
+		$discount = true;
+	}
+	extract(shortcode_atts(array(
+		'package' => 'starter'
+	   ), $atts));
+
+	if ($discount) {
+		$price = modula_edd_get_download_price( $packages[$atts['package']] );
+	} else {
+		$price = edd_get_download_price( $packages[$atts['package']] );
+	}
+
+	if ($price) {
+		$output = '<span class="package-price">$' . floor( $price ) . '</span>';
+	}
+	return $output;
+}
+
 // EU VAT
 require_once ANTREAS_CORE . 'modula-vat-handle.php';
