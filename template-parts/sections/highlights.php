@@ -23,7 +23,7 @@
 					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
-								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/video-and-images-icon.jpg' ); ?> " alt="Combine Videos & Images in a Gallery Icon">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/video-extension-icon.jpg' ); ?> " alt="Combine Videos & Images in a Gallery Icon">
 								<div class="media-body">
 									<h5 class="mt-0">Videos</h5>
 									<p class="mb-0">Create the ultimate gallery experience by adding videos from YouTube, Vimeo or self-hosted to your image galleries. </p>
@@ -79,7 +79,7 @@
 					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
-								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/password-protect-galleries.jpg' ); ?> " alt="Password Protected Galleries Icon">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/password-protected-galleries-icon.jpg' ); ?> " alt="Password Protected Galleries Icon">
 								<div class="media-body">
 									<h5>Password protect</h5>
 									<p class="mb-0">Password protect your galleries. Share your password-protected gallery URL with specific clients. Gain granular access control.</p>
@@ -115,7 +115,7 @@
 					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
-								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/user-roles-extension.jpg' ); ?> " alt="User Roles Extension Icon">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/user-roles-extension-icon.jpg' ); ?> " alt="User Roles Extension Icon">
 								<div class="media-body">
 									<h5>User roles</h5>
 									<p class="mb-0">Control over which user roles can manage galleries on your website. Add or remove permissions with 1 click.</p>
@@ -212,7 +212,7 @@
 					<div class="col-sm-6 col-lg-4">
 						<div class="highlights-section__highlight">
 							<div class="media">
-								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/advanced-shortcode-extension-icon.jpg' ); ?> " alt="Advanced Shortcode Extension Icon">
+								<img class="float-left mr-2" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/highlights/advanced-shortocde-icon.jpg' ); ?> " alt="Advanced Shortcode Extension Icon">
 								<div class="media-body">
 									<h5>Advanced Shortcode</h5>
 									<p class="mb-0">Allows you to dynamically link to specific galleries without creating pages for them by using URLs with query strings.</p>
