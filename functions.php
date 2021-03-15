@@ -363,9 +363,9 @@ function modula_theme_modula_pricing_shortcode( $atts = array() ) {
 	if (isset($atts['discount'])) {
 		$discount = true;
 	}
-	extract(shortcode_atts(array(
+	wp_parse_args($atts, array(
 		'package' => 'starter'
-	   ), $atts));
+	));
 
 	if ($discount) {
 		$price = modula_edd_get_download_price( $packages[$atts['package']] );
