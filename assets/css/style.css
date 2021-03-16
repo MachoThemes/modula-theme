@@ -4779,12 +4779,14 @@ body.modal--open {
     #edd_checkout_cart_wrap .edd_cart_remove_item_btn:hover {
       color: #774cce;
       border-color: #774cce; }
+  #edd_checkout_cart_wrap .edd_cart_discount span.edd_discount {
+    padding-right: 95px !important; }
   #edd_checkout_cart_wrap .edd_cart_subtotal,
   #edd_checkout_cart_wrap .edd_cart_discount,
   #edd_checkout_cart_wrap .edd_cart_tax,
   #edd_checkout_cart_wrap .edd_cart_total {
     padding-right: 99px;
-    padding-left: 17px;
+    padding-left: 7px;
     font-weight: 700;
     font-size: 14px; }
   #edd_checkout_cart_wrap .edd_cart_subtotal_amount,
@@ -5350,6 +5352,10 @@ p.edd-logged-out {
 #edd_login_form fieldset h3 {
   display: none; }
 
+@media screen and (max-width: 991px) {
+  #edd_checkout_cart_wrap .edd_cart_discount span.edd_discount {
+    padding-right: 22px !important; } }
+
 @media screen and (max-width: 768px) {
   tr.edd_cart_footer_row.edd_cart_footer_row_total {
     width: 100% !important;
@@ -5357,7 +5363,9 @@ p.edd-logged-out {
   th.edd_cart_total.edd_cart_total_text {
     width: 100% !important; }
   .edd_cart_amount {
-    padding-left: 9px; }
+    padding-left: 18px; }
+  #edd_checkout_cart span.edd_discount {
+    padding-left: 20px; }
   #edd_checkout_cart .edd_cart_total {
     padding-bottom: 0 !important;
     float: left; }
