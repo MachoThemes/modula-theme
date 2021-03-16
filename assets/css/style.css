@@ -2300,11 +2300,13 @@ title-single__comments a {
 .page-template-pricing .pricing-table {
   display: block !important; }
 
-.page-template-pricing .pricing-section {
+.page-template-pricing .pricing-section,
+.page-template-pricing-section-2 .pricing-section {
   margin-top: -15rem !important;
   padding-bottom: 0; }
 
-.page-template-pricing .title-section {
+.page-template-pricing .title-section,
+.page-template-pricing-section-2 .title-section {
   padding-top: 2rem;
   padding-bottom: 15rem; }
 
@@ -2315,7 +2317,7 @@ title-single__comments a {
   padding: 3.75rem 0;
   background: #FAFAFA; }
 
-.page-template-pricing-section-2 .pricing-table {
+.page-template-pricing-section-2 .pricing-section .pricing-table {
   display: none; }
 
 .main-table .pricing-table--header > :nth-child(3) {
