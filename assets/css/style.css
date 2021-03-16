@@ -4752,9 +4752,9 @@ body.modal--open {
       border-color: #eee !important; }
       #edd_checkout_cart_wrap .edd_cart_item.edd_cart_footer_row_total .edd_cart_total_text,
       #edd_checkout_cart_wrap .edd_cart_footer_row.edd_cart_footer_row_total .edd_cart_total_text {
+        padding-left: 23px;
         color: #666;
-        text-align: left;
-        padding: 0.5em 1.387em; }
+        text-align: left; }
   #edd_checkout_cart_wrap .edd_cart_header_row {
     background: #f4f7fa;
     color: #1e242d;
@@ -4784,6 +4784,7 @@ body.modal--open {
   #edd_checkout_cart_wrap .edd_cart_tax,
   #edd_checkout_cart_wrap .edd_cart_total {
     padding-right: 99px;
+    padding-left: 7px;
     font-weight: 700;
     font-size: 14px; }
   #edd_checkout_cart_wrap .edd_cart_subtotal_amount,
@@ -5354,6 +5355,8 @@ p.edd-logged-out {
     display: table !important; }
   th.edd_cart_total.edd_cart_total_text {
     width: 100% !important; }
+  .edd_cart_amount {
+    padding-left: 18px; }
   #edd_checkout_cart .edd_cart_total {
     padding-bottom: 0 !important;
     float: left; }

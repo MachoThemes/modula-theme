@@ -97,9 +97,9 @@
                     border-style: solid !important;
                     border-color: #eee !important;
                     .edd_cart_total_text {
+                        padding-left: 23px;
                         color: #666;
                         text-align: left;
-                        padding: 0.5em 1.387em;
                     }
                 }
                 
@@ -148,9 +148,10 @@
 	.edd_cart_discount,
 	.edd_cart_tax,
 	.edd_cart_total {
-                padding-right: 99px;
-		font-weight: 700;
-		font-size: 14px;
+            padding-right: 99px;
+            padding-left: 7px;
+            font-weight: 700;
+            font-size: 14px;
 	}
 
 	.edd_cart_subtotal_amount,
@@ -884,6 +885,9 @@ p.edd-logged-out {
     }
     th.edd_cart_total.edd_cart_total_text {
         width: 100% !important;
+    }
+    .edd_cart_amount {
+        padding-left: 18px;
     }
     #edd_checkout_cart {
         .edd_cart_total{
