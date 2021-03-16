@@ -14,6 +14,9 @@
             }
             td {
                 color: #000;
+                vertical-align: middle;
+                line-height: 25px;
+                padding: 0.5em 1.387em;
             }
         }
         
@@ -26,8 +29,8 @@
                 }
                 
                 .edd_cart_item_price {
-                    padding-right: 100px;
-                    float: right;
+                    padding-right: 100px !important;
+                    float: left;
                     margin-top: 10px;
                 }
                 
@@ -96,6 +99,7 @@
                     .edd_cart_total_text {
                         color: #666;
                         text-align: left;
+                        padding: 0.5em 1.387em;
                     }
                 }
                 
@@ -198,7 +202,7 @@
                 }
             }
             #edd_sl_renewal_fields, #edd_discount_code {
-                border-bootom: 1px solid #f0f0f0;
+                border-bottom: 1px solid #f0f0f0;
                 padding: 0.5em 1.387em;
                 background-color: #fff;
                 box-shadow: 4px 4px 0 0 #cfd9e6;
