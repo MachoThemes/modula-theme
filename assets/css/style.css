@@ -4784,7 +4784,7 @@ body.modal--open {
   #edd_checkout_cart_wrap .edd_cart_tax,
   #edd_checkout_cart_wrap .edd_cart_total {
     padding-right: 99px;
-    padding-left: 7px;
+    padding-left: 17px;
     font-weight: 700;
     font-size: 14px; }
   #edd_checkout_cart_wrap .edd_cart_subtotal_amount,
@@ -4797,7 +4797,8 @@ body.modal--open {
   #edd_checkout_cart_wrap .edd_cart_amount,
   #edd_checkout_cart_wrap .edd_cart_total {
     color: #2b6;
-    font-size: 22px; }
+    font-size: 22px;
+    text-align: left; }
   #edd_checkout_cart_wrap .edd_cart_tax_row {
     width: 50%; }
 
@@ -5356,7 +5357,7 @@ p.edd-logged-out {
   th.edd_cart_total.edd_cart_total_text {
     width: 100% !important; }
   .edd_cart_amount {
-    padding-left: 18px; }
+    padding-left: 9px; }
   #edd_checkout_cart .edd_cart_total {
     padding-bottom: 0 !important;
     float: left; }

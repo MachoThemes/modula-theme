@@ -149,7 +149,7 @@
 	.edd_cart_tax,
 	.edd_cart_total {
             padding-right: 99px;
-            padding-left: 7px;
+            padding-left: 17px;
             font-weight: 700;
             font-size: 14px;
 	}
@@ -167,6 +167,7 @@
 	.edd_cart_total {
 		color: #2b6;
 		font-size: 22px;
+		text-align: left;
 	}
         
         .edd_cart_tax_row {
@@ -887,7 +888,7 @@ p.edd-logged-out {
         width: 100% !important;
     }
     .edd_cart_amount {
-        padding-left: 18px;
+        padding-left: 9px;
     }
     #edd_checkout_cart {
         .edd_cart_total{
