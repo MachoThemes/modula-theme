@@ -175,7 +175,7 @@
 			}
 
 			if ( ! is_user_logged_in() ) {
-				$items .= '<li class="menu-item"><a class="login-link" href="#" rel="nofollow">Log In</a></li>';
+				$items .= '<li class="menu-item"><a class="" href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '" rel="nofollow">Log In</a></li>';
 			} else {
 				$items .= '<li class="menu-item menu-item-has-children">';
 				$items .= '<a href="' . get_permalink( get_page_by_path( 'my-account' ) ) . '">My Account</a>';

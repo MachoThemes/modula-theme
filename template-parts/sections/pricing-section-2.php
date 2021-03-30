@@ -224,16 +224,16 @@ $addons = modula_theme_get_all_extensions( $downloads );
 				</span>
 			</div>
 			<div class="col-xs-3">
-				Regular
-			</div>
-			<div class="col-xs-3">
-				Regular
-			</div>
-			<div class="col-xs-3">
 				<mark>Priority</mark>
 			</div>
 			<div class="col-xs-3">
 				<mark>Priority</mark>
+			</div>
+			<div class="col-xs-3">
+				Regular
+			</div>
+			<div class="col-xs-3">
+				Regular
 			</div>
 		</div><!-- row -->
 

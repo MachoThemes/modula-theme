@@ -75,8 +75,11 @@
                                                 <?php
                                                 $price_id       = edd_get_cart_item_price_id( $download );
                                                 $version        = get_post_meta($download['id'], '_edd_sl_version', true);
-                                                $changelog       = get_post_meta($download['id'], '_edd_sl_changelog', true);
+                                                $changelog      = get_post_meta($download['id'], '_edd_sl_changelog', true);
                                                 $download_files = edd_get_download_files( $download['id'], $price_id );
+                                                $purchase_data  = edd_get_payment_meta( $payment->ID );
+                                                $email          = edd_get_payment_user_email( $payment->ID );
+                                                
                                                 echo $download['name']; 
                                                 ?>
                                                 </td>
@@ -98,8 +101,11 @@
                                                 <?php endif; ?>
                                                 </td>
                                                 <td>
-                                                <?php foreach ($download_files as $file): ?>
-                                                <a href="<?php echo $file['file'] ?>"><?php _e('Download', 'modula-theme') ?></a>
+                                                <?php 
+                                                    foreach ( $download_files as $filekey => $file ):
+                                                        $download_url   = edd_get_download_file_url( $purchase_data['key'], $email, $filekey, $download['id'], $price_id );
+                                                ?>
+                                                <a href="<?php echo $download_url ?>"><?php _e('Download', 'modula-theme') ?></a>
                                                 <?php endforeach; ?>
                                                 </td>
                                             </tr>
