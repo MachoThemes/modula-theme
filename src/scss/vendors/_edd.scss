@@ -143,6 +143,9 @@
 			border-color: $accent-color-1;
 		}
 	}
+    .edd_cart_discount {
+        padding-bottom: 30px;
+    }
     .edd_cart_discount span.edd_discount {
         padding-right: 95px !important;
     }
@@ -268,7 +271,7 @@
     }
     
     #edd-payment-mode-wrap {
-        padding: 29px 150px 10px 150px;
+        padding: 29px 150px 29px 150px;
     }
 }
 
@@ -495,6 +498,7 @@ body #edd_checkout_form_wrap select {
 	text-transform: none;
 	letter-spacing: 0;
 	box-shadow: none;
+    border: none;
 
 	&:hover {
 		background: #178146;

@@ -2300,13 +2300,11 @@ title-single__comments a {
 .page-template-pricing .pricing-table {
   display: block !important; }
 
-.page-template-pricing .pricing-section,
-.page-template-pricing-section-2 .pricing-section {
+.page-template-pricing .pricing-section {
   margin-top: -15rem !important;
   padding-bottom: 0; }
 
-.page-template-pricing .title-section,
-.page-template-pricing-section-2 .title-section {
+.page-template-pricing .title-section {
   padding-top: 2rem;
   padding-bottom: 15rem; }
 
@@ -2317,7 +2315,7 @@ title-single__comments a {
   padding: 3.75rem 0;
   background: #FAFAFA; }
 
-.page-template-pricing-section-2 .pricing-section .pricing-table {
+.page-template-pricing-section-2 .pricing-table {
   display: none; }
 
 .main-table .pricing-table--header > :nth-child(3) {
@@ -4781,6 +4779,8 @@ body.modal--open {
     #edd_checkout_cart_wrap .edd_cart_remove_item_btn:hover {
       color: #774cce;
       border-color: #774cce; }
+  #edd_checkout_cart_wrap .edd_cart_discount {
+    padding-bottom: 30px; }
   #edd_checkout_cart_wrap .edd_cart_discount span.edd_discount {
     padding-right: 95px !important; }
   #edd_checkout_cart_wrap .edd_cart_subtotal,
@@ -4881,7 +4881,7 @@ body.modal--open {
       font-weight: bold;
       font-size: 20px; }
   #edd_payment_mode_select_wrap #edd-payment-mode-wrap {
-    padding: 29px 150px 10px 150px; }
+    padding: 29px 150px 29px 150px; }
 
 #edd-discount-code-wrap > label {
   color: #666 !important;
@@ -5070,7 +5070,8 @@ body #edd_checkout_form_wrap select {
   font-size: 20.8px;
   text-transform: none;
   letter-spacing: 0;
-  box-shadow: none; }
+  box-shadow: none;
+  border: none; }
   #edd_purchase_submit #edd-purchase-button:hover,
   #edd_purchase_submit .edd-submit:hover,
   #edd_purchase_submit input[type=submit].edd-submit:hover {
