@@ -30,7 +30,7 @@
                 
                 .edd_cart_item_price {
                     padding-right: 100px !important;
-                    float: left;
+                    float: right;
                     margin-top: 10px;
                 }
                 
@@ -153,7 +153,6 @@
 	.edd_cart_discount,
 	.edd_cart_tax,
 	.edd_cart_total {
-            padding-right: 99px;
             padding-left: 7px;
             font-weight: 700;
             font-size: 14px;
@@ -172,12 +171,16 @@
 	.edd_cart_total {
 		color: #2b6;
 		font-size: 22px;
-		text-align: left;
+		text-align: right;
 	}
         
         .edd_cart_tax_row {
             width: 50%;
         }
+}
+input.edd-apply-discount,
+#edd-add-license-renewal {
+    border: none;
 }
 
 /* left sidebar */
