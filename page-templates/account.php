@@ -15,6 +15,9 @@
                               <a class="nav-link" id="downloads-tab" data-toggle="tab" href="#downloads" role="tab" aria-controls="downloads" aria-selected="false"><?php _e('Downloads', 'modula-theme'); ?></a>
                             </li>
                             <li class="nav-item">
+                              <a class="nav-link" id="subscrptions-tab" data-toggle="tab" href="#subscriptions" role="tab" aria-controls="subscriptions" aria-selected="false"><?php _e('Subscriptions', 'modula-theme'); ?></a>
+                            </li>
+                            <li class="nav-item">
                               <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><?php _e('Profile', 'modula-theme'); ?></a>
                             </li>
                         </div>
@@ -68,20 +71,17 @@
                                     $count = 0;
                                     if ( $downloads ) :
                                         foreach ( $downloads as $download ) :
-                                            if (!empty($download['parent'])): ?>
-                                            <?php $count++; ?>
+                                            if (!empty($download['parent'])): 
+                                            $count++; ?>
                                             <tr class="edd_download_history_row">
-                                                <td class="download-name">
-                                                <?php
-                                                $price_id       = edd_get_cart_item_price_id( $download );
-                                                $version        = get_post_meta($download['id'], '_edd_sl_version', true);
-                                                $changelog      = get_post_meta($download['id'], '_edd_sl_changelog', true);
-                                                $download_files = edd_get_download_files( $download['id'], $price_id );
-                                                $purchase_data  = edd_get_payment_meta( $payment->ID );
-                                                $email          = edd_get_payment_user_email( $payment->ID );
-                                                
-                                                echo $download['name']; 
-                                                ?>
+                                                <td class="download-name"><?php
+                                                    $price_id       = edd_get_cart_item_price_id( $download );
+                                                    $version        = get_post_meta($download['id'], '_edd_sl_version', true);
+                                                    $changelog      = get_post_meta($download['id'], '_edd_sl_changelog', true);
+                                                    $download_files = edd_get_download_files( $download['id'], $price_id );
+                                                    $purchase_data  = edd_get_payment_meta( $payment->ID );
+                                                    $email          = edd_get_payment_user_email( $payment->ID );
+                                                    echo $download['name']; ?>
                                                 </td>
                                                 <td>
                                                 <?php if ($version): ?>
@@ -91,7 +91,7 @@
                                                 <td>
                                                 <?php if ($changelog): ?>
                                                 <a id="changelog-link-<?php echo $count ?>" data-count="<?php echo $count ?>" class="changelog-link" href="#"><?php _e('Changelog', 'modula-theme') ?></a>
-                                                <div id="modal--changelog-<?php echo $count ?>" class="modal modal--changelog <?php echo $_POST['edd_action'] ? 'modal--open': ''; ?>">
+                                                <div id="modal--changelog-<?php echo $count ?>" class="modal modal--changelog <?php echo isset($_POST['edd_action']) ? 'modal--open': ''; ?>">
                                                     <div class="modal__overlay"></div>
                                                     <div class="modal__content">
                                                         <div class="modal__close"></div>
@@ -100,14 +100,10 @@
                                                 </div>
                                                 <?php endif; ?>
                                                 </td>
-                                                <td>
-                                                <?php 
-                                                    foreach ( $download_files as $filekey => $file ):
-                                                        $download_url   = edd_get_download_file_url( $purchase_data['key'], $email, $filekey, $download['id'], $price_id );
-                                                ?>
-                                                <a href="<?php echo $download_url ?>"><?php _e('Download', 'modula-theme') ?></a>
-                                                <?php endforeach; ?>
-                                                </td>
+                                                <td><?php foreach ( $download_files as $filekey => $file ): 
+                                                    $download_url   = edd_get_download_file_url( $purchase_data['key'], $email, $filekey, $download['id'], $price_id ); ?>
+                                                    <a href="<?php echo $download_url ?>"><?php _e('Download', 'modula-theme') ?></a>
+                                                <?php endforeach; ?></td>
                                             </tr>
                                             <?php
                                             endif;
@@ -117,30 +113,30 @@
                             <?php endif; ?>            
                             </table>
                         </div>
-                        
-			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <?php echo do_shortcode('[edd_profile_editor]'); ?>
-			</div>
-                    <?php else: ?>
-                        <div class="col-xs-12">
-				<div class="rounded-box">
-                                    <div class="account-container">
-					<a class="anchor" name="account-information"></a>
-                                        <span class="title-icon"><img draggable="false" role="img" class="emoji" alt="🔐" src="https://s.w.org/images/core/emoji/13.0.0/svg/1f510.svg"></span>
-                                        <div class="login-title mb-3">You're not logged in.</div>              
-                                        <p>Please log into your account below.</p>
-                                    </div>
-                                    <div class="account-form-container">
-                                        <?php echo do_shortcode('[edd_profile_editor]'); ?>
-                                    </div>
-				</div>
-			</div>
-                    <?php endif; ?>
+                <div class="tab-pane fade" id="subscriptions" role="tabpanel" aria-labelledby="subscriptions-tab">
+                    <?php echo do_shortcode('[edd_subscriptions]'); ?>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <?php echo do_shortcode('[edd_profile_editor]'); ?>
+                </div>
+        <?php else: ?>
+            <div class="col-xs-12">
+                <div class="rounded-box">
+                    <div class="account-container">
+                        <a class="anchor" name="account-information"></a>
+                        <span class="title-icon"><img draggable="false" role="img" class="emoji" alt="🔐" src="https://s.w.org/images/core/emoji/13.0.0/svg/1f510.svg"></span>
+                        <div class="login-title mb-3">You're not logged in.</div>              
+                        <p>Please log into your account below.</p>
+                    </div>
+                    <div class="account-form-container">
+                        <?php echo do_shortcode('[edd_profile_editor]'); ?>
+                    </div>
+                </div>
+            </div>x
+        <?php endif; ?>
 		</div>
 	</div>
 </section>
 
 <?php get_template_part( 'template-parts/sections/cta' ); ?>
-
 <?php get_footer(); ?>
-

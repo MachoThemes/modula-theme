@@ -38,8 +38,6 @@ function jp_disable_billing_details() {
 	add_action( 'edd_paypalexpress_cc_form', 'modula_add_country' );
         remove_action( 'edd_purchase_form_after_cc_form', 'edd_checkout_submit', 9999 );
         add_action( 'edd_purchase_form_after_cc_form', 'modula_theme_checkout_submit', 9999 );
-        remove_action( 'edd_purchase_history_row_end', 'edd_sl_site_management_links', 10, 2 );
-        remove_action( 'edd_purchase_history_header_after', 'edd_sl_add_key_column' );
 }
 add_action( 'init', 'jp_disable_billing_details' );
 
