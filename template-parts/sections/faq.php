@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 section__heading text-center">
 				<h3>Frequently Asked Questions.</h3>
-				<p>Still have questions? These are some frequently asked questions, but, if your question is not listed feel free to check our <a class="link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'docs' ) ) ); ?>">documentation</a> or <a class="link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact-us' ) ) ); ?>">contact us</a>.</p>
+				<p>Still have questions? These are some frequently asked questions, but, if your question is not listed feel free to check our <a class="link" target="_blank" href="https://modula.helpscoutdocs.com/">documentation</a> or <a class="link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact-us' ) ) ); ?>">contact us</a>.</p>
 			</div>
 		</div>
 
@@ -57,7 +57,7 @@
 				<div class="accordion">
 					<div class="accordion__title">Can I use Modula on client sites?</div>
 					<div class="accordion__content">
-						<p>Yes, any license you purchase can be used on a client’s website, if you’re handling the payment. If not, you can sign up as an affiliate and refer your client, so you get 20% as a commission for recommending a great product to them. 😎</p>
+						<p>Yes, any license you purchase can be used on a client’s website, if you’re handling the payment. If not, <a href="https://wp-modula.com/become-an-affiliate/" target="_blank">you can sign up as an affiliate</a> and refer your client, so you get 20% as a commission for recommending a great product to them. 😎</p>
 					</div>
 				</div>
 				<div class="accordion">

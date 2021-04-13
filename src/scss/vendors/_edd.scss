@@ -708,17 +708,19 @@ body #edd_checkout_form_wrap select {
 }
 
 @media screen and (min-width: 768px) {
-    .testimonial-photo {
-        width: 25%;
-        display: inline-block;
-        float: left 
+    .checkout-testimonial.testimonial{
+        .testimonial-photo {
+            width: 25%;
+            display: inline-block;
+            float: left 
 
-    }
-         
-    .testimonial__content {
-        width: 75%;
-        display: inline-block;
-        float: left;
+        }
+             
+        .testimonial__content {
+            width: 75%;
+            display: inline-block;
+            float: left;
+        }
     }
 }
 
