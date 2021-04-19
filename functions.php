@@ -293,7 +293,7 @@ add_filter( 'edd_require_billing_address', '__return_false' );
 
 add_filter( 'edd_get_cart_discount_html', 'modula_theme_get_cart_discount_html', 10, 4 );
 function modula_theme_get_cart_discount_html($discount_html, $discount, $rate, $remove_url) {
-    $discount_html = '<th colspan="2" class="edd_cart_discount">';
+    $discount_html = '<th class="edd_cart_discount">';
     $discount_html .= "<span class=\"edd_discount\">\n";
     $discount_html .= "<span class=\"discount-rate\">$rate</span><span class=\"discount-code\">($discount)</span>\n";  
     $discount_html .= "</span></th>\n";
