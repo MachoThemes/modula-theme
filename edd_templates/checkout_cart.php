@@ -104,7 +104,9 @@ global $post; ?>
 
 		<tr class="edd_cart_footer_row edd_cart_discount_row" <?php if( ! edd_cart_has_discounts() )  echo ' style="display:none;"'; ?>>
 			<?php do_action( 'edd_checkout_table_discount_first' ); ?>
-			<?php edd_cart_discounts_html(); ?>
+			<th colspan="<?php echo edd_checkout_cart_columns(); ?>" class="edd_cart_discount">
+				<?php edd_cart_discounts_html(); ?>
+			</th>
 			</div>
 			<?php do_action( 'edd_checkout_table_discount_last' ); ?>
 		</tr>
