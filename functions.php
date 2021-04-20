@@ -41,32 +41,6 @@ function jp_disable_billing_details() {
 }
 add_action( 'init', 'jp_disable_billing_details' );
 
-// add_action('wp_enqueue_scripts', 'modula_theme_script_edd', 100);
-// function modula_theme_script_edd()
-// {
-//     wp_dequeue_script('edd-checkout-global');
-//     wp_enqueue_script('modula-theme-edd-checkout-global', get_stylesheet_directory_uri().'/src/js/modula-theme-edd-checkout-global.js', array('jquery'));
-// 	wp_localize_script( 'modula-theme-edd-checkout-global', 'edd_global_vars', apply_filters( 'edd_global_checkout_script_vars', array(
-// 		'ajaxurl'               => edd_get_ajax_url(),
-// 		'checkout_nonce'        => wp_create_nonce( 'edd_checkout_nonce' ),
-// 		'checkout_error_anchor' => '#edd_purchase_submit',
-// 		'currency_sign'         => edd_currency_filter(''),
-// 		'currency_pos'          => edd_get_option( 'currency_position', 'before' ),
-// 		'decimal_separator'     => edd_get_option( 'decimal_separator', '.' ),
-// 		'thousands_separator'   => edd_get_option( 'thousands_separator', ',' ),
-// 		'no_gateway'            => __( 'Please select a payment method', 'easy-digital-downloads' ),
-// 		'no_discount'           => __( 'Please enter a discount code', 'easy-digital-downloads' ), // Blank discount code message
-// 		'enter_discount'        => __( 'Enter discount', 'easy-digital-downloads' ),
-// 		'discount_applied'      => __( 'Discount Applied', 'easy-digital-downloads' ), // Discount verified message
-// 		'no_email'              => __( 'Please enter an email address before applying a discount code', 'easy-digital-downloads' ),
-// 		'no_username'           => __( 'Please enter a username before applying a discount code', 'easy-digital-downloads' ),
-// 		'purchase_loading'      => __( 'Please Wait...', 'easy-digital-downloads' ),
-// 		'complete_purchase'     => edd_get_checkout_button_purchase_label(),
-// 		'taxes_enabled'         => edd_use_taxes() ? '1' : '0',
-// 		'edd_version'           => EDD_VERSION
-// 	) ) );
-// }
-
 function modula_add_country(){
 
 	$logged_in = is_user_logged_in();
@@ -291,15 +265,14 @@ function modula_theme_checkout_submit() { ?>
 // add_filter( 'edd-vat-use-checkout-billing-template', '__return_false' );
 add_filter( 'edd_require_billing_address', '__return_false' );
 
-// add_filter( 'edd_get_cart_discount_html', 'modula_theme_get_cart_discount_html', 10, 4 );
-// function modula_theme_get_cart_discount_html($discount_html, $discount, $rate, $remove_url) {
-
-//     $discount_html .= "<span class=\"edd_discount\">\n";
-//     $discount_html .= "<span class=\"discount-rate\">$rate</span><span class=\"discount-code\">($discount)</span>\n";  
-//     $discount_html .= "</span>\n";
-//     $discount_html .= "<th class=\"edd_cart_actions edd_cart_discount discount_actions\"><a href=\"$remove_url\" data-code=\"$discount\" class=\"edd_discount_remove\"></a></th>\n";
-//     return $discount_html;
-// }
+add_filter( 'edd_get_cart_discount_html', 'modula_theme_get_cart_discount_html', 10, 4 );
+function modula_theme_get_cart_discount_html($discount_html, $discount, $rate, $remove_url) {
+    $discount_html = "<div class=\"edd_discount\">\n";
+    $discount_html .= "<span class=\"discount-rate\">$rate</span><span class=\"discount-code\">($discount)</span>\n";  
+    $discount_html .= "</div>\n";
+    $discount_html .= "<div class=\"edd_cart_actions discount_actions\"><a href=\"$remove_url\" data-code=\"$discount\" class=\"edd_discount_remove\"></a></div>\n";
+    return $discount_html;
+}
 
 // Modula Hide Bundle licenses
 add_filter( 'edd_sl_licenses_of_purchase', 'modula_hide_licenses', 99, 3 );

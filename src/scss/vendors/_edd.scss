@@ -42,13 +42,28 @@
                     }
                 }
                 
+                @media screen and (max-width: 768px) { 
+                    .edd_cart_discount {
+                        display: block;
+                        width: 100%;
+                        .edd_discount { 
+                            width: 80%;
+                            text-align: left;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+                
                 .edd_discount {
-                    float: right;
+                    display: inline-block;
+                    width: 41%;
+                    float: left;
+                    text-align: right;
                     .discount-rate {
-                       color: #2794da;
-                       line-height: 1;
-                       font-size: .87rem;
-                       margin-right: 3px;
+                        color: #2794da;
+                        line-height: 1;
+                        font-size: .87rem;
+                        margin-right: 3px;
                     }
                     .discount-code {
                         display: inline;
@@ -62,13 +77,12 @@
                 
                 .edd_discount_remove {
                     display: block;
-                    top: -2px;
                     float: right;
                     width: 10px;
                     height: 10px;
                     background-image: url(../images/icons/cancel.png);
                     background-size: cover;
-                    margin-bottom: 4px;
+                    margin-top: 6px;
                     &:hover {
                         background-position: initial;
                         background-image: url(../images/icons/cancel-hover.png);
@@ -189,71 +203,71 @@ input.edd-apply-discount,
 		margin: 0;
 	}
                         
-                input[type="radio"] {
-                    margin-right: 10px;
-                } 
-        
-        #edd_sl_renewal_form, #edd_purchase_form, #edd_sl_cancel_renewal_form {
-            > p {
-                border: 1px solid #eee;
-                border-left: 1px solid #ddd !important;
-                padding: 0.5em 1.387em;
-                background-color: #fff;
-                box-shadow: 4px 4px 0 0 #cfd9e6;
-                input.edd-submit {
-                    border: none;
-                    color: #292e37;
-                    box-shadow: none;
-                    background: #fff;
-                    padding: 0;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-            #edd_sl_renewal_fields, #edd_discount_code {
-                border-bottom: 1px solid #f0f0f0;
-                padding: 0.5em 1.387em;
-                background-color: #fff;
-                box-shadow: 4px 4px 0 0 #cfd9e6;
-                a {
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: #292e37;
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+    
+    #edd_sl_renewal_form, #edd_purchase_form, #edd_sl_cancel_renewal_form {
+        > p {
+            border: 1px solid #eee;
+            border-left: 1px solid #ddd !important;
+            padding: 0.5em 1.387em;
+            background-color: #fff;
+            box-shadow: 4px 4px 0 0 #cfd9e6;
+            input.edd-submit {
+                border: none;
+                color: #292e37;
+                box-shadow: none;
+                background: #fff;
+                padding: 0;
+                &:hover {
                     text-decoration: underline;
-                }
-                p {
-                    color: #666;
-                    font-size: 16px;
-                    font-weight: 700;
-                    border: none;
-                    padding: 0;
-                    background-color: #fff;
-                    margin: 0;
-                }
-                input[type="text"] {
-                    box-shadow: none;
-                    max-height: 35px;
-                    margin-bottom: 6px;
-                    max-width: 275px;
-                    display: inline-block;
-                    font-size: .87rem;
-                    line-height: 1;
-                    padding: .5rem;
-                    height: 2rem;
-                    vertical-align: unset;
-                    color: #35495c !important;
-                    background-color: #f4f7fa !important;
-                    border: 1px solid #cfd9e6 !important;
-                    height: unset !important;
-                    border-radius: 0;
-                }
-                input[type="submit"] {
-                    padding: 6px 12px;
-                    border-radius: 0;
                 }
             }
         }
+        #edd_sl_renewal_fields, #edd_discount_code {
+            border-bottom: 1px solid #f0f0f0;
+            padding: 0.5em 1.387em;
+            background-color: #fff;
+            box-shadow: 4px 4px 0 0 #cfd9e6;
+            a {
+                font-size: 14px;
+                font-weight: 400;
+                color: #292e37;
+                text-decoration: underline;
+            }
+            p {
+                color: #666;
+                font-size: 16px;
+                font-weight: 700;
+                border: none;
+                padding: 0;
+                background-color: #fff;
+                margin: 0;
+            }
+            input[type="text"] {
+                box-shadow: none;
+                max-height: 35px;
+                margin-bottom: 6px;
+                max-width: 275px;
+                display: inline-block;
+                font-size: .87rem;
+                line-height: 1;
+                padding: .5rem;
+                height: 2rem;
+                vertical-align: unset;
+                color: #35495c !important;
+                background-color: #f4f7fa !important;
+                border: 1px solid #cfd9e6 !important;
+                height: unset !important;
+                border-radius: 0;
+            }
+            input[type="submit"] {
+                padding: 6px 12px;
+                border-radius: 0;
+            }
+        }
+    }
 }
 
 #edd_payment_mode_select_wrap {
@@ -337,22 +351,6 @@ input.edd-apply-discount,
     float: left;
     font-weight: 600;
 }
-
-/*#edd_payment_mode_select legend:before {
-	content: 'Step 1:';
-}*/
-
-/*#edd_checkout_user_info legend:before {
-	content: 'Step 2:';
-}*/
-
-/*#edd_cc_fields legend:before {
-	content: 'Fill in Your';
-}*/
-/*
-#edd_cc_address legend:before {
-	content: '(optional) Fill in Your';
-}*/
 
 .edd-description {
 	display: none !important;
@@ -888,12 +886,6 @@ p.edd-logged-out {
     }
 }
 
-@media screen and (max-width: 991px) {
-    #edd_checkout_cart_wrap .edd_cart_discount span.edd_discount {
-        padding-right: 22px !important;
-    }
-}
-
 @media screen and (max-width: 768px) {
     tr.edd_cart_footer_row.edd_cart_footer_row_total {
         width: 100% !important;
@@ -904,9 +896,6 @@ p.edd-logged-out {
     }
     .edd_cart_amount {
         padding-left: 18px;
-    }
-    #edd_checkout_cart span.edd_discount{
-        padding-left: 20px;
     }
     #edd_checkout_cart {
         .edd_cart_total{
@@ -926,12 +915,6 @@ p.edd-logged-out {
         td, tr {
             display: block;
         }
-    }
-    .edd_cart_discount {
-        float: left;
-    }
-    .discount_actions {
-        float: right;
     }
     .edd_cart_item {
         td {
@@ -965,12 +948,6 @@ p.edd-logged-out {
 
     #edd_checkout_cart > tfoot > tr.edd_cart_footer_row.edd_cart_discount_row > th.edd_cart_actions.discount_actions {
         padding-top:14px !important;
-    }
-}
-@media screen and (max-width: 350px) {   
-    th.edd_cart_discount{
-        width: 50%;
-        padding-right: 15px !important;
     }
 }
 
