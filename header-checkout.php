@@ -7,7 +7,7 @@
 
 <body <?php body_class(); ?>>
 
-	<header class="<?php modula_header_class(); ?> header--checkout">
+	<header class="header--checkout">
 		<div class="container">
 			<div class="row justify-content-center header__content">
 				<div class="col-md-7 text-center">

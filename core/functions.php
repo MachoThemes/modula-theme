@@ -1,31 +1,6 @@
 <?php //Contains assorted functions and utilities for themes.
 
 
-	function modula_header_class() {
-
-		$class = 'header';
-
-		if ( ( is_home() ||
-		     is_archive() ||
-		     (
-			     is_page() &&
-			     ! is_page_template( 'page-templates/pricing.php' ) &&
-                             ! is_page_template( 'page-templates/pricing-section-2.php' ) &&
-			     ! is_page_template( 'page-templates/pricing-2.php' ) &&
-			     ! is_page_template( 'page-templates/pricing-ltd.php' ) &&
-			     ! is_page_template( 'page-templates/checkout.php' ) &&
-			     ! is_page_template( 'page-templates/account.php' ) &&
-			     ! is_page_template( 'page-templates/purchase-confirmation.php' ) &&
-			     ! is_page_template( 'page-templates/landing-page-2.php' )
-		     ) ) &&
-		    ! is_tax('wpchill_docs_cat')
-		) {
-			$class .= ' header--over-content';
-		}
-
-		echo esc_attr( $class );
-	}
-
 //Returns the current language's code in the event that WPML is active
 	if ( ! function_exists( 'antreas_wpml_current_language' ) ) {
 		function antreas_wpml_current_language() {

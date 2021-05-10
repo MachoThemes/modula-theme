@@ -1,11 +1,11 @@
 (function($){
 
 	$(document).ready(function(){
-		$('a.compare-plans-button').on('click', function(e) {
+		$('.compare-plans-button').on('click', function(e) {
                     e.preventDefault();
-                    $('.pricing-table').show();
+                    $('.pricing-section').show();
                     $("body,html").animate(
-                    { scrollTop: $('.pricing-table').offset().top }, 800 );
+                    { scrollTop: $('.pricing-section').offset().top }, 800 );
 		});
 	});
         

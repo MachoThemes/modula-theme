@@ -13,7 +13,7 @@
 
 		<?php do_action('before_header');  ?>
 
-		<header class="<?php modula_header_class(); ?>">
+		<header>
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 header__content">

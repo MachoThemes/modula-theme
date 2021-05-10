@@ -63,86 +63,45 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+class Accordion {
 
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Accordion = function () {
-	function Accordion($element) {
-		var _this = this;
-
-		_classCallCheck(this, Accordion);
-
+	constructor($element) {
 		this.$accordion = $element;
 		this.$accordionTitle = this.$accordion.children('.accordion__title');
 		this.$accordionContent = this.$accordion.children('.accordion__content');
 
 		//events
-		this.$accordionTitle.on('click', function (e) {
-			return _this.onAccordionClick(e);
+		this.$accordionTitle.on('click', e => this.onAccordionClick(e));
+	}
+
+	onAccordionClick(e) {
+		e.preventDefault();
+
+		this.$accordionContent.slideToggle(300, 'swing', () => {
+			this.$accordion.toggleClass('accordion--opened');
 		});
 	}
 
-	_createClass(Accordion, [{
-		key: 'onAccordionClick',
-		value: function onAccordionClick(e) {
-			var _this2 = this;
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Accordion;
 
-			e.preventDefault();
-
-			this.$accordionContent.slideToggle(300, 'swing', function () {
-				_this2.$accordion.toggleClass('accordion--opened');
-			});
-		}
-	}]);
-
-	return Accordion;
-}();
-
-exports.default = Accordion;
 
 /***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+class DocSearch {
 
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var DocSearch = function () {
-	function DocSearch($element) {
-		var _this = this;
-
-		_classCallCheck(this, DocSearch);
-
+	constructor($element) {
 		this.$searchInput = $element.find('input');
 		this.$searchResults = $element.find('.doc-search__results');
 		this.nonce = this.$searchInput.attr('data-nonce');
@@ -150,119 +109,74 @@ var DocSearch = function () {
 		this.postCategory = this.$searchInput.attr('data-post-category');
 
 		//events
-		this.$searchInput.on('keyup', function (e) {
-			return _this.onKeyUp(e);
+		this.$searchInput.on('keyup', e => this.onKeyUp(e));
+	}
+
+	onKeyUp(e) {
+		e.preventDefault();
+
+		let value = this.$searchInput.val();
+		clearTimeout(this.timeout);
+
+		if (value.length <= 3) {
+			this.$searchResults.hide().html("");
+		} else {
+			this.$searchResults.show().html('<p class="mb-0">Searching for articles: <strong>' + value + '</strong></p>');
+			this.timeout = setTimeout(() => this.makeAjaxCall(), 500);
+		}
+	}
+
+	makeAjaxCall() {
+		jQuery.ajax({
+			type: "POST",
+			data: { action: "modula_search_articles", nonce: this.nonce, post_type: this.postType, post_category: this.postCategory, s: this.$searchInput.val() },
+			url: modula.ajaxurl,
+			success: html => {
+				this.$searchResults.show().html(html);
+			}
 		});
 	}
 
-	_createClass(DocSearch, [{
-		key: 'onKeyUp',
-		value: function onKeyUp(e) {
-			var _this2 = this;
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = DocSearch;
 
-			e.preventDefault();
-
-			var value = this.$searchInput.val();
-			clearTimeout(this.timeout);
-
-			if (value.length <= 3) {
-				this.$searchResults.hide().html("");
-			} else {
-				this.$searchResults.show().html('<p class="mb-0">Searching for articles: <strong>' + value + '</strong></p>');
-				this.timeout = setTimeout(function () {
-					return _this2.makeAjaxCall();
-				}, 500);
-			}
-		}
-	}, {
-		key: 'makeAjaxCall',
-		value: function makeAjaxCall() {
-			var _this3 = this;
-
-			jQuery.ajax({
-				type: "POST",
-				data: { action: "modula_search_articles", nonce: this.nonce, post_type: this.postType, post_category: this.postCategory, s: this.$searchInput.val() },
-				url: modula.ajaxurl,
-				success: function success(html) {
-					_this3.$searchResults.show().html(html);
-				}
-			});
-		}
-	}]);
-
-	return DocSearch;
-}();
-
-exports.default = DocSearch;
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+class Events {
 
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Events = function () {
-	function Events($hero) {
-		var _this = this;
-
-		_classCallCheck(this, Events);
+	constructor($hero) {
 
 		//events
-		document.addEventListener('modal-2-opened', function (e) {
-			return _this.onModalVideoOpen(e);
-		});
-		document.addEventListener('modal-2-closed', function (e) {
-			return _this.onModalVideoClosed(e);
-		});
+		document.addEventListener('modal-2-opened', e => this.onModalVideoOpen(e));
+		document.addEventListener('modal-2-closed', e => this.onModalVideoClosed(e));
 	}
 
-	_createClass(Events, [{
-		key: 'onModalVideoOpen',
-		value: function onModalVideoOpen(e) {
-			e.preventDefault();
-			jQuery('.modal--video iframe').attr('src', "https://www.youtube.com/embed/NxrTXQNExh4?feature=oembed&autoplay=1");
-		}
-	}, {
-		key: 'onModalVideoClosed',
-		value: function onModalVideoClosed(e) {
-			e.preventDefault();
-			jQuery('.modal--video iframe').attr('src', "");
-		}
-	}]);
+	onModalVideoOpen(e) {
+		e.preventDefault();
+		jQuery('.modal--video iframe').attr('src', "https://www.youtube.com/embed/NxrTXQNExh4?feature=oembed&autoplay=1");
+	}
 
-	return Events;
-}();
+	onModalVideoClosed(e) {
+		e.preventDefault();
+		jQuery('.modal--video iframe').attr('src', "");
+	}
 
-exports.default = Events;
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Events;
+
 
 /***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+class Header {
 
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Header = function () {
-	function Header($element) {
-		_classCallCheck(this, Header);
-
+	constructor($element) {
 		this.$header = $element;
 		this.$mainMenu = this.$header.find('.main-menu');
 		this.$menuIcon = this.$header.find('.menu-icon');
@@ -273,188 +187,128 @@ var Header = function () {
 		this.initMenu();
 	}
 
-	_createClass(Header, [{
-		key: 'initSticky',
-		value: function initSticky() {
-			var _this = this;
+	initSticky() {
 
-			if (jQuery('body').hasClass('page-template-checkout')) {
-				return;
-			}
-
-			if (jQuery('body').hasClass('page-template-pricing')) {
-				return;
-			}
-
-			if (jQuery('body').hasClass('page-template-pricing-2')) {
-				return;
-			}
-
-			window.addEventListener('scroll', function () {
-				return _this.makeSticky();
-			});
+		if (jQuery('body').hasClass('page-template-checkout')) {
+			return;
 		}
-	}, {
-		key: 'makeSticky',
-		value: function makeSticky() {
 
-			if (window.pageYOffset > 0) {
-				this.$header.addClass('header--sticky');
-			} else {
-				this.$header.removeClass('header--sticky');
-			}
+		if (jQuery('body').hasClass('page-template-pricing')) {
+			return;
 		}
-	}, {
-		key: 'initMenu',
-		value: function initMenu() {
-			var _this2 = this;
 
-			this.$menuArrow.on('click', function (e) {
-				jQuery(e.target).toggleClass('menu-arrow--open');
-				jQuery(e.target).siblings('.sub-menu').toggleClass('sub-menu--open');
-			});
-
-			this.$menuIcon.on('click', function () {
-				_this2.$menuIcon.toggleClass('menu-icon--open');
-				_this2.$mainMenu.toggleClass('main-menu--open');
-			});
+		if (jQuery('body').hasClass('page-template-pricing-2')) {
+			return;
 		}
-	}]);
 
-	return Header;
-}();
+		window.addEventListener('scroll', () => this.makeSticky());
+	}
 
-exports.default = Header;
+	makeSticky() {
+
+		if (window.pageYOffset > 0) {
+			this.$header.addClass('header--sticky');
+		} else {
+			this.$header.removeClass('header--sticky');
+		}
+	}
+
+	initMenu() {
+
+		this.$menuArrow.on('click', e => {
+			jQuery(e.target).toggleClass('menu-arrow--open');
+			jQuery(e.target).siblings('.sub-menu').toggleClass('sub-menu--open');
+		});
+
+		this.$menuIcon.on('click', () => {
+			this.$menuIcon.toggleClass('menu-icon--open');
+			this.$mainMenu.toggleClass('main-menu--open');
+		});
+	}
+
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Header;
+
 
 /***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+class Modal {
 
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Modal = function () {
-	function Modal(id, $element, $trigger) {
-		var _this = this;
-
-		_classCallCheck(this, Modal);
-
+	constructor(id, $element, $trigger) {
 		this.id = id;
 		this.$modal = $element;
 		this.$trigger = $trigger;
 
 		//events
-		this.$trigger.on('click', function (e) {
-			return _this.openModal(e);
-		});
-		this.$modal.find('.modal__overlay, .modal__close').on('click', function (e) {
-			return _this.closeModal(e);
-		});
+		this.$trigger.on('click', e => this.openModal(e));
+		this.$modal.find('.modal__overlay, .modal__close').on('click', e => this.closeModal(e));
 	}
 
-	_createClass(Modal, [{
-		key: 'openModal',
-		value: function openModal(e) {
-			e.preventDefault();
-			this.$modal.addClass('modal--open');
-			jQuery('body').addClass('modal--open');
-			document.dispatchEvent(new Event(this.id + '-opened'));
-		}
-	}, {
-		key: 'closeModal',
-		value: function closeModal(e) {
-			e.preventDefault();
-			this.$modal.removeClass('modal--open');
-			jQuery('body').removeClass('modal--open');
-			document.dispatchEvent(new Event(this.id + '-closed'));
-		}
-	}]);
+	openModal(e) {
+		e.preventDefault();
+		this.$modal.addClass('modal--open');
+		jQuery('body').addClass('modal--open');
+		document.dispatchEvent(new Event(this.id + '-opened'));
+	}
 
-	return Modal;
-}();
+	closeModal(e) {
+		e.preventDefault();
+		this.$modal.removeClass('modal--open');
+		jQuery('body').removeClass('modal--open');
+		document.dispatchEvent(new Event(this.id + '-closed'));
+	}
 
-exports.default = Modal;
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Modal;
+
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+class PromotionSection {
 
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var PromotionSection = function () {
-	function PromotionSection($element) {
-		_classCallCheck(this, PromotionSection);
+	constructor($element) {
 
 		this.$promotionSection = $element;
 
 		this.initSticky();
 	}
 
-	_createClass(PromotionSection, [{
-		key: 'initSticky',
-		value: function initSticky() {
-			var _this = this;
+	initSticky() {
 
-			if (!jQuery('body').hasClass('page-template-pricing')) {
-				return;
-			}
-
-			window.addEventListener('scroll', function () {
-				return _this.makeSticky();
-			});
+		if (!jQuery('body').hasClass('page-template-pricing')) {
+			return;
 		}
-	}, {
-		key: 'makeSticky',
-		value: function makeSticky() {
 
-			if (window.pageYOffset > 0) {
-				this.$promotionSection.addClass('promotion-section--sticky');
-			} else {
-				this.$promotionSection.removeClass('promotion-section--sticky');
-			}
+		window.addEventListener('scroll', () => this.makeSticky());
+	}
+
+	makeSticky() {
+
+		if (window.pageYOffset > 0) {
+			this.$promotionSection.addClass('promotion-section--sticky');
+		} else {
+			this.$promotionSection.removeClass('promotion-section--sticky');
 		}
-	}]);
+	}
 
-	return PromotionSection;
-}();
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = PromotionSection;
 
-exports.default = PromotionSection;
 
 /***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var TRANSITION_END = 'transitionend';
-var MAX_UID = 1000000;
-var MILLISECONDS_MULTIPLIER = 1000;
+const TRANSITION_END = 'transitionend';
+const MAX_UID = 1000000;
+const MILLISECONDS_MULTIPLIER = 1000;
 
 // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 function toType(obj) {
@@ -465,7 +319,7 @@ function getSpecialTransitionEndEvent() {
   return {
     bindType: TRANSITION_END,
     delegateType: TRANSITION_END,
-    handle: function handle(event) {
+    handle(event) {
       if (jQuery(event.target).is(this)) {
         return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
       }
@@ -475,17 +329,15 @@ function getSpecialTransitionEndEvent() {
 }
 
 function transitionEndEmulator(duration) {
-  var _this = this;
+  let called = false;
 
-  var called = false;
-
-  jQuery(this).one(Util.TRANSITION_END, function () {
+  jQuery(this).one(Util.TRANSITION_END, () => {
     called = true;
   });
 
-  setTimeout(function () {
+  setTimeout(() => {
     if (!called) {
-      Util.triggerTransitionEnd(_this);
+      Util.triggerTransitionEnd(this);
     }
   }, duration);
 
@@ -503,22 +355,23 @@ function setTransitionEndSupport() {
  * --------------------------------------------------------------------------
  */
 
-var Util = {
+const Util = {
 
   TRANSITION_END: 'bsTransitionEnd',
 
-  getUID: function getUID(prefix) {
+  getUID(prefix) {
     do {
       // eslint-disable-next-line no-bitwise
       prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
     } while (document.getElementById(prefix));
     return prefix;
   },
-  getSelectorFromElement: function getSelectorFromElement(element) {
-    var selector = element.getAttribute('data-target');
+
+  getSelectorFromElement(element) {
+    let selector = element.getAttribute('data-target');
 
     if (!selector || selector === '#') {
-      var hrefAttr = element.getAttribute('href');
+      const hrefAttr = element.getAttribute('href');
       selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : '';
     }
 
@@ -528,17 +381,18 @@ var Util = {
       return null;
     }
   },
-  getTransitionDurationFromElement: function getTransitionDurationFromElement(element) {
+
+  getTransitionDurationFromElement(element) {
     if (!element) {
       return 0;
     }
 
     // Get transition-duration of the element
-    var transitionDuration = jQuery(element).css('transition-duration');
-    var transitionDelay = jQuery(element).css('transition-delay');
+    let transitionDuration = jQuery(element).css('transition-duration');
+    let transitionDelay = jQuery(element).css('transition-delay');
 
-    var floatTransitionDuration = parseFloat(transitionDuration);
-    var floatTransitionDelay = parseFloat(transitionDelay);
+    const floatTransitionDuration = parseFloat(transitionDuration);
+    const floatTransitionDelay = parseFloat(transitionDelay);
 
     // Return 0 if element or transition duration is not found
     if (!floatTransitionDuration && !floatTransitionDelay) {
@@ -551,42 +405,46 @@ var Util = {
 
     return (parseFloat(transitionDuration) + parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
   },
-  reflow: function reflow(element) {
+
+  reflow(element) {
     return element.offsetHeight;
   },
-  triggerTransitionEnd: function triggerTransitionEnd(element) {
+
+  triggerTransitionEnd(element) {
     jQuery(element).trigger(TRANSITION_END);
   },
 
-
   // TODO: Remove in v5
-  supportsTransitionEnd: function supportsTransitionEnd() {
+  supportsTransitionEnd() {
     return Boolean(TRANSITION_END);
   },
-  isElement: function isElement(obj) {
+
+  isElement(obj) {
     return (obj[0] || obj).nodeType;
   },
-  typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
-    for (var property in configTypes) {
+
+  typeCheckConfig(componentName, config, configTypes) {
+    for (const property in configTypes) {
       if (Object.prototype.hasOwnProperty.call(configTypes, property)) {
-        var expectedTypes = configTypes[property];
-        var value = config[property];
-        var valueType = value && Util.isElement(value) ? 'element' : toType(value);
+        const expectedTypes = configTypes[property];
+        const value = config[property];
+        const valueType = value && Util.isElement(value) ? 'element' : toType(value);
 
         if (!new RegExp(expectedTypes).test(valueType)) {
-          throw new Error(componentName.toUpperCase() + ': ' + ('Option "' + property + '" provided type "' + valueType + '" ') + ('but expected type "' + expectedTypes + '".'));
+          throw new Error(`${componentName.toUpperCase()}: ` + `Option "${property}" provided type "${valueType}" ` + `but expected type "${expectedTypes}".`);
         }
       }
     }
   },
-  findShadowRoot: function findShadowRoot(element) {
+
+  findShadowRoot(element) {
     if (!document.documentElement.attachShadow) {
       return null;
     }
 
     // Can find the shadow root otherwise it'll return the document
     if (typeof element.getRootNode === 'function') {
-      var root = element.getRootNode();
+      const root = element.getRootNode();
       return root instanceof ShadowRoot ? root : null;
     }
 
@@ -611,22 +469,22 @@ setTransitionEndSupport();
  * ------------------------------------------------------------------------
  */
 
-var NAME = 'tab';
-var VERSION = '4.3.1';
-var DATA_KEY = 'bs.tab';
-var EVENT_KEY = '.' + DATA_KEY;
-var DATA_API_KEY = '.data-api';
-var JQUERY_NO_CONFLICT = jQuery.fn[NAME];
+const NAME = 'tab';
+const VERSION = '4.3.1';
+const DATA_KEY = 'bs.tab';
+const EVENT_KEY = `.${DATA_KEY}`;
+const DATA_API_KEY = '.data-api';
+const JQUERY_NO_CONFLICT = jQuery.fn[NAME];
 
-var Event = {
-  HIDE: 'hide' + EVENT_KEY,
-  HIDDEN: 'hidden' + EVENT_KEY,
-  SHOW: 'show' + EVENT_KEY,
-  SHOWN: 'shown' + EVENT_KEY,
-  CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+const Event = {
+  HIDE: `hide${EVENT_KEY}`,
+  HIDDEN: `hidden${EVENT_KEY}`,
+  SHOW: `show${EVENT_KEY}`,
+  SHOWN: `shown${EVENT_KEY}`,
+  CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`
 };
 
-var ClassName = {
+const ClassName = {
   DROPDOWN_MENU: 'dropdown-menu',
   ACTIVE: 'active',
   DISABLED: 'disabled',
@@ -634,7 +492,7 @@ var ClassName = {
   SHOW: 'show'
 };
 
-var Selector = {
+const Selector = {
   DROPDOWN: '.dropdown',
   NAV_LIST_GROUP: '.nav, .list-group',
   ACTIVE: '.active',
@@ -649,189 +507,166 @@ var Selector = {
    * ------------------------------------------------------------------------
    */
 
-};
-var Tab = function () {
-  function Tab(element) {
-    _classCallCheck(this, Tab);
-
+};class Tab {
+  constructor(element) {
     this._element = element;
   }
 
   // Getters
 
-  _createClass(Tab, [{
-    key: 'show',
+  static get VERSION() {
+    return VERSION;
+  }
 
+  // Public
 
-    // Public
+  show() {
+    if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && jQuery(this._element).hasClass(ClassName.ACTIVE) || jQuery(this._element).hasClass(ClassName.DISABLED)) {
+      return;
+    }
 
-    value: function show() {
-      var _this2 = this;
+    let target;
+    let previous;
+    const listElement = jQuery(this._element).closest(Selector.NAV_LIST_GROUP)[0];
+    const selector = Util.getSelectorFromElement(this._element);
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && jQuery(this._element).hasClass(ClassName.ACTIVE) || jQuery(this._element).hasClass(ClassName.DISABLED)) {
-        return;
-      }
+    if (listElement) {
+      const itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector.ACTIVE_UL : Selector.ACTIVE;
+      previous = jQuery.makeArray(jQuery(listElement).find(itemSelector));
+      previous = previous[previous.length - 1];
+    }
 
-      var target = void 0;
-      var previous = void 0;
-      var listElement = jQuery(this._element).closest(Selector.NAV_LIST_GROUP)[0];
-      var selector = Util.getSelectorFromElement(this._element);
+    const hideEvent = jQuery.Event(Event.HIDE, {
+      relatedTarget: this._element
+    });
 
-      if (listElement) {
-        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector.ACTIVE_UL : Selector.ACTIVE;
-        previous = jQuery.makeArray(jQuery(listElement).find(itemSelector));
-        previous = previous[previous.length - 1];
-      }
+    const showEvent = jQuery.Event(Event.SHOW, {
+      relatedTarget: previous
+    });
 
-      var hideEvent = jQuery.Event(Event.HIDE, {
+    if (previous) {
+      jQuery(previous).trigger(hideEvent);
+    }
+
+    jQuery(this._element).trigger(showEvent);
+
+    if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
+      return;
+    }
+
+    if (selector) {
+      target = document.querySelector(selector);
+    }
+
+    this._activate(this._element, listElement);
+
+    const complete = () => {
+      const hiddenEvent = jQuery.Event(Event.HIDDEN, {
         relatedTarget: this._element
       });
 
-      var showEvent = jQuery.Event(Event.SHOW, {
+      const shownEvent = jQuery.Event(Event.SHOWN, {
         relatedTarget: previous
       });
 
-      if (previous) {
-        jQuery(previous).trigger(hideEvent);
+      jQuery(previous).trigger(hiddenEvent);
+      jQuery(this._element).trigger(shownEvent);
+    };
+
+    if (target) {
+      this._activate(target, target.parentNode, complete);
+    } else {
+      complete();
+    }
+  }
+
+  dispose() {
+    jQuery.removeData(this._element, DATA_KEY);
+    this._element = null;
+  }
+
+  // Private
+
+  _activate(element, container, callback) {
+    const activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? jQuery(container).find(Selector.ACTIVE_UL) : jQuery(container).children(Selector.ACTIVE);
+
+    const active = activeElements[0];
+    const isTransitioning = callback && active && jQuery(active).hasClass(ClassName.FADE);
+    const complete = () => this._transitionComplete(element, active, callback);
+
+    if (active && isTransitioning) {
+      const transitionDuration = Util.getTransitionDurationFromElement(active);
+
+      jQuery(active).removeClass(ClassName.SHOW).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+    } else {
+      complete();
+    }
+  }
+
+  _transitionComplete(element, active, callback) {
+    if (active) {
+      jQuery(active).removeClass(ClassName.ACTIVE);
+
+      const dropdownChild = jQuery(active.parentNode).find(Selector.DROPDOWN_ACTIVE_CHILD)[0];
+
+      if (dropdownChild) {
+        jQuery(dropdownChild).removeClass(ClassName.ACTIVE);
       }
 
-      jQuery(this._element).trigger(showEvent);
-
-      if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
-        return;
-      }
-
-      if (selector) {
-        target = document.querySelector(selector);
-      }
-
-      this._activate(this._element, listElement);
-
-      var complete = function complete() {
-        var hiddenEvent = jQuery.Event(Event.HIDDEN, {
-          relatedTarget: _this2._element
-        });
-
-        var shownEvent = jQuery.Event(Event.SHOWN, {
-          relatedTarget: previous
-        });
-
-        jQuery(previous).trigger(hiddenEvent);
-        jQuery(_this2._element).trigger(shownEvent);
-      };
-
-      if (target) {
-        this._activate(target, target.parentNode, complete);
-      } else {
-        complete();
+      if (active.getAttribute('role') === 'tab') {
+        active.setAttribute('aria-selected', false);
       }
     }
-  }, {
-    key: 'dispose',
-    value: function dispose() {
-      jQuery.removeData(this._element, DATA_KEY);
-      this._element = null;
+
+    jQuery(element).addClass(ClassName.ACTIVE);
+    if (element.getAttribute('role') === 'tab') {
+      element.setAttribute('aria-selected', true);
     }
 
-    // Private
+    Util.reflow(element);
 
-  }, {
-    key: '_activate',
-    value: function _activate(element, container, callback) {
-      var _this3 = this;
+    if (element.classList.contains(ClassName.FADE)) {
+      element.classList.add(ClassName.SHOW);
+    }
 
-      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? jQuery(container).find(Selector.ACTIVE_UL) : jQuery(container).children(Selector.ACTIVE);
+    if (element.parentNode && jQuery(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
+      const dropdownElement = jQuery(element).closest(Selector.DROPDOWN)[0];
 
-      var active = activeElements[0];
-      var isTransitioning = callback && active && jQuery(active).hasClass(ClassName.FADE);
-      var complete = function complete() {
-        return _this3._transitionComplete(element, active, callback);
-      };
+      if (dropdownElement) {
+        const dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector.DROPDOWN_TOGGLE));
 
-      if (active && isTransitioning) {
-        var transitionDuration = Util.getTransitionDurationFromElement(active);
-
-        jQuery(active).removeClass(ClassName.SHOW).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-      } else {
-        complete();
+        jQuery(dropdownToggleList).addClass(ClassName.ACTIVE);
       }
+
+      element.setAttribute('aria-expanded', true);
     }
-  }, {
-    key: '_transitionComplete',
-    value: function _transitionComplete(element, active, callback) {
-      if (active) {
-        jQuery(active).removeClass(ClassName.ACTIVE);
 
-        var dropdownChild = jQuery(active.parentNode).find(Selector.DROPDOWN_ACTIVE_CHILD)[0];
+    if (callback) {
+      callback();
+    }
+  }
 
-        if (dropdownChild) {
-          jQuery(dropdownChild).removeClass(ClassName.ACTIVE);
+  // Static
+
+  static _jQueryInterface(config) {
+    return this.each(function () {
+      const $this = jQuery(this);
+      let data = $this.data(DATA_KEY);
+
+      if (!data) {
+        data = new Tab(this);
+        $this.data(DATA_KEY, data);
+      }
+
+      if (typeof config === 'string') {
+        if (typeof data[config] === 'undefined') {
+          throw new TypeError(`No method named "${config}"`);
         }
-
-        if (active.getAttribute('role') === 'tab') {
-          active.setAttribute('aria-selected', false);
-        }
+        data[config]();
       }
-
-      jQuery(element).addClass(ClassName.ACTIVE);
-      if (element.getAttribute('role') === 'tab') {
-        element.setAttribute('aria-selected', true);
-      }
-
-      Util.reflow(element);
-
-      if (element.classList.contains(ClassName.FADE)) {
-        element.classList.add(ClassName.SHOW);
-      }
-
-      if (element.parentNode && jQuery(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
-        var dropdownElement = jQuery(element).closest(Selector.DROPDOWN)[0];
-
-        if (dropdownElement) {
-          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector.DROPDOWN_TOGGLE));
-
-          jQuery(dropdownToggleList).addClass(ClassName.ACTIVE);
-        }
-
-        element.setAttribute('aria-expanded', true);
-      }
-
-      if (callback) {
-        callback();
-      }
-    }
-
-    // Static
-
-  }], [{
-    key: '_jQueryInterface',
-    value: function _jQueryInterface(config) {
-      return this.each(function () {
-        var $this = jQuery(this);
-        var data = $this.data(DATA_KEY);
-
-        if (!data) {
-          data = new Tab(this);
-          $this.data(DATA_KEY, data);
-        }
-
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError('No method named "' + config + '"');
-          }
-          data[config]();
-        }
-      });
-    }
-  }, {
-    key: 'VERSION',
-    get: function get() {
-      return VERSION;
-    }
-  }]);
-
-  return Tab;
-}();
+    });
+  }
+}
 
 /**
  * ------------------------------------------------------------------------
@@ -852,66 +687,38 @@ jQuery(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event)
 
 jQuery.fn[NAME] = Tab._jQueryInterface;
 jQuery.fn[NAME].Constructor = Tab;
-jQuery.fn[NAME].noConflict = function () {
+jQuery.fn[NAME].noConflict = () => {
   jQuery.fn[NAME] = JQUERY_NO_CONFLICT;
   return Tab._jQueryInterface;
 };
 
-exports.default = Tab;
+/* unused harmony default export */ var _unused_webpack_default_export = (Tab);
 
 /***/ }),
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 7 */,
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Header__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_PromotionSection__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_Modal__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_Events__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_Accordion__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_DocSearch__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_Tabs__ = __webpack_require__(6);
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Header = __webpack_require__(10);
 
-var _Header2 = _interopRequireDefault(_Header);
 
-var _PromotionSection = __webpack_require__(12);
 
-var _PromotionSection2 = _interopRequireDefault(_PromotionSection);
 
-var _Modal = __webpack_require__(11);
 
-var _Modal2 = _interopRequireDefault(_Modal);
+class Modula {
 
-var _Events = __webpack_require__(9);
-
-var _Events2 = _interopRequireDefault(_Events);
-
-var _Accordion = __webpack_require__(7);
-
-var _Accordion2 = _interopRequireDefault(_Accordion);
-
-var _DocSearch = __webpack_require__(8);
-
-var _DocSearch2 = _interopRequireDefault(_DocSearch);
-
-var _Tabs = __webpack_require__(13);
-
-var _Tabs2 = _interopRequireDefault(_Tabs);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Modula = function () {
-	function Modula() {
-		_classCallCheck(this, Modula);
-
+	constructor() {
 		this.initHeader();
 		this.initScrollAnimation();
 		this.initModals();
@@ -925,193 +732,174 @@ var Modula = function () {
 		this.initCheckoutPage();
 	}
 
-	_createClass(Modula, [{
-		key: 'initHeader',
-		value: function initHeader() {
-			new _Header2.default(jQuery('.header'));
-		}
-	}, {
-		key: 'initPromotionSection',
-		value: function initPromotionSection() {
-			new _PromotionSection2.default(jQuery('.promotion-section'));
-		}
-	}, {
-		key: 'initScrollAnimation',
-		value: function initScrollAnimation() {
+	initHeader() {
+		new __WEBPACK_IMPORTED_MODULE_0__modules_Header__["a" /* default */](jQuery('.header'));
+	}
 
-			jQuery('a[href*="#"]:not([href="#"])').on('click', function (e) {
-				var target = void 0;
-				if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-					target = jQuery(this.hash);
-					target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
-					if (target.length) {
-						e.preventDefault();
-						jQuery('html, body').animate({ scrollTop: target.offset().top }, 1000, 'swing');
-					}
+	initPromotionSection() {
+		new __WEBPACK_IMPORTED_MODULE_1__modules_PromotionSection__["a" /* default */](jQuery('.promotion-section'));
+	}
+
+	initScrollAnimation() {
+
+		jQuery('a[href*="#"]:not([href="#"])').on('click', function (e) {
+			let target;
+			if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+				target = jQuery(this.hash);
+				target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					e.preventDefault();
+					jQuery('html, body').animate({ scrollTop: target.offset().top }, 1000, 'swing');
 				}
-			});
-		}
-	}, {
-		key: 'initModals',
-		value: function initModals() {
-			new _Modal2.default('modal-1', jQuery('.modal--login'), jQuery('.login-link'));
-			new _Modal2.default('modal-2', jQuery('.modal--video'), jQuery('.banner-section .hero__img, .banner-section .hero__play-icon, .hero-section-2__hero'));
-			jQuery('.changelog-link').each(function () {
-				var count = jQuery(this).attr('data-count');
-				new _Modal2.default('modal-changelog-' + count, jQuery('#modal--changelog-' + count), jQuery('#changelog-link-' + count));
-			});
-		}
-	}, {
-		key: 'initAccordions',
-		value: function initAccordions() {
-			var $elements = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : jQuery(".accordion");
-
-			$elements.each(function (index) {
-				new _Accordion2.default(jQuery(this));
-			});
-		}
-	}, {
-		key: 'initDocSearch',
-		value: function initDocSearch() {
-			var $elements = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : jQuery(".doc-search");
-
-			$elements.each(function () {
-				new _DocSearch2.default(jQuery(this));
-			});
-		}
-	}, {
-		key: 'initEvents',
-		value: function initEvents() {
-			new _Events2.default();
-		}
-	}, {
-		key: 'initWaypoints',
-		value: function initWaypoints() {
-
-			if (typeof Waypoint === "undefined") {
-				return;
 			}
+		});
+	}
 
-			jQuery('.illustration').each(function () {
+	initModals() {
+		new __WEBPACK_IMPORTED_MODULE_2__modules_Modal__["a" /* default */]('modal-1', jQuery('.modal--login'), jQuery('.login-link'));
+		new __WEBPACK_IMPORTED_MODULE_2__modules_Modal__["a" /* default */]('modal-2', jQuery('.modal--video'), jQuery('.banner-section .hero__img, .banner-section .hero__play-icon, .hero-section-2__hero'));
+		jQuery('.changelog-link').each(function () {
+			var count = jQuery(this).attr('data-count');
+			new __WEBPACK_IMPORTED_MODULE_2__modules_Modal__["a" /* default */]('modal-changelog-' + count, jQuery('#modal--changelog-' + count), jQuery('#changelog-link-' + count));
+		});
+	}
 
-				var $illustration = jQuery(this);
+	initAccordions($elements = jQuery(".accordion")) {
+		$elements.each(function (index) {
+			new __WEBPACK_IMPORTED_MODULE_4__modules_Accordion__["a" /* default */](jQuery(this));
+		});
+	}
 
-				new Waypoint({
-					element: $illustration,
-					offset: '36%',
-					handler: function handler(direction) {
-						$illustration.addClass('illustration--animate');
-					}
-				});
-			});
+	initDocSearch($elements = jQuery(".doc-search")) {
+		$elements.each(function () {
+			new __WEBPACK_IMPORTED_MODULE_5__modules_DocSearch__["a" /* default */](jQuery(this));
+		});
+	}
 
-			jQuery('.waypoint').each(function () {
+	initEvents() {
+		new __WEBPACK_IMPORTED_MODULE_3__modules_Events__["a" /* default */]();
+	}
 
-				var $element = jQuery(this);
+	initWaypoints() {
 
-				new Waypoint({
-					element: $element,
-					offset: '75%',
-					handler: function handler(direction) {
-						$element.addClass('in-viewport');
-					}
-				});
-			});
+		if (typeof Waypoint === "undefined") {
+			return;
 		}
-	}, {
-		key: 'initPostNavigation',
-		value: function initPostNavigation() {
 
-			if (typeof Waypoint === "undefined") {
-				return;
-			}
+		jQuery('.illustration').each(function () {
 
-			if (jQuery('.post-navigation').length == 0) {
-				return;
-			}
+			let $illustration = jQuery(this);
 
-			var $postNavigation = jQuery('.post-navigation');
-
-			// make the post navigation stick
 			new Waypoint({
-				element: jQuery('.post-content'),
-				offset: '200px',
-				handler: function handler(direction) {
-					if ('down' === direction) {
-						$postNavigation.addClass('stick');
-					}
-					if ('up' === direction) {
-						$postNavigation.removeClass('stick');
-					}
+				element: $illustration,
+				offset: '36%',
+				handler: function (direction) {
+					$illustration.addClass('illustration--animate');
 				}
 			});
+		});
 
-			// hide the post navigation when reaching the bottom of the post
+		jQuery('.waypoint').each(function () {
+
+			let $element = jQuery(this);
+
 			new Waypoint({
-				element: jQuery('.post-content > *:last-child'),
-				offset: '200px',
-				handler: function handler(direction) {
-					if ('down' === direction) {
-						$postNavigation.addClass('invisible');
-					}
-					if ('up' === direction) {
-						$postNavigation.removeClass('invisible');
-					}
+				element: $element,
+				offset: '75%',
+				handler: function (direction) {
+					$element.addClass('in-viewport');
 				}
 			});
+		});
+	}
 
-			// hide/show the post navigation when hovering over alignwide and alignfull elements
-			jQuery('.post-content .alignwide, .post-content .alignfull').on('mouseenter', function () {
-				$postNavigation.addClass('invisible');
-			});
+	initPostNavigation() {
 
-			jQuery('.post-content .alignwide, .post-content .alignfull').on('mouseleave', function () {
-				$postNavigation.removeClass('invisible');
-			});
-
-			//strip dashes in toc links
-			jQuery('.post-navigation').find('.ez-toc-list a').each(function (index) {
-				var href = jQuery(this).attr('href');
-				href = href.replace('-_', '');
-				jQuery(this).attr('href', href);
-			});
+		if (typeof Waypoint === "undefined") {
+			return;
 		}
-	}, {
-		key: 'initCurrency',
-		value: function initCurrency() {
 
-			var cpoSymbols = {
-				'EUR': '&euro;',
-				'GBP': '&pound;',
-				'USD': '&dollar;'
-			};
-
-			jQuery(window).on('ppeddfsAfterFsMarkup', function () {
-				jQuery('span.fsc-currency').each(function () {
-					var $span = jQuery(this),
-					    currency = $span.text();
-
-					if (cpoSymbols[currency]) {
-						$span.html(cpoSymbols[currency]);
-					}
-				});
-			});
+		if (jQuery('.post-navigation').length == 0) {
+			return;
 		}
-	}, {
-		key: 'initCheckoutPage',
-		value: function initCheckoutPage() {
 
-			if (!jQuery('body').hasClass('page-template-checkout')) {
-				return;
+		let $postNavigation = jQuery('.post-navigation');
+
+		// make the post navigation stick
+		new Waypoint({
+			element: jQuery('.post-content'),
+			offset: '200px',
+			handler: function (direction) {
+				if ('down' === direction) {
+					$postNavigation.addClass('stick');
+				}
+				if ('up' === direction) {
+					$postNavigation.removeClass('stick');
+				}
 			}
+		});
 
-			//new CheckoutPage();
+		// hide the post navigation when reaching the bottom of the post
+		new Waypoint({
+			element: jQuery('.post-content > *:last-child'),
+			offset: '200px',
+			handler: function (direction) {
+				if ('down' === direction) {
+					$postNavigation.addClass('invisible');
+				}
+				if ('up' === direction) {
+					$postNavigation.removeClass('invisible');
+				}
+			}
+		});
+
+		// hide/show the post navigation when hovering over alignwide and alignfull elements
+		jQuery('.post-content .alignwide, .post-content .alignfull').on('mouseenter', () => {
+			$postNavigation.addClass('invisible');
+		});
+
+		jQuery('.post-content .alignwide, .post-content .alignfull').on('mouseleave', () => {
+			$postNavigation.removeClass('invisible');
+		});
+
+		//strip dashes in toc links
+		jQuery('.post-navigation').find('.ez-toc-list a').each(function (index) {
+			var href = jQuery(this).attr('href');
+			href = href.replace('-_', '');
+			jQuery(this).attr('href', href);
+		});
+	}
+
+	initCurrency() {
+
+		var cpoSymbols = {
+			'EUR': '&euro;',
+			'GBP': '&pound;',
+			'USD': '&dollar;'
+		};
+
+		jQuery(window).on('ppeddfsAfterFsMarkup', function () {
+			jQuery('span.fsc-currency').each(function () {
+				var $span = jQuery(this),
+				    currency = $span.text();
+
+				if (cpoSymbols[currency]) {
+					$span.html(cpoSymbols[currency]);
+				}
+			});
+		});
+	}
+
+	initCheckoutPage() {
+
+		if (!jQuery('body').hasClass('page-template-checkout')) {
+			return;
 		}
-	}]);
 
-	return Modula;
-}();
+		//new CheckoutPage();
+	}
 
+}
 window.Modula = new Modula();
 
 /***/ })

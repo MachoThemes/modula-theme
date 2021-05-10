@@ -5,8 +5,8 @@
 <section class="title-section">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-md-10">
-				<h1>You're <u>5 minutes away</u> from having a gallery that amazes potential clients</h1>
+			<div class="col-md-8">
+                <h1>You're <b>5 minutes away</b> from having a gallery that amazes your clients</h1>
 				<?php if ( has_excerpt() ) : ?>
 					<div class="title-section__excerpt">
 						<?php echo wp_kses_post( get_the_excerpt() ); ?>

@@ -10,7 +10,7 @@
 
 	<?php do_action('before_header');  ?>
 
-	<header class="<?php modula_header_class(); ?>">
+	<header>
 		<div class="container">
 			<div class="row justify-content-center">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link mt-2 mb-2" rel="home" itemprop="url"></a>
