@@ -108,7 +108,35 @@ $addons->posts = array_reverse($addons->posts);
                     <?php endif; ?>
 
                     <div class="plans-table__content">
-                        <?php echo get_the_content(null, null, $download->ID) ?>
+                        <?php //echo get_the_content(null, null, $download->ID) ?>
+                        <?php
+
+                        switch ($download->ID) {
+                            case $download1_id: ?>
+                                <ul>
+                                    <li>⭐️ <a class="compare-plans-button" href="/pricing"">All Premium Add-ons</a></li>
+                                    <li>⭐️ License for <b>99 sites</b></li>
+                                    <li>⭐️ <b>VIP Support</b></li>
+                                    <li>Includes Whitelabeling</li>
+                                </ul>
+                                <?php break;
+                            case $download2_id: ?>
+                                <ul>
+                                    <li>⭐️ <a class="compare-plans-button" href="/pricing">All Premium Add-ons</a></li>
+                                    <li>License for <b>5 sites</b></li>
+                                    <li>Priority Support</li>
+                                </ul>
+                                <?php break;
+                            case $download3_id: ?>
+                                <ul>
+                                    <li><a class="compare-plans-button" href="/pricing">All Basic Add-ons</a></li>
+                                    <li>License for <b>3 site</b></li>
+                                    <li>Priority Support</li>
+                                </ul>
+                                <?php break;
+                        }
+
+                        ?>
 
                     </div>
                 </div>
