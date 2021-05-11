@@ -8328,6 +8328,22 @@ html {
     font-size: 22px;
 }
 
+/* CSS Specific pentru templata pricing-page-3 */
+.page-template-pricing-section-3 header {
+    border-bottom: 1px solid #DDD;
+}
+
+.page-template-pricing-section-3 .title-section {
+    padding: 3.125rem 0 0 0;
+    background: #FFF;
+    color: #000;
+}
+
+.page-template-pricing-section-3 .title-section h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #41495b;
+}
 
 .pt-0 {padding-top: 0;}
 .testimonials-section-3 .testimonial__stars {
