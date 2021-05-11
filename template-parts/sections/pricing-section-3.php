@@ -178,7 +178,7 @@ $addons->posts = array_reverse($addons->posts);
         </div>
     </div>
 </section>
-<section class="section pricing-section" id="pricing">
+<section class="section pricing-section-3" id="pricing">
     <div class="container">
         <div id="pricing-table" class="pricing-table pricing-table--header row">
             <div class="col-xs-3">

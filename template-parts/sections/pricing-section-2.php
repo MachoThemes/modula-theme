@@ -58,7 +58,7 @@ foreach ( $download_ids as $id ) {
 $addons = modula_theme_get_all_extensions( $downloads );
 
 ?>
-<section class="pricing-section" id="pricing">
+<section class="section pricing-section" id="pricing">
 
 	<div class="container main-table">
                 <div class="plans-table row">

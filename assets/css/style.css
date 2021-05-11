@@ -3561,9 +3561,7 @@ html body .pricing-table.row .pricing-breaker h4 {
     text-align: center;
 }
 
-.pricing-section {
-    display: none;
-}
+
 
 .plans-table > .plan:nth-child(2) {
     position: relative;
@@ -8346,4 +8344,7 @@ html {
 .pricing-table--last > .col-xs-3:nth-of-type(3),
 .pricing-table--last > .col-xs-3:nth-of-type(4) {
     border-bottom: 1px solid #ebebeb;
+}
+.pricing-section-3 {
+    display: none;
 }
