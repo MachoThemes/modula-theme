@@ -400,7 +400,7 @@ $addons->posts = array_reverse($addons->posts);
             <?php elseif (get_the_id() == 474995): ?>
                 <div class="pricing-table row">
                     <div class="pricing-breaker">
-                        <h4><?php esc_html_e('Premium+ Add-ons', 'modula-theme'); ?></h4>
+                        <h4><?php esc_html_e('Included only with Agency plans', 'modula-theme'); ?></h4>
                     </div>
                 </div>
             <?php endif; ?>
