@@ -4199,6 +4199,7 @@ video {
     max-height: 58px;
     border-radius: 50%;
     filter: grayscale(100%);
+    margin: 0 auto;
 }
 
 .testimonial__name h6 {

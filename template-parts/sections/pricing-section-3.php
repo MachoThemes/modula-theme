@@ -186,7 +186,7 @@ $addons->posts = array_reverse($addons->posts);
         <div class="testimonial__stars"></div>
         <div class="row justify-content-center">
             <div class="testimonial__author col-sm-1">
-                <?php echo wp_get_attachment_image(225676, "thumbnail", false, array('class' => 'testimonial__avatar mr-3')); ?>
+                <?php echo wp_get_attachment_image(225676, "thumbnail", false, array('class' => 'testimonial__avatar')); ?>
             </div>
             <div class="testimonial__content col-sm-7">
                 <p class="mb-0">Modula is <b>one of the leading gallery plugins</b> in the WordPress economy
