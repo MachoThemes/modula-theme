@@ -8344,6 +8344,8 @@ html {
     color: #41495b;
 }
 
+/* Added by Cristi on 11th of May, 2021 */
+
 .pt-0 {padding-top: 0;}
 .testimonials-section-3 .testimonial__stars {
     display: block;
@@ -8363,3 +8365,10 @@ html {
 }
 .pricing-table--comparison {display: none;}
 #edd_checkout_user_info {border-right: 0;}
+
+@media only screen and (max-width: 600px) {
+    .plans-table > .plan:nth-child(2):before {
+        top: 10%;
+        left: auto;
+    }
+}
