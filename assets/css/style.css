@@ -2759,8 +2759,7 @@ title-single__comments a {
 
 .footer-section a {
     color: #FFF;
-    text-decoration: underline;
-    text-decoration-color: #FFF;
+    text-decoration: none;
 }
 
 .footer-section a:hover {
@@ -3379,9 +3378,6 @@ title-single__comments a {
     display: block;
 }
 
-.page-template-pricing-section-2 .pricing-table {
-    display: none;
-}
 
 .main-table .pricing-table--header > :nth-child(3) {
     position: relative;
@@ -8361,6 +8357,6 @@ html {
 .pricing-table--last > .col-xs-3:nth-of-type(4) {
     border-bottom: 1px solid #ebebeb;
 }
-.pricing-section-3 {
+.pricing-table--comparison {
     display: none;
 }
