@@ -4197,7 +4197,6 @@ video {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: auto;
 }
 
 .testimonial__avatar {
