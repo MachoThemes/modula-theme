@@ -2249,6 +2249,7 @@ input[type=checkbox].checkbox:checked + label:after, .edd-login-remember input[t
 
 .page-pricing .testimonials-section-top {
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .page-pricing .header {
@@ -4342,7 +4343,8 @@ video {
     border-bottom: 1px solid #EEE;
 }
 
-.pricing-tables sup {
+.pricing-tables sup,
+.pricing-section sup {
     font-size: 0.35em;
     vertical-align: top;
     font-weight: 700;
@@ -8335,3 +8337,13 @@ html {
     margin: 0 auto 20px auto;
 }
 .pricing-note { color: #999999;}
+.cta_money_back_guarantee {
+    font-size: 13px;
+    position: relative;
+    top: -15px;
+}
+.pricing-table--last > .col-xs-3:nth-of-type(2),
+.pricing-table--last > .col-xs-3:nth-of-type(3),
+.pricing-table--last > .col-xs-3:nth-of-type(4) {
+    border-bottom: 1px solid #ebebeb;
+}

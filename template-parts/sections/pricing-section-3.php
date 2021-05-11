@@ -141,7 +141,7 @@ $addons->posts = array_reverse($addons->posts);
                                  src="https://wp-modula.com/wp-content/uploads/2021/05/cristian-signature-small.png"
                                  alt="Modula CEO handwritten signature"/>
                             <p class="mb-0"><b>Raiber Cristian</b></p>
-                            <p>CEO WP Modula</p>
+                            <p>CEO, WP Modula</p>
                             <small class="pricing-note">All pricing in USD. You can upgrade your plan or cancel at any
                                 time. Renewals are at full price when using a discount.</small>
                         </div>
@@ -178,7 +178,7 @@ $addons->posts = array_reverse($addons->posts);
         </div>
     </div>
 </section>
-<section class="pricing-section" id="pricing">
+<section class="section pricing-section" id="pricing">
     <div class="container">
         <div id="pricing-table" class="pricing-table pricing-table--header row">
             <div class="col-xs-3">
@@ -318,7 +318,7 @@ $addons->posts = array_reverse($addons->posts);
 
         <div class="pricing-table row">
             <div class="pricing-breaker">
-                <h4><?php esc_html_e('Starter addons', 'modula-theme'); ?></h4>
+                <h4><?php esc_html_e('Basic Add-ons', 'modula-theme'); ?></h4>
             </div><!--pricing-breaker-->
         </div><!--row -->
 
@@ -366,13 +366,13 @@ $addons->posts = array_reverse($addons->posts);
             <?php if (get_the_id() == 294024): ?>
                 <div class="pricing-table row">
                     <div class="pricing-breaker">
-                        <h4><?php esc_html_e('Business addons', 'modula-theme'); ?></h4>
+                        <h4><?php esc_html_e('Premium Add-ons', 'modula-theme'); ?></h4>
                     </div>
                 </div>
             <?php elseif (get_the_id() == 474995): ?>
                 <div class="pricing-table row">
                     <div class="pricing-breaker">
-                        <h4><?php esc_html_e('Agency addons', 'modula-theme'); ?></h4>
+                        <h4><?php esc_html_e('Premium+ Add-ons', 'modula-theme'); ?></h4>
                     </div>
                 </div>
             <?php endif; ?>
