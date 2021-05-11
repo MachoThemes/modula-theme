@@ -6678,6 +6678,8 @@ input.edd-apply-discount,
     border: 1px solid #DDD;
 }
 
+
+
 #edd_cc_fields {
     padding-bottom: 2px !important;
     background-image: none;
@@ -8358,6 +8360,5 @@ html {
 .pricing-table--last > .col-xs-3:nth-of-type(5) {
     border-bottom: 1px solid #ebebeb;
 }
-.pricing-table--comparison {
-    display: none;
-}
+.pricing-table--comparison {display: none;}
+#edd_checkout_user_info {border-right: 0;}
