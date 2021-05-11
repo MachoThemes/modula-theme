@@ -1,4 +1,4 @@
-<section class="section testimonials-section-3 testimonials-section-top pt-0">
+<section class="testimonials-section-3 testimonials-section-top">
     <div class="container">
         <div class="testimonial__stars"></div>
         <div class="row justify-content-center">
