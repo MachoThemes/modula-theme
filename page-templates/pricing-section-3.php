@@ -24,4 +24,5 @@
 <?php get_template_part( 'template-parts/sections/as-seen-on' ); ?>
 <?php //get_template_part( 'template-parts/sections/lite-vs-pro' ); ?>
 <?php get_template_part( 'template-parts/sections/testimonials-section-3-litepro' ); ?>
-<?php get_template_part( 'template-parts/sections/footer-simple' ); ?>
+
+<?php get_footer(); ?>

@@ -250,7 +250,7 @@
 			return;
 		}
 
-		if ( is_page( 'pricing' ) || ( is_single() && 'post' == get_post_type() ) ) {
+		if ( is_page( 'pricing' ) || is_page_template('page-templates/pricing-section-3.php') || ( is_single() && 'post' == get_post_type() ) ) {
 			get_template_part( 'template-parts/sections/footer-simple' );
 
 			return;
