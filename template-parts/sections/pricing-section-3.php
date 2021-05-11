@@ -55,7 +55,7 @@ $addons->posts = array_reverse($addons->posts);
     <div class="container main-table">
         <div class="plans-table row justify-content-center">
             <?php foreach ($downloads as $download) : ?>
-                <div class="col-sm-3 plan">
+                <div class="col-sm-4 col-md-4 col-lg-3 plan">
                     <h4 class="plans-table__title mb-2"><?php echo explode('-', $download->post_title)[1]; ?></h4>
                     <?php if (has_excerpt($download->ID) && '' != get_the_excerpt($download->ID)): ?>
                         <div class="plans-table__package_description"><?php echo get_the_excerpt($download->ID); ?></div>
