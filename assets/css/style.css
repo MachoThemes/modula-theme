@@ -8354,7 +8354,8 @@ html {
 }
 .pricing-table--last > .col-xs-3:nth-of-type(2),
 .pricing-table--last > .col-xs-3:nth-of-type(3),
-.pricing-table--last > .col-xs-3:nth-of-type(4) {
+.pricing-table--last > .col-xs-3:nth-of-type(4),
+.pricing-table--last > .col-xs-3:nth-of-type(5) {
     border-bottom: 1px solid #ebebeb;
 }
 .pricing-table--comparison {
