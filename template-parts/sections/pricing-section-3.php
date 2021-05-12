@@ -391,7 +391,7 @@ $addons->posts = array_reverse($addons->posts);
 
         <?php while ($addons->have_posts()) : ?>
             <?php $addons->the_post(); ?>
-            <?php if (get_the_id() == 294024): ?>
+            <?php if (get_the_id() == 503915): ?>
                 <div class="pricing-table row">
                     <div class="pricing-breaker">
                         <h4><?php esc_html_e('Premium Add-ons', 'modula-theme'); ?></h4>
