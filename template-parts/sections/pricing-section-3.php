@@ -131,7 +131,7 @@ $addons->posts = array_reverse($addons->posts);
                                 <ul>
                                     <li><a class="compare-plans-button" href="/pricing">All Basic Add-ons</a></li>
                                     <li>License for <b>3 site</b></li>
-                                    <li>Priority Support</li>
+                                    <li>Regular Support</li>
                                 </ul>
                                 <?php break;
                         }
