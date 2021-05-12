@@ -14,10 +14,7 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 			<?php if ( function_exists( 'edd_get_cart_contents' ) && edd_get_cart_contents() ) { ?>
 
 			<div class="col-sm-12 title-wrap justify-content-center">
-				<h1 class="h3 text-center">Complete Your Purchase</h1>
-				<p class="text-center">You're <u>5 minutes away</u> from having a gallery that amazes potential clients.</p>
-
-				<div class="col-lg-8 col-lg-offset-2">
+				<div class="col-lg-9 col-lg-offset-2">
 				<?php edd_checkout_cart(); ?>
 					<div id="edd_checkout_form_wrap" class="edd_clearfix">
 						<?php do_action( 'edd_before_purchase_form' ); ?>
@@ -52,6 +49,20 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 					</div><!--end #edd_checkout_form_wrap-->
 
 				</div><!-- col -->
+                                
+                                <div class="col-lg-9 col-lg-offset-2">
+                                    <div class="checkout-testimonial testimonial footer-testimonial">
+                                        <div class="testimonial-photo">
+                                            <?php echo wp_get_attachment_image(232408, "thumbnail", false, array('class' => 'testimonial__avatar')); ?>
+                                        </div>
+                                        <div class="testimonial__content mb-3">
+                                            <p class="mb-0">Finally a beautiful looking image gallery plugin with a development team
+                                                that actually cares about web performance. If you’re looking to showcase your images
+                                                and care about the speed of your website, this is the plugin for you.</p>
+                                            <p class="testimonial__title mb-0">— Brian Jackson - Kinsta</p>
+                                        </div>
+                                    </div><!-- testimonial -->
+                                </div>
 
 				<div class="col-lg-5"> <!--right hand side checkout details -->
 					

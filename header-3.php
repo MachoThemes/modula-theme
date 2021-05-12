@@ -3,16 +3,18 @@
 <head>
 	<?php wp_head(); ?>
 	<meta name="theme-color" content="#2ebf91">
+	<script src="https://www.googleoptimize.com/optimize.js?id=GTM-TPVPWRK"></script>
 </head>
 
 <body <?php body_class(); ?>>
 
 	<?php do_action('before_header');  ?>
 
-	<header class="<?php modula_header_class(); ?>">
+	<header>
 		<div class="container">
 			<div class="row justify-content-center">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link mt-2 mb-2" rel="home" itemprop="url"></a>
+				<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link mt-2 mb-2" rel="home" itemprop="url"></a> -->
+                <div class="logo-link mt-2 mb-2"></div>
 			</div>
 		</div>
 	</header>

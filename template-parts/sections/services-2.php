@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 section__heading text-center">
-				<h2>Join over 80,000 people using Modula.</h2>
+				<h2>Join over 90,000 people using Modula.</h2>
 				<p>With Modula adding galleries to your WordPress website has never been easier. Add galleries, masonry grids and more in just a few clicks.</p>
 			</div>
 		</div>
@@ -128,7 +128,7 @@
 		<div class="row">
 			<div class="col-xs-12 text-center">
 				<a class="button button--xl" href="<?php echo esc_url( get_permalink( get_page_by_path( 'pricing' ) ) ); ?>">Get Started Now</a>
-                <p><small class="cta_money_back_guarantee" style="font-size: 13px; position:relative;top: -15px;">14 day money back guarantee, love it or get a full refund.</small></p>
+                <p><small class="cta_money_back_guarantee">14 day money back guarantee, love it or get a full refund.</small></p>
 			</div>
 
 		</div>

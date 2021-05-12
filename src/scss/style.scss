@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'nav';
 @import 'reset';
 @import 'general';
 @import 'typography';
@@ -63,7 +64,7 @@
 @import 'partials/doc-search';
 @import 'partials/social-links';
 @import 'partials/tooltip';
-@import 'partials/scrollbar';
+//@import 'partials/scrollbar';
 @import 'partials/checkout-badges';
 @import 'partials/checkout-steps';
 @import 'partials/sidebar';

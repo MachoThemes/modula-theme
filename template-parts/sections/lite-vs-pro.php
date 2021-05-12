@@ -2,6 +2,9 @@
 $utm_medium = isset( $_GET['utm_medium'] ) ? $_GET['utm_medium'] : '';
 
 //get addons
+if (!isset($downloads)) {
+	$downloads = array();
+}
 $addons = modula_theme_get_all_extensions( $downloads );
 ?>
 
@@ -33,7 +36,6 @@ $addons = modula_theme_get_all_extensions( $downloads );
 					</div>
 					<div class="col-xs-4">
 						<h4 class="pricing-table__title">Paid plans</h4>
-						<small><i>*All extensions are included starting with the Business plan</i></small>
 						<br />
 						<a class="button pricing-table__button" href="#pricing">Upgrade Now</a>
 					</div>

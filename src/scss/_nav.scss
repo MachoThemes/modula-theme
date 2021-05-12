@@ -1,0 +1,250 @@
+.page-template-account .main {
+    padding-top: 75px !important;
+    
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 960px;
+    }
+}
+
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+    border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+    padding: 0 !important;
+    .section-left, .section-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    li {
+        list-style: none;
+        &.nav-logout {
+            float: right;
+            margin: 0;
+            > a {
+                text-align: right;
+                text-decoration: none;
+                padding: 12px 15px 8px;
+                font-size: 18px;
+                color: #2b6;
+                font-weight: 400;
+            }
+        }
+    }
+    .nav-item {
+        margin-bottom: -$nav-tabs-border-width;
+        display: inline-block;
+    a {
+        text-decoration: none;
+        padding: 12px 15px 8px;
+        font-size: 18px;
+        color: #2b6;
+        font-weight: 400;
+    }
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    &:hover {
+        background-color: #f4f7fa;
+        border-color: $nav-tabs-link-active-border-color;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overtlap tab border
+    margin-top: -$nav-tabs-border-width;
+  }
+}
+#account-tabs-content {
+    padding: 0;
+}
+#edd_user_history {
+    thead {
+        text-transform: uppercase;
+        background-color: #f4f7fa;
+        color: #162938;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .edd_purchase_row {
+        font-size: 16px;
+        font-weight: 400;
+        background-color: #fff;
+    }
+    
+    th {
+        background-color: #f4f7fa;
+        padding: 15px 20px;
+    }
+    
+    tr.edd_download_history_row:nth-child(odd) {
+        background-color: #fff;
+    }
+    
+    tr.edd_download_history_row:nth-child(even) {
+        background-color: #f4f7fa;
+    }
+    
+    td {
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #45545F;
+    }
+}
+
+//
+// Pills
+//
+
+.nav-pills {
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+    > .tab-pane {
+      display: none;
+    }
+    > .active {
+      display: block;
+    }
+    a {
+        text-decoration: none;
+        color: #2b6;
+    }
+    a.edd-manage-license-back {
+      color: #fff;
+      height: 20px;
+      line-height: 0;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+}
+
+//License 
+.license-container {
+    color: #666;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #f4f7fa;  
+    border: 1px solid #f0f0f0;
+    padding: 15px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    .download-license {
+        float: right;
+    }
+}
+
+//Profile 
+
+#edd_profile_editor_form .row {
+    padding: 30px 0;
+    margin-top: 30px;
+    background-color: #f4f7fa;
+    
+    #edd_profile_name_label,
+    #edd_profile_billing_address_label, 
+    #edd_profile_password_label {
+        color: #162938;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 1.1;
+        margin: 1.25rem 0;
+    }
+    
+    label {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+}
+#edd_profile_submit_wrap {
+    margin-top: 42px;
+}
+#edd_profile_editor_submit {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding: 12px 47px;
+    transition: all .5s ease;
+}
+
+@media screen and (max-width: 768px) {
+    #edd_profile_personal_fieldset,
+    #edd_profile_password_fieldset {
+        padding: 20px 20px;
+    }
+}

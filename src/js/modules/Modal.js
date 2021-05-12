@@ -13,12 +13,14 @@ export default class Modal {
 	openModal(e){
 		e.preventDefault();
 		this.$modal.addClass('modal--open');
+                jQuery('body').addClass('modal--open');
 		document.dispatchEvent( new Event( this.id + '-opened') );
 	}
 
 	closeModal(e){
 		e.preventDefault();
 		this.$modal.removeClass('modal--open');
+                jQuery('body').removeClass('modal--open');
 		document.dispatchEvent( new Event( this.id + '-closed') );
 	}
 

@@ -76,23 +76,104 @@
 	}
 }
 
-.page-template-pricing {
+.page-pricing {
+	header {
+		border-bottom: 1px solid #DDD;
+	}
+
 	.title-section {
- 		//padding-top: rem(80px);
-		//padding-bottom: rem(240px);
-		padding-top: 2rem;
-   		padding-bottom: 15rem;
+ 		padding: rem(50px) 0 0 0;
+		background: #FFF;
+		color: #000;
+
+		h1 {
+			font-size: 2rem;
+			font-weight: 400;
+			color: #41495b
+		}
 	}
 	.title-section__excerpt {
 		padding: 0.5rem 0;
 	}
-	.pricing-section {
-		margin-top: rem(-240px);
-		padding-bottom: 0;
-	}
+
 	.faq-section{
 		margin-top: rem(-80px);
 		padding-top: rem(130px);
+	}
+
+	.testimonial__content {
+		color: #41495b;
+		font-weight: 400;
+	}
+
+	.testimonials-section-top {
+		padding-top: 1rem;
+		padding-bottom: 0;
+	}
+
+	.testimonials-section-3 {
+		display: block;
+		min-height: 250px;
+		.testimonial__stars {
+			margin-bottom: 5px !important;
+			margin-left: 15px;
+		}
+	}
+
+
+	.header {
+		border-bottom: 1px solid #DDD;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		background: #fff;
+	}
+
+	.title-section h1  {
+		margin-bottom: 0;
+	}
+
+	.header-testimonial {
+		display: inline-flex;
+		.testimonial__content {
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+
+	.testimonial__stars {
+		margin-right: 8px;
+	}
+
+	.testimonial__avatar {
+		width: 70px;
+		height: 70px;
+		margin-left: 20px;
+	}
+
+	div.testimonial__content.mb-3 {
+		margin-bottom: 0 !important;
+	}
+	.guarantee-badge {
+		max-width: 130px;
+		position: relative;
+		top: -60px;
+	}
+
+
+
+	.pricing-table .icon-cancel, .pricing-table .modal__close {
+		background-image: url('../images/icons/cancel-hover.png');
+	}
+
+	.pricing-message:before {
+		width: 100px;
+		height: 100px;
+		background: url('../../src/img/14Day-Guarantee-Purple.png') no-repeat 50% 50%;
+		background-size: cover;
+		display: inline-block;
+		content: '';
 	}
 
 }

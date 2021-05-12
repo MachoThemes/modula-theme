@@ -1,11 +1,10 @@
 <?php
 
-$theme = wp_get_theme();
 define( 'ANTREAS_SLUG', 'antreas' );
 define( 'ANTREAS_PRO_SLUG', 'antreas-pro' );
 define( 'ANTREAS_PREFIX', 'antreas_pro' );
-define( 'ANTREAS_NAME', $theme['Name'] );
-define( 'ANTREAS_VERSION', $theme['Version'] );
+define( 'ANTREAS_NAME', 'Modula Theme' );
+define( 'ANTREAS_VERSION', '2.0.1' );
 define( 'ANTREAS_ASSETS_CSS', get_template_directory_uri() . '/assets/css/' );
 define( 'ANTREAS_ASSETS_JS', get_template_directory_uri() . '/assets/js/' );
 define( 'ANTREAS_ASSETS_IMG', get_template_directory_uri() . '/assets/images/' );
@@ -37,6 +36,8 @@ function jp_disable_billing_details() {
 	remove_action( 'edd_after_cc_fields', 'edd_default_cc_address_fields' );
 	add_action( 'edd_after_cc_fields', 'modula_cc_address_fields' );
 	add_action( 'edd_paypalexpress_cc_form', 'modula_add_country' );
+        remove_action( 'edd_purchase_form_after_cc_form', 'edd_checkout_submit', 9999 );
+        add_action( 'edd_purchase_form_after_cc_form', 'modula_theme_checkout_submit', 9999 );
 }
 add_action( 'init', 'jp_disable_billing_details' );
 
@@ -85,7 +86,7 @@ function modula_add_country(){
 }
 
 function modula_cc_address_fields(){
-
+    
 	$logged_in = is_user_logged_in();
 	$customer  = EDD()->session->get( 'customer' );
 	$customer  = wp_parse_args( $customer, array( 'address' => array(
@@ -131,49 +132,39 @@ function modula_cc_address_fields(){
 	<fieldset id="edd_cc_address" class="cc-address">
 		<legend><?php _e( 'Billing Details', 'easy-digital-downloads' ); ?></legend>
 		<?php do_action( 'edd_cc_billing_top' ); ?>
-		<p id="edd-card-address-wrap">
+<!--		<p id="edd-card-address-wrap">
 			<label for="card_address" class="edd-label">
-				<?php _e( 'Billing Address', 'easy-digital-downloads' ); ?>
-				<?php if( edd_field_is_required( 'card_address' ) ) { ?>
+				<?php //_e( 'Billing Address', 'easy-digital-downloads' ); ?>
+				<?php //if( edd_field_is_required( 'card_address' ) ) { ?>
 					<span class="edd-required-indicator">*</span>
-				<?php } ?>
+				<?php //} ?>
 			</label>
-			<span class="edd-description"><?php _e( 'The primary billing address for your credit card.', 'easy-digital-downloads' ); ?></span>
-			<input type="text" id="card_address" name="card_address" class="card-address edd-input<?php if( edd_field_is_required( 'card_address' ) ) { echo ' required'; } ?>" placeholder="<?php _e( 'Address line 1', 'easy-digital-downloads' ); ?>" value="<?php echo $customer['address']['line1']; ?>"<?php if( edd_field_is_required( 'card_address' ) ) {  echo ' required '; } ?>/>
-		</p>
+			<span class="edd-description"><?php //_e( 'The primary billing address for your credit card.', 'easy-digital-downloads' ); ?></span>
+			<input type="text" id="card_address" name="card_address" class="card-address edd-input<?php //if( edd_field_is_required( 'card_address' ) ) { echo ' required'; } ?>" placeholder="<?php //_e( 'Address line 1', 'easy-digital-downloads' ); ?>" value="<?php //echo $customer['address']['line1']; ?>"<?php //if( edd_field_is_required( 'card_address' ) ) {  echo ' required '; } ?>/>
+		</p> 
 		<p id="edd-card-address-2-wrap">
 			<label for="card_address_2" class="edd-label">
-				<?php _e( 'Billing Address Line 2 (optional)', 'easy-digital-downloads' ); ?>
-				<?php if( edd_field_is_required( 'card_address_2' ) ) { ?>
+				<?php //_e( 'Billing Address Line 2 (optional)', 'easy-digital-downloads' ); ?>
+				<?php //if( edd_field_is_required( 'card_address_2' ) ) { ?>
 					<span class="edd-required-indicator">*</span>
-				<?php } ?>
+				<?php //} ?>
 			</label>
-			<span class="edd-description"><?php _e( 'The suite, apt no, PO box, etc, associated with your billing address.', 'easy-digital-downloads' ); ?></span>
-			<input type="text" id="card_address_2" name="card_address_2" class="card-address-2 edd-input<?php if( edd_field_is_required( 'card_address_2' ) ) { echo ' required'; } ?>" placeholder="<?php _e( 'Address line 2', 'easy-digital-downloads' ); ?>" value="<?php echo $customer['address']['line2']; ?>"<?php if( edd_field_is_required( 'card_address_2' ) ) {  echo ' required '; } ?>/>
+			<span class="edd-description"><?php //_e( 'The suite, apt no, PO box, etc, associated with your billing address.', 'easy-digital-downloads' ); ?></span>
+			<input type="text" id="card_address_2" name="card_address_2" class="card-address-2 edd-input<?php //if( edd_field_is_required( 'card_address_2' ) ) { echo ' required'; } ?>" placeholder="<?php // _e( 'Address line 2', 'easy-digital-downloads' ); ?>" value="<?php //echo $customer['address']['line2']; ?>"<?php //if( edd_field_is_required( 'card_address_2' ) ) {  echo ' required '; } ?>/>
 		</p>
 		<p id="edd-card-city-wrap">
 			<label for="card_city" class="edd-label">
-				<?php _e( 'Billing City', 'easy-digital-downloads' ); ?>
-				<?php if( edd_field_is_required( 'card_city' ) ) { ?>
+				<?php //_e( 'Billing City', 'easy-digital-downloads' ); ?>
+				<?php //if( edd_field_is_required( 'card_city' ) ) { ?>
 					<span class="edd-required-indicator">*</span>
-				<?php } ?>
+				<?php //} ?>
 			</label>
-			<span class="edd-description"><?php _e( 'The city for your billing address.', 'easy-digital-downloads' ); ?></span>
-			<input type="text" id="card_city" name="card_city" class="card-city edd-input<?php if( edd_field_is_required( 'card_city' ) ) { echo ' required'; } ?>" placeholder="<?php _e( 'City', 'easy-digital-downloads' ); ?>" value="<?php echo $customer['address']['city']; ?>"<?php if( edd_field_is_required( 'card_city' ) ) {  echo ' required '; } ?>/>
-		</p>
-		<p id="edd-card-zip-wrap">
-			<label for="card_zip" class="edd-label">
-				<?php _e( 'Billing Zip / Postal Code', 'easy-digital-downloads' ); ?>
-				<?php if( edd_field_is_required( 'card_zip' ) ) { ?>
-					<span class="edd-required-indicator">*</span>
-				<?php } ?>
-			</label>
-			<span class="edd-description"><?php _e( 'The zip or postal code for your billing address.', 'easy-digital-downloads' ); ?></span>
-			<input type="text" size="4" id="card_zip" name="card_zip" class="card-zip edd-input<?php if( edd_field_is_required( 'card_zip' ) ) { echo ' required'; } ?>" placeholder="<?php _e( 'Zip / Postal Code', 'easy-digital-downloads' ); ?>" value="<?php echo $customer['address']['zip']; ?>"<?php if( edd_field_is_required( 'card_zip' ) ) {  echo ' required '; } ?>/>
-		</p>
-		<p id="edd-card-country-wrap">
+			<span class="edd-description"><?php //_e( 'The city for your billing address.', 'easy-digital-downloads' ); ?></span>
+			<input type="text" id="card_city" name="card_city" class="card-city edd-input<?php //if( edd_field_is_required( 'card_city' ) ) { echo ' required'; } ?>" placeholder="<?php //_e( 'City', 'easy-digital-downloads' ); ?>" value="<?php // echo $customer['address']['city']; ?>"<?php //if( edd_field_is_required( 'card_city' ) ) {  echo ' required '; } ?>/>
+		</p>-->
+                <p id="edd-card-country-wrap">
 			<label for="billing_country" class="edd-label">
-				<?php _e( 'Billing Country', 'easy-digital-downloads' ); ?>
+				<?php _e( 'Country', 'easy-digital-downloads' ); ?>
 				<?php if( edd_field_is_required( 'billing_country' ) ) { ?>
 					<span class="edd-required-indicator">*</span>
 				<?php } ?>
@@ -198,46 +189,90 @@ function modula_cc_address_fields(){
 				?>
 			</select>
 		</p>
-		<p id="edd-card-state-wrap">
-			<label for="card_state" class="edd-label">
-				<?php _e( 'Billing State / Province', 'easy-digital-downloads' ); ?>
-				<?php if( edd_field_is_required( 'card_state' ) ) { ?>
+		<p id="edd-card-zip-wrap">
+			<label for="card_zip" class="edd-label">
+				<?php _e( 'Zip / Postal Code', 'easy-digital-downloads' ); ?>
+				<?php if( edd_field_is_required( 'card_zip' ) ) { ?>
 					<span class="edd-required-indicator">*</span>
 				<?php } ?>
 			</label>
-			<span class="edd-description"><?php _e( 'The state or province for your billing address.', 'easy-digital-downloads' ); ?></span>
+			<span class="edd-description"><?php _e( 'The zip or postal code for your billing address.', 'easy-digital-downloads' ); ?></span>
+			<input type="text" size="4" id="card_zip" name="card_zip" class="card-zip edd-input<?php if( edd_field_is_required( 'card_zip' ) ) { echo ' required'; } ?>" placeholder="<?php _e( 'Zip / Postal Code', 'easy-digital-downloads' ); ?>" value="<?php echo $customer['address']['zip']; ?>"<?php if( edd_field_is_required( 'card_zip' ) ) {  echo ' required '; } ?>/>
+		</p>
+<!--		<p id="edd-card-state-wrap">
+			<label for="card_state" class="edd-label">
+				<?php //_e( 'Billing State / Province', 'easy-digital-downloads' ); ?>
+				<?php //if( edd_field_is_required( 'card_state' ) ) { ?>
+					<span class="edd-required-indicator">*</span>
+				<?php //} ?>
+			</label>
+			<span class="edd-description"><?php //_e( 'The state or province for your billing address.', 'easy-digital-downloads' ); ?></span>
 			<?php
-			$selected_state = edd_get_shop_state();
-			$states         = edd_get_shop_states( $selected_country );
-
-			if( ! empty( $customer['address']['state'] ) ) {
-				$selected_state = $customer['address']['state'];
-			}
-
-			if( ! empty( $states ) ) : ?>
-			<select name="card_state" id="card_state" class="card_state edd-select<?php if( edd_field_is_required( 'card_state' ) ) { echo ' required'; } ?>">
+//			$selected_state = edd_get_shop_state();
+//			$states         = edd_get_shop_states( $selected_country );
+//
+//			if( ! empty( $customer['address']['state'] ) ) {
+//				$selected_state = $customer['address']['state'];
+//			}
+//
+//			if( ! empty( $states ) ) : ?>
+			<select name="card_state" id="card_state" class="card_state edd-select<?php //if( edd_field_is_required( 'card_state' ) ) { echo ' required'; } ?>">
 				<?php
-					foreach( $states as $state_code => $state ) {
-						echo '<option value="' . $state_code . '"' . selected( $state_code, $selected_state, false ) . '>' . $state . '</option>';
-					}
+//					foreach( $states as $state_code => $state ) {
+//						echo '<option value="' . $state_code . '"' . selected( $state_code, $selected_state, false ) . '>' . $state . '</option>';
+//					}
 				?>
 			</select>
-			<?php else : ?>
-			<?php $customer_state = ! empty( $customer['address']['state'] ) ? $customer['address']['state'] : ''; ?>
-			<input type="text" size="6" name="card_state" id="card_state" class="card_state edd-input" value="<?php echo esc_attr( $customer_state ); ?>" placeholder="<?php _e( 'State / Province', 'easy-digital-downloads' ); ?>"/>
-			<?php endif; ?>
-		</p>
+			<?php // else : ?>
+			<?php //$customer_state = ! empty( $customer['address']['state'] ) ? $customer['address']['state'] : ''; ?>
+			<input type="text" size="6" name="card_state" id="card_state" class="card_state edd-input" value="<?php // echo esc_attr( $customer_state ); ?>" placeholder="<?php // _e( 'State / Province', 'easy-digital-downloads' ); ?>"/>
+			<?php //endif; ?>
+		</p>-->
 		<?php do_action( 'edd_cc_billing_bottom' ); ?>
-		<?php wp_nonce_field( 'edd-checkout-address-fields', 'edd-checkout-address-fields-nonce', false, true ); ?>
-	</fieldset>
+		<?php wp_nonce_field( 'edd-checkout-address-fields', 'edd-checkout-address-fields-nonce', false, true ); ?>              
+	</fieldset>   
+                
 	<?php
 	echo ob_get_clean();
 
 }
 
+function modula_theme_checkout_submit() { ?>      
+        <div class="footer-cart-total">
+                <div class="footer-message">
+                    <span><?php _e( "You're almost done!", 'easy-digital-downloads' ); ?></span>  
+                </div>
+                <span class="edd_cart_total edd_cart_total_text"><?php _e( 'Purchase Total', 'easy-digital-downloads' ); ?>: </span>
+                <span class="edd_cart_total edd_cart_amount" data-subtotal="<?php echo edd_get_cart_subtotal(); ?>" data-total="<?php echo edd_get_cart_total(); ?>"><?php edd_cart_total(); ?></span>
+        </div> 
+	<fieldset id="edd_purchase_submit">
+		<?php do_action( 'edd_purchase_form_before_submit' ); ?>
+
+		<?php edd_checkout_hidden_fields(); ?>
+
+		<?php echo edd_checkout_button_purchase(); ?>
+
+		<?php do_action( 'edd_purchase_form_after_submit' ); ?>
+
+		<?php if ( edd_is_ajax_disabled() ) { ?>
+			<p class="edd-cancel"><a href="<?php echo edd_get_checkout_uri(); ?>"><?php _e( 'Go back', 'easy-digital-downloads' ); ?></a></p>
+		<?php } ?>
+	</fieldset>
+<?php
+}
+
 
 // add_filter( 'edd-vat-use-checkout-billing-template', '__return_false' );
 add_filter( 'edd_require_billing_address', '__return_false' );
+
+add_filter( 'edd_get_cart_discount_html', 'modula_theme_get_cart_discount_html', 10, 4 );
+function modula_theme_get_cart_discount_html($discount_html, $discount, $rate, $remove_url) {
+    $discount_html = "<div class=\"edd_discount\">\n";
+    $discount_html .= "<span class=\"discount-rate\">$rate</span><span class=\"discount-code\">($discount)</span>\n";  
+    $discount_html .= "</div>\n";
+    $discount_html .= "<div class=\"edd_cart_actions discount_actions\"><a href=\"$remove_url\" data-code=\"$discount\" class=\"edd_discount_remove\"></a></div>\n";
+    return $discount_html;
+}
 
 // Modula Hide Bundle licenses
 add_filter( 'edd_sl_licenses_of_purchase', 'modula_hide_licenses', 99, 3 );
@@ -290,8 +325,54 @@ function modula_licenses_tag( $payment_id = 0 ){
 
 }
 
+add_action( 'edd_checkout_form_top', 'modula_theme_testimonial_cheerful_theme' );
+function modula_theme_testimonial_cheerful_theme() { ?>
+    <div class="checkout-testimonial testimonial">
+        <div class="testimonial-photo">
+            <?php echo wp_get_attachment_image(462018, "thumbnail", false, array('class' => 'testimonial__avatar')); ?>
+        </div>
+        <div class="testimonial__content mb-3">
+            <p class="mb-0">Modula is the best gallery plugin for WordPress I’ve ever used. It’s
+						fast, easy to get started, and has some killer features. It’s also super
+						customizable. As a developer I appreciate that for my clients. As a user, I
+						appreciate that I don’t need to add any code to get things the way I want!</p>
+             <p class="testimonial__title mb-0">— Joe Casabona – casabona.org</p>
+        </div>
+    </div><!-- testimonial -->
+<?php
+}
+
 function modula_theme_add_editor_styles() {
 	add_editor_style( 'modula-theme-block-styles.css' );
+}
+
+add_shortcode('modula_pricing', 'modula_theme_modula_pricing_shortcode');
+function modula_theme_modula_pricing_shortcode( $atts = array() ) {
+	$output = '';
+	$packages = array(
+		'starter'  => 405675,
+		'agency'   => 256715,
+		'trio' 	   => 256708,
+		'business' => 256712
+	);
+	if (isset($atts['discount'])) {
+		$discount = true;
+	}
+	$args = wp_parse_args($atts, array(
+		'package' => 'starter',
+		'discount' => false
+	));
+
+	if ($args['discount']) {
+		$price = modula_edd_get_download_price( $packages[$args['package']] );
+	} else {
+		$price = edd_get_download_price( $packages[$args['package']] );
+	}
+
+	if ($price) {
+		$output = '<span class="package-price">$' . floor( $price ) . '</span>';
+	}
+	return $output;
 }
 
 // EU VAT

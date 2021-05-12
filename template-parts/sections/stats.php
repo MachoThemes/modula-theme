@@ -14,7 +14,7 @@
 					<div class="col-xs-12 col-sm-6">
 						<div class="stats-section__stat mb-3">
 							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stats/installations.png' ); ?> " alt="Active installs">
-							<h6 class="mb-0">80,000+</h6>
+							<h6 class="mb-0">90,000+</h6>
 							<p class="mb-0">active installations</p>
 						</div><!-- stats-section__stat -->
 					</div><!-- col -->
@@ -45,7 +45,7 @@
             <div class="col-lg-12 text-center mt-lg-3">
                 <a class="button button--xl"
                    href="<?php echo esc_url(get_permalink(get_page_by_path('pricing'))); ?>">Get Started Now with Modula</a>
-                <div><small class="cta_money_back_guarantee" style="font-size: 13px; position:relative;top: -15px;">14
+                <div><small class="cta_money_back_guarantee">14
                         day money back guarantee, love it or get a full refund.</small></div>
             </div>
 		</div>

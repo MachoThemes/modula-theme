@@ -29,9 +29,11 @@
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
-                <div class="as-seen-on-section__images__img">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/wp-engine.png'); ?> "
-                         alt="WP Engine logo">
+                <div class="as-seen-on-section__images__img" style="height:50px;">
+                    <a href="https://www.wpkube.com/" target="_blank">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/wpkube.png'); ?> "
+                         alt="WP Kube logo">
+                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">

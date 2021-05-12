@@ -40,26 +40,14 @@
 						<p>Yes. We work extremely hard to provide great support for any issues that you have. So, in the unlikely event that you do run into any issues with Modula - <a href="/contact-us">let us know!</a>.</p>
 					</div>
 				</div>
+			</div>
+
+			<div class="col-md-6">
+			
 				<div class="accordion">
 					<div class="accordion__title">I have pre-sale questions, can you help?</div>
 					<div class="accordion__content">
 						<p>Yes, of course! You are welcome to ask us any questions you may have <a href="/contact-us">here</a>.</p>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="col-md-6">
-				<div class="accordion">
-					<div class="accordion__title">Does Modula have an affiliate program?</div>
-					<div class="accordion__content">
-						<p>Yes, of course, we do! We’d love to have you as a partner so you can spread your love for Modula with the world. Learn more about <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'become-an-affiliate' ) ) ); ?>">becoming an affiliate</a>.</p>
-					</div>
-				</div>
-				<div class="accordion">
-					<div class="accordion__title">Is there a free version of Modula available?</div>
-					<div class="accordion__content">
-						<p>Yes, you can download the free version of Modula from the WordPress.org plugin repository, <a href="https://wordpress.org/plugins/modula-best-grid-gallery/" target="_blank">here.</a></p>
 					</div>
 				</div>
 				<div class="accordion">

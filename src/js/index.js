@@ -4,7 +4,7 @@ import Modal from './modules/Modal';
 import Events from './modules/Events';
 import Accordion from './modules/Accordion';
 import DocSearch from './modules/DocSearch';
-
+import Tabs from './modules/Tabs';
 
 class Modula {
 
@@ -48,6 +48,10 @@ class Modula {
 	initModals() {
 		new Modal( 'modal-1', jQuery('.modal--login'), jQuery('.login-link') );
 		new Modal( 'modal-2', jQuery('.modal--video'), jQuery('.banner-section .hero__img, .banner-section .hero__play-icon, .hero-section-2__hero') );
+                jQuery('.changelog-link').each(function() {
+                    var count = jQuery(this).attr('data-count');
+                    new Modal( 'modal-changelog-' + count, jQuery('#modal--changelog-' + count), jQuery('#changelog-link-' + count));
+                });
 	}
 
 	initAccordions( $elements = jQuery(".accordion") ){
