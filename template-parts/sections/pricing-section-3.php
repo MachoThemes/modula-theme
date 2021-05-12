@@ -5,10 +5,10 @@ wp_enqueue_script('modula-pricing', ANTREAS_ASSETS_JS . 'pricing.js', array('jqu
 
 $download1_id = 256715;
 $download2_id = 256712;
-$download3_id = 256708;
+$download3_id = 515186; // simple
 $download4_id = 405675;
 
-wp_enqueue_script('waypoints');
+
 
 $utm_medium = isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '';
 $upgrading = false;
@@ -114,7 +114,7 @@ $addons->posts = array_reverse($addons->posts);
                         switch ($download->ID) {
                             case $download1_id: ?>
                                 <ul>
-                                    <li>⭐️ <a class="compare-plans-button" href="/pricing"">All Premium Add-ons</a></li>
+                                    <li>⭐️ <a class="compare-plans-button" href="/pricing">All Premium Add-ons</a></li>
                                     <li>⭐️ License for <b>99 sites</b></li>
                                     <li>⭐️ <b>VIP Support</b></li>
                                     <li>Includes Whitelabeling</li>
