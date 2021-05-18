@@ -4,7 +4,7 @@ define( 'ANTREAS_SLUG', 'antreas' );
 define( 'ANTREAS_PRO_SLUG', 'antreas-pro' );
 define( 'ANTREAS_PREFIX', 'antreas_pro' );
 define( 'ANTREAS_NAME', 'Modula Theme' );
-define( 'ANTREAS_VERSION', '2.0.1' );
+define( 'ANTREAS_VERSION', '2.0.2' );
 define( 'ANTREAS_ASSETS_CSS', get_template_directory_uri() . '/assets/css/' );
 define( 'ANTREAS_ASSETS_JS', get_template_directory_uri() . '/assets/js/' );
 define( 'ANTREAS_ASSETS_IMG', get_template_directory_uri() . '/assets/images/' );
