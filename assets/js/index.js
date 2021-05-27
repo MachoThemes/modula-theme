@@ -733,7 +733,7 @@
 				}
 
 				initHeader() {
-					new __WEBPACK_IMPORTED_MODULE_0__modules_Header__['a' /* default */](jQuery('.header'));
+					new __WEBPACK_IMPORTED_MODULE_0__modules_Header__['a' /* default */](jQuery('.header__content'));
 				}
 
 				initPromotionSection() {
