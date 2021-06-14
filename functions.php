@@ -86,7 +86,7 @@ function modula_add_country(){
 }
 
 function modula_cc_address_fields(){
-    
+
 	$logged_in = is_user_logged_in();
 	$customer  = EDD()->session->get( 'customer' );
 	$customer  = wp_parse_args( $customer, array( 'address' => array(
@@ -141,7 +141,7 @@ function modula_cc_address_fields(){
 			</label>
 			<span class="edd-description"><?php //_e( 'The primary billing address for your credit card.', 'easy-digital-downloads' ); ?></span>
 			<input type="text" id="card_address" name="card_address" class="card-address edd-input<?php //if( edd_field_is_required( 'card_address' ) ) { echo ' required'; } ?>" placeholder="<?php //_e( 'Address line 1', 'easy-digital-downloads' ); ?>" value="<?php //echo $customer['address']['line1']; ?>"<?php //if( edd_field_is_required( 'card_address' ) ) {  echo ' required '; } ?>/>
-		</p> 
+		</p>
 		<p id="edd-card-address-2-wrap">
 			<label for="card_address_2" class="edd-label">
 				<?php //_e( 'Billing Address Line 2 (optional)', 'easy-digital-downloads' ); ?>
@@ -229,22 +229,22 @@ function modula_cc_address_fields(){
 			<?php //endif; ?>
 		</p>-->
 		<?php do_action( 'edd_cc_billing_bottom' ); ?>
-		<?php wp_nonce_field( 'edd-checkout-address-fields', 'edd-checkout-address-fields-nonce', false, true ); ?>              
-	</fieldset>   
-                
+		<?php wp_nonce_field( 'edd-checkout-address-fields', 'edd-checkout-address-fields-nonce', false, true ); ?>
+	</fieldset>
+
 	<?php
 	echo ob_get_clean();
 
 }
 
-function modula_theme_checkout_submit() { ?>      
+function modula_theme_checkout_submit() { ?>
         <div class="footer-cart-total">
                 <div class="footer-message">
-                    <span><?php _e( "You're almost done!", 'easy-digital-downloads' ); ?></span>  
+                    <span><?php _e( "You're almost done!", 'easy-digital-downloads' ); ?></span>
                 </div>
                 <span class="edd_cart_total edd_cart_total_text"><?php _e( 'Purchase Total', 'easy-digital-downloads' ); ?>: </span>
                 <span class="edd_cart_total edd_cart_amount" data-subtotal="<?php echo edd_get_cart_subtotal(); ?>" data-total="<?php echo edd_get_cart_total(); ?>"><?php edd_cart_total(); ?></span>
-        </div> 
+        </div>
 	<fieldset id="edd_purchase_submit">
 		<?php do_action( 'edd_purchase_form_before_submit' ); ?>
 
@@ -268,7 +268,7 @@ add_filter( 'edd_require_billing_address', '__return_false' );
 add_filter( 'edd_get_cart_discount_html', 'modula_theme_get_cart_discount_html', 10, 4 );
 function modula_theme_get_cart_discount_html($discount_html, $discount, $rate, $remove_url) {
     $discount_html = "<div class=\"edd_discount\">\n";
-    $discount_html .= "<span class=\"discount-rate\">$rate</span><span class=\"discount-code\">($discount)</span>\n";  
+    $discount_html .= "<span class=\"discount-rate\">$rate</span><span class=\"discount-code\">($discount)</span>\n";
     $discount_html .= "</div>\n";
     $discount_html .= "<div class=\"edd_cart_actions discount_actions\"><a href=\"$remove_url\" data-code=\"$discount\" class=\"edd_discount_remove\"></a></div>\n";
     return $discount_html;
@@ -377,3 +377,15 @@ function modula_theme_modula_pricing_shortcode( $atts = array() ) {
 
 // EU VAT
 require_once ANTREAS_CORE . 'modula-vat-handle.php';
+
+if ( !function_exists( 'register_block_pattern' ) ) {
+	return;
+}
+
+register_block_pattern(
+    'modula-patters/modula-pattern-1',
+    [
+        'title'   => __( 'CTA' ),
+        'content' => "<!-- wp:group -->\n<div class=\"wp-block-group\"><div class=\"wp-block-group__inner-container\"><!-- wp:group {\"className\":\"ctabanner\"} -->\n<div class=\"wp-block-group ctabanner\"><div class=\"wp-block-group__inner-container\"></div></div>\n<!-- /wp:group --></div></div>\n<!-- /wp:group -->\n<!-- wp:cover {\"url\":\"https://wp-modula.com/wp-content/uploads/2021/06/Asset-2-100.jpg\",\"id\":522823,\"dimRatio\":15,\"contentPosition\":\"center center\"} -->\n<div class=\"wp-block-cover has-background-dim-20 has-background-dim\"><img class=\"wp-block-cover__image-background wp-image-522823\" alt=\"\" src=\"https://wp-modula.com/wp-content/uploads/2021/06/Asset-2-100.jpg\" data-object-fit=\"cover\"/><div class=\"wp-block-cover__inner-container\"><!-- wp:columns {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-columns are-vertically-aligned-center\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"33.33%\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:33.33%\"><!-- wp:image {\"align\":\"center\",\"id\":522731,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"https://wp-modula.com/wp-content/uploads/2021/06/architecture_photography-1024x1024.jpg\" alt=\"\" class=\"wp-image-522731\"/></figure></div>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n<!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"66.66%\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:66.66%\"><!-- wp:heading {\"textAlign\":\"center\",\"textColor\":\"white\"} -->\n<h2 class=\"has-text-align-center has-white-color has-text-color\" id=\"h-modula-gallery-plugin\">Modula Gallery Plugin</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->\n<p class=\"has-text-align-center has-white-color has-text-color\"><em>The easiest way to display Ninja Form entries on your website\'s front-end.</em></p>\n<!-- /wp:paragraph -->\n<!-- wp:buttons {\"contentJustification\":\"center\"} -->\n<div class=\"wp-block-buttons is-content-justification-center\"><!-- wp:button -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link\" target=\"_blank\" rel=\"noreferrer noopener\">Get Started Now</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:cover -->",
+    ]
+);
