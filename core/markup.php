@@ -136,7 +136,7 @@ function antreas_body_class( $body_classes = '' ) {
 if ( ! function_exists( 'antreas_viewport' ) ) {
 	add_action( 'wp_head', 'antreas_viewport' );
 	function antreas_viewport() {
-		echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>' . "\n";
+		echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0/>' . "\n";
 	}
 }
 

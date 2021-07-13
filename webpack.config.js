@@ -5,7 +5,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const config = {
     entry: {
         index: './src/js/index.js',
-        gutenberg: './src/js/gutenberg.js',
         style: './src/scss/style.scss',
     },
     output: {
