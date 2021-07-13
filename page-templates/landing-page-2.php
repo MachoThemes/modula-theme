@@ -7,7 +7,7 @@
 <?php get_template_part( 'template-parts/sections/highlights' ); ?>
 <?php get_template_part( 'template-parts/sections/testimonials-2' ); ?>
 <?php //get_template_part( 'template-parts/sections/compatibility' ); ?>
-<?php get_template_part( 'template-parts/sections/stats' ); ?>
+<?php //get_template_part( 'template-parts/sections/stats' ); ?>
 <?php get_template_part( 'template-parts/sections/as-seen-on' ); ?>
 
 

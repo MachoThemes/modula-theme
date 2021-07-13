@@ -57,7 +57,7 @@
 					</div>
 				</div>
 
-				<p class="mt-3">Still have questions? If your question is not listed feel free to check our <a class="link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'docs' ) ) ); ?>">documentation</a> or <a class="link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact-us' ) ) ); ?>">contact us</a>.</p>
+				<p class="mt-3">Still have questions? If your question is not listed feel free to check our <a class="link" rel="noreferrer noopener" href="<?php echo esc_url( get_permalink( get_page_by_path( 'docs' ) ) ); ?>">documentation</a> or <a class="link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact-us' ) ) ); ?>">contact us</a>.</p>
 
 
 			</div><!-- col -->

@@ -10,7 +10,7 @@
         <div class="row as-seen-on-section__images">
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img">
-                    <a href="https://colorlib.com" target="_blank">
+                    <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/colorlib.png'); ?> "
                              alt="Colorlib logo">
                     </a>
@@ -30,7 +30,7 @@
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:50px;">
-                    <a href="https://www.wpkube.com/" target="_blank">
+                    <a href="https://www.wpkube.com/" target="_blank" rel="noopener noreferrer">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/wpkube.png'); ?> "
                          alt="WP Kube logo">
                      </a>
@@ -45,7 +45,7 @@
             <div class="clear visible-lg"></div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:30px;">
-                    <a href="https://fixthephoto.com" target="_blank">
+                    <a href="https://fixthephoto.com" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/fixthephoto.png'); ?> "
                              alt="FixThePhoto logo">
                     </a>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:40px;">
-                    <a href="https://shotkit.com" target="_blank">
+                    <a href="https://shotkit.com" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/shotkit.png'); ?> "
                              alt="Shotkit logo">
                     </a>
@@ -67,7 +67,7 @@
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img" style="height:40px;">
-                    <a href="https://cpothemes.com/wordpress-photo-gallery-plugins" target="_blank">
+                    <a href="https://cpothemes.com/wordpress-photo-gallery-plugins" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/cpothemes.png'); ?>"
                              alt="CPOThemes logo">
                     </a>
@@ -76,7 +76,7 @@
 
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                 <div class="as-seen-on-section__images__img">
-                    <a href="https://www.codeinwp.com" target="_blank">
+                    <a href="https://www.codeinwp.com" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logos/codeinwp.png'); ?> "
                              alt="CodeInWP logo">
                     </a>

@@ -15,7 +15,7 @@
             </div>
 
             <div class="col-md-6" style="z-index:0;">
-                <img class="hero-section-2__hero" src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-2.png">
+                <img alt="hero-image" class="hero-section-2__hero" src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-2.png">
 
                 <div class="hero-section-2__arrow">
 					<?php echo file_get_contents( get_template_directory_uri() . '/assets/images/banner-section__arrow.svg' ); ?>

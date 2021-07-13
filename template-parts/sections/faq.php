@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 section__heading text-center">
 				<h3>Frequently Asked Questions.</h3>
-				<p>Still have questions? These are some frequently asked questions, but, if your question is not listed feel free to check our <a class="link" target="_blank" href="https://modula.helpscoutdocs.com/">documentation</a> or <a class="link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact-us' ) ) ); ?>">contact us</a>.</p>
+				<p>Still have questions? These are some frequently asked questions, but, if your question is not listed feel free to check our <a class="link" target="_blank" href="https://modula.helpscoutdocs.com/">documentation</a> or <a title="contact us - clicking on this link will take you to our contact page" class="link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact-us' ) ) ); ?>">contact us</a>.</p>
 			</div>
 		</div>
 

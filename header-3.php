@@ -12,7 +12,7 @@
 	<header>
 		<div class="container">
 			<div class="row justify-content-center">
-				 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link mt-2 mb-2" rel="home" itemprop="url"></a>
+				 <a title="Website logo - click it to return to the homepage" href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link mt-2 mb-2" rel="home" itemprop="url"></a>
                 <!-- <div class="logo-link mt-2 mb-2"></div> -->
 			</div>
 		</div>
